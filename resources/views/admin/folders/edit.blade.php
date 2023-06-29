@@ -57,6 +57,9 @@
                     @include('admin.folders.tab_edit.details')
                 </div>
                 <div class="tab-pane fade" id="attachments_signatures">
+                    <br>
+                    @include('admin.folders.tab_edit.attachments')
+                    <br>
                     @include('admin.folders.tab_edit.signatures')
                 </div>
                 <div class="tab-pane fade" id="budget">

@@ -30,6 +30,10 @@ class Folder extends Model
     {
         return $this->belongsTo(Signature::class, 'signature_id')->withDefault();
     }
+    public function attachment()
+    {
+        return $this->belongsTo(Attachment::class, 'attachment_id')->withDefault();
+    }
 
     /**
      * Set to null if empty

@@ -21,8 +21,6 @@ class File extends Model implements HasMedia
 
     protected $fillable = ['uuid', 'folder_id', 'created_by_id'];
     
-    
-
     /**
      * Set to null if empty
      * @param $input

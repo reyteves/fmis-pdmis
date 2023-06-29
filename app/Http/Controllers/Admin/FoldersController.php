@@ -15,6 +15,7 @@ use Illuminate\Http\Request as NRequest;
 
 use App\Project;
 use App\Signature;
+use App\Attachment;
 
 class FoldersController extends Controller
 {
@@ -115,9 +116,20 @@ class FoldersController extends Controller
             'id' => $folder->id,
         ]);
 
-
         // Associate the signature with the folder
         $folder->signature()->associate($signature);
+
+        $attachment = Attachment::create([
+            'ppmp' => $request->has('ppmp') ? 'checked' : 'unchecked',
+            'implementation_plan' => $request->has('implementation_plan') ? 'checked' : 'unchecked',
+            'summary_of_expenditures' => $request->has('summary_of_expenditures') ? 'checked' : 'unchecked',
+            'list_of_beneficiaries' => $request->has('list_of_beneficiaries') ? 'checked' : 'unchecked',
+            'other_attachments' => $request->has('other_attachments') ? 'checked' : 'unchecked',
+            'id' => $folder->id,
+        ]);
+        
+        // Associate the attachment with the folder
+        $folder->attachment()->associate($attachment);
 
         $folder->save();
 
