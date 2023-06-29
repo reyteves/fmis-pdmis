@@ -180,6 +180,7 @@ class FoldersController extends Controller
         $project = $folder->project;
         if ($project) {
             $project->name = $folder->name;
+            $project->description= $request->input('description');
             $project->background_and_rationale = $request->input('background_and_rationale');
             $project->objectives = $request->input('objectives');
             $project->project_implementation = $request->input('project_implementation');
@@ -206,6 +207,16 @@ class FoldersController extends Controller
             $signature->approved_by_checkbox = $request->has('approved_by_checkbox') ? 'checked' : 'unchecked';
             $signature->approved_by_input = $request->input('approved_by_input');
             $signature->save();
+        }
+
+        $attachment = $folder->attachment;
+        if ($attachment) {
+            $attachment->ppmp = $request->has('ppmp') ? 'checked' : 'unchecked';
+            $attachment->implementation_plan = $request->has('implementation_plan') ? 'checked' : 'unchecked';
+            $attachment->summary_of_expenditures = $request->has('summary_of_expenditures') ? 'checked' : 'unchecked';
+            $attachment->list_of_beneficiaries = $request->has('list_of_beneficiaries') ? 'checked' : 'unchecked';
+            $attachment->other_attachments = $request->has('other_attachments') ? 'checked' : 'unchecked';
+            $attachment->save();
         }
 
         return redirect()->route('admin.folders.index');
@@ -321,6 +332,11 @@ class FoldersController extends Controller
         $signature = $folder->signature;
         if ($signature) {
             $signature->delete();
+        }
+
+        $attachment = $folder->attachment;
+        if ($attachment) {
+            $attachment->delete();
         }
 
         $folder->forceDelete();

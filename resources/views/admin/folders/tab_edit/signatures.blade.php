@@ -1,3 +1,5 @@
+<label for="signatures">Signatures</label>
+
 {{-- Signatures Checklist --}}
 <div class="form-row">
     <div class="form-group">

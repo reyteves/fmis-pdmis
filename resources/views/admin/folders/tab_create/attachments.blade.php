@@ -1,4 +1,4 @@
-
+<label for="attachments">Attachments</label>
 
     <div class="form-check">
         {!! Form::checkbox('ppmp', 'ppmp', false, ['class' => 'form-check-input', 'id' => 'ppmp']) !!}
