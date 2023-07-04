@@ -2,19 +2,17 @@
 
 @section('content')
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
-
-    {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!}
-
+    {!! Form::open(['method' => 'POST', 'route' => ['admin.folders.store']]) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('quickadmin.qa_edit')
+            @lang('quickadmin.qa_create')
         </div>
 
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('name', trans('quickadmin.folders.fields.name') . '*', ['class' => 'control-label']) !!}
+                    {!! Form::label('name', trans('quickadmin.folders.fields.name') . ' Name* ', ['class' => 'control-label']) !!}
                     {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
                     <p class="help-block"></p>
                     @if ($errors->has('name'))
@@ -33,12 +31,11 @@
                     <a class="nav-link" data-toggle="tab" href="#attachments_signatures">Attachments and Signatures</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#site">Project Site</a>
+                    <a class="nav-link" data-toggle="tab" href="#site">Project Site</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
                 </li>
-               
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#table-stakeholders">Stakeholders Addresses</a>
                 </li>
@@ -53,23 +50,23 @@
                 </li>
             </ul>
 
-            <div class="tab-content panel-body">
+            <div class="tab-content">
                 <div class="tab-pane fade" id="details">
-                    @include('admin.folders.tab_edit.details')
+                    @include('admin.folders.tab_create.details')
                 </div>
                 <div class="tab-pane fade" id="attachments_signatures">
                     <br>
-                    @include('admin.folders.tab_edit.attachments')
+                    @include('admin.folders.tab_create.attachments')
                     <br>
-                    @include('admin.folders.tab_edit.signatures')
+                    @include('admin.folders.tab_create.signatures')
                 </div>
                 <div class="tab-pane fade" id="site">
-                    @include('admin.folders.tab_edit.site')
+                    <br>
+                    @include('admin.folders.tab_create.site')
                 </div>
                 <div class="tab-pane fade" id="budget">
-                    @include('admin.folders.tab_edit.budget')
+                    @include('admin.folders.tab_create.budget')
                 </div>
-                
                 <div class="tab-pane fade" id="table-stakeholders">
                     {{-- @include('partials._table_stakeholders') --}}
                 </div>
@@ -84,10 +81,22 @@
                 </div>
             </div>
 
-           
         </div>
     </div>
 
-    {!! Form::submit(trans('quickadmin.qa_update'), ['class' => 'btn btn-success']) !!}
+    {!! Form::submit(trans('quickadmin.qa_save'), ['class' => 'btn btn-success']) !!}
     {!! Form::close() !!}
+
+   
 @stop
+
+@section('javascript')
+{{-- <script>
+    $(document).ready(function () {
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var previousTab = $(e.relatedTarget).attr("href"); // Get the previous tab pane ID
+            $(previousTab).hide(); // Hide the previous tab pane
+        });
+    });
+</script> --}}
+@endsection

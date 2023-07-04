@@ -34,6 +34,14 @@ class Folder extends Model
     {
         return $this->belongsTo(Attachment::class, 'attachment_id')->withDefault();
     }
+    public function site()
+    {
+        return $this->belongsTo(Site::class, 'site_id')->withDefault();
+    }
+    public function budget()
+    {
+        return $this->belongsTo(Budget::class, 'budget_id')->withDefault();
+    }
 
     /**
      * Set to null if empty

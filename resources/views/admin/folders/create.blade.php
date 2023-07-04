@@ -24,17 +24,17 @@
             </div>
 
             <ul class="nav nav-tabs text-lg bg-gray-100">
-                <li class="nav-item show">
-                    <a class="nav-link active" data-toggle="tab" href="#details">Details</a>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#details">Details</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#attachments_signatures">Attachments and Signatures</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
+                    <a class="nav-link" data-toggle="tab" href="#site">Project Site</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#name-site">Project Site</a>
+                    <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#table-stakeholders">Stakeholders Addresses</a>
@@ -60,13 +60,13 @@
                     <br>
                     @include('admin.folders.tab_create.signatures')
                 </div>
+                <div class="tab-pane fade" id="site">
+                    <br>
+                    @include('admin.folders.tab_create.site')
+                </div>
                 <div class="tab-pane fade" id="budget">
-                    {{-- @include('admin.folders.tab_create.details') --}}
+                    @include('admin.folders.tab_create.budget')
                 </div>
-                <div class="tab-pane fade" id="name-site">
-                    {{-- @include('partials._input_budget') --}}
-                </div>
-        
                 <div class="tab-pane fade" id="table-stakeholders">
                     {{-- @include('partials._table_stakeholders') --}}
                 </div>
@@ -91,12 +91,5 @@
 @stop
 
 @section('javascript')
-<script>
-    $(document).ready(function () {
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            var previousTab = $(e.relatedTarget).attr("href"); // Get the previous tab pane ID
-            $(previousTab).hide(); // Hide the previous tab pane
-        });
-    });
-</script>
+
 @endsection

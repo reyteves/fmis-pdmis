@@ -4,13 +4,13 @@
 @section('content')
     <h3 class="page-title">@lang('quickadmin.users.title')</h3>
     @can('user_create')
-    <p>
-        <a href="{{ route('admin.users.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
-        
-    </p>
+        <p>
+            <a href="{{ route('admin.users.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
+
+        </p>
     @endcan
 
-    
+
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -18,7 +18,8 @@
         </div>
 
         <div class="panel-body table-responsive">
-            <table class="table table-bordered table-striped {{ count($users) > 0 ? 'datatable' : '' }} @can('user_delete') dt-select @endcan">
+            <table
+                class="table table-bordered table-striped {{ count($users) > 0 ? 'datatable' : '' }} @can('user_delete') dt-select @endcan">
                 <thead>
                     <tr>
                         @can('user_delete')
@@ -28,11 +29,11 @@
                         <th>@lang('quickadmin.users.fields.name')</th>
                         <th>@lang('quickadmin.users.fields.email')</th>
                         <th>@lang('quickadmin.users.fields.role')</th>
-                                                <th>&nbsp;</th>
+                        <th>&nbsp;</th>
 
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @if (count($users) > 0)
                         @foreach ($users as $user)
@@ -43,22 +44,26 @@
 
                                 <td field-key='name'>{{ $user->name }}</td>
                                 <td field-key='email'>{{ $user->email }}</td>
-                                <td field-key='role'>{{ $user->role->title or '' }}</td>
-                                                                <td>
+                                {{-- <td field-key='role'>{{ $user->role->title or '' }}</td> --}}
+                                <td field-key='role'>{{ $user->role->title}}</td>
+                                <td>
                                     @can('user_view')
-                                    <a href="{{ route('admin.users.show',[$user->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
+                                        <a href="{{ route('admin.users.show', [$user->id]) }}"
+                                            class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
                                     @endcan
                                     @can('user_edit')
-                                    <a href="{{ route('admin.users.edit',[$user->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
+                                        <a href="{{ route('admin.users.edit', [$user->id]) }}"
+                                            class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
                                     @endcan
                                     @can('user_delete')
-{!! Form::open(array(
-                                        'style' => 'display: inline-block;',
-                                        'method' => 'DELETE',
-                                        'onsubmit' => "return confirm('".trans("quickadmin.qa_are_you_sure")."');",
-                                        'route' => ['admin.users.destroy', $user->id])) !!}
-                                    {!! Form::submit(trans('quickadmin.qa_delete'), array('class' => 'btn btn-xs btn-danger')) !!}
-                                    {!! Form::close() !!}
+                                        {!! Form::open([
+                                            'style' => 'display: inline-block;',
+                                            'method' => 'DELETE',
+                                            'onsubmit' => "return confirm('" . trans('quickadmin.qa_are_you_sure') . "');",
+                                            'route' => ['admin.users.destroy', $user->id],
+                                        ]) !!}
+                                        {!! Form::submit(trans('quickadmin.qa_delete'), ['class' => 'btn btn-xs btn-danger']) !!}
+                                        {!! Form::close() !!}
                                     @endcan
                                 </td>
 
@@ -75,11 +80,10 @@
     </div>
 @stop
 
-@section('javascript') 
+@section('javascript')
     <script>
         @can('user_delete')
             window.route_mass_crud_entries_destroy = '{{ route('admin.users.mass_destroy') }}';
         @endcan
-
     </script>
 @endsection

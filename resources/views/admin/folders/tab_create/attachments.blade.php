@@ -21,3 +21,7 @@
         {!! Form::label('other_attachments', 'Other attachments –<span> page/portion of the plan as project basis; plan, bills of materials and vicinity map for Infrastructure, Return of Investments for livelihood and other similar projects</span>', ['class' => 'form-check-label'],false) !!}
     </div>
 
+
+
+
+

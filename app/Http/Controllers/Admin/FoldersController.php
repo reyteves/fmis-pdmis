@@ -16,6 +16,8 @@ use Illuminate\Http\Request as NRequest;
 use App\Project;
 use App\Signature;
 use App\Attachment;
+use App\Site;
+use App\Budget;
 
 class FoldersController extends Controller
 {
@@ -127,9 +129,44 @@ class FoldersController extends Controller
             'other_attachments' => $request->has('other_attachments') ? 'checked' : 'unchecked',
             'id' => $folder->id,
         ]);
-        
+
         // Associate the attachment with the folder
         $folder->attachment()->associate($attachment);
+
+
+        $site = Site::create([
+            'region' => $request->input('region'),
+            'congressional_district' => $request->input('congressional_district'),
+            'province' => $request->input('province'),
+            'municipality' => $request->input('municipality'),
+            'barangay' => $request->input('barangay'),
+            'street_address' => $request->input('street_address'),
+            'cadt_calt' => $request->input('cadt_calt'),
+            'ad_name' => $request->input('ad_name'),
+            'id' => $folder->id,
+        ]);
+
+        // Associate the attachment with the folder
+        $folder->site()->associate($site);
+
+
+        $budget = Budget::create([
+            'project_status' => $request->input('project_status'),
+            'implementation_mode' => $request->input('implementation_mode'),
+            'project_basis' => $request->input('project_basis'),
+            'total_project_cost' => $request->input('total_project_cost'),
+            'direct_cost' => $request->input('direct_cost'),
+            'indirect_cost' => $request->input('indirect_cost'),
+            'source_of_fund' => $request->input('source_of_fund'),
+            'budget_year' => $request->input('budget_year'),
+            'core_program' => $request->input('core_program'),
+            'sub_program' => $request->input('sub_program'),
+            'target_date_start' => $request->input('target_date_start'),
+            'target_date_completion' => $request->input('target_date_completion'),
+            'id' => $folder->id,
+        ]);
+
+        $folder->budget()->associate($budget);
 
         $folder->save();
 
@@ -180,7 +217,7 @@ class FoldersController extends Controller
         $project = $folder->project;
         if ($project) {
             $project->name = $folder->name;
-            $project->description= $request->input('description');
+            $project->description = $request->input('description');
             $project->background_and_rationale = $request->input('background_and_rationale');
             $project->objectives = $request->input('objectives');
             $project->project_implementation = $request->input('project_implementation');
@@ -217,6 +254,36 @@ class FoldersController extends Controller
             $attachment->list_of_beneficiaries = $request->has('list_of_beneficiaries') ? 'checked' : 'unchecked';
             $attachment->other_attachments = $request->has('other_attachments') ? 'checked' : 'unchecked';
             $attachment->save();
+        }
+
+        $site = $folder->site;
+        if ($site) {
+            $site->region = $request->input('region');
+            $site->congressional_district = $request->input('congressional_district');
+            $site->province = $request->input('province');
+            $site->municipality = $request->input('municipality');
+            $site->barangay = $request->input('barangay');
+            $site->street_address = $request->input('street_address');
+            $site->cadt_calt = $request->input('cadt_calt');
+            $site->ad_name = $request->input('ad_name');
+            $site->save();
+        }
+
+        $budget = $folder->budget;
+        if ($budget) {
+            $budget->project_status = $request->input('project_status');
+            $budget->implementation_mode = $request->input('implementation_mode');
+            $budget->project_basis = $request->input('project_basis');
+            $budget->total_project_cost = $request->input('total_project_cost');
+            $budget->direct_cost = $request->input('direct_cost');
+            $budget->indirect_cost = $request->input('indirect_cost');
+            $budget->source_of_fund = $request->input('source_of_fund');
+            $budget->budget_year = $request->input('budget_year');
+            $budget->core_program = $request->input('core_program');
+            $budget->sub_program = $request->input('sub_program');
+            $budget->target_date_start = $request->input('target_date_start');
+            $budget->target_date_completion = $request->input('target_date_completion');
+            $budget->save();
         }
 
         return redirect()->route('admin.folders.index');
@@ -337,6 +404,16 @@ class FoldersController extends Controller
         $attachment = $folder->attachment;
         if ($attachment) {
             $attachment->delete();
+        }
+
+        $site = $folder->site;
+        if ($site) {
+            $site->delete();
+        }
+
+        $budget = $folder->budget;
+        if ($budget) {
+            $budget->delete();
         }
 
         $folder->forceDelete();
