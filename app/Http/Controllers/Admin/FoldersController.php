@@ -18,6 +18,7 @@ use App\Signature;
 use App\Attachment;
 use App\Site;
 use App\Budget;
+use App\Stakeholder;
 
 class FoldersController extends Controller
 {
@@ -168,6 +169,15 @@ class FoldersController extends Controller
 
         $folder->budget()->associate($budget);
 
+        $stakeholder = Stakeholder::create([
+            'name' => $request->input('name'),
+            'office_address' => $request->input('office_address'),
+            'contact_number' => $request->input('contact_number'),
+            'id' => $folder->id,
+        ]);
+
+        $folder->stakeholder()->attach($stakeholder->id);
+
         $folder->save();
 
         return redirect()->route('admin.folders.index');
@@ -284,6 +294,17 @@ class FoldersController extends Controller
             $budget->target_date_start = $request->input('target_date_start');
             $budget->target_date_completion = $request->input('target_date_completion');
             $budget->save();
+        }
+
+        // Update the associated stakeholders
+        foreach ($folder->stakeholder as $stakeholder) {
+            if ($stakeholder->folder->contains($folder)) {
+                $stakeholder->update([
+                    'name' => $request->input('name'),
+                    'office_address' => $request->input('office_address'),
+                    'contact_number' => $request->input('contact_number'),
+                ]);
+            }
         }
 
         return redirect()->route('admin.folders.index');
@@ -415,6 +436,13 @@ class FoldersController extends Controller
         if ($budget) {
             $budget->delete();
         }
+
+
+        // Delete the associated stakeholders from the stakeholders table
+        $folder->stakeholder()->delete();
+
+        // Delete the associated stakeholders
+        $folder->stakeholder()->detach();
 
         $folder->forceDelete();
 

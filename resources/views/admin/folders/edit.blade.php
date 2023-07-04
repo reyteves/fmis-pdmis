@@ -71,7 +71,7 @@
                 </div>
                 
                 <div class="tab-pane fade" id="table-stakeholders">
-                    {{-- @include('partials._table_stakeholders') --}}
+                    @include('admin.folders.tab_edit.stakeholders')
                 </div>
                 <div class="tab-pane fade" id="table-proponent">
                     {{-- @include('partials._table_proponent') --}}
