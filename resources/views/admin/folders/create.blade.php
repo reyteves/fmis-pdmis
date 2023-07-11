@@ -36,18 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#table-stakeholders">Stakeholders Addresses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#table-proponent">Proponents Addresses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#table-beneficiaries">Direct Beneficiaries</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#table-beneficiaries2">Indirect Beneficiaries</a>
-                </li>
+
+               
+
             </ul>
 
             <div class="tab-content">
@@ -67,18 +58,9 @@
                 <div class="tab-pane fade" id="budget">
                     @include('admin.folders.tab_create.budget')
                 </div>
-                <div class="tab-pane fade" id="table-stakeholders">
-                    @include('admin.folders.tab_create.stakeholders')
-                </div>
-                <div class="tab-pane fade" id="table-proponent">
-                    {{-- @include('partials._table_proponent') --}}
-                </div>
-                <div class="tab-pane fade" id="table-beneficiaries">
-                    {{-- @include('partials._table_direct_beneficiaries') --}}
-                </div>
-                <div class="tab-pane fade" id="table-beneficiaries2">
-                    {{-- @include('partials._table_indirect_beneficiaries') --}}
-                </div>
+
+             
+
             </div>
 
         </div>

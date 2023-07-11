@@ -18,7 +18,7 @@ use App\Signature;
 use App\Attachment;
 use App\Site;
 use App\Budget;
-use App\Stakeholder;
+// use App\Stakeholder;
 
 class FoldersController extends Controller
 {
@@ -169,14 +169,6 @@ class FoldersController extends Controller
 
         $folder->budget()->associate($budget);
 
-        $stakeholder = Stakeholder::create([
-            'name' => $request->input('name'),
-            'office_address' => $request->input('office_address'),
-            'contact_number' => $request->input('contact_number'),
-            'id' => $folder->id,
-        ]);
-
-        $folder->stakeholder()->attach($stakeholder->id);
 
         $folder->save();
 
@@ -283,6 +275,8 @@ class FoldersController extends Controller
         if ($budget) {
             $budget->project_status = $request->input('project_status');
             $budget->implementation_mode = $request->input('implementation_mode');
+            // Set the implementation_mode radio button value based on the existing value
+            // $budget->implementation_mode = $request->has('implementation_mode') ? $request->input('implementation_mode') : $budget->implementation_mode;
             $budget->project_basis = $request->input('project_basis');
             $budget->total_project_cost = $request->input('total_project_cost');
             $budget->direct_cost = $request->input('direct_cost');
@@ -297,15 +291,15 @@ class FoldersController extends Controller
         }
 
         // Update the associated stakeholders
-        foreach ($folder->stakeholder as $stakeholder) {
-            if ($stakeholder->folder->contains($folder)) {
-                $stakeholder->update([
-                    'name' => $request->input('name'),
-                    'office_address' => $request->input('office_address'),
-                    'contact_number' => $request->input('contact_number'),
-                ]);
-            }
-        }
+        // foreach ($folder->stakeholder as $stakeholder) {
+        //     if ($stakeholder->folder->contains($folder->name)) {
+        //         $stakeholder->update([
+        //             'name' => $request->input('name'),
+        //             'office_address' => $request->input('office_address'),
+        //             'contact_number' => $request->input('contact_number'),
+        //         ]);
+        //     }
+        // }
 
         return redirect()->route('admin.folders.index');
     }
@@ -437,12 +431,11 @@ class FoldersController extends Controller
             $budget->delete();
         }
 
-
         // Delete the associated stakeholders from the stakeholders table
-        $folder->stakeholder()->delete();
+        // $folder->stakeholder()->delete();
 
         // Delete the associated stakeholders
-        $folder->stakeholder()->detach();
+        // $folder->stakeholder()->detach();
 
         $folder->forceDelete();
 

@@ -43,10 +43,10 @@ class Folder extends Model
         return $this->belongsTo(Budget::class, 'budget_id')->withDefault();
     }
 
-    public function stakeholder()
-    {
-        return $this->belongsToMany(Stakeholder::class)->withTimestamps();
-    }
+    // public function stakeholder()
+    // {
+    //     return $this->belongsToMany(Stakeholder::class)->withTimestamps();
+    // }
 
     /**
      * Set to null if empty

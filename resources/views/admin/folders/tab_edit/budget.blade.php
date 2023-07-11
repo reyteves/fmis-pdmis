@@ -1,4 +1,23 @@
 <br>
+<label for="implementation_mode">Implementation Mode</label>
+<div class="row mb-3 form-group" id="implementation_mode">
+    <div class="col-md-3 col-lg-3 col-xl-3">
+        <div class="form-check form-check-inline">
+            {{ Form::radio('implementation_mode', 'by-administration', $folder->budget->implementation_mode == 'by-administration', ['class' => 'form-check-input', 'id' => 'by-administration', 'checked' => $folder->budget->implementation_mode == 'by-administration']) }}
+            <label class="form-check-label" for="by-administration">
+                By Administration
+            </label>
+        </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-xl-3">
+        <div class="form-check form-check-inline">
+            {{ Form::radio('implementation_mode', 'by-contract', $folder->budget->implementation_mode == 'by-contract', ['class' => 'form-check-input', 'id' => 'by-contract', 'checked' => $folder->budget->implementation_mode == 'by-contract']) }}
+            <label class="form-check-label" for="by-contract">
+                By Contract
+            </label>
+        </div>
+    </div>
+</div>
 
 {{-- Project Status --}}
 <div class="row mb-3 pt-3">
@@ -33,13 +52,11 @@
 
 <br>
 
-{{-- Mode of Implementation --}}
-<label for="implementation_mode" class="form-label">Mode of Implementation:</label>
-<br>
-<div class="row mb-3 form-group" id="implementation_mode">
+
+{{-- <div class="row mb-3 form-group" id="implementation_mode">
     <div class="col-md-3 col-lg-3 col-xl-3">
         <div class="form-check form-check-inline">
-            {{ Form::radio('implementation_mode', 'by-administration', old('implementation_mode', $folder->budget->implementation_mode) == 'by-administration', ['class' => 'form-check-input', 'id' => 'by-administration']) }}
+            {{ Form::radio('implementation_mode', 'by-administration', $folder->budget->implementation_mode == 'by-administration', ['class' => 'form-check-input', 'id' => 'by-administration', 'checked' => $folder->budget->implementation_mode == 'by-administration']) }}
             <label class="form-check-label ml-2" for="by-administration">
                 By Administration
             </label>
@@ -47,14 +64,24 @@
     </div>
     <div class="col-md-3 col-lg-3 col-xl-3">
         <div class="form-check form-check-inline">
-            {{ Form::radio('implementation_mode', 'by-contract', old('implementation_mode', $folder->budget->implementation_mode) == 'by-contract', ['class' => 'form-check-input', 'id' => 'by-contract']) }}
+            {{ Form::radio('implementation_mode', 'by-contract', $folder->budget->implementation_mode == 'by-contract', ['class' => 'form-check-input', 'id' => 'by-contract', 'checked' => $folder->budget->implementation_mode == 'by-contract']) }}
             <label class="form-check-label ml-2" for="by-contract">
                 By Contract
             </label>
         </div>
     </div>
-</div>
-{{-- /Mode of Implementation --}}
+</div> --}}
+
+
+
+
+
+
+<script>
+    var implementationMode = '{{ $folder->budget->implementation_mode }}';
+    console.log(implementationMode);
+</script>
+
 
 <br>
 
@@ -76,15 +103,15 @@
 <div class="row mb-3">
     <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="total_project_cost" class="col-form-label text-md-end">Total Project Cost</label>
-        {{ Form::number('total_project_cost', old('total_project_cost', $folder->budget->total_project_cost), ['class' => 'form-control', 'id' => 'total_project_cost', 'autocomplete' => 'total_project_cost', 'autofocus']) }}
+        {{ Form::text('total_project_cost', old('total_project_cost', $folder->budget->total_project_cost), ['class' => 'form-control', 'id' => 'total_project_cost', 'autocomplete' => 'total_project_cost', 'autofocus']) }}
     </div>
     <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="direct_cost" class="col-form-label text-md-end">Direct Cost</label>
-        {{ Form::number('direct_cost', old('direct_cost', $folder->budget->direct_cost), ['class' => 'form-control', 'id' => 'direct_cost', 'autocomplete' => 'direct_cost', 'autofocus']) }}
+        {{ Form::text('direct_cost', old('direct_cost', $folder->budget->direct_cost), ['class' => 'form-control', 'id' => 'direct_cost', 'autocomplete' => 'direct_cost', 'autofocus']) }}
     </div>
     <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="indirect_cost" class="col-form-label text-md-end">Indirect Cost</label>
-        {{ Form::number('indirect_cost', old('indirect_cost', $folder->budget->indirect_cost), ['class' => 'form-control', 'id' => 'indirect_cost']) }}
+        {{ Form::text('indirect_cost', old('indirect_cost', $folder->budget->indirect_cost), ['class' => 'form-control', 'id' => 'indirect_cost']) }}
     </div>
 </div>
 {{-- /project cost --}}

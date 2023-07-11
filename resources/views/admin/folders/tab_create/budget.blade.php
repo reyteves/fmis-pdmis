@@ -76,15 +76,15 @@
 <div class="row mb-3">
     <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="total_project_cost" class="col-form-label text-md-end">Total Project Cost</label>
-        {{ Form::number('total_project_cost', null, ['class' => 'form-control', 'id' => 'total_project_cost', 'autocomplete' => 'total_project_cost', 'autofocus']) }}
+        {{ Form::text('total_project_cost', null, ['class' => 'form-control', 'id' => 'total_project_cost', 'autocomplete' => 'total_project_cost', 'autofocus']) }}
     </div>
     <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="direct_cost" class="col-form-label text-md-end">Direct Cost</label>
-        {{ Form::number('direct_cost', null, ['class' => 'form-control', 'id' => 'direct_cost', 'autocomplete' => 'direct_cost', 'autofocus']) }}
+        {{ Form::text('direct_cost', null, ['class' => 'form-control', 'id' => 'direct_cost', 'autocomplete' => 'direct_cost', 'autofocus']) }}
     </div>
     <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="indirect_cost" class="col-form-label text-md-end">Indirect Cost</label>
-        {{ Form::number('indirect_cost', null, ['class' => 'form-control', 'id' => 'indirect_cost']) }}
+        {{ Form::text('indirect_cost', null, ['class' => 'form-control', 'id' => 'indirect_cost']) }}
     </div>
 </div>
 {{-- /project cost --}}
