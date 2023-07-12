@@ -13,44 +13,31 @@
             position: absolute;
             left: 0;
             top: 0;
-            font-family: Arial, sans-serif;
-            margin: 40px;
+           
         }
 
-        .print-content h4 {
-            font-size: 14px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+      
 
         .print-content div {
             margin-bottom: 10px;
-            font-size: 12px;
+            /* font-size: 12px; */
         }
 
-        .print-content .text-right {
-            text-align: right;
-        }
+        
 
     }
 
 
     @media not print {
 
-        .print-content h4 {
-            font-size: 14px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+    
 
         .print-content div {
-            margin-bottom: 10px;
-            font-size: 12px;
+            /* margin-bottom: 10px; */
+            /* font-size: 12px; */
         }
 
-        .print-content .text-right {
-            text-align: right;
-        }
+       
 
     }
 </style>
@@ -59,307 +46,722 @@
 
 <div class="print-content">
 
-    <div style="text-align: center;">
-        <label>PROJECT PROPOSAL FORMAT</label>
-    </div>
+    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;border:none;'><strong><span
+                style='font-size:15px;font-family:"Arial",sans-serif;color:black;'>PROJECT PROPOSAL
+                FORMAT&nbsp;</span></strong></p>
 
-    <div>
-        <h4>Project Title: </h4>{{ $folder->project->name }}
-    </div>
+
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">I. GENERAL
+                INFORMATION</span></strong></p>
+
+    {{-- Project Title --}}
+
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>1.</span></strong>
+                    </p>
+                </td>
+                <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Project Title</span></strong></p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:13px;font-family:"Arial",sans-serif;'>{{ $folder->project->name }}</span><span
+                            style="font-size:12px;">&nbsp;</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     {{-- Project Site --}}
 
-    <h4>Project Site</h4>
-
-    <table>
-        <tr>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 mb-3">
-                    <div><strong>Sitio:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 mb-3">
-                    <div>{!! nl2br($folder->site->street_address) !!}</div>
-                </div>
-            </td>
-            {{-- </tr>
-        <tr> --}}
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div><strong>Barangay:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div>{!! nl2br($folder->site->barangay) !!}</div>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div><strong>Municipality:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div>{!! nl2br($folder->site->municipality) !!}</div>
-                </div>
-            </td>
-            {{-- </tr>
-        <tr> --}}
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div><strong>Congressional District:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div>{!! nl2br($folder->site->congressional_district) !!}</div>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div><strong>Province:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div>{!! nl2br($folder->site->province) !!}</div>
-                </div>
-            </td>
-            {{-- </tr>
-        <tr> --}}
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div><strong>Region:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div>{!! nl2br($folder->site->region) !!}</div>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div><strong>CADT/CALT Petition No.:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div>{!! nl2br($folder->site->cadt_calt) !!}</div>
-                </div>
-            </td>
-            {{-- </tr>
-        <tr> --}}
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div><strong>Name of AD:</strong></div>
-                </div>
-            </td>
-            <td>
-                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                    <div>{!! nl2br($folder->site->ad_name) !!}</div>
-                </div>
-            </td>
-        </tr>
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>2.</span></strong>
+                    </p>
+                </td>
+                <td colspan="2" style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Project Site</span></strong></p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td colspan="4" style="width: 400.2pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 11.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 85.15pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Sitio</span></em></strong>
+                    </p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 135.85pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->street_address) !!}</span></p>
+                </td>
+                <td style="width: 4cm;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Barangay</span></em></strong>
+                    </p>
+                </td>
+                <td style="width: 14.15pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 136.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->barangay) !!}</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 11.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 85.15pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Municipality</span></em></strong>
+                    </p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 135.85pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->municipality) !!}</span></p>
+                </td>
+                <td style="width: 4cm;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Congressional
+                                    District</span></em></strong></p>
+                </td>
+                <td style="width: 14.15pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 136.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->congressional_district) !!}</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 11.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 85.15pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Province</span></em></strong>
+                    </p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 135.85pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->province) !!}</span></p>
+                </td>
+                <td style="width: 4cm;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Region</span></em></strong>
+                    </p>
+                </td>
+                <td style="width: 14.15pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 136.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->region) !!}</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2"
+                    style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 11.8pt;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 85.15pt;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>CADT/CALT&nbsp;</span></em></strong>
+                    </p>
+                </td>
+                <td rowspan="2"
+                    style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 135.85pt;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>t{!! nl2br($folder->site->cadt_calt) !!}</span></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 4cm;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Name of
+                                    AD</span></em></strong></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 14.15pt;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 136.8pt;border: none;padding: 0cm 5.4pt;height: 4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->ad_name) !!}</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 135.85pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 136.8pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+        </tbody>
     </table>
+
 
     <!-- Project Basis -->
-    <table>
-        <tr>
-            <td>
-                <label for="project_basis">Project Basis:</label> {{ $folder->budget->project_basis }}
-            </td>
 
-        </tr>
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>3.</span></strong>
+                    </p>
+                </td>
+                <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Project Basis/es</span></strong>
+                    </p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->project_basis }}</span>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
     </table>
+
     <!-- /Project Basis -->
 
 
-    <!-- /Project Cost -->
-    <table>
-        <tr>
-            <td>
-                <label for="total_project_cost" style="padding-right: 10px;">Total Project Cost:</label>
-                {{ $folder->budget->total_project_cost }}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="direct_cost" style="padding-right: 10px; padding-left: 30px;">Direct Cost:</label>
-                {{ $folder->budget->direct_cost }}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="indirect_cost" style="padding-right: 10px; padding-left: 30px;">Indirect Cost:</label>
-                {{ $folder->budget->indirect_cost }}
-            </td>
-        </tr>
+    <!-- Project Cost -->
+
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>4.</span></strong>
+                    </p>
+                </td>
+                <td colspan="2" style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Total Project
+                                Cost</span></strong></p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->total_project_cost }}</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 11.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 85.15pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Direct</span></em></strong>
+                    </p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->direct_cost }}</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 11.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td style="width: 85.15pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Indirect</span></em></strong>
+                    </p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></em></strong>
+                    </p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->indirect_cost }}</span>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
     </table>
 
+    <!-- /Project Cost -->
 
-    <br>
 
     <!-- Source of Fund and Budget Year -->
-    <table style="margin-bottom: 15px;">
-        <tr>
-            <td>
-                <label for="source_of_fund" style="padding-right: 10px;">Source of Fund:</label>
-                {{ $folder->budget->source_of_fund }}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="budget_year" style="padding-right: 10px; padding-left: 30px;">Budget Year:</label>
-                {{ $folder->budget->budget_year }}
-            </td>
-        </tr>
+
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td rowspan="2"
+                    style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>5.</span></strong>
+                    </p>
+                </td>
+                <td rowspan="2"
+                    style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Source of Fund/ Budget
+                                Year</span></strong></p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->source_of_fund }}
+                            / {{ $folder->budget->budget_year }}</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+        </tbody>
     </table>
+
     <!-- /Source of Fund and Budget Year -->
 
-
     <!-- Core Program and Sub-program Addressed -->
-    <div class="row">
-        <div class="col-md-6">
-            <label for="core_program" style="text-align: right;">Core Program and Sub-program Addressed:</label>
-            {{ $folder->budget->core_program }} / {{ $folder->budget->sub_program }}
-        </div>
-    </div>
+
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td rowspan="3"
+                    style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>7.</span></strong>
+                    </p>
+                </td>
+                <td rowspan="3"
+                    style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Core Program and Sub-program
+                                Addressed</span></strong></p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td rowspan="3"
+                    style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->core_program }}
+                            / {{ $folder->budget->sub_program }}</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.3pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.3pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
     <!-- /Core Program and Sub-program Addressed -->
 
-    <div style="margin-bottom: 15px; padding-top: 15px;">
-        <div style="display: flex;">
-            <label for="project_status" style="display: block;">Project Status:</label>
-            <br>
-        </div>
-        <div id="project_status">
-            <div style="display: inline-block; margin-bottom: 10px; width: 16.66%;">
-                {{ Form::checkbox('project_status[]', 'proposed', old('project_status', $folder->budget->project_status) == 'proposed', ['class' => 'form-check-input', 'id' => 'proposed_checkbox', 'disabled' => 'disabled']) }}
-                <label style="display: inline-block;" for="proposed_checkbox">Proposed</label>
-            </div>
-            <div style="display: inline-block; margin-bottom: 10px; width: 16.66%;">
-                {{ Form::checkbox('project_status[]', 'on-going', old('project_status', $folder->budget->project_status) == 'on-going', ['class' => 'form-check-input', 'id' => 'on-going_checkbox', 'disabled' => 'disabled']) }}
-                <label style="display: inline-block;" for="on-going_checkbox">On-going</label>
-            </div>
-            <div style="display: inline-block; margin-bottom: 10px; width: 16.66%;">
-                {{ Form::checkbox('project_status[]', 'continuing', old('project_status', $folder->budget->project_status) == 'continuing', ['class' => 'form-check-input', 'id' => 'continuing_checkbox', 'disabled' => 'disabled']) }}
-                <label style="display: inline-block;" for="continuing_checkbox">Continuing</label>
-            </div>
-            <div style="display: inline-block; margin-bottom: 10px; width: 16.66%;">
-                {{ Form::checkbox('project_status[]', 'terminating', old('project_status', $folder->budget->project_status) == 'terminating', ['class' => 'form-check-input', 'id' => 'terminating_checkbox', 'disabled' => 'disabled']) }}
-                <label style="display: inline-block;" for="terminating_checkbox">Terminating</label>
-            </div>
-            <div style="display: inline-block; margin-bottom: 10px; width: 16.66%;">
-                {{ Form::checkbox('project_status[]', 'coordinated', old('project_status', $folder->budget->project_status) == 'coordinated', ['class' => 'form-check-input', 'id' => 'coordinated_checkbox', 'disabled' => 'disabled']) }}
-                <label style="display: inline-block;" for="coordinated_checkbox">Coordinated</label>
-            </div>
-        </div>
-    </div>
+    {{-- Project Status --}}
 
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>8.</span></strong>
+                    </p>
+                </td>
+                <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Project Status</span></strong>
+                    </p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 78.05pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>
+                            {{ Form::checkbox('project_status[]', 'proposed', old('project_status', $folder->budget->project_status) == 'proposed', ['class' => 'form-check-input', 'id' => 'proposed_checkbox', 'disabled' => 'disabled']) }}
+                            Proposed</span></p>
+                </td>
+                <td style="width: 69.6pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('project_status[]', 'on-going', old('project_status', $folder->budget->project_status) == 'on-going', ['class' => 'form-check-input', 'id' => 'on-going_checkbox', 'disabled' => 'disabled']) }}
+                            On-going</span></p>
+                </td>
+                <td style="width: 3cm;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('project_status[]', 'continuing', old('project_status', $folder->budget->project_status) == 'continuing', ['class' => 'form-check-input', 'id' => 'continuing_checkbox', 'disabled' => 'disabled']) }}
+                            Continuing</span></p>
+                </td>
+                <td style="width: 83.4pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('project_status[]', 'terminating', old('project_status', $folder->budget->project_status) == 'terminating', ['class' => 'form-check-input', 'id' => 'terminating_checkbox', 'disabled' => 'disabled']) }}
+                            Terminating</span></p>
+                </td>
+                <td style="width: 84.1pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('project_status[]', 'coordinated', old('project_status', $folder->budget->project_status) == 'coordinated', ['class' => 'form-check-input', 'id' => 'coordinated_checkbox', 'disabled' => 'disabled']) }}
+                            Coordinated</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
+    {{-- /Project Status --}}
+
+    <!-- Project Duration -->
+
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>11.</span></strong>
+                    </p>
+                </td>
+                <td colspan="2" style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Project Duration</span></strong>
+                    </p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2"
+                    style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 11.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 85.15pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Target date of
+                                    start</span></em></strong></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->target_date_start }}</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2"
+                    style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 11.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2"
+                    style="width: 85.15pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>Target date of
+                                    completion</span></em></strong></p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><em><span
+                                    style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></em></strong>
+                    </p>
+                </td>
+                <td rowspan="2"
+                    style="width: 13.8pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ $folder->budget->target_date_completion }}</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 15.5pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- /Project Duration -->
 
     <!-- Mode of Implementation -->
 
-    <label for="implementation_mode" style="display: block;">Implementation Mode</label>
-    <div style="margin-bottom: 15px;" id="implementation_mode">
-        <div style="display: inline-block; width: 33.33%;">
-            <div style="display: inline-block;">
-                {{ Form::checkbox('implementation_mode', 'by-administration', $folder->budget->implementation_mode == 'by-administration', ['class' => 'form-check-input', 'id' => 'by-administration', 'checked' => $folder->budget->implementation_mode == 'by-administration', 'disabled' => 'disabled']) }}
-                <label style="display: inline-block;" for="by-administration">
-                    By Administration
-                </label>
-            </div>
-        </div>
-        <div style="display: inline-block; width: 33.33%;">
-            <div style="display: inline-block;">
-                {{ Form::checkbox('implementation_mode', 'by-contract', $folder->budget->implementation_mode == 'by-contract', ['class' => 'form-check-input', 'id' => 'by-contract', 'checked' => $folder->budget->implementation_mode == 'by-contract', 'disabled' => 'disabled']) }}
-                <label style="display: inline-block;" for="by-contract">
-                    By Contract
-                </label>
-            </div>
-        </div>
-    </div>
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+        <tbody>
+            <tr>
+                <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>12.</span></strong>
+                    </p>
+                </td>
+                <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>Mode of
+                                Implementation</span></strong></p>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></strong></p>
+                </td>
+                <td style="width: 13.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
+                                style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
+                </td>
+                <td style="width: 147.65pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('implementation_mode', 'by-administration', $folder->budget->implementation_mode == 'by-administration', ['class' => 'form-check-input', 'id' => 'by-administration', 'checked' => $folder->budget->implementation_mode == 'by-administration', 'disabled' => 'disabled']) }}
+                            by administration</span></p>
+                </td>
+                <td style="width: 252.55pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
+                            style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('implementation_mode', 'by-contract', $folder->budget->implementation_mode == 'by-contract', ['class' => 'form-check-input', 'id' => 'by-contract', 'checked' => $folder->budget->implementation_mode == 'by-contract', 'disabled' => 'disabled']) }}
+                             by contract</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- /Mode of Implementation -->
 
 
-    <!-- /Mode of Implementation - Form 2 -->
+    {{-- Background and Rationale --}}
+
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">II. BACKGROUND AND
+                RATIONALE</span></strong></p>
+    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->background_and_rationale)) !!}</span></p>
+    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
 
 
-    <div class="row">
-        <div class="col-xs-12">
-            <h4>Background and Rationale</h4>
-            <div>{!! nl2br(e($folder->project->background_and_rationale)) !!}</div>
-        </div>
-    </div>
+    {{-- / Background and Rationale --}}
 
-    <div class="row">
+
+    {{-- Objectives  --}}
+    {{-- <div class="row">
         <div class="col-xs-12">
             <h4>Objectives</h4>
             <div>{!! nl2br(e($folder->project->objectives)) !!}</div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row">
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">III. OBJECTIVES</span></strong></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->objectives)) !!}</span></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
+
+    {{-- Project Description --}}
+    {{-- <div class="row">
         <div class="col-xs-12">
             <h4>Project Description</h4>
             <div>{!! nl2br(e($folder->project->description)) !!}</div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row">
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">IV. PROJECT DESCRIPTION</span></strong></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->description)) !!}</span></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
+
+
+    {{-- Project Implementation --}}
+    {{-- <div class="row">
         <div class="col-xs-12">
             <h4>Project Implementation</h4>
             <div>{!! nl2br(e($folder->project->project_implementation)) !!}</div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row">
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">IV. PROJECT IMPLEMENTATION</span></strong></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->project_implementation)) !!}</span></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
+
+    {{-- Monitoring and Evaluation --}}
+    {{-- <div class="row">
         <div class="col-xs-12">
             <h4>Monitoring and Evaluation</h4>
             <div>{!! nl2br(e($folder->project->monitoring_evaluation)) !!}</div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row">
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">V. MONITORING AND EVALUATION</span></strong></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->monitoring_evaluation)) !!}</span></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
+
+    {{-- Potential Risk --}}
+    {{-- <div class="row">
         <div class="col-xs-12">
             <h4>Potential Risk</h4>
             <div>{!! nl2br(e($folder->project->potential_risk)) !!}</div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row">
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">VI. POTENTIAL RISKS</span></strong></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->potential_risk)) !!}</span></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
+
+    {{-- Sustainability Plan --}}
+    {{-- <div class="row">
         <div class="col-xs-12">
             <h4>Sustainability Plan</h4>
             <div>{!! nl2br(e($folder->project->sustainability_plan)) !!}</div>
         </div>
-    </div>
+    </div> --}}
 
-
-
-
-
-
-    <!-- Project Duration -->
-    <div class="row mb-3">
-        <div class="col-md-6 col-lg-6 col-xl-6">
-            <label for="target_date_start" class="col-form-label text-md-end">Target Date of Start</label>
-            <div>{{ $folder->budget->target_date_start }}</div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xl-6">
-            <label for="target_date_completion" class="col-form-label text-md-end">Target Date of Completion</label>
-            <div>{{ $folder->budget->target_date_completion }}</div>
-        </div>
-    </div>
-    <!-- /Project Duration -->
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">VII. SUSTAINABIITY PLAN</span></strong></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->sustainability_plan)) !!}</span></p>
+<p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+    style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
 
 
     <label for="attachments">Attachments</label>
@@ -424,106 +826,106 @@
 
     <label for="signatures">Signatures</label>
 
-{{-- Signatures Checklist --}}
-<div class="form-row">
-    <div class="form-group">
-        <div class="form-check">
-            {!! Form::checkbox(
-                'prepared_by_checkbox[]',
-                'Prepared by: CSC Staff',
-                old('prepared_by_checkbox', $folder->signature->prepared_by_checkbox) == 'checked',
-                ['id' => 'prepared_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
-            ) !!}
-            <label class="form-check-label">Prepared by: CSC Staff</label>
-            <div>{{ old('prepared_by_input', $folder->signature->prepared_by_input) }}</div>
+    {{-- Signatures Checklist --}}
+    <div class="form-row">
+        <div class="form-group">
+            <div class="form-check">
+                {!! Form::checkbox(
+                    'prepared_by_checkbox[]',
+                    'Prepared by: CSC Staff',
+                    old('prepared_by_checkbox', $folder->signature->prepared_by_checkbox) == 'checked',
+                    ['id' => 'prepared_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
+                ) !!}
+                <label class="form-check-label">Prepared by: CSC Staff</label>
+                <div>{{ old('prepared_by_input', $folder->signature->prepared_by_input) }}</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                {!! Form::checkbox(
+                    'evaluated_by_checkbox[]',
+                    'Evaluated by: Provincial Officer',
+                    old('evaluated_by_checkbox', $folder->signature->evaluated_by_checkbox) == 'checked',
+                    ['id' => 'evaluated_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
+                ) !!}
+                <label class="form-check-label">Evaluated by: Provincial Officer</label>
+                <div>{{ old('evaluated_by_input', $folder->signature->evaluated_by_input) }}</div>
+            </div>
         </div>
     </div>
 
-    <div class="form-group">
-        <div class="form-check">
-            {!! Form::checkbox(
-                'evaluated_by_checkbox[]',
-                'Evaluated by: Provincial Officer',
-                old('evaluated_by_checkbox', $folder->signature->evaluated_by_checkbox) == 'checked',
-                ['id' => 'evaluated_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
-            ) !!}
-            <label class="form-check-label">Evaluated by: Provincial Officer</label>
-            <div>{{ old('evaluated_by_input', $folder->signature->evaluated_by_input) }}</div>
+    <div class="form-row">
+        <div class="form-group">
+            <div class="form-check">
+                {!! Form::checkbox(
+                    'confirmed_by_checkbox[]',
+                    'Confirmed by: IPS/IPO Heads/IP Leader/Elder',
+                    old('confirmed_by_checkbox', $folder->signature->confirmed_by_checkbox) == 'checked',
+                    ['id' => 'confirmed_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
+                ) !!}
+                <label class="form-check-label">Confirmed by: IPS/IPO Heads/IP Leader/Elder</label>
+                <div>{{ old('confirmed_by_input', $folder->signature->confirmed_by_input) }}</div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="form-row">
-    <div class="form-group">
-        <div class="form-check">
-            {!! Form::checkbox(
-                'confirmed_by_checkbox[]',
-                'Confirmed by: IPS/IPO Heads/IP Leader/Elder',
-                old('confirmed_by_checkbox', $folder->signature->confirmed_by_checkbox) == 'checked',
-                ['id' => 'confirmed_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
-            ) !!}
-            <label class="form-check-label">Confirmed by: IPS/IPO Heads/IP Leader/Elder</label>
-            <div>{{ old('confirmed_by_input', $folder->signature->confirmed_by_input) }}</div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-check">
-            {!! Form::checkbox(
-                'validated_by_checkbox[]',
-                'Validated by: Regional Staff',
-                old('validated_by_checkbox', $folder->signature->validated_by_checkbox) == 'checked',
-                ['id' => 'validated_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
-            ) !!}
-            <label class="form-check-label">Validated by: Regional Staff</label>
-            <div>{{ old('validated_by_input', $folder->signature->validated_by_input) }}</div>
-        </div>
-    </div>
-</div>
-
-<div class="form-row">
-    <div class="form-group">
-        <div class="form-check">
-            {!! Form::checkbox(
-                'endorsed_by_checkbox[]',
-                'Endorsed by: Regional Director',
-                old('endorsed_by_checkbox', $folder->signature->endorsed_by_checkbox) == 'checked',
-                ['id' => 'endorsed_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
-            ) !!}
-            <label class="form-check-label">Endorsed by: Regional Director</label>
-            <div>{{ old('endorsed_by_input', $folder->signature->endorsed_by_input) }}</div>
+        <div class="form-group">
+            <div class="form-check">
+                {!! Form::checkbox(
+                    'validated_by_checkbox[]',
+                    'Validated by: Regional Staff',
+                    old('validated_by_checkbox', $folder->signature->validated_by_checkbox) == 'checked',
+                    ['id' => 'validated_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
+                ) !!}
+                <label class="form-check-label">Validated by: Regional Staff</label>
+                <div>{{ old('validated_by_input', $folder->signature->validated_by_input) }}</div>
+            </div>
         </div>
     </div>
 
-    <div class="form-group">
-        <div class="form-check">
-            {!! Form::checkbox(
-                'recommended_by_checkbox[]',
-                'Recommending Approval: Executive Director',
-                old('recommended_by_checkbox', $folder->signature->recommended_by_checkbox) == 'checked',
-                ['id' => 'recommended_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
-            ) !!}
-            <label class="form-check-label">Recommending Approval: Executive Director</label>
-            <div>{{ old('recommended_by_input', $folder->signature->recommended_by_input) }}</div>
+    <div class="form-row">
+        <div class="form-group">
+            <div class="form-check">
+                {!! Form::checkbox(
+                    'endorsed_by_checkbox[]',
+                    'Endorsed by: Regional Director',
+                    old('endorsed_by_checkbox', $folder->signature->endorsed_by_checkbox) == 'checked',
+                    ['id' => 'endorsed_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
+                ) !!}
+                <label class="form-check-label">Endorsed by: Regional Director</label>
+                <div>{{ old('endorsed_by_input', $folder->signature->endorsed_by_input) }}</div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="form-row">
-    <div class="form-group">
-        <div class="form-check">
-            {!! Form::checkbox(
-                'approved_by_checkbox[]',
-                'Approved by: Chairperson',
-                old('approved_by_checkbox', $folder->signature->approved_by_checkbox) == 'checked',
-                ['id' => 'approved_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
-            ) !!}
-            <label class="form-check-label">Approved by: Chairperson</label>
-            <div>{{ old('approved_by_input', $folder->signature->approved_by_input) }}</div>
+        <div class="form-group">
+            <div class="form-check">
+                {!! Form::checkbox(
+                    'recommended_by_checkbox[]',
+                    'Recommending Approval: Executive Director',
+                    old('recommended_by_checkbox', $folder->signature->recommended_by_checkbox) == 'checked',
+                    ['id' => 'recommended_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
+                ) !!}
+                <label class="form-check-label">Recommending Approval: Executive Director</label>
+                <div>{{ old('recommended_by_input', $folder->signature->recommended_by_input) }}</div>
+            </div>
         </div>
     </div>
-</div>
-{{-- /Signatures Checklist --}}
+
+    <div class="form-row">
+        <div class="form-group">
+            <div class="form-check">
+                {!! Form::checkbox(
+                    'approved_by_checkbox[]',
+                    'Approved by: Chairperson',
+                    old('approved_by_checkbox', $folder->signature->approved_by_checkbox) == 'checked',
+                    ['id' => 'approved_by_checkbox_{uniqueId}', 'class' => 'form-check-input', 'disabled' => 'disabled'],
+                ) !!}
+                <label class="form-check-label">Approved by: Chairperson</label>
+                <div>{{ old('approved_by_input', $folder->signature->approved_by_input) }}</div>
+            </div>
+        </div>
+    </div>
+    {{-- /Signatures Checklist --}}
 
     {{-- End Printable Page --}}
 </div>
