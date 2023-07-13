@@ -18,19 +18,11 @@
 
         .print-content div {
             margin-bottom: 10px;
-            /* font-size: 12px; */
         }
     }
 
 
     @media not print {
-
-
-
-        .print-content div {
-            /* margin-bottom: 10px; */
-            /* font-size: 12px; */
-        }
 
 
 
@@ -818,7 +810,7 @@
     </ol>
 
 
-
+<br><br>
 
     {{-- Signatures Checklist --}}
 

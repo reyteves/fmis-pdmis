@@ -36,6 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#evaluate">Evaluate</a>
+                </li>
 
                
 
@@ -57,6 +60,9 @@
                 </div>
                 <div class="tab-pane fade" id="budget">
                     @include('admin.folders.tab_create.budget')
+                </div>
+                <div class="tab-pane fade" id="evaluate">
+                    @include('admin.folders.tab_create.evaluate')
                 </div>
 
              

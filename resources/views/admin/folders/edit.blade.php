@@ -44,6 +44,9 @@
                 <li class="nav-item">
                     <a id="viewLink" class="nav-link" data-toggle="tab" href="#view">View</a>
                 </li>
+                <li class="nav-item">
+                    <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate">Evaluate</a>
+                </li>
             </ul>
 
             <div class="tab-content panel-body">
@@ -64,6 +67,9 @@
                 </div>
                 <div class="tab-pane fade" id="view">
                     @include('admin.folders.tab_edit.view')
+                </div>
+                <div class="tab-pane fade" id="evaluate">
+                    @include('admin.folders.tab_edit.evaluate')
                 </div>
 
             </div>

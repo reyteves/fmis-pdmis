@@ -42,6 +42,10 @@ class Folder extends Model
     {
         return $this->belongsTo(Budget::class, 'budget_id')->withDefault();
     }
+    public function evaluation()
+    {
+        return $this->belongsTo(Evaluation::class, 'evaluation_id')->withDefault();
+    }
 
     // public function stakeholder()
     // {
