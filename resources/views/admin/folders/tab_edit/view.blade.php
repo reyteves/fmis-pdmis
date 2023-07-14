@@ -24,7 +24,21 @@
 
     @media not print {
 
+        .print-content,
+        .print-content * {
+            visibility: visible;
+        }
 
+        .print-content {
+            /* position: absolute; */
+            left: 0;
+            top: 0;
+
+        }
+
+        .print-content div {
+            margin-bottom: 10px;
+        }
 
     }
 </style>
