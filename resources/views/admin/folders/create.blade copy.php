@@ -5,11 +5,15 @@
     {!! Form::open(['method' => 'POST', 'route' => ['admin.folders.store']]) !!}
 
     <div class="panel panel-default">
+    {{-- <div> --}}
         <div class="panel-heading">
+
+        {{-- <div> --}}
             @lang('quickadmin.qa_create')
         </div>
 
         <div class="panel-body">
+        {{-- <div> --}}
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('name', trans('quickadmin.folders.fields.name') . ' Name* ', ['class' => 'control-label']) !!}
@@ -39,9 +43,12 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#evaluate">Evaluate</a>
                 </li>
+
+               
+
             </ul>
 
-            {{-- <div class="tab-content">
+            <div class="tab-content">
                 <div class="tab-pane fade" id="details">
                     @include('admin.folders.tab_create.details')
                 </div>
@@ -61,38 +68,8 @@
                 <div class="tab-pane fade" id="evaluate">
                     @include('admin.folders.tab_create.evaluate')
                 </div>
-            </div> --}}
 
-            <div class="tab-content">
-                <div class="tab-pane fade" id="details">
-                    <div class="tab-content">
-                        @include('admin.folders.tab_create.details')
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="attachments_signatures">
-                    <div class="tab-content">
-                        <br>
-                        @include('admin.folders.tab_create.attachments')
-                        <br>
-                        @include('admin.folders.tab_create.signatures')
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="site">
-                    <div class="tab-content">
-                        <br>
-                        @include('admin.folders.tab_create.site')
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="budget">
-                    <div class="tab-content">
-                        @include('admin.folders.tab_create.budget')
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="evaluate">
-                    <div class="tab-content">
-                        @include('admin.folders.tab_create.evaluate')
-                    </div>
-                </div>
+            
             </div>
 
         </div>
@@ -100,6 +77,8 @@
 
     {!! Form::submit(trans('quickadmin.qa_save'), ['class' => 'btn btn-success']) !!}
     {!! Form::close() !!}
+
+   
 @stop
 
 @section('javascript')

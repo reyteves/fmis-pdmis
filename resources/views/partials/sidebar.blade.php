@@ -5,8 +5,6 @@
     <section class="sidebar">
         <ul class="sidebar-menu">
 
-             
-
             <li class="{{ $request->segment(1) == 'home' ? 'active' : '' }}">
                 <a href="{{ url('/') }}">
                     <i class="fa fa-wrench"></i>
@@ -14,57 +12,22 @@
                 </a>
             </li>
 
-            
-            @can('user_management_access')
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-users"></i>
-                    <span class="title">@lang('quickadmin.user-management.title')</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                
-                @can('role_access')
-                <li class="{{ $request->segment(2) == 'roles' ? 'active active-sub' : '' }}">
-                        <a href="{{ route('admin.roles.index') }}">
-                            <i class="fa fa-briefcase"></i>
-                            <span class="title">
-                                @lang('quickadmin.roles.title')
-                            </span>
-                        </a>
-                    </li>
-                @endcan
-                @can('user_access')
-                <li class="{{ $request->segment(2) == 'users' ? 'active active-sub' : '' }}">
-                        <a href="{{ route('admin.users.index') }}">
-                            <i class="fa fa-user"></i>
-                            <span class="title">
-                                @lang('quickadmin.users.title')
-                            </span>
-                        </a>
-                    </li>
-                @endcan
-                </ul>
-            </li>
-            @endcan
             @can('folder_access')
-            <li class="{{ $request->segment(2) == 'folders' ? 'active' : '' }}">
-                <a href="{{ route('admin.folders.index') }}">
-                    <i class="fa fa-gears"></i>
-                    <span class="title">@lang('quickadmin.folders.title')</span>
-                </a>
-            </li>
+                <li class="{{ $request->segment(2) == 'folders' ? 'active' : '' }}">
+                    <a href="{{ route('admin.folders.index') }}">
+                        <i class="fa fa-gears"></i>
+                        <span class="title">@lang('quickadmin.folders.title')</span>
+                    </a>
+                </li>
             @endcan
-            
+
             @can('file_access')
-            <li class="{{ $request->segment(2) == 'files' ? 'active' : '' }}">
-                <a href="{{ route('admin.files.index') }}">
-                    <i class="fa fa-gears"></i>
-                    <span class="title">@lang('quickadmin.files.title')</span>
-                </a>
-            </li>
+                <li class="{{ $request->segment(2) == 'files' ? 'active' : '' }}">
+                    <a href="{{ route('admin.files.index') }}">
+                        <i class="fa fa-gears"></i>
+                        <span class="title">@lang('quickadmin.files.title')</span>
+                    </a>
+                </li>
             @endcan
 
             {{-- @can('plan_access')
@@ -84,6 +47,42 @@
                 </a>
             </li>
 
+
+            @can('user_management_access')
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span class="title">@lang('quickadmin.user-management.title')</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        @can('role_access')
+                            <li class="{{ $request->segment(2) == 'roles' ? 'active active-sub' : '' }}">
+                                <a href="{{ route('admin.roles.index') }}">
+                                    <i class="fa fa-briefcase"></i>
+                                    <span class="title">
+                                        @lang('quickadmin.roles.title')
+                                    </span>
+                                </a>
+                            </li>
+                        @endcan
+                        @can('user_access')
+                            <li class="{{ $request->segment(2) == 'users' ? 'active active-sub' : '' }}">
+                                <a href="{{ route('admin.users.index') }}">
+                                    <i class="fa fa-user"></i>
+                                    <span class="title">
+                                        @lang('quickadmin.users.title')
+                                    </span>
+                                </a>
+                            </li>
+                        @endcan
+                    </ul>
+                </li>
+            @endcan
+
             <li>
                 <a href="#logout" onclick="$('#logout').submit();">
                     <i class="fa fa-arrow-left"></i>
@@ -93,4 +92,3 @@
         </ul>
     </section>
 </aside>
-

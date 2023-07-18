@@ -4,64 +4,64 @@
 
 {{--  --}}
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('format_check', '1. Format', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('format_check', '1', false, ['class' => 'form-check-input', 'id' => 'format_check_yes']) !!}
             {!! Form::label('format_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('format_check', '0', false, ['class' => 'form-check-input', 'id' => 'format_check_no']) !!}
             {!! Form::label('format_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('format_comment', old('format_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}     
     </div>
 </div>
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('provincial_evaluation_check', '2. Provincial Evaluation Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('provincial_evaluation_check', '1', false, ['class' => 'form-check-input', 'id' => 'provincial_evaluation_check_yes']) !!}
             {!! Form::label('provincial_evaluation_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('provincial_evaluation_check', '0', false, ['class' => 'form-check-input', 'id' => 'provincial_evaluation_check_no']) !!}
             {!! Form::label('provincial_evaluation_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('provincial_evaluation_comment', old('provincial_evaluation_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('regional_validation_check', '3. Regional Validation Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('regional_validation_check', '1', false, ['class' => 'form-check-input', 'id' => 'regional_validation_check_yes']) !!}
             {!! Form::label('regional_validation_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('regional_validation_check', '0', false, ['class' => 'form-check-input', 'id' => 'regional_validation_check_no']) !!}
             {!! Form::label('regional_validation_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('regional_validation_comment', old('regional_validation_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -74,22 +74,22 @@
 {{--  --}}
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('general_information_check', 'General Information Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('general_information_check', '1', false, ['class' => 'form-check-input', 'id' => 'general_information_check_yes']) !!}
             {!! Form::label('general_information_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('general_information_check', '0', false, ['class' => 'form-check-input', 'id' => 'general_information_check_no']) !!}
             {!! Form::label('general_information_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('general_information_comment', old('general_information_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -102,22 +102,22 @@
 {!! Form::textarea('background_and_rationale_comment', old('background_and_rationale_comment'), ['class' => 'form-control', 'rows' => 1]) !!} --}}
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('background_and_rationale_check', 'Background and Rationale Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('background_and_rationale_check', '1', false, ['class' => 'form-check-input', 'id' => 'background_and_rationale_check_yes']) !!}
             {!! Form::label('background_and_rationale_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('background_and_rationale_check', '0', false, ['class' => 'form-check-input', 'id' => 'background_and_rationale_check_no']) !!}
             {!! Form::label('background_and_rationale_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('background_and_rationale_comment', old('background_and_rationale_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -134,22 +134,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('objectives_check', 'Objectives Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('objectives_check', '1', false, ['class' => 'form-check-input', 'id' => 'objectives_check_yes']) !!}
             {!! Form::label('objectives_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('objectives_check', '0', false, ['class' => 'form-check-input', 'id' => 'objectives_check_no']) !!}
             {!! Form::label('objectives_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('objectives_comment', old('objectives_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -162,22 +162,22 @@
 {!! Form::textarea('project_description_comment', old('project_description_comment'), ['class' => 'form-control', 'rows' => 1]) !!} --}}
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('project_description_check', 'Project Description Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('project_description_check', '1', false, ['class' => 'form-check-input', 'id' => 'project_description_check_yes']) !!}
             {!! Form::label('project_description_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('project_description_check', '0', false, ['class' => 'form-check-input', 'id' => 'project_description_check_no']) !!}
             {!! Form::label('project_description_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('project_description_comment', old('project_description_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -193,22 +193,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('implementation_strategies_check', 'Implementation Strategies Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('implementation_strategies_check', '1', false, ['class' => 'form-check-input', 'id' => 'implementation_strategies_check_yes']) !!}
             {!! Form::label('implementation_strategies_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('implementation_strategies_check', '0', false, ['class' => 'form-check-input', 'id' => 'implementation_strategies_check_no']) !!}
             {!! Form::label('implementation_strategies_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('implementation_strategies_comment', old('implementation_strategies_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -222,22 +222,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('sustainability_plan_check', 'Sustainability Plan Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('sustainability_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'sustainability_plan_check_yes']) !!}
             {!! Form::label('sustainability_plan_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('sustainability_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'sustainability_plan_check_no']) !!}
             {!! Form::label('sustainability_plan_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('sustainability_plan_comment', old('sustainability_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -252,22 +252,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('budgetary_requirements_check', 'Budgetary Requirements Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('budgetary_requirements_check', '1', false, ['class' => 'form-check-input', 'id' => 'budgetary_requirements_check_yes']) !!}
             {!! Form::label('budgetary_requirements_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('budgetary_requirements_check', '0', false, ['class' => 'form-check-input', 'id' => 'budgetary_requirements_check_no']) !!}
             {!! Form::label('budgetary_requirements_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('budgetary_requirements_comment', old('budgetary_requirements_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -281,22 +281,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('attachments_check', 'Attachments Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('attachments_check', '1', false, ['class' => 'form-check-input', 'id' => 'attachments_check_yes']) !!}
             {!! Form::label('attachments_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('attachments_check', '0', false, ['class' => 'form-check-input', 'id' => 'attachments_check_no']) !!}
             {!! Form::label('attachments_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('attachments_comment', old('attachments_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -313,22 +313,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('signatories_check', 'Signatories Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('signatories_check', '1', false, ['class' => 'form-check-input', 'id' => 'signatories_check_yes']) !!}
             {!! Form::label('signatories_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('signatories_check', '0', false, ['class' => 'form-check-input', 'id' => 'signatories_check_no']) !!}
             {!! Form::label('signatories_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('signatories_comment', old('signatories_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -344,22 +344,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('ipra_rights_check', 'IPRA Rights Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('ipra_rights_check', '1', false, ['class' => 'form-check-input', 'id' => 'ipra_rights_check_yes']) !!}
             {!! Form::label('ipra_rights_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('ipra_rights_check', '0', false, ['class' => 'form-check-input', 'id' => 'ipra_rights_check_no']) !!}
             {!! Form::label('ipra_rights_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('ipra_rights_comment', old('ipra_rights_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -373,22 +373,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('presidents_agenda_check', "President's Agenda Check", ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('presidents_agenda_check', '1', false, ['class' => 'form-check-input', 'id' => 'presidents_agenda_check_yes']) !!}
             {!! Form::label('presidents_agenda_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('presidents_agenda_check', '0', false, ['class' => 'form-check-input', 'id' => 'presidents_agenda_check_no']) !!}
             {!! Form::label('presidents_agenda_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('presidents_agenda_comment', old('presidents_agenda_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -402,22 +402,22 @@
 {!! Form::textarea('pdp_pip_comment', old('pdp_pip_comment'), ['class' => 'form-control', 'rows' => 1]) !!} --}}
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('pdp_pip_check', 'PDP-PIP Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('pdp_pip_check', '1', false, ['class' => 'form-check-input', 'id' => 'pdp_pip_check_yes']) !!}
             {!! Form::label('pdp_pip_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('pdp_pip_check', '0', false, ['class' => 'form-check-input', 'id' => 'pdp_pip_check_no']) !!}
             {!! Form::label('pdp_pip_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('pdp_pip_comment', old('pdp_pip_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -432,22 +432,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('ip_master_plan_check', 'IP Master Plan Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('ip_master_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'ip_master_plan_check_yes']) !!}
             {!! Form::label('ip_master_plan_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('ip_master_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'ip_master_plan_check_no']) !!}
             {!! Form::label('ip_master_plan_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('ip_master_plan_comment', old('ip_master_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -463,22 +463,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('strategic_plan_check', 'Strategic Plan Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('strategic_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'strategic_plan_check_yes']) !!}
             {!! Form::label('strategic_plan_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('strategic_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'strategic_plan_check_no']) !!}
             {!! Form::label('strategic_plan_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('strategic_plan_comment', old('strategic_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -492,22 +492,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('workflow_framework_check', 'Workflow Framework Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('workflow_framework_check', '1', false, ['class' => 'form-check-input', 'id' => 'workflow_framework_check_yes']) !!}
             {!! Form::label('workflow_framework_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('workflow_framework_check', '0', false, ['class' => 'form-check-input', 'id' => 'workflow_framework_check_no']) !!}
             {!! Form::label('workflow_framework_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('workflow_framework_comment', old('workflow_framework_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -521,22 +521,22 @@
 {!! Form::textarea('building_blocks_comment', old('building_blocks_comment'), ['class' => 'form-control', 'rows' => 1]) !!} --}}
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('building_blocks_check', 'Building Blocks Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('building_blocks_check', '1', false, ['class' => 'form-check-input', 'id' => 'building_blocks_check_yes']) !!}
             {!! Form::label('building_blocks_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('building_blocks_check', '0', false, ['class' => 'form-check-input', 'id' => 'building_blocks_check_no']) !!}
             {!! Form::label('building_blocks_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('building_blocks_comment', old('building_blocks_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -549,22 +549,22 @@
 {!! Form::textarea('strategic_directions_comment', old('strategic_directions_comment'), ['class' => 'form-control', 'rows' => 1]) !!} --}}
 
 
-<div class="form-group col-md-2">
+<div class="form-group col-xs-12 col-md-2 col-xl-2">
     {!! Form::label('strategic_directions_check', 'Strategic Directions Check', ['class' => 'control-label']) !!}
 </div>
-<div class="form-group col-md-2">
+<div class="form-group col-xs-6 col-md-2 col-xl-2">
     <div class="form-check">
         {!! Form::radio('strategic_directions_check', '1', false, ['class' => 'form-check-input', 'id' => 'strategic_directions_check_yes']) !!}
         {!! Form::label('strategic_directions_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
     </div>
 </div>
-<div class="form-group col-md-2">
+<div class="form-group col-xs-6 col-md-2 col-xl-2">
     <div class="form-check">
         {!! Form::radio('strategic_directions_check', '0', false, ['class' => 'form-check-input', 'id' => 'strategic_directions_check_no']) !!}
         {!! Form::label('strategic_directions_check_no', 'No', ['class' => 'form-check-label']) !!}
     </div>
 </div>
-<div class="form-group col-md-6">
+<div class="form-group col-xs-12 col-md-6 col-xl-6">
     {!! Form::text('strategic_directions_comment', old('strategic_directions_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
 </div>
 </div>
@@ -578,22 +578,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('prexc_comment_check', 'PREXC Comment Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('prexc_comment_check', '1', false, ['class' => 'form-check-input', 'id' => 'prexc_comment_check_yes']) !!}
             {!! Form::label('prexc_comment_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('prexc_comment_check', '0', false, ['class' => 'form-check-input', 'id' => 'prexc_comment_check_no']) !!}
             {!! Form::label('prexc_comment_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('prexc_comment', old('prexc_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -609,22 +609,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('sdg_check', 'SDG Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('sdg_check', '1', false, ['class' => 'form-check-input', 'id' => 'sdg_check_yes']) !!}
             {!! Form::label('sdg_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('sdg_check', '0', false, ['class' => 'form-check-input', 'id' => 'sdg_check_no']) !!}
             {!! Form::label('sdg_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('sdg_comment', old('sdg_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -639,22 +639,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('signature_check', 'Signature Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('signature_check', '1', false, ['class' => 'form-check-input', 'id' => 'signature_check_yes']) !!}
             {!! Form::label('signature_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('signature_check', '0', false, ['class' => 'form-check-input', 'id' => 'signature_check_no']) !!}
             {!! Form::label('signature_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('signature_comment', old('signature_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -668,22 +668,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('pdp_pip_check', 'PDP PIP Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('pdp_pip_check', '1', false, ['class' => 'form-check-input', 'id' => 'pdp_pip_check_yes']) !!}
             {!! Form::label('pdp_pip_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('pdp_pip_check', '0', false, ['class' => 'form-check-input', 'id' => 'pdp_pip_check_no']) !!}
             {!! Form::label('pdp_pip_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('pdp_pip_comment', old('pdp_pip_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -699,22 +699,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('ip_master_plan_check', 'IP Master Plan Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('ip_master_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'ip_master_plan_check_yes']) !!}
             {!! Form::label('ip_master_plan_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('ip_master_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'ip_master_plan_check_no']) !!}
             {!! Form::label('ip_master_plan_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('ip_master_plan_comment', old('ip_master_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -730,22 +730,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('strategic_plan_check', 'Strategic Plan Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('strategic_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'strategic_plan_check_yes']) !!}
             {!! Form::label('strategic_plan_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('strategic_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'strategic_plan_check_no']) !!}
             {!! Form::label('strategic_plan_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('strategic_plan_comment', old('strategic_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -761,22 +761,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('workflow_framework_check', 'Workflow Framework Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('workflow_framework_check', '1', false, ['class' => 'form-check-input', 'id' => 'workflow_framework_check_yes']) !!}
             {!! Form::label('workflow_framework_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('workflow_framework_check', '0', false, ['class' => 'form-check-input', 'id' => 'workflow_framework_check_no']) !!}
             {!! Form::label('workflow_framework_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('workflow_framework_comment', old('workflow_framework_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -792,22 +792,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('building_blocks_check', 'Building Blocks Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('building_blocks_check', '1', false, ['class' => 'form-check-input', 'id' => 'building_blocks_check_yes']) !!}
             {!! Form::label('building_blocks_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('building_blocks_check', '0', false, ['class' => 'form-check-input', 'id' => 'building_blocks_check_no']) !!}
             {!! Form::label('building_blocks_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('building_blocks_comment', old('building_blocks_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -823,22 +823,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('strategic_directions_check', 'Strategic Directions Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('strategic_directions_check', '1', false, ['class' => 'form-check-input', 'id' => 'strategic_directions_check_yes']) !!}
             {!! Form::label('strategic_directions_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('strategic_directions_check', '0', false, ['class' => 'form-check-input', 'id' => 'strategic_directions_check_no']) !!}
             {!! Form::label('strategic_directions_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('strategic_directions_comment', old('strategic_directions_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -856,22 +856,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('prexc_check', 'Prexc Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('prexc_check', '1', false, ['class' => 'form-check-input', 'id' => 'prexc_check_yes']) !!}
             {!! Form::label('prexc_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('prexc_check', '0', false, ['class' => 'form-check-input', 'id' => 'prexc_check_no']) !!}
             {!! Form::label('prexc_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('prexc_comment', old('prexc_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -887,22 +887,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('sdg_check', 'SDG Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('sdg_check', '1', false, ['class' => 'form-check-input', 'id' => 'sdg_check_yes']) !!}
             {!! Form::label('sdg_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('sdg_check', '0', false, ['class' => 'form-check-input', 'id' => 'sdg_check_no']) !!}
             {!! Form::label('sdg_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('sdg_comment', old('sdg_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -919,22 +919,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('signature_check', 'Signature Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('signature_check', '1', false, ['class' => 'form-check-input', 'id' => 'signature_check_yes']) !!}
             {!! Form::label('signature_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('signature_check', '0', false, ['class' => 'form-check-input', 'id' => 'signature_check_no']) !!}
             {!! Form::label('signature_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('signature_comment', old('signature_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -950,22 +950,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('procurement_management_plan_check', 'Procurement Management Plan Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('procurement_management_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'procurement_management_plan_check_yes']) !!}
             {!! Form::label('procurement_management_plan_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('procurement_management_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'procurement_management_plan_check_no']) !!}
             {!! Form::label('procurement_management_plan_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('procurement_management_plan_comment', old('procurement_management_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -981,22 +981,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('implementation_plan_check', 'Implementation Plan Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('implementation_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'implementation_plan_check_yes']) !!}
             {!! Form::label('implementation_plan_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('implementation_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'implementation_plan_check_no']) !!}
             {!! Form::label('implementation_plan_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('implementation_plan_comment', old('implementation_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -1013,22 +1013,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('expenditure_summary_check', 'Expenditure Summary Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('expenditure_summary_check', '1', false, ['class' => 'form-check-input', 'id' => 'expenditure_summary_check_yes']) !!}
             {!! Form::label('expenditure_summary_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('expenditure_summary_check', '0', false, ['class' => 'form-check-input', 'id' => 'expenditure_summary_check_no']) !!}
             {!! Form::label('expenditure_summary_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('expenditure_summary_comment', old('expenditure_summary_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -1044,22 +1044,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('beneficiaries_check', 'Beneficiaries Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('beneficiaries_check', '1', false, ['class' => 'form-check-input', 'id' => 'beneficiaries_check_yes']) !!}
             {!! Form::label('beneficiaries_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('beneficiaries_check', '0', false, ['class' => 'form-check-input', 'id' => 'beneficiaries_check_no']) !!}
             {!! Form::label('beneficiaries_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('beneficiaries_comment', old('beneficiaries_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -1075,22 +1075,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('project_page_photocopy_check', 'Project Page Photocopy Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('project_page_photocopy_check', '1', false, ['class' => 'form-check-input', 'id' => 'project_page_photocopy_check_yes']) !!}
             {!! Form::label('project_page_photocopy_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('project_page_photocopy_check', '0', false, ['class' => 'form-check-input', 'id' => 'project_page_photocopy_check_no']) !!}
             {!! Form::label('project_page_photocopy_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('project_page_photocopy_comment', old('project_page_photocopy_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -1106,22 +1106,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('plan_materials_map_check', 'Plan Materials Map Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('plan_materials_map_check', '1', false, ['class' => 'form-check-input', 'id' => 'plan_materials_map_check_yes']) !!}
             {!! Form::label('plan_materials_map_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('plan_materials_map_check', '0', false, ['class' => 'form-check-input', 'id' => 'plan_materials_map_check_no']) !!}
             {!! Form::label('plan_materials_map_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('plan_materials_map_comment', old('plan_materials_map_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
@@ -1137,22 +1137,22 @@
 
 
 <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-12 col-md-2 col-xl-2">
         {!! Form::label('return_on_investment_check', 'Return on Investment Check', ['class' => 'control-label']) !!}
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('return_on_investment_check', '1', false, ['class' => 'form-check-input', 'id' => 'return_on_investment_check_yes']) !!}
             {!! Form::label('return_on_investment_check_yes', 'Yes', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-xs-6 col-md-2 col-xl-2">
         <div class="form-check">
             {!! Form::radio('return_on_investment_check', '0', false, ['class' => 'form-check-input', 'id' => 'return_on_investment_check_no']) !!}
             {!! Form::label('return_on_investment_check_no', 'No', ['class' => 'form-check-label']) !!}
         </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-xs-12 col-md-6 col-xl-6">
         {!! Form::text('return_on_investment_comment', old('return_on_investment_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}
     </div>
 </div>
