@@ -41,27 +41,7 @@
                 </li>
             </ul>
 
-            {{-- <div class="tab-content">
-                <div class="tab-pane fade" id="details">
-                    @include('admin.folders.tab_create.details')
-                </div>
-                <div class="tab-pane fade" id="attachments_signatures">
-                    <br>
-                    @include('admin.folders.tab_create.attachments')
-                    <br>
-                    @include('admin.folders.tab_create.signatures')
-                </div>
-                <div class="tab-pane fade" id="site">
-                    <br>
-                    @include('admin.folders.tab_create.site')
-                </div>
-                <div class="tab-pane fade" id="budget">
-                    @include('admin.folders.tab_create.budget')
-                </div>
-                <div class="tab-pane fade" id="evaluate">
-                    @include('admin.folders.tab_create.evaluate')
-                </div>
-            </div> --}}
+         
 
             <div class="tab-content">
                 <div class="tab-pane fade" id="details">

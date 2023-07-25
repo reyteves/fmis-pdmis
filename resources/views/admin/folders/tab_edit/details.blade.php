@@ -1,20 +1,3 @@
- {{-- Project description --}}
- <div class="row">
-    <div class="col-xs-12 form-group">
-        {!! Form::label('description', 'Project Description', ['class' => 'control-label']) !!}
-        {!! Form::textarea('description', old('description', $folder->project->description), [
-            'class' => 'form-control',
-            'rows' => 10,
-        ]) !!}
-        <p class="help-block"></p>
-        @if ($errors->has('description'))
-            <p class="help-block">
-                {{ $errors->first('description') }}
-            </p>
-        @endif
-    </div>
-</div>
-{{-- /Project description --}}
 
 {{-- Background and Rationale --}}
 <div class="row">
@@ -55,6 +38,25 @@
     </div>
 </div>
 {{-- /Objectives --}}
+
+ {{-- Project description --}}
+ <div class="row">
+    <div class="col-xs-12 form-group">
+        {!! Form::label('description', 'Project Description', ['class' => 'control-label']) !!}
+        {!! Form::textarea('description', old('description', $folder->project->description), [
+            'class' => 'form-control',
+            'rows' => 10,
+        ]) !!}
+        <p class="help-block"></p>
+        @if ($errors->has('description'))
+            <p class="help-block">
+                {{ $errors->first('description') }}
+            </p>
+        @endif
+    </div>
+</div>
+{{-- /Project description --}}
+
 
 {{-- Project Implementation --}}
 <div class="row">

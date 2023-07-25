@@ -2,6 +2,12 @@
 
 Route::get('/', function () { return redirect('/admin/home'); });
 
+
+// custom AJAX routes
+
+Route::get('/get-folder-count', 'Admin\FoldersController@getFolderCount');
+
+
 // Authentication Routes...
 $this->router->get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');
 $this->router->post('login', 'Auth\LoginController@login')->name('auth.login');

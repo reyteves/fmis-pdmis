@@ -5,11 +5,38 @@
     <section class="sidebar">
         <ul class="sidebar-menu">
 
+            <li>
+                <a>
+                    <span style="color: white;">👤</span>
+                    <span class="title">
+                        @switch(Auth::user()->role_id)
+                            @case(1)
+                                Administrator
+                                @break
+            
+                            @case(2)
+                                Proponent
+                                @break
+            
+                            @case(3)
+                                Evaluator
+                                @break
+            
+                            @default
+                                Unknown Role
+                        @endswitch
+                    </span>
+                </a>
+            </li>
+
+            
             <li class="{{ $request->segment(1) == 'home' ? 'active' : '' }}">
                 <a href="{{ url('/') }}">
                     <i class="fa fa-wrench"></i>
                     <span class="title">@lang('quickadmin.qa_dashboard')</span>
                 </a>
+
+              
             </li>
 
             @can('folder_access')
@@ -30,14 +57,6 @@
                 </li>
             @endcan
 
-            {{-- @can('plan_access')
-            <li class="{{ $request->segment(2) == 'subscriptions' ? 'active' : '' }}">
-                <a href="{{ route('admin.subscriptions.index') }}">
-                    <i class="fa fa-credit-card"></i>
-                    <span class="title">My Plan</span>
-                </a>
-            </li>
-            @endcan --}}
 
 
             <li class="{{ $request->segment(1) == 'change_password' ? 'active' : '' }}">

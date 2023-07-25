@@ -9,11 +9,14 @@
     {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!}
 
 
+    {{-- <div class="panel panel-default"> --}}
     <div class="panel panel-default">
         <div class="panel-heading">
+        {{-- <div> --}}
             @lang('quickadmin.qa_edit')
         </div>
 
+        {{-- <div class="panel-body"> --}}
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
@@ -29,18 +32,35 @@
             </div>
 
             <ul class="nav nav-tabs text-lg bg-gray-100">
+
+
+                @if(Auth::user()->role_id !== 3)
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#details">Details</a>
                 </li>
+                @endif
+
+                @if(Auth::user()->role_id !== 2)
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#attachments_signatures">Attachments and Signatures</a>
                 </li>
+
+                @endif
+
+                @if(Auth::user()->role_id !== 3)
+
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#site">Project Site</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
                 </li>
+
+                @endif
+
+
                 <li class="nav-item">
                     <a id="viewLink" class="nav-link" data-toggle="tab" href="#view">View</a>
                 </li>

@@ -40,13 +40,6 @@
             margin-bottom: 10px;
         }
 
-        .print-content {
-      width: 8.27in; /* 210mm */
-      height: 11.69in; /* 297mm */
-      margin: 0 auto; /* Center the content horizontally (optional) */
-      /* Add any other CSS styles for the print-content div as needed */
-    }
-
     }
 </style>
 
@@ -62,12 +55,9 @@
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">I. GENERAL
                 INFORMATION</span></strong></p>
 
-
-                <div style="display:block">
-
     {{-- Project Title --}}
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
@@ -76,7 +66,6 @@
                     </p>
                 </td>
                 <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
-               
                     <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
                                 style='font-size:12px;font-family:"Arial",sans-serif;'>Project Title</span></strong></p>
                     <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -97,7 +86,7 @@
 
     {{-- Project Site --}}
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
@@ -285,7 +274,7 @@
 
     <!-- Project Basis -->
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
@@ -318,7 +307,7 @@
 
     <!-- Project Cost -->
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
@@ -400,7 +389,7 @@
 
     <!-- Source of Fund and Budget Year -->
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td rowspan="2"
@@ -441,7 +430,7 @@
 
     <!-- Core Program and Sub-program Addressed -->
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td rowspan="3"
@@ -488,7 +477,7 @@
 
     {{-- Project Status --}}
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
@@ -541,7 +530,7 @@
 
     <!-- Project Duration -->
 
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
@@ -641,8 +630,7 @@
 
     <!-- Mode of Implementation -->
 
-    {{-- <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;"> --}}
-    <table style="width: 100%;margin-left:-28.6pt;border-collapse:collapse;border:none;">
+    <table style="width: 5.4e+2pt;margin-left:-28.6pt;border-collapse:collapse;border:none;">
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
@@ -678,46 +666,27 @@
     <!-- /Mode of Implementation -->
 
 
-    {{-- /End Block --}}
-</div>
-<br>
-
-
     {{-- Background and Rationale --}}
 
- 
-
-            <table style="width: 100%; border-collapse: collapse; border: none;">
-                <tbody>
-                  <tr>
-                    <td style="width: 100%; padding: 0;">
-                        <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">II. BACKGROUND AND
-                            RATIONALE</span></strong></p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 100%; padding: 0; margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;">
-                      <p style="margin: 0; padding: 0; font-size: 11.0pt; font-family: 'Arial', sans-serif;">
-                        {!! nl2br(e($folder->project->background_and_rationale)) !!}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 100%; padding: 0; margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;">
-                      <p style="margin: 0; padding: 0; font-size: 11.0pt; font-family: 'Arial', sans-serif;">
-                        &nbsp;
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">BACKGROUND AND
+                RATIONALE</span></strong></p>
+                
+    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
+            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->background_and_rationale)) !!}</span></p>
+    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
+            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
 
 
     {{-- / Background and Rationale --}}
 
 
     {{-- Objectives  --}}
-  
+    {{-- <div class="row">
+        <div class="col-xs-12">
+            <h4>Objectives</h4>
+            <div>{!! nl2br(e($folder->project->objectives)) !!}</div>
+        </div>
+    </div> --}}
 
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">III.
                 OBJECTIVES</span></strong></p>
@@ -727,7 +696,12 @@
             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
 
     {{-- Project Description --}}
- 
+    {{-- <div class="row">
+        <div class="col-xs-12">
+            <h4>Project Description</h4>
+            <div>{!! nl2br(e($folder->project->description)) !!}</div>
+        </div>
+    </div> --}}
 
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">IV. PROJECT
                 DESCRIPTION</span></strong></p>
@@ -738,7 +712,12 @@
 
 
     {{-- Project Implementation --}}
- 
+    {{-- <div class="row">
+        <div class="col-xs-12">
+            <h4>Project Implementation</h4>
+            <div>{!! nl2br(e($folder->project->project_implementation)) !!}</div>
+        </div>
+    </div> --}}
 
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">IV. PROJECT
                 IMPLEMENTATION</span></strong></p>
@@ -748,7 +727,12 @@
             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
 
     {{-- Monitoring and Evaluation --}}
-
+    {{-- <div class="row">
+        <div class="col-xs-12">
+            <h4>Monitoring and Evaluation</h4>
+            <div>{!! nl2br(e($folder->project->monitoring_evaluation)) !!}</div>
+        </div>
+    </div> --}}
 
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">V. MONITORING AND
                 EVALUATION</span></strong></p>
@@ -758,7 +742,12 @@
             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
 
     {{-- Potential Risk --}}
-
+    {{-- <div class="row">
+        <div class="col-xs-12">
+            <h4>Potential Risk</h4>
+            <div>{!! nl2br(e($folder->project->potential_risk)) !!}</div>
+        </div>
+    </div> --}}
 
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">VI. POTENTIAL
                 RISKS</span></strong></p>
@@ -768,7 +757,12 @@
             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
 
     {{-- Sustainability Plan --}}
- 
+    {{-- <div class="row">
+        <div class="col-xs-12">
+            <h4>Sustainability Plan</h4>
+            <div>{!! nl2br(e($folder->project->sustainability_plan)) !!}</div>
+        </div>
+    </div> --}}
 
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">VII. SUSTAINABIITY
                 PLAN</span></strong></p>

@@ -21,6 +21,8 @@ class User extends Authenticatable
     use Notifiable;
     protected $fillable = ['name', 'email', 'password', 'remember_token', 'role_id', 'stripe_customer_id', 'role_until'];
     
+
+    
     
     
     /**
@@ -46,6 +48,18 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo(Role::class, 'role_id');
+
+    }
+
+
+    public function getRoleTitleAttribute()
+    {
+        if ($this->role) {
+            return $this->role->title;
+        }
+
+        // Return a default value if the user has no role.
+        return 'No Role';
     }
     
     public function sendPasswordResetNotification($token)

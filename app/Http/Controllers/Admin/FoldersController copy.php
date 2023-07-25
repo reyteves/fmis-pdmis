@@ -23,14 +23,8 @@ use App\Evaluation;
 
 class FoldersController extends Controller
 {
-    public function getFolderCount(Request $request)
-{
- 
-        $foldersCount = Folder::count();
-        return response()->json(['count' => $foldersCount]);
- 
+
   
-}
     /**
      * Display a listing of Folder.
      *
@@ -58,10 +52,7 @@ class FoldersController extends Controller
             $folders = Folder::all();
         }
 
-        // Retrieve the count of folders
-        $foldersCount = Folder::count();
-
-        return view('admin.folders.index', compact('folders', 'foldersCount'));
+        return view('admin.folders.index', compact('folders'));
     }
 
     /**
@@ -578,7 +569,7 @@ class FoldersController extends Controller
         if ($evaluation) {
             $evaluation->format_check = $request->input('format_check');
             $evaluation->format_comment = $request->input('format_comment');
-
+            
             $evaluation->provincial_evaluation_check = $request->input('provincial_evaluation_check');
             $evaluation->provincial_evaluation_comment = $request->input('provincial_evaluation_comment');
             $evaluation->regional_validation_check = $request->input('regional_validation_check');
@@ -607,7 +598,7 @@ class FoldersController extends Controller
             $evaluation->ipra_rights_comment = $request->input('ipra_rights_comment');
             $evaluation->presidents_agenda_check = $request->input('presidents_agenda_check');
             $evaluation->presidents_agenda_comment = $request->input('presidents_agenda_comment');
-
+            
 
             $evaluation->pdp_pip_check = $request->input('pdp_pip_check');
             $evaluation->pdp_pip_comment = $request->input('pdp_pip_comment');

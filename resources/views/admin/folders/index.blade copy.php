@@ -96,22 +96,10 @@
                                     </td>
                                 @else
                                     <td>
-                                        {{-- @can('folder_edit')
+                                        @can('folder_edit')
                                             <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
                                                 class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
-                                        @endcan --}}
-
-                                        @can('folder_edit')
-                                            @if (Auth::user()->role_id === 3)
-                                                <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
-                                                    class="btn btn-xs btn-info">Validate</a>
-                                            @else
-                                                <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
-                                                    class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
-                                            @endif
                                         @endcan
-
-
                                         @can('folder_delete')
                                             {!! Form::open([
                                                 'style' => 'display: inline-block;',
@@ -149,7 +137,7 @@
         @can('folder_delete')
             @if (request('show_deleted') != 1)
                 window.route_mass_crud_entries_destroy =
-                    '{{ route('admin.folders.mass_destroy') }}';
+                '{{ route('admin.folders.mass_destroy') }}';
             @endif
         @endcan
     </script>

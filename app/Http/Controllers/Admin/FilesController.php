@@ -100,6 +100,17 @@ class FilesController extends Controller
                 ]);
             }
 
+            // if (!is_null($fileIds)) {
+            //     foreach ($fileIds as $fileId) {
+            //         $file = File::create([
+            //             'id' => $fileId,
+            //             'uuid' => (string) \Webpatser\Uuid\Uuid::generate(),
+            //             'folder_id' => $request->input('folder_id'),
+            //             'created_by_id' => Auth::getUser()->id
+            //         ]);
+            //     }
+            // }
+
             foreach ($request->input('filename_id', []) as $index => $id) {
                 $model = config('media-library.media_model');
                 $file = $model::find($id);
