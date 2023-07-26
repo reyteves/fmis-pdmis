@@ -4,21 +4,21 @@
     integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
 
 @section('content')
-    <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
+    {{-- <h3 class="page-title">@lang('quickadmin.folders.title')</h3> --}}
 
-    {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!}
+    {{-- {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!} --}}
 
 
     {{-- <div class="panel panel-default"> --}}
     <div class="panel panel-default">
-        <div class="panel-heading">
-        {{-- <div> --}}
+        {{-- <div class="panel-heading">
+      
             @lang('quickadmin.qa_edit')
-        </div>
+        </div> --}}
 
         {{-- <div class="panel-body"> --}}
         <div class="panel-body">
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('name', trans('quickadmin.folders.fields.name') . '*', ['class' => 'control-label']) !!}
                     {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
@@ -29,7 +29,7 @@
                         </p>
                     @endif
                 </div>
-            </div>
+            </div> --}}
 
             <ul class="nav nav-tabs text-lg bg-gray-100">
 
@@ -49,29 +49,14 @@
 
                 @endif
 
-                @if(Auth::user()->role_id !== 3)
-
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#site">Project Site</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
-                </li>
-
-                @endif
+              
 
 
                 <li class="nav-item">
                     <a id="viewLink" class="nav-link" data-toggle="tab" href="#view">View</a>
                 </li>
 
-                @if(Auth::user()->role_id !== 2)
-                
-                <li class="nav-item">
-                    <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate">Evaluate</a>
-                </li>
-
-                @endif
+              
             </ul>
 
             <div class="tab-content panel-body">
@@ -101,8 +86,8 @@
         </div>
     </div>
 
-    {!! Form::submit(trans('quickadmin.qa_update'), ['class' => 'btn btn-success', 'id' => 'updateButton']) !!}
-    {!! Form::close() !!}
+    {{-- {!! Form::submit(trans('quickadmin.qa_update'), ['class' => 'btn btn-success', 'id' => 'updateButton']) !!} --}}
+    {{-- {!! Form::close() !!} --}}
 @stop
 
 

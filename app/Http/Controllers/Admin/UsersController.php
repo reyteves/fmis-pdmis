@@ -11,6 +11,14 @@ use App\Http\Requests\Admin\UpdateUsersRequest;
 
 class UsersController extends Controller
 {
+    public function getUserCount(Request $request)
+{
+ 
+        $usersCount = User::count();
+        return response()->json(['count' => $usersCount]);
+ 
+  
+}
     /**
      * Display a listing of User.
      *

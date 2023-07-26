@@ -67,7 +67,13 @@ class Evaluation extends Model
         'plan_materials_map_check',
         'plan_materials_map_comment',
         'return_on_investment_check',
-        'return_on_investment_comment'
+        'return_on_investment_comment',
+        'project_title',
+        'location',
+        'cost_and_source',
+        'period_of_implementation',
+        'no_of_beneficiaries',
+        'synopsis',
     ];
 
     public function folder()
@@ -75,5 +81,3 @@ class Evaluation extends Model
         return $this->hasOne(Folder::class);
     }
 }
-
-

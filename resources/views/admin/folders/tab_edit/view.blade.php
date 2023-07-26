@@ -50,7 +50,7 @@
         .print-content {
             width: 8.27in;
             /* 210mm */
-            height: 11.69in;
+            /* height: 11.69in; */
             /* 297mm */
             margin: 0 auto;
             /* Center the content horizontally (optional) */

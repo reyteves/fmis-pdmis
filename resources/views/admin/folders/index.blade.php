@@ -5,16 +5,10 @@
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
     @can('folder_create')
         <p>
-            {{-- <a href="{{ route('admin.folders.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a> --}}
+           
             <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Project</a>
 
-            {{-- @if (!is_null(Auth::getUser()->role_id) && config('quickadmin.can_see_all_records_role_id') == Auth::getUser()->role_id)
-                @if (Session::get('Folder.filter', 'all') == 'my')
-                    <a href="?filter=all" class="btn btn-default">Show all records</a>
-                @else
-                    <a href="?filter=my" class="btn btn-default">Filter my records</a>
-                @endif
-            @endif --}}
+           
         </p>
     @endcan
 
@@ -96,22 +90,23 @@
                                     </td>
                                 @else
                                     <td>
-                                        {{-- @can('folder_edit')
-                                            <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
-                                                class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
-                                        @endcan --}}
+
+                                        <a href="{{ route('admin.folders.view_ppf', [$folder->id]) }}"
+                                            class="btn btn-xs btn-primary">View</a>
+                                   
 
                                         @can('folder_edit')
                                             @if (Auth::user()->role_id === 3)
                                                 <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
-                                                    class="btn btn-xs btn-info">Validate</a>
+                                                    class="btn btn-xs btn-info">Evaluate</a>
                                             @else
                                                 <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
                                                     class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
                                             @endif
                                         @endcan
 
-
+                                        
+                                      
                                         @can('folder_delete')
                                             {!! Form::open([
                                                 'style' => 'display: inline-block;',
@@ -122,6 +117,9 @@
                                             {!! Form::submit(trans('quickadmin.qa_delete'), ['class' => 'btn btn-xs btn-danger']) !!}
                                             {!! Form::close() !!}
                                         @endcan
+
+
+
                                     </td>
                                 @endif
                             </tr>
@@ -138,13 +136,6 @@
 @stop
 
 @section('javascript')
-    <script>
-        $(document).ready(function() {
-            //            var table = $('#myTable_Wrapper').DataTable();
-            //console.log(table);
-            //            table.button( '.dt-button' ).remove();
-        })
-    </script>
     <script>
         @can('folder_delete')
             @if (request('show_deleted') != 1)

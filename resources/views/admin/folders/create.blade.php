@@ -27,18 +27,26 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#details">Details</a>
                 </li>
+
+                @if(Auth::user()->role_id !== 2)
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#attachments_signatures">Attachments and Signatures</a>
                 </li>
+                @endif
+
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#site">Project Site</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
                 </li>
+
+                @if(Auth::user()->role_id !== 2)
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#evaluate">Evaluate</a>
                 </li>
+                @endif
             </ul>
 
          

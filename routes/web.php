@@ -1,4 +1,9 @@
+
+
+
 <?php
+
+use App\Http\Controllers\Admin\FoldersController; // Update the namespace as per your controller location
 
 Route::get('/', function () { return redirect('/admin/home'); });
 
@@ -6,6 +11,11 @@ Route::get('/', function () { return redirect('/admin/home'); });
 // custom AJAX routes
 
 Route::get('/get-folder-count', 'Admin\FoldersController@getFolderCount');
+Route::get('/get-user-count', 'Admin\UsersController@getUserCount');
+
+// custom View routes
+Route::get('admin/folders/{id}/view_ppf', [FoldersController::class, 'view_ppf'])->name('admin.folders.view_ppf');
+
 
 
 // Authentication Routes...
@@ -30,8 +40,9 @@ $this->router->post('register', 'Auth\RegisterController@register')->name('auth.
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/home', 'HomeController@index');
 
-    Route::resource('subscriptions', 'Admin\SubscriptionsController');
-    Route::resource('payments', 'Admin\PaymentsController');
+    // Route::resource('subscriptions', 'Admin\SubscriptionsController');
+    // Route::resource('payments', 'Admin\PaymentsController');
+
     Route::resource('roles', 'Admin\RolesController');
     Route::post('roles_mass_destroy', ['uses' => 'Admin\RolesController@massDestroy', 'as' => 'roles.mass_destroy']);
     Route::resource('users', 'Admin\UsersController');

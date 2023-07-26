@@ -6,22 +6,22 @@
         <ul class="sidebar-menu">
 
             <li>
-                <a>
+                <a href="{{ url('/') }}">
                     <span style="color: white;">👤</span>
                     <span class="title">
                         @switch(Auth::user()->role_id)
                             @case(1)
                                 Administrator
-                                @break
-            
+                            @break
+
                             @case(2)
                                 Proponent
-                                @break
-            
+                            @break
+
                             @case(3)
                                 Evaluator
-                                @break
-            
+                            @break
+
                             @default
                                 Unknown Role
                         @endswitch
@@ -29,21 +29,28 @@
                 </a>
             </li>
 
-            
+
             <li class="{{ $request->segment(1) == 'home' ? 'active' : '' }}">
                 <a href="{{ url('/') }}">
                     <i class="fa fa-wrench"></i>
                     <span class="title">@lang('quickadmin.qa_dashboard')</span>
                 </a>
 
-              
+
             </li>
 
             @can('folder_access')
                 <li class="{{ $request->segment(2) == 'folders' ? 'active' : '' }}">
                     <a href="{{ route('admin.folders.index') }}">
                         <i class="fa fa-gears"></i>
-                        <span class="title">@lang('quickadmin.folders.title')</span>
+
+                        {{-- if proponent show My Projects else the label is Projects --}}
+                        @if (Auth::check() && Auth::user()->role_id != 2)
+                            <span class="title">@lang('quickadmin.folders.title')</span>
+                        @else
+                            <span class="title">My Projects</span>
+                        @endif
+
                     </a>
                 </li>
             @endcan
@@ -52,7 +59,13 @@
                 <li class="{{ $request->segment(2) == 'files' ? 'active' : '' }}">
                     <a href="{{ route('admin.files.index') }}">
                         <i class="fa fa-gears"></i>
+                        
+                        @if (Auth::check() && Auth::user()->role_id != 2)
                         <span class="title">@lang('quickadmin.files.title')</span>
+                        @else
+                        <span class="title">My Project Files</span>
+                        @endif
+
                     </a>
                 </li>
             @endcan
