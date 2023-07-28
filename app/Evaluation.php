@@ -68,7 +68,7 @@ class Evaluation extends Model
         'plan_materials_map_comment',
         'return_on_investment_check',
         'return_on_investment_comment',
-        'project_title',
+        'evaluation_project_title',
         'location',
         'cost_and_source',
         'period_of_implementation',

@@ -21,160 +21,11 @@
         font-family: "Calibri", sans-serif;
         color: black;
     }
-
-    .custom-font-size tr td p span {
-    font-size: 16px !important;}
 </style>
 
-<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;margin-left:-.75pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;'><br></p>
-<table style="width: 100%;">
-    <tbody>
-        <tr>
-            <td style="width: 100%;" colspan="3">
-                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.75pt;margin-left:2.8pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;text-align:center;'><strong>CHECKLIST OF REQUIREMENTS FOR THE APPROVAL OF PROJECT PROPOSALS&nbsp;</strong></p>
-            </td>
-        </tr>
-
-        <tr>
-            <td style="text-align: left;"><strong>Project Title &nbsp; </strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
-            </td>
-            <td>{!! Form::text('evaluation_project_title', old('evaluation_project_title'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Project Title'
-            ]) !!}</td>
-        </tr>
-  
-
-        <tr>
-            <td style="text-align: left;"><strong>Location &nbsp; </strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
-            </td>
-            <td>{!! Form::text('location', old('location'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Location'
-            ]) !!}</td>
-        </tr>
-  
-
-        <tr>
-            <td style="text-align: left;"><strong>Cost &amp; Source &nbsp; </strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
-            </td>
-            <td>{!! Form::text('cost_and_source', old('cost_and_source'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Cost and Source'
-            ]) !!}</td>
-        </tr>
 
 
-        <tr>
-            <td style="text-align: left;"><strong>Period of implementation&nbsp;</strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
-            </td>
-            <td>{!! Form::text('period_of_implementation', old('period_of_implementation'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Period of implementation'
-            ]) !!}</td>
-        </tr>
-
-        <tr>
-            <td style="text-align: left;"><strong>No. of Beneficiaries&nbsp;</strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
-            </td>
-            <td>{!! Form::text('no_of_beneficiaries', old('no_of_beneficiaries'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'No. of Beneficiaries'
-            ]) !!}</td>
-        </tr>
-
-     
-        <tr style="margin-bottom:25px;">
-            <td style="text-align: left; "><strong>SYNOPSIS&nbsp;</strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
-            </td>
-            <td>{!! Form::text('synopsis', old('synopsis'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'SYNOPSIS'
-            ]) !!}</td>
-        </tr>
-    </tbody>
-</table> 
-
-{{--  --}}
-
-{{-- <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;margin-left:-.75pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;'><br></p>
-<table style="width: 81%; margin-right: calc(19%); margin-bottom: 30px">
-    <tbody>
-        <tr>
-            <td style="width: 100%;" colspan="3">
-                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.75pt;margin-left:2.8pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;text-align:center;'><strong>CHECKLIST OF REQUIREMENTS FOR THE APPROVAL OF PROJECT PROPOSALS&nbsp;</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Project Title &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Location &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Cost &amp; Source &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Period of implementation&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>No. of Beneficiaries&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr style="margin-bottom:25px;">
-            <td style="text-align: left; width: 13.5198%;"><strong>SYNOPSIS&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-    </tbody>
-</table> --}}
-
-
-{{--  --}}
-
-
-
-
-<table style="float: left;border: none;width:967.25pt;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;" class="custom-font-size">
+<table style="float: left;border: none;width:967.25pt;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;">
     <tbody>
         <tr>
             <td rowspan="2"
@@ -301,11 +152,7 @@
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('format_comment', old('format_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!} </span>
+                    <span style="font-size:24px;">{!! Form::text('format_comment', old('format_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}    </span>
                 </p>
             </td>
         </tr>
@@ -330,10 +177,7 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'provincial_evaluation_check_yes',
-                    ]) !!}
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check', '1', false, ['class' => 'form-check-input', 'id' => 'provincial_evaluation_check_yes']) !!}
                     </span>
                 </p>
             </td>
@@ -341,21 +185,14 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'provincial_evaluation_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check', '0', false, ['class' => 'form-check-input', 'id' => 'provincial_evaluation_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('provincial_evaluation_comment', old('provincial_evaluation_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('provincial_evaluation_comment', old('provincial_evaluation_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -380,32 +217,22 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'regional_validation_check_yes',
-                    ]) !!}
-                    </span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check', '1', false, ['class' => 'form-check-input', 'id' => 'regional_validation_check_yes']) !!}
+                        {!! Form::label('regional_validation_check_yes', 'Yes', ['class' => 'form-check-label']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'regional_validation_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check', '0', false, ['class' => 'form-check-input', 'id' => 'regional_validation_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('regional_validation_comment', old('regional_validation_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('regional_validation_comment', old('regional_validation_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -468,31 +295,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'general_information_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check', '1', false, ['class' => 'form-check-input', 'id' => 'general_information_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'general_information_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check', '0', false, ['class' => 'form-check-input', 'id' => 'general_information_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('general_information_comment', old('general_information_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('general_information_comment', old('general_information_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -517,31 +334,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('background_and_rationale_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'background_and_rationale_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('background_and_rationale_check', '1', false, ['class' => 'form-check-input', 'id' => 'background_and_rationale_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('background_and_rationale_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'background_and_rationale_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('background_and_rationale_check', '0', false, ['class' => 'form-check-input', 'id' => 'background_and_rationale_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('background_and_rationale_comment', old('background_and_rationale_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('background_and_rationale_comment', old('background_and_rationale_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -580,11 +387,7 @@
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;"> {!! Form::text('objectives_comment', old('objectives_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;"> {!! Form::text('objectives_comment', old('objectives_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -610,31 +413,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'project_description_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check', '1', false, ['class' => 'form-check-input', 'id' => 'project_description_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'project_description_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check', '0', false, ['class' => 'form-check-input', 'id' => 'project_description_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('project_description_comment', old('project_description_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('project_description_comment', old('project_description_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -659,31 +452,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp{!! Form::radio('implementation_strategies_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'implementation_strategies_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp{!! Form::radio('implementation_strategies_check', '1', false, ['class' => 'form-check-input', 'id' => 'implementation_strategies_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_strategies_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'implementation_strategies_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_strategies_check', '0', false, ['class' => 'form-check-input', 'id' => 'implementation_strategies_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('implementation_strategies_comment', old('implementation_strategies_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('implementation_strategies_comment', old('implementation_strategies_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -708,31 +491,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'sustainability_plan_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'sustainability_plan_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'sustainability_plan_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'sustainability_plan_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('sustainability_plan_comment', old('sustainability_plan_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('sustainability_plan_comment', old('sustainability_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -757,31 +530,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'budgetary_requirements_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check', '1', false, ['class' => 'form-check-input', 'id' => 'budgetary_requirements_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'budgetary_requirements_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check', '0', false, ['class' => 'form-check-input', 'id' => 'budgetary_requirements_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('budgetary_requirements_comment', old('budgetary_requirements_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('budgetary_requirements_comment', old('budgetary_requirements_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -806,31 +569,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'attachments_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '1', false, ['class' => 'form-check-input', 'id' => 'attachments_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'attachments_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '0', false, ['class' => 'form-check-input', 'id' => 'attachments_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('attachments_comment', old('attachments_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('attachments_comment', old('attachments_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -855,31 +608,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'signatories_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check', '1', false, ['class' => 'form-check-input', 'id' => 'signatories_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'signatories_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check', '0', false, ['class' => 'form-check-input', 'id' => 'signatories_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('signatories_comment', old('signatories_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('signatories_comment', old('signatories_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -942,31 +685,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'ipra_rights_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check', '1', false, ['class' => 'form-check-input', 'id' => 'ipra_rights_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'ipra_rights_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check', '0', false, ['class' => 'form-check-input', 'id' => 'ipra_rights_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('ipra_rights_comment', old('ipra_rights_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('ipra_rights_comment', old('ipra_rights_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -991,31 +724,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'presidents_agenda_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check', '1', false, ['class' => 'form-check-input', 'id' => 'presidents_agenda_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'presidents_agenda_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check', '0', false, ['class' => 'form-check-input', 'id' => 'presidents_agenda_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('presidents_agenda_comment', old('presidents_agenda_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('presidents_agenda_comment', old('presidents_agenda_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1054,11 +777,7 @@
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('pdp_pip_comment', old('pdp_pip_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('pdp_pip_comment', old('pdp_pip_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1083,31 +802,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'ip_master_plan_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'ip_master_plan_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'ip_master_plan_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'ip_master_plan_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('ip_master_plan_comment', old('ip_master_plan_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('ip_master_plan_comment', old('ip_master_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1132,31 +841,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'strategic_plan_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'strategic_plan_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'strategic_plan_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'strategic_plan_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('strategic_plan_comment', old('strategic_plan_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('strategic_plan_comment', old('strategic_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1181,31 +880,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'workflow_framework_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check', '1', false, ['class' => 'form-check-input', 'id' => 'workflow_framework_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'workflow_framework_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check', '0', false, ['class' => 'form-check-input', 'id' => 'workflow_framework_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('workflow_framework_comment', old('workflow_framework_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('workflow_framework_comment', old('workflow_framework_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1230,31 +919,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'building_blocks_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check', '1', false, ['class' => 'form-check-input', 'id' => 'building_blocks_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'building_blocks_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check', '0', false, ['class' => 'form-check-input', 'id' => 'building_blocks_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('building_blocks_comment', old('building_blocks_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('building_blocks_comment', old('building_blocks_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1279,31 +958,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp; {!! Form::radio('strategic_directions_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'strategic_directions_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp; {!! Form::radio('strategic_directions_check', '1', false, ['class' => 'form-check-input', 'id' => 'strategic_directions_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_directions_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'strategic_directions_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_directions_check', '0', false, ['class' => 'form-check-input', 'id' => 'strategic_directions_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('strategic_directions_comment', old('strategic_directions_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('strategic_directions_comment', old('strategic_directions_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1326,38 +995,28 @@
             </td>
 
 
-            {{-- finished until here: --}}
+{{-- finished until here: --}}
 
 
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_comment_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'prexc_comment_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_comment_check', '1', false, ['class' => 'form-check-input', 'id' => 'prexc_comment_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_comment_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'prexc_comment_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_comment_check', '0', false, ['class' => 'form-check-input', 'id' => 'prexc_comment_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('prexc_comment', old('prexc_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('prexc_comment', old('prexc_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1396,11 +1055,7 @@
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('sdg_comment', old('sdg_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('sdg_comment', old('sdg_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1477,11 +1132,7 @@
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('signature_comment', old('signature_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('signature_comment', old('signature_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1506,31 +1157,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'attachments_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '1', false, ['class' => 'form-check-input', 'id' => 'attachments_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'attachments_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '0', false, ['class' => 'form-check-input', 'id' => 'attachments_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('attachments_comment', old('attachments_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('attachments_comment', old('attachments_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1554,31 +1195,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('procurement_management_plan_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'procurement_management_plan_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('procurement_management_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'procurement_management_plan_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('procurement_management_plan_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'procurement_management_plan_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('procurement_management_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'procurement_management_plan_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('procurement_management_plan_comment', old('procurement_management_plan_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('procurement_management_plan_comment', old('procurement_management_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1602,31 +1233,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'implementation_plan_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check', '1', false, ['class' => 'form-check-input', 'id' => 'implementation_plan_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'implementation_plan_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check', '0', false, ['class' => 'form-check-input', 'id' => 'implementation_plan_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('implementation_plan_comment', old('implementation_plan_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('implementation_plan_comment', old('implementation_plan_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1650,31 +1271,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'expenditure_summary_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check', '1', false, ['class' => 'form-check-input', 'id' => 'expenditure_summary_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'expenditure_summary_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check', '0', false, ['class' => 'form-check-input', 'id' => 'expenditure_summary_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('expenditure_summary_comment', old('expenditure_summary_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('expenditure_summary_comment', old('expenditure_summary_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1698,31 +1309,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'beneficiaries_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check', '1', false, ['class' => 'form-check-input', 'id' => 'beneficiaries_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'beneficiaries_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check', '0', false, ['class' => 'form-check-input', 'id' => 'beneficiaries_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('beneficiaries_comment', old('beneficiaries_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('beneficiaries_comment', old('beneficiaries_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1746,31 +1347,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'project_page_photocopy_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check', '1', false, ['class' => 'form-check-input', 'id' => 'project_page_photocopy_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'project_page_photocopy_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check', '0', false, ['class' => 'form-check-input', 'id' => 'project_page_photocopy_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('project_page_photocopy_comment', old('project_page_photocopy_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('project_page_photocopy_comment', old('project_page_photocopy_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1794,31 +1385,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.45pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'plan_materials_map_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check', '1', false, ['class' => 'form-check-input', 'id' => 'plan_materials_map_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.45pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'plan_materials_map_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check', '0', false, ['class' => 'form-check-input', 'id' => 'plan_materials_map_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.45pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('plan_materials_map_comment', old('plan_materials_map_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('plan_materials_map_comment', old('plan_materials_map_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>
@@ -1842,31 +1423,21 @@
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check', '1', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'return_on_investment_check_yes',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check', '1', false, ['class' => 'form-check-input', 'id' => 'return_on_investment_check_yes']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                    <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check', '0', false, [
-                        'class' => 'form-check-input',
-                        'id' => 'return_on_investment_check_no',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check', '0', false, ['class' => 'form-check-input', 'id' => 'return_on_investment_check_no']) !!}</span>
                 </p>
             </td>
             <td
                 style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                 <p
                     style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                    <span style="font-size:24px;">{!! Form::text('return_on_investment_comment', old('return_on_investment_comment'), [
-                        'class' => 'form-control',
-                        'rows' => 1,
-                        'placeholder' => 'Required Actions',
-                    ]) !!}</span>
+                    <span style="font-size:24px;">{!! Form::text('return_on_investment_comment', old('return_on_investment_comment'), ['class' => 'form-control', 'rows' => 1, 'placeholder' => 'Required Actions']) !!}</span>
                 </p>
             </td>
         </tr>

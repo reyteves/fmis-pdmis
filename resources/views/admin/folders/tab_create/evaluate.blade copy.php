@@ -49,129 +49,45 @@
   
 
         <tr>
-            <td style="text-align: left;"><strong>Location &nbsp; </strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
+            <td style="width: 21.1538%; text-align: left;"><strong>Location &nbsp; &nbsp; &nbsp;</strong></td>
+            <td style="width: 3.675%;">
+                <div style="text-align: center;">:</div>
             </td>
-            <td>{!! Form::text('location', old('location'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Location'
-            ]) !!}</td>
+            <td style="width: 74.9963%;">__project_location</td>
         </tr>
-  
 
+        
         <tr>
-            <td style="text-align: left;"><strong>Cost &amp; Source &nbsp; </strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
+            <td style="width: 21.1538%; text-align: left;"><strong>Cost &amp; Source &nbsp;</strong></td>
+            <td style="width: 3.675%;">
+                <div style="text-align: center;">:</div>
             </td>
-            <td>{!! Form::text('cost_and_source', old('cost_and_source'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Cost and Source'
-            ]) !!}</td>
+            <td style="width: 74.9963%;">__project_cost<br></td>
         </tr>
-
-
         <tr>
-            <td style="text-align: left;"><strong>Period of implementation&nbsp;</strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
+            <td style="width: 21.1538%; text-align: left;"><strong>Period of implementation&nbsp;</strong></td>
+            <td style="width: 3.675%;">
+                <div style="text-align: center;">:</div>
             </td>
-            <td>{!! Form::text('period_of_implementation', old('period_of_implementation'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Period of implementation'
-            ]) !!}</td>
+            <td style="width: 74.9963%;">__project_implementation<br></td>
         </tr>
-
         <tr>
-            <td style="text-align: left;"><strong>No. of Beneficiaries&nbsp;</strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
+            <td style="width: 21.1538%; text-align: left;"><strong>No. of Beneficiaries &nbsp;</strong></td>
+            <td style="width: 3.675%;">
+                <div style="text-align: center;">:</div>
             </td>
-            <td>{!! Form::text('no_of_beneficiaries', old('no_of_beneficiaries'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'No. of Beneficiaries'
-            ]) !!}</td>
+            <td style="width: 74.9963%;">__project_benficiaries<br></td>
         </tr>
-
-     
-        <tr style="margin-bottom:25px;">
-            <td style="text-align: left; "><strong>SYNOPSIS&nbsp;</strong></td>
-            <td>
-                <span style="text-align: center;">:</span>
+        <tr>
+            <td style="width: 21.1538%; text-align: left;"><strong>SYNOPSIS &nbsp;&nbsp;</strong></td>
+            <td style="width: 3.675%;">
+                <div style="text-align: center;">:</div>
+                <div style="text-align: center;"><br></div>
             </td>
-            <td>{!! Form::text('synopsis', old('synopsis'), [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'SYNOPSIS'
-            ]) !!}</td>
+            <td style="width: 74.9963%;">__project_synopsis</td>
         </tr>
     </tbody>
 </table> 
-
-{{--  --}}
-
-{{-- <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;margin-left:-.75pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;'><br></p>
-<table style="width: 81%; margin-right: calc(19%); margin-bottom: 30px">
-    <tbody>
-        <tr>
-            <td style="width: 100%;" colspan="3">
-                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.75pt;margin-left:2.8pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;text-align:center;'><strong>CHECKLIST OF REQUIREMENTS FOR THE APPROVAL OF PROJECT PROPOSALS&nbsp;</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Project Title &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Location &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Cost &amp; Source &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Period of implementation&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>No. of Beneficiaries&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr style="margin-bottom:25px;">
-            <td style="text-align: left; width: 13.5198%;"><strong>SYNOPSIS&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-    </tbody>
-</table> --}}
-
-
-{{--  --}}
-
-
 
 
 <table style="float: left;border: none;width:967.25pt;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;" class="custom-font-size">

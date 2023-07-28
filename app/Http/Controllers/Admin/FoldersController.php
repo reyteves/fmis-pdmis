@@ -287,7 +287,7 @@ class FoldersController extends Controller
             'return_on_investment_check' => $request->input('return_on_investment_check'),
             'return_on_investment_comment' => $request->input('return_on_investment_comment'),
 
-            'project_title' => $request->input('project_title'),
+            'evaluation_project_title' => $request->input('evaluation_project_title'),
             'location' => $request->input('location'),
             'cost_and_source' => $request->input('cost_and_source'),
             'period_of_implementation' => $request->input('period_of_implementation'),
@@ -500,7 +500,7 @@ class FoldersController extends Controller
             $evaluation->return_on_investment_check = $request->input('return_on_investment_check');
             $evaluation->return_on_investment_comment = $request->input('return_on_investment_comment');
 
-            $evaluation->project_title = $request->input('project_title');
+            $evaluation->evaluation_project_title = $request->input('evaluation_project_title');
             $evaluation->location = $request->input('location');
             $evaluation->cost_and_source = $request->input('cost_and_source');
             $evaluation->period_of_implementation = $request->input('period_of_implementation');
