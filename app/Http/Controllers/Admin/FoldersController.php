@@ -264,8 +264,6 @@ class FoldersController extends Controller
 
 
 
-
-
             'procurement_management_plan_check' => $request->input('procurement_management_plan_check'),
             'procurement_management_plan_comment' => $request->input('procurement_management_plan_comment'),
 
@@ -293,6 +291,8 @@ class FoldersController extends Controller
             'period_of_implementation' => $request->input('period_of_implementation'),
             'no_of_beneficiaries' => $request->input('no_of_beneficiaries'),
             'synopsis' => $request->input('synopsis'),
+            'bureau_director_name' => $request->input('bureau_director_name'),
+            'bureau_director_designation' => $request->input('bureau_director_designation'),
 
             'id' => $folder->id,
         ]);
@@ -506,6 +506,8 @@ class FoldersController extends Controller
             $evaluation->period_of_implementation = $request->input('period_of_implementation');
             $evaluation->no_of_beneficiaries = $request->input('no_of_beneficiaries');
             $evaluation->synopsis = $request->input('synopsis');
+            $evaluation->bureau_director_name = $request->input('bureau_director_name');
+            $evaluation->bureau_director_designation = $request->input('bureau_director_designation');
 
             $evaluation->save();
         }

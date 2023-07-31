@@ -26,6 +26,73 @@
 
 
 
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;margin-left:-.75pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;margin-bottom:8.65pt;'><br></p>
+    <table style="float: left;border: none;width:967.25pt;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;margin-bottom:15pt;" class="custom-font-size">
+    <tbody>
+        <tr>
+            <td style="width: 100%;" colspan="3">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.75pt;margin-left:2.8pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;text-align:center;'><strong>CHECKLIST OF REQUIREMENTS FOR THE APPROVAL OF PROJECT PROPOSALS&nbsp;</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;"><strong>Project Title&nbsp;</strong></td>
+            <td style="width: 5px;"><span style="text-align: center;">:</span></td>
+            <td>{!! Form::text('evaluation_project_title', old('evaluation_project_title',  $folder->evaluation->evaluation_project_title), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Project Title'
+            ]) !!}</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;"><strong>Location&nbsp;</strong></td>
+            <td style="width: 5px;"><span style="text-align: center;">:</span></td>
+            <td>{!! Form::text('location', old('location', $folder->evaluation->location), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Location'
+            ]) !!}</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;"><strong>Cost &amp; Source&nbsp;</strong></td>
+            <td style="width: 5px;"><span style="text-align: center;">:</span></td>
+            <td>{!! Form::text('cost_and_source', old('cost_and_source', $folder->evaluation->cost_and_source), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Cost and Source'
+            ]) !!}</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;"><strong>Period of implementation&nbsp;</strong></td>
+            <td style="width: 5px;"><span style="text-align: center;">:</span></td>
+            <td>{!! Form::text('period_of_implementation', old('period_of_implementation', $folder->evaluation->period_of_implementation), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Period of implementation'
+            ]) !!}</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;"><strong>No. of Beneficiaries&nbsp;</strong></td>
+            <td style="width: 5px;"><span style="text-align: center;">:</span></td>
+            <td>{!! Form::text('no_of_beneficiaries', old('no_of_beneficiaries', $folder->evaluation->no_of_beneficiaries), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'No. of Beneficiaries'
+            ]) !!}</td>
+        </tr>
+        <tr style="margin-bottom:25px;">
+            <td style="text-align: left;"><strong>SYNOPSIS&nbsp;</strong></td>
+            <td style="width: 5px;"><span style="text-align: center;">:</span></td>
+            <td>{!! Form::text('synopsis', old('synopsis', $folder->evaluation->synopsis), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'SYNOPSIS'
+            ]) !!}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
 <table style="float: left;border: none;width:967.25pt;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;" class="custom-font-size">
     <tbody>
         <tr>
@@ -1349,3 +1416,116 @@
         </tr>
     </tbody>
 </table>
+
+{{-- <p><br></p>
+<table style="margin-right: calc(34%); width: 66%;">
+    <tbody>
+        <tr>
+            <td>
+                <p>For Completion by the Region/For Recommending Approval by the Executive Director:</p>
+            </td>
+        </tr>
+        <tr>
+            <td><br></td>
+        </tr>
+        <tr style="width:20px">
+            <td>
+                {!! Form::text('bureau_director_name', old('bureau_director_name', $folder->evaluation->bureau_director_name), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Name',
+                    ]) !!}
+            </td>
+        </tr>
+        <tr>
+            <td>________________________</td>
+        </tr>
+        <tr style="width:20px">
+            <td>
+                {!! Form::text('bureau_director_designation', old('bureau_director_designation', $folder->evaluation->bureau_director_designation), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Designation',
+                    ]) !!}
+            </td>
+        </tr>
+    </tbody>
+</table> --}}
+
+
+
+{{-- <p><br></p>
+<table style="margin-right: calc(34%); width: 66%;">
+    <tbody>
+        <tr>
+            <td>
+                <p>For Completion by the Region/For Recommending Approval by the Executive Director:</p>
+            </td>
+        </tr>
+        <tr>
+            <td><br></td>
+        </tr>
+        <tr style="width:20px">
+            <td>
+                {!! Form::text('bureau_director_name', old('bureau_director_name', $folder->evaluation->bureau_director_name), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Name',
+                    ]) !!}
+            </td>
+        </tr>
+        <tr>
+            <td>________________________</td>
+        </tr>
+        <tr style="width:20px">
+            <td>
+                {!! Form::text('bureau_director_designation', old('bureau_director_designation', $folder->evaluation->bureau_director_designation), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Designation',
+                    ]) !!}
+            </td>
+        </tr>
+    </tbody>
+</table> --}}
+
+
+
+<p><br></p>
+<table style="margin-right: calc(70%); width: 30%;">
+    <tbody>
+        <tr>
+            <td>
+                <p>For Completion by the Region/For Recommending Approval by the Executive Director:</p>
+            </td>
+        </tr>
+        <tr>
+            <td><br></td>
+        </tr>
+        <tr style="width:{{ strlen('For Completion by the Region/For Recommending Approval by the Executive Director:') }}ch">
+            <td>
+                {!! Form::text('bureau_director_name', old('bureau_director_name', $folder->evaluation->bureau_director_name), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Name',
+                    ]) !!}
+            </td>
+        </tr>
+        <tr>
+            <td>__________________________________________________________</td>
+        </tr>
+        <tr style="width:{{ strlen('________________________') }}ch">
+            <td>
+                {!! Form::text('bureau_director_designation', old('bureau_director_designation', $folder->evaluation->bureau_director_designation), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Designation',
+                    ]) !!}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+

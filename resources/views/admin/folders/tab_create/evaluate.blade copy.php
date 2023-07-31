@@ -49,45 +49,73 @@
   
 
         <tr>
-            <td style="width: 21.1538%; text-align: left;"><strong>Location &nbsp; &nbsp; &nbsp;</strong></td>
-            <td style="width: 3.675%;">
-                <div style="text-align: center;">:</div>
+            <td style="text-align: left;"><strong>Location &nbsp; </strong></td>
+            <td>
+                <span style="text-align: center;">:</span>
             </td>
-            <td style="width: 74.9963%;">__project_location</td>
+            <td>{!! Form::text('location', old('location'), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Location'
+            ]) !!}</td>
+        </tr>
+  
+
+        <tr>
+            <td style="text-align: left;"><strong>Cost &amp; Source &nbsp; </strong></td>
+            <td>
+                <span style="text-align: center;">:</span>
+            </td>
+            <td>{!! Form::text('cost_and_source', old('cost_and_source'), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Cost and Source'
+            ]) !!}</td>
         </tr>
 
-        
+
         <tr>
-            <td style="width: 21.1538%; text-align: left;"><strong>Cost &amp; Source &nbsp;</strong></td>
-            <td style="width: 3.675%;">
-                <div style="text-align: center;">:</div>
+            <td style="text-align: left;"><strong>Period of implementation&nbsp;</strong></td>
+            <td>
+                <span style="text-align: center;">:</span>
             </td>
-            <td style="width: 74.9963%;">__project_cost<br></td>
+            <td>{!! Form::text('period_of_implementation', old('period_of_implementation'), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Period of implementation'
+            ]) !!}</td>
         </tr>
+
         <tr>
-            <td style="width: 21.1538%; text-align: left;"><strong>Period of implementation&nbsp;</strong></td>
-            <td style="width: 3.675%;">
-                <div style="text-align: center;">:</div>
+            <td style="text-align: left;"><strong>No. of Beneficiaries&nbsp;</strong></td>
+            <td>
+                <span style="text-align: center;">:</span>
             </td>
-            <td style="width: 74.9963%;">__project_implementation<br></td>
+            <td>{!! Form::text('no_of_beneficiaries', old('no_of_beneficiaries'), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'No. of Beneficiaries'
+            ]) !!}</td>
         </tr>
-        <tr>
-            <td style="width: 21.1538%; text-align: left;"><strong>No. of Beneficiaries &nbsp;</strong></td>
-            <td style="width: 3.675%;">
-                <div style="text-align: center;">:</div>
+
+     
+        <tr style="margin-bottom:25px;">
+            <td style="text-align: left; "><strong>SYNOPSIS&nbsp;</strong></td>
+            <td>
+                <span style="text-align: center;">:</span>
             </td>
-            <td style="width: 74.9963%;">__project_benficiaries<br></td>
-        </tr>
-        <tr>
-            <td style="width: 21.1538%; text-align: left;"><strong>SYNOPSIS &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.675%;">
-                <div style="text-align: center;">:</div>
-                <div style="text-align: center;"><br></div>
-            </td>
-            <td style="width: 74.9963%;">__project_synopsis</td>
+            <td>{!! Form::text('synopsis', old('synopsis'), [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'SYNOPSIS'
+            ]) !!}</td>
         </tr>
     </tbody>
 </table> 
+
+
+
+
 
 
 <table style="float: left;border: none;width:967.25pt;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;" class="custom-font-size">

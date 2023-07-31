@@ -27,7 +27,7 @@
 </style>
 
 <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;margin-left:-.75pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;'><br></p>
-<table style="width: 100%;">
+<table style="float: left;border: none;width:967.25pt;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;margin-bottom:15pt;" class="custom-font-size">
     <tbody>
         <tr>
             <td style="width: 100%;" colspan="3">
@@ -113,63 +113,7 @@
     </tbody>
 </table> 
 
-{{--  --}}
 
-{{-- <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;margin-left:-.75pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;'><br></p>
-<table style="width: 81%; margin-right: calc(19%); margin-bottom: 30px">
-    <tbody>
-        <tr>
-            <td style="width: 100%;" colspan="3">
-                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.75pt;margin-left:2.8pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;text-align:center;'><strong>CHECKLIST OF REQUIREMENTS FOR THE APPROVAL OF PROJECT PROPOSALS&nbsp;</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Project Title &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Location &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Cost &amp; Source &nbsp;&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>Period of implementation&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; width: 13.5198%;"><strong>No. of Beneficiaries&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-        <tr style="margin-bottom:25px;">
-            <td style="text-align: left; width: 13.5198%;"><strong>SYNOPSIS&nbsp;</strong></td>
-            <td style="width: 3.4965%;">
-                <div style="text-align: center;"><span style="text-align: center;">:</span></div>
-            </td>
-            <td style="width: 82.9837%;"><br></td>
-        </tr>
-    </tbody>
-</table> --}}
-
-
-{{--  --}}
 
 
 
@@ -1868,6 +1812,41 @@
                         'placeholder' => 'Required Actions',
                     ]) !!}</span>
                 </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p><br></p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <p>For Completion by the Region/For Recommending Approval by the Executive Director:</p>
+            </td>
+        </tr>
+        <tr>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>
+                {!! Form::text('bureau_director_name', old('bureau_director_name'), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Name',
+                    ]) !!}
+            </td>
+        </tr>
+        <tr>
+            <td>________________________</td>
+        </tr>
+        <tr>
+            <td>
+                {!! Form::text('bureau_director_designation', old('bureau_director_designation'), [
+                        'class' => 'form-control',
+                        'rows' => 1,
+                        'placeholder' => 'Bureau Director Designation',
+                    ]) !!}
             </td>
         </tr>
     </tbody>

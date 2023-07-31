@@ -74,6 +74,8 @@ class Evaluation extends Model
         'period_of_implementation',
         'no_of_beneficiaries',
         'synopsis',
+        'bureau_director_name',
+        'bureau_director_designation'
     ];
 
     public function folder()

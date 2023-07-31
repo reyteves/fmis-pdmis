@@ -48,15 +48,14 @@
         }
 
         .print-content {
-            width: 8.27in;
-            /* 210mm */
-            /* height: 11.69in; */
-            /* 297mm */
+            width: 8.27in;  
             margin: 0 auto;
-            /* Center the content horizontally (optional) */
-            /* Add any other CSS styles for the print-content div as needed */
-
+        
         }
+
+        .row-spacing td {
+    padding-bottom: 10px;
+  }
 
 
     }
@@ -83,9 +82,9 @@
             <tbody>
                 <tr>
                     <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>1.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 11.25pt;vertical-align: top;">
 
@@ -114,9 +113,9 @@
             <tbody>
                 <tr>
                     <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>2.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td colspan="2" style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                         <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -311,9 +310,9 @@
             <tbody>
                 <tr>
                     <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>3.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
                         <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -345,9 +344,9 @@
             <tbody>
                 <tr>
                     <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>4.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td colspan="2" style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                         <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -430,9 +429,9 @@
                 <tr>
                     <td rowspan="2"
                         style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>5.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td rowspan="2"
                         style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
@@ -471,9 +470,9 @@
                 <tr>
                     <td rowspan="3"
                         style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>7.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td rowspan="3"
                         style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
@@ -517,9 +516,9 @@
             <tbody>
                 <tr>
                     <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>8.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                         <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -571,9 +570,9 @@
             <tbody>
                 <tr>
                     <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>11.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td colspan="2" style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                         <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -675,9 +674,9 @@
             <tbody>
                 <tr>
                     <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
-                        <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                        {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
                             <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>12.</span></strong>
-                        </p>
+                        </p> --}}
                     </td>
                     <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                         <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -712,62 +711,6 @@
 
 
 
-    {{-- <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">II. BACKGROUND AND
-                RATIONALE</span></strong></p>
-
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->background_and_rationale)) !!}</span></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-
-
-    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">III.
-                OBJECTIVES</span></strong></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->objectives)) !!}</span></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-
- 
-    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">IV. PROJECT
-                DESCRIPTION</span></strong></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->description)) !!}</span></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-
-
-    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">IV. PROJECT
-                IMPLEMENTATION</span></strong></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->project_implementation)) !!}</span></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-
- 
-    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">V. MONITORING AND
-                EVALUATION</span></strong></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->monitoring_evaluation)) !!}</span></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-
-
-    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">VI. POTENTIAL
-                RISKS</span></strong></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->potential_risk)) !!}</span></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-
-  
-    <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">VII. SUSTAINABIITY
-                PLAN</span></strong></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 36.0pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->sustainability_plan)) !!}</span></p>
-    <p style="margin-right: 22.0pt; text-align: justify; text-indent: 2.25pt;"><span
-            style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">&nbsp;</span></p> --}}
-
     <table style="width: 100%; border-collapse: collapse; border: none;">
         <tbody>
            
@@ -781,7 +724,7 @@
             </tr>
 
             <tr>
-                <td style="border: none; text-align: justify; text-indent: 36.0pt;">
+                <td style="border: none; text-align: justify; text-indent: 36.0pt; text-indent: 0;">
                     <p style="margin-right: 22.0pt;"><span
                             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->background_and_rationale)) !!}</span>
                     </p>
@@ -799,7 +742,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="border: none; text-align: justify; text-indent: 36.0pt;">
+                <td style="border: none; text-align: justify; text-indent: 36.0pt; text-indent: 0;">
                     <p style="margin-right: 22.0pt;"><span
                             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->objectives)) !!}</span>
                     </p>
@@ -816,7 +759,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="border: none; text-align: justify; text-indent: 36.0pt;">
+                <td style="border: none; text-align: justify; text-indent: 36.0pt; text-indent: 0;">
                     <p style="margin-right: 22.0pt;"><span
                             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->description)) !!}</span>
                     </p>
@@ -833,7 +776,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="border: none; text-align: justify; text-indent: 36.0pt;">
+                <td style="border: none; text-align: justify; text-indent: 36.0pt; text-indent: 0;">
                     <p style="margin-right: 22.0pt;"><span
                             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->project_implementation)) !!}</span>
                     </p>
@@ -850,7 +793,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="border: none; text-align: justify; text-indent: 36.0pt;">
+                <td style="border: none; text-align: justify; text-indent: 36.0pt; text-indent: 0;">
                     <p style="margin-right: 22.0pt;"><span
                             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->monitoring_evaluation)) !!}</span>
                     </p>
@@ -867,7 +810,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="border: none; text-align: justify; text-indent: 36.0pt;">
+                <td style="border: none; text-align: justify; text-indent: 36.0pt; text-indent: 0;">
                     <p style="margin-right: 22.0pt;"><span
                             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->potential_risk)) !!}</span>
                     </p>
@@ -884,7 +827,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="border: none; text-align: justify; text-indent: 36.0pt;">
+                <td style="border: none; text-align: justify; text-indent: 36.0pt; text-indent: 0;">
                     <p style="margin-right: 22.0pt;"><span
                             style="font-size: 11.0pt; font-family: 'Arial',sans-serif;">{!! nl2br(e($folder->project->sustainability_plan)) !!}</span>
                     </p>
@@ -1043,7 +986,7 @@
     <div align="center" style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'>
         <table style="width: 5.2e+2pt;border-collapse:collapse;border:none;">
             <tbody>
-                <tr>
+                <tr class="row-spacing">
                     <td style="width: 162.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                         <p
                             style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;margin-right:-14.4pt;text-align:center;border:none;'>
@@ -1317,7 +1260,7 @@
     </p>
     <table style="width: 1.6e+2pt;margin-left:161.4pt;border-collapse:collapse;border:none;">
         <tbody>
-            <tr>
+            <tr style="margin-bottom: 25px">
                 <td style="width: 160.55pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                     <p
                         style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;margin-right:-14.4pt;text-align:center;border:none;'>
@@ -1364,3 +1307,41 @@
         <button class="btn btn-primary" onclick="window.print()">Print</button>
     </div>
 </div>
+
+
+@section('javascript')
+    
+      <script>
+        $(document).ready(function() {
+          function updateCheckboxes() {
+            $('.print-content input[type="checkbox"]').each(function() {
+              const checkbox = $(this);
+              const isChecked = checkbox.is(':checked');
+              const checkmark = isChecked ? '✓' : '';
+      
+              // Create a <span> element to hold the checkmark symbol
+              const checkmarkSpan = $('<span>').text(checkmark);
+      
+              // Remove any existing checkmark span if present
+              checkbox.next('.checkmark').remove();
+      
+              // Hide the checkbox
+              checkbox.css('display', 'none');
+      
+              // Add the new checkmark span after the checkbox
+              checkbox.after(checkmarkSpan.addClass('checkmark'));
+            });
+          }
+      
+          // Call the function to update checkboxes when the page is loaded
+          updateCheckboxes();
+      
+          // Add event listener to update checkboxes when any checkbox is clicked
+          $('input[type="checkbox"]').on('change', function() {
+            updateCheckboxes();
+          });
+        });
+      </script>
+      
+
+@endsection
