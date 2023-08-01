@@ -1,6 +1,6 @@
 <label for="attachments">Attachments</label>
 
-    <div class="form-check">
+<div class="form-check">
         {!! Form::checkbox('ppmp', 'ppmp', false, ['class' => 'form-check-input', 'id' => 'ppmp']) !!}
         {!! Form::label('ppmp', 'Project Procurement Management Plan (PPMP)– PPF 1a (Annex B)', ['class' => 'form-check-label']) !!}
     </div>

@@ -12,7 +12,7 @@
     {{-- <div class="panel panel-default"> --}}
     <div class="panel panel-default">
         <div class="panel-heading">
-        {{-- <div> --}}
+            {{-- <div> --}}
             @lang('quickadmin.qa_edit')
         </div>
 
@@ -34,42 +34,47 @@
             <ul class="nav nav-tabs text-lg bg-gray-100">
 
 
-                @if(Auth::user()->role_id !== 3)
-
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#details">Details</a>
-                </li>
+                @if (Auth::user()->role_id !== 3)
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#details"><i class="fa fa-pencil"></i>&nbsp;Details</a>
+                    </li>
                 @endif
 
-                @if(Auth::user()->role_id !== 2)
-
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#attachments_signatures">Attachments and Signatures</a>
-                </li>
-
+                @if (Auth::user()->role_id !== 3)
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#site"><i
+                                class="fa fa-pencil"></i>&nbsp;Project Site</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#budget"><i class="fa fa-pencil"></i>&nbsp;Budget
+                            Details</a>
+                    </li>
                 @endif
 
-                @if(Auth::user()->role_id !== 3)
-
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#site">Project Site</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
-                </li>
-
+                @if (Auth::user()->role_id !== 2)
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#attachments_signatures"><i
+                                class="fa fa-check"></i>&nbsp;Status, Attachments and Signatures</a>
+                    </li>
                 @endif
 
 
                 <li class="nav-item">
-                    <a id="viewLink" class="nav-link" data-toggle="tab" href="#view">View</a>
+                    <a id="viewLink" class="nav-link" data-toggle="tab" href="#view"><i
+                            class="fa fa-eye"></i>&nbsp;View</a>
                 </li>
 
-                @if(Auth::user()->role_id !== 2)
-                
-                <li class="nav-item">
-                    <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate">Evaluate</a>
-                </li>
+                @if (Auth::user()->role_id !== 2)
+                    <li class="nav-item">
+                        <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate"><i
+                                class="fa fa-check"></i>&nbsp;Evaluate</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate-print"><i
+                                class="fa fa-check"></i>&nbsp;Print Evaluation Page</a>
+                    </li>
+
 
                 @endif
             </ul>
@@ -96,6 +101,9 @@
                 <div class="tab-pane fade" id="evaluate">
                     @include('admin.folders.tab_edit.evaluate')
                 </div>
+                <div class="tab-pane fade" id="evaluate-print">
+                    @include('admin.folders.tab_edit.evaluation-page')
+                </div>
 
             </div>
         </div>
@@ -109,8 +117,8 @@
 @section('javascript')
     <script>
         $(document).ready(function() {
-          
-  // Toggle visibility of the update button when a tab is clicked
+
+            // Toggle visibility of the update button when a tab is clicked
             $('.nav-link').click(function() {
                 var tabId = $(this).attr('href');
                 if (tabId !== '#view') {

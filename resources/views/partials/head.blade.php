@@ -36,3 +36,5 @@
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css" />
 
+<!-- Add your icon link here -->
+<link rel="icon" href="{{ asset('images/app/aNCIP_logo150x150.png') }}" type="image/png">

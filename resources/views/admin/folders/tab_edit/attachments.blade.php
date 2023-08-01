@@ -1,3 +1,37 @@
+{{-- Project Status --}}
+<div class="row mb-3 pt-3">
+    <div class="col-md-12">
+        <label for="project_status" class="d-block">Project Status:</label>
+        <br>
+        <div class="form-group" id="project_status">
+            <div class="form-check form-check-inline mb-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                {{ Form::radio('project_status', 'proposed', old('project_status', $folder->budget->project_status) == 'proposed', ['class' => 'form-check-input', 'id' => 'proposed']) }}
+                <label class="form-check-label" for="proposed">Proposed</label>
+            </div>
+            <div class="form-check form-check-inline mb-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                {{ Form::radio('project_status', 'on-going', old('project_status', $folder->budget->project_status) == 'on-going', ['class' => 'form-check-input', 'id' => 'on-going']) }}
+                <label class="form-check-label" for="on-going">On-going</label>
+            </div>
+            <div class="form-check form-check-inline mb-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                {{ Form::radio('project_status', 'continuing', old('project_status', $folder->budget->project_status) == 'continuing', ['class' => 'form-check-input', 'id' => 'continuing']) }}
+                <label class="form-check-label" for="continuing">Continuing</label>
+            </div>
+            <div class="form-check form-check-inline mb-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                {{ Form::radio('project_status', 'terminating', old('project_status', $folder->budget->project_status) == 'terminating', ['class' => 'form-check-input', 'id' => 'terminating']) }}
+                <label class="form-check-label" for="terminating">Terminating</label>
+            </div>
+            <div class="form-check form-check-inline mb-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                {{ Form::radio('project_status', 'coordinated', old('project_status', $folder->budget->project_status) == 'coordinated', ['class' => 'form-check-input', 'id' => 'coordinated']) }}
+                <label class="form-check-label" for="coordinated">Coordinated</label>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- /Project Status --}}
+
+<br>
+
+
 <label for="attachments">Attachments</label>
 
 <div class="form-check">

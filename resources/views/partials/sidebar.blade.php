@@ -1,13 +1,13 @@
 @inject('request', 'Illuminate\Http\Request')
 <!-- Left side column. contains the sidebar -->
-<aside class="main-sidebar">
+<aside class="main-sidebar sidebar-dark-info elevation-4">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <ul class="sidebar-menu">
 
             <li>
                 <a href="{{ url('/') }}">
-                    <span style="color: white;">👤</span>
+                    <span style="color: white;"><i class="fa fa-user"></i>&nbsp;</span>
                     <span class="title">
                         @switch(Auth::user()->role_id)
                             @case(1)
@@ -32,7 +32,8 @@
 
             <li class="{{ $request->segment(1) == 'home' ? 'active' : '' }}">
                 <a href="{{ url('/') }}">
-                    <i class="fa fa-wrench"></i>
+                    {{-- <i class="fa fa-wrench"></i> --}}
+                    <i class="fa fa-lightbulb-o"></i>
                     <span class="title">@lang('quickadmin.qa_dashboard')</span>
                 </a>
 
@@ -42,7 +43,8 @@
             @can('folder_access')
                 <li class="{{ $request->segment(2) == 'folders' ? 'active' : '' }}">
                     <a href="{{ route('admin.folders.index') }}">
-                        <i class="fa fa-gears"></i>
+                        {{-- <i class="fa fa-gears"></i> --}}
+                        <i class="fa fa-folder"></i>
 
                         {{-- if proponent show My Projects else the label is Projects --}}
                         @if (Auth::check() && Auth::user()->role_id != 2)
@@ -58,7 +60,8 @@
             @can('file_access')
                 <li class="{{ $request->segment(2) == 'files' ? 'active' : '' }}">
                     <a href="{{ route('admin.files.index') }}">
-                        <i class="fa fa-gears"></i>
+                        {{-- <i class="fa fa-gears"></i> --}}
+                        <i class="fa fa-file"></i>
                         
                         @if (Auth::check() && Auth::user()->role_id != 2)
                         <span class="title">@lang('quickadmin.files.title')</span>

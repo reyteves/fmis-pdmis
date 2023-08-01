@@ -5,13 +5,12 @@
         <div class="container-fluid panel panel default">
 
             <div class="panel-body">
+            
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
 
-
-
                     @if (Auth::check() && Auth::user()->role_id != 2)
-                        <div class="col-lg-3 col-6">
+                        <div class="col-lg-3 col-6 justify-content-center">
                             <!-- small box -->
                             <div class="small-box bg-primary text-dark">
                                 <div class="inner text-center">
@@ -28,7 +27,7 @@
                     @endif
 
                     @if (Auth::check() && Auth::user()->role_id == 2)
-                        <div class="col-lg-3 col-6">
+                        <div class="col-lg-3 col-6 justify-content-center">
                             <!-- small box -->
                             <div class="small-box bg-primary text-dark">
                                 <div class="inner text-center">

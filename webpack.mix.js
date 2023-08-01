@@ -11,5 +11,13 @@ let mix = require('laravel-mix');
  |
  */
 
+// mix.js('resources/assets/js/app.js', 'public/js')
+//    .sass('resources/assets/sass/app.scss', 'public/css');
+
+
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .sass('resources/sass/fontawesome.scss', 'public/css') // Add the Font Awesome SCSS import
+   .options({
+        processCssUrls: false, // Prevent Laravel Mix from rewriting font URLs
+    });

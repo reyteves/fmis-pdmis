@@ -56,6 +56,10 @@
                 <tr data-entry-id="{{ $folder->id }}">
                     <td field-key='name'>{{ $folder->name }}</td>
                                 <td field-key='created_by'>{{ $folder->created_by->name or '' }}</td>
+                              
+
+                             
+
                                 @if( request('show_deleted') == 1 )
                                 <td>
                                     @can('delete')

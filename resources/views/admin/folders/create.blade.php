@@ -25,26 +25,25 @@
 
             <ul class="nav nav-tabs text-lg bg-gray-100">
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#details">Details</a>
+                    <a class="nav-link" data-toggle="tab" href="#details"><i class="fa fa-pencil"></i>&nbsp;Details</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#site"><i class="fa fa-pencil"></i>&nbsp;Project Site</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#budget"><i class="fa fa-pencil"></i>&nbsp;Budget Details</a>
                 </li>
 
                 @if(Auth::user()->role_id !== 2)
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#attachments_signatures">Attachments and Signatures</a>
+                    <a class="nav-link" data-toggle="tab" href="#attachments_signatures"><i class="fa fa-check"></i>&nbsp;Attachments and Signatures</a>
                 </li>
                 @endif
 
-
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#site">Project Site</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#budget">Budget Details</a>
-                </li>
-
                 @if(Auth::user()->role_id !== 2)
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#evaluate">Evaluate</a>
+                    <a class="nav-link" data-toggle="tab" href="#evaluate"><i class="fa fa-check"></i>&nbsp;Evaluate</a>
                 </li>
                 @endif
             </ul>

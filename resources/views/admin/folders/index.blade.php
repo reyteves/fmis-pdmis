@@ -5,10 +5,14 @@
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
     @can('folder_create')
         <p>
-           
-            <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Project</a>
 
-           
+            {{-- <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Project</a> --}}
+
+            <a href="{{ route('admin.folders.create') }}" class="btn btn-success">
+                <i class="fa fa-plus"></i> &nbsp;Add New Project
+            </a>
+
+
         </p>
     @endcan
 
@@ -92,21 +96,33 @@
                                     <td>
 
                                         <a href="{{ route('admin.folders.view_ppf', [$folder->id]) }}"
-                                            class="btn btn-xs btn-primary">View</a>
-                                   
+                                            class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> &nbsp;View</a>
+
 
                                         @can('folder_edit')
                                             @if (Auth::user()->role_id === 3)
                                                 <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
-                                                    class="btn btn-xs btn-info">Evaluate</a>
+                                                    class="btn btn-xs btn-info"><i class="fa fa-check"></i>&nbsp;Evaluate</a>
                                             @else
                                                 <a href="{{ route('admin.folders.edit', [$folder->id]) }}"
-                                                    class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
+                                                    class="btn btn-xs btn-info"><i
+                                                        class="fa fa-pencil"></i>&nbsp;@lang('quickadmin.qa_edit')</a>
                                             @endif
                                         @endcan
 
-                                        
-                                      
+
+
+                                        {{-- @can('folder_delete')
+                                            {!! Form::open([
+                                                'style' => 'display: inline-block;',
+                                                'method' => 'DELETE',
+                                                'onsubmit' => "return confirm('" . trans('quickadmin.qa_are_you_sure') . "');",
+                                                'route' => ['admin.folders.destroy', $folder->id],
+                                            ]) !!}
+                                            {!! Form::submit('<i class="fa fa-pencil"></i> '.trans('quickadmin.qa_delete'), ['class' => 'btn btn-xs btn-danger']) !!}
+                                            {!! Form::close() !!}
+                                        @endcan --}}
+
                                         @can('folder_delete')
                                             {!! Form::open([
                                                 'style' => 'display: inline-block;',
@@ -114,9 +130,13 @@
                                                 'onsubmit' => "return confirm('" . trans('quickadmin.qa_are_you_sure') . "');",
                                                 'route' => ['admin.folders.destroy', $folder->id],
                                             ]) !!}
-                                            {!! Form::submit(trans('quickadmin.qa_delete'), ['class' => 'btn btn-xs btn-danger']) !!}
+                                            {!! Form::button('<i class="fa fa-trash"></i> ' . trans('quickadmin.qa_delete'), [
+                                                'type' => 'submit',
+                                                'class' => 'btn btn-xs btn-danger',
+                                            ]) !!}
                                             {!! Form::close() !!}
                                         @endcan
+
 
 
 

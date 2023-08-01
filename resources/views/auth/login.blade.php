@@ -1,11 +1,23 @@
 @extends('layouts.auth')
 
 @section('content')
-<div class="row h-100 w-100" style="justify-content:center;display:flex" id="login-box">
+<div class="row h-100 w-100 card" style="justify-content:center;display:flex; margin-left: 10px; margin-right: 10px;" id="login-box">
     <div class="col-md-5">
+        
         <div class="panel panel-default">
-            <div class="panel-heading">{{ ucfirst(config('app.name')) }} @lang('quickadmin.qa_login')</div>
-            <div class="panel-body">
+            <div class="login-logo" style="margin-top: 30px">
+                <a href="/">
+                    <img src="{{ asset('images/app/NCIP_logo150x150.png') }}" alt="{{ config('app.name', 'NCIP-HRMIS') }} Logo" class="img-circle" style="height:50px;">
+                    <b>NCIP</b>PDMIS
+                </a>
+                
+            </div>
+            
+            <p class="login-box-msg"><span style="font-family: Calibri, sans-serif; font-size: 17px;"><strong>Project Development Management Information System</strong></span></p>            
+            {{-- <div class="panel">{{ ucfirst(config('app.name')) }} @lang('quickadmin.qa_login')</div> --}}
+
+            <div class="panel-body card-body login-card-body">
+                <p class="login-box-msg"><span style="font-family: Calibri, sans-serif; font-size: 15px;">Sign in to start your session</span></p>
                 @if (count($errors) > 0)
                 <div class="alert alert-danger">
                     <strong>Whoops!</strong> @lang('quickadmin.qa_there_were_problems_with_input'):
@@ -26,26 +38,29 @@
                            name="_token"
                            value="{{ csrf_token() }}">
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">@lang('quickadmin.qa_email')</label>
-
-                        <div class="col-md-6">
+                    
+                      
+                      <div class="text-center"> <!-- Wrapping div for center alignment -->
+                        <div class="form-group row">
+                          <label class="col-md-2 col-form-label text-md-right">@lang('quickadmin.qa_email')</label>
+                          <div class="col-md-10">
                             <input type="email"
                                    class="form-control"
                                    name="email"
                                    value="{{ old('email') }}">
+                          </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">@lang('quickadmin.qa_password')</label>
-
-                        <div class="col-md-6">
+                      
+                        <div class="form-group row">
+                          <label class="col-md-2 col-form-label text-md-right">@lang('quickadmin.qa_password')</label>
+                          <div class="col-md-10">
                             <input type="password"
                                    class="form-control"
                                    name="password">
+                          </div>
                         </div>
-                    </div>
+                      </div> <!-- End of wrapping div -->
+                      
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
