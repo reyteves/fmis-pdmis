@@ -72,7 +72,7 @@
 
                     <li class="nav-item">
                         <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate-print"><i
-                                class="fa fa-check"></i>&nbsp;Print Evaluation Page</a>
+                                class="fa fa-eye"></i>&nbsp;Print Evaluation Page</a>
                     </li>
 
 

@@ -21,6 +21,10 @@
         text-decoration-style: initial;
         text-decoration-color: initial;
         text-align: center;
+
+        display: flex;
+        /* align-items: center; */
+        /* margin-bottom: 20px; */
     }
 
     .header p span {
@@ -66,14 +70,26 @@
 <div class="print-content" style="width: 100%">
 
 
-    <div class="header">
+    {{-- <div class="header">
         <p><span>Republic of the Philippines</span><span>&nbsp;</span></p>
         <p>Office of the President&nbsp;</p>
         <p><strong>NATIONAL COMMISSION ON INDIGENOUS PEOPLES&nbsp;</strong></p>
         <p>6th &amp; 7th Floors Sunnymede I.T. Center, 1614 Quezon Avenue, South Triangle &nbsp;Quezon City&nbsp;</p>
         <p>Website: www.ncip.gov.ph</p>
-    </div>
+    </div> --}}
 
+    <div class="header">
+        <img class="logo" src="{{ asset('images/app/aNCIP_logo150x150.png') }}" alt="NCIP Logo">
+        <div class="header-content">
+            <p><span>Republic of the Philippines</span><span>&nbsp;</span></p>
+            <p>Office of the President&nbsp;</p>
+            <p><strong>NATIONAL COMMISSION ON INDIGENOUS PEOPLES&nbsp;</strong></p>
+            <p>6th &amp; 7th Floors Sunnymede I.T. Center, 1614 Quezon Avenue, South Triangle &nbsp;Quezon City&nbsp;</p>
+            <p>Website: www.ncip.gov.ph</p>
+        </div>
+    </div>
+    
+    
     <p
         style='margin-top:0cm;margin-right:0cm;margin-bottom:8.75pt;margin-left:2.8pt;font-size:11.0pt;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
         <strong>CHECKLIST OF REQUIREMENTS FOR THE APPROVAL OF PROJECT PROPOSALS&nbsp;</strong></p>
