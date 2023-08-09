@@ -61,7 +61,7 @@
 
                 <li class="nav-item">
                     <a id="viewLink" class="nav-link" data-toggle="tab" href="#view"><i
-                            class="fa fa-eye"></i>&nbsp;View</a>
+                            class="fa fa-eye"></i>&nbsp;Print Project Details</a>
                 </li>
 
                 @if (Auth::user()->role_id !== 2)

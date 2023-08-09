@@ -4,6 +4,8 @@
 <?php
 
 use App\Http\Controllers\Admin\FoldersController; // Update the namespace as per your controller location
+use App\Http\Controllers\PsgcController;
+
 
 Route::get('/', function () { return redirect('/admin/home'); });
 
@@ -16,6 +18,23 @@ Route::get('/get-user-count', 'Admin\UsersController@getUserCount');
 // custom View routes
 Route::get('admin/folders/{id}/view_ppf', [FoldersController::class, 'view_ppf'])->name('admin.folders.view_ppf');
 
+
+// psgc routes
+
+Route::get('/get-regions-dropdown', [PsgcController::class, 'getRegionsDropdown']);
+Route::get('/get-provinces-for-region/{region}', [PsgcController::class, 'getProvincesForRegion']);
+
+Route::get('/getProvinceName/{code}', 'PsgcController@getProvinceName');
+
+Route::get('/getCityName/{code}', 'PsgcController@getCityName');
+
+
+// end custom psgc routes
+
+
+Route::get('psgc/getProvinces', [PsgcController::class, 'getProvinces'])->name('getProvinces');
+Route::get('psgc/getCities', [PsgcController::class, 'getCities'])->name('getCities');
+Route::get('psgc/getBrgy', [PsgcController::class, 'getBrgy'])->name('getBrgy');
 
 
 // Authentication Routes...
@@ -48,6 +67,11 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('users', 'Admin\UsersController');
     Route::post('users_mass_destroy', ['uses' => 'Admin\UsersController@massDestroy', 'as' => 'users.mass_destroy']);
     Route::resource('folders', 'Admin\FoldersController');
+
+// Add a custom route for the viewFoldersWithSameRegion function
+Route::get('folders/view-same-region', 'Admin\FoldersController@viewFoldersWithSameRegion')
+    ->name('folders.view-same-region');
+
     Route::post('folders_mass_destroy', ['uses' => 'Admin\FoldersController@massDestroy', 'as' => 'folders.mass_destroy']);
     Route::post('folders_restore/{id}', ['uses' => 'Admin\FoldersController@restore', 'as' => 'folders.restore']);
     Route::delete('folders_perma_del/{id}', ['uses' => 'Admin\FoldersController@perma_del', 'as' => 'folders.perma_del']);

@@ -10,6 +10,7 @@
         </div>
         
         <div class="panel-body">
+
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('name', trans('quickadmin.users.fields.name').'*', ['class' => 'control-label']) !!}
@@ -22,6 +23,7 @@
                     @endif
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('email', trans('quickadmin.users.fields.email').'*', ['class' => 'control-label']) !!}
@@ -34,6 +36,7 @@
                     @endif
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('password', trans('quickadmin.users.fields.password').'*', ['class' => 'control-label']) !!}
@@ -46,6 +49,7 @@
                     @endif
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('role_id', trans('quickadmin.users.fields.role').'*', ['class' => 'control-label']) !!}
@@ -58,6 +62,32 @@
                     @endif
                 </div>
             </div>
+
+            {{-- <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('region', 'Region:', ['class' => 'control-label']) !!}
+                    {!! Form::text('region', old('region'), ['class' => 'form-control', 'placeholder' => '', 'required' => 'required']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('region'))
+                        <p class="help-block">
+                            {{ $errors->first('region') }}
+                        </p>
+                    @endif
+                </div>
+            </div> --}}
+
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('region', 'Region:', ['class' => 'control-label']) !!}
+                    {!! Form::select('region', [], old('region'), ['class' => 'form-control select2', 'placeholder' => 'Select a region', 'required' => 'required']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('region'))
+                        <p class="help-block">
+                            {{ $errors->first('region') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
             
         </div>
     </div>
@@ -66,3 +96,22 @@
     {!! Form::close() !!}
 @stop
 
+@section('javascript')
+<script>
+    $(document).ready(function() {
+        console.log("test user region");
+        // Fetch regions from the server and populate the region dropdown
+        fetch('/get-regions-dropdown')
+            .then(response => response.json())
+            .then(data => {
+                let dropdown = $('select[name="region"]');
+                let sortedOptions = Object.keys(data).sort().map(code => {
+                    return $('<option></option>').val(code).text(data[code]);
+                });
+                dropdown.empty().append(sortedOptions);
+                
+                dropdown.trigger('change');
+            });
+    })
+</script>
+@endsection

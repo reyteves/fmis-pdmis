@@ -65,8 +65,6 @@ class UsersController extends Controller
         }
         $user = User::create($request->all());
 
-
-
         return redirect()->route('admin.users.index');
     }
 

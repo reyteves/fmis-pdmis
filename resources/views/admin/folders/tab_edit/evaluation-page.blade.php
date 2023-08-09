@@ -1,4 +1,14 @@
 <style>
+
+.print-evaluation .form-control {
+        border: none;
+        resize: none;
+        cursor: not-allowed;
+        cursor: default;
+        pointer-events: none;
+    }
+
+   
     .custom-font-size tr td p span {
         font-size: 17px !important;
     }
@@ -88,6 +98,7 @@
         * {
             /* margin-left: 0 !important;  */
             margin: auto !important;
+            padding: auto !important;
         }
 
 
@@ -97,6 +108,7 @@
         .print-content {
             width: 8.27in !important;
             margin: 0 auto;
+            padding: auto !important;
         }
     }
 </style>
@@ -120,7 +132,7 @@
     <hr style="border: 0.5px solid gray;">
 
 
-    <div classs="evaluate_page_input">
+    <div class="evaluate_page_input">
         <table>
 
             <p
@@ -2054,3 +2066,4 @@
         });
     });
 </script>
+

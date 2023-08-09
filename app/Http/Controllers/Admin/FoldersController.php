@@ -70,6 +70,36 @@ class FoldersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+/** View Folders with Same Region as User*/
+    public function viewFoldersWithSameRegion()
+    {
+        if (!Gate::allows('folder_access')) {
+            return abort(401);
+        }
+        $userRegion = auth()->user()->region; // Assuming user's region is stored in the 'region' field
+    
+        if ($filterBy = request()->get('filter')) {
+            if ($filterBy == 'all') {
+                Session::put('Folder.filter', 'all');
+            } elseif ($filterBy == 'my') {
+                Session::put('Folder.filter', 'my');
+            }
+        }
+        if (request('show_deleted') == 1) {
+            if (!Gate::allows('folder_delete')) {
+                return abort(401);
+            }
+            $folders = Folder::onlyTrashed()->where('region', $userRegion)->get();
+        } else {
+            $folders = Folder::where('region', $userRegion)->get();
+        }
+        // Retrieve the count of folders
+        $foldersCount = $folders->count();
+        return view('admin.folders.index', compact('folders', 'foldersCount'));
+    }
+    
+
     public function create()
     {
         if (!Gate::allows('folder_create')) {

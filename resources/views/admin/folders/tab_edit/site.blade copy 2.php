@@ -145,114 +145,48 @@
         });
 
         /* To select cities/municipalities/sub-municipalities based on selected province */
-        // $('#provinces-dropdown').on('change', function() {
-        //     let selectedProvinceId = $(this).val();
-        //     let municipalitiesDropdown = $(
-        //         '#municipalities-dropdown'
-        //     ); // Replace 'municipalities-dropdown' with the ID of your municipalities dropdown
-        //     let barangayDropdown = $('#barangay-dropdown');
-        //     // Fetch municipalities based on the selected province
-        //     $.ajax({
-        //         url: "{{ route('getCities') }}",
-        //         data: {
-        //             provinceID: selectedProvinceId // Use province code as the parameter
-        //         },
-        //         type: "GET",
-        //         dataType: "json",
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{ csrf_token() }}',
-        //         },
-        //         success: function(data) {
-        //             municipalitiesDropdown.empty();
-        //             let initialMunicipalityCode = '{{ $folder->site->municipality }}';
-        //             municipalitiesDropdown.val(initialMunicipalityCode);
-        //             for (let municipality of data) {
-        //                 let option = $('<option></option>');
-        //                 option.val(municipality.code).text(municipality.name);
-        //                 if (municipality.code === initialMunicipalityCode) {
-        //                     option.prop('selected', true);
-        //                 }
-        //                 municipalitiesDropdown.append(option);
-        //             }
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error(error);
-        //         }
-        //     });
-        //     // Trigger change event on municipalities dropdown after page load
-        //     $('#municipalities-dropdown').trigger('change');
-        // });
-        /* To select barangays based on selected municipality */
-        // $('#municipalities-dropdown').on('change', function() {
-        //     let selectedMunicipalityId = $(this).val();
-        //     let barangayDropdown = $('#barangay-dropdown');
-        //     // Fetch barangays based on the selected municipality
-        //     $.ajax({
-        //         url: "{{ route('getBrgy') }}", // Change to your route for fetching barangays
-        //         data: {
-        //             cityID: selectedMunicipalityId
-        //         },
-        //         type: "GET",
-        //         dataType: "json",
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{ csrf_token() }}',
-        //         },
-        //         success: function(data) {
-        //             barangayDropdown.empty();
-        //             let initialBarangayValue = '{{ $folder->site->barangay }}';
-        //             console.log("initialBarangayValue: " + initialBarangayValue);
-        //             barangayDropdown.val(initialBarangayValue);
-        //             for (let barangay of data) {
-        //                 let option = $('<option></option>');
-        //                 option.val(barangay.code).text(barangay.name);
-        //                 if (barangay.code === initialBarangayValue) {
-        //                     option.prop('selected', true);
-        //                 }
-        //                 barangayDropdown.append(option);
-        //             }
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error("error: " + error);
-        //         }
-        //     });
-        //     $('#barangay-dropdown').trigger('change');
-        // });
-        //  /end of document ready
-        // Trigger change event on provinces dropdown to populate municipalities and barangays
-    $('#provinces-dropdown').trigger('change');
-
-/* To select municipalities and barangays based on selected province */
-$('#provinces-dropdown').on('change', function() {
-    let selectedProvinceId = $(this).val();
-    let municipalitiesDropdown = $('#municipalities-dropdown');
-    let barangayDropdown = $('#barangay-dropdown');
-
-    // Fetch municipalities based on the selected province
-    $.ajax({
-        url: "{{ route('getCities') }}",
-        data: {
-            provinceID: selectedProvinceId // Use province code as the parameter
-        },
-        type: "GET",
-        dataType: "json",
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}',
-        },
-        success: function(data) {
-            municipalitiesDropdown.empty();
-            let initialMunicipalityCode = '{{ $folder->site->municipality }}';
-            municipalitiesDropdown.val(initialMunicipalityCode);
-            for (let municipality of data) {
-                let option = $('<option></option>');
-                option.val(municipality.code).text(municipality.name);
-                if (municipality.code === initialMunicipalityCode) {
-                    option.prop('selected', true);
+        $('#provinces-dropdown').on('change', function() {
+            let selectedProvinceId = $(this).val();
+            let municipalitiesDropdown = $(
+                '#municipalities-dropdown'
+            ); // Replace 'municipalities-dropdown' with the ID of your municipalities dropdown
+            let barangayDropdown = $('#barangay-dropdown');
+            // Fetch municipalities based on the selected province
+            $.ajax({
+                url: "{{ route('getCities') }}",
+                data: {
+                    provinceID: selectedProvinceId // Use province code as the parameter
+                },
+                type: "GET",
+                dataType: "json",
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                },
+                success: function(data) {
+                    municipalitiesDropdown.empty();
+                    let initialMunicipalityCode = '{{ $folder->site->municipality }}';
+                    municipalitiesDropdown.val(initialMunicipalityCode);
+                    for (let municipality of data) {
+                        let option = $('<option></option>');
+                        option.val(municipality.code).text(municipality.name);
+                        if (municipality.code === initialMunicipalityCode) {
+                            option.prop('selected', true);
+                        }
+                        municipalitiesDropdown.append(option);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
                 }
-                municipalitiesDropdown.append(option);
-            }
-
+            });
+            // Trigger change event on municipalities dropdown after page load
+            $('#municipalities-dropdown').trigger('change');
+        });
+        /* To select barangays based on selected municipality */
+        $('#municipalities-dropdown').on('change', function() {
+            let selectedMunicipalityId = $(this).val();
+            let barangayDropdown = $('#barangay-dropdown');
             // Fetch barangays based on the selected municipality
-            let selectedMunicipalityId = municipalitiesDropdown.val();
             $.ajax({
                 url: "{{ route('getBrgy') }}", // Change to your route for fetching barangays
                 data: {
@@ -266,6 +200,7 @@ $('#provinces-dropdown').on('change', function() {
                 success: function(data) {
                     barangayDropdown.empty();
                     let initialBarangayValue = '{{ $folder->site->barangay }}';
+                    console.log("initialBarangayValue: " + initialBarangayValue);
                     barangayDropdown.val(initialBarangayValue);
                     for (let barangay of data) {
                         let option = $('<option></option>');
@@ -280,11 +215,8 @@ $('#provinces-dropdown').on('change', function() {
                     console.error("error: " + error);
                 }
             });
-        },
-        error: function(xhr, status, error) {
-            console.error(error);
-        }
-    });
-});
+            $('#barangay-dropdown').trigger('change');
+        });
+        //  /end of document ready
     });
 </script>
