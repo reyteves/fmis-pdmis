@@ -186,8 +186,8 @@
                                 style='font-size:12px;font-family:"Arial",sans-serif;'>:</span></strong></p>
                 </td>
                 <td style="width: 136.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
-                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
-                            style='font-size:12px;font-family:"Arial",sans-serif;'>{!! nl2br($folder->site->barangay) !!}</span>
+                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'>
+                        <span style='font-size:12px;font-family:"Arial",sans-serif;' id="barangaySpan">{!! nl2br($folder->site->barangay) !!}</span>
                     </p>
                 </td>
             </tr>
@@ -277,12 +277,12 @@
                     </p>
 
                 </td>
-
+{{-- 
                 <p style='margin: 0cm; font-size: 16px; font-family: "Times New Roman", serif;'>
                     <span style='font-size: 12px; font-family: "Arial", sans-serif;' name="region">
                         {!! nl2br($folder->site->region) !!}
                     </span>
-                </p>
+                </p> --}}
 
             </tr>
             <tr>
@@ -1394,24 +1394,6 @@
                 });
             });
 
-        // fetch('/getProvinces')
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         // Find all elements with the name attribute 'province'
-        //         let provinceElements = $('[name="province"]');
-
-        //         // Loop through each element and set its text content to the name of the province
-        //         provinceElements.each(function() {
-        //             let provinceCode = $(this).text().trim(); // Trim any whitespace
-        //             console.log("provinceCode: "+provinceCode);
-        //             console.log("data.hasOwnProperty(provinceCode): "+ data.hasOwnProperty(provinceCode));
-        //             if (data.hasOwnProperty(provinceCode)) {
-        //                 $(this).text(data[provinceCode]);
-        //                 console.log("province name: "+ data[provinceCode]);
-        //             }
-        //         });
-        //     });
-
         var provinceCode = $('#provinceSpan').text().trim(); 
         $.ajax({
             url: '/getProvinceName/' + provinceCode,
@@ -1450,6 +1432,27 @@
             $('#citySpan').text('Error fetching data');
         }
     });
+
+    var barangayCode = $('#barangaySpan').text().trim();
+
+    console.log("barangayCode: "+ barangayCode);
+    
+        $.ajax({
+        url: '/getBarangayName/' + barangayCode, // Update URL for city name request
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response.barangayCode) {
+                $('#barangaySpan').text(response.barangayCode); // Update appropriate span for city
+            } else {
+                $('#barangaySpan').text('Barangay not found');
+            }
+        },
+        error: function () {
+            $('#barangaySpan').text('Error fetching data');
+        }
+    });
+
 
 
     </script>

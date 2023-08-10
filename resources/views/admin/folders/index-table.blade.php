@@ -7,8 +7,9 @@
 
     <td field-key='name'>
         @can('folder_view')
-            <a href="{{ route('admin.folders.show', [$folder->id]) }}">{{ $folder->name }}</a>
+            <a href="{{ route('admin.folders.view_ppf', [$folder->id]) }}">{{ $folder->name }}</a>
         </td>
+
     @endcan
     @if (request('show_deleted') == 1)
         <td>
@@ -37,6 +38,7 @@
         <td>
 
             <a href="{{ route('admin.folders.view_ppf', [$folder->id]) }}"
+                {{-- class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> &nbsp;View</a> --}}
                 class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> &nbsp;View</a>
             @can('folder_edit')
                 @if (Auth::user()->role_id === 3)
@@ -47,7 +49,16 @@
                         class="btn btn-xs btn-info"><i
                             class="fa fa-pencil"></i>&nbsp;@lang('quickadmin.qa_edit')</a>
                 @endif
+
+                <a href="{{ route('admin.folders.show', [$folder->id]) }}" class="btn btn-xs btn-info">
+                    &nbsp;Attach File
+                </a>
             @endcan
+
+            {{-- @can('folder_view')
+        <a href="{{ route('admin.folders.show', [$folder->id]) }}" class="btn btn-xs btn-info"><i class="fas fa-eye"></i>&nbsp;Attach File</a>
+        
+    @endcan --}}
 
             @can('folder_delete')
                 {!! Form::open([

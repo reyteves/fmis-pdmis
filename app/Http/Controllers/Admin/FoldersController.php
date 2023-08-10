@@ -24,14 +24,59 @@ use App\Evaluation;
 class FoldersController extends Controller
 {
 
-
-
     public function getFolderCount(Request $request)
     {
 
         $foldersCount = Folder::count();
         return response()->json(['count' => $foldersCount]);
     }
+
+    // public function proposedCount(Request $request)
+    // {
+    //     $projectStatus = 'proposed'; // Value to match in the project_status column
+
+    //     $proposedCount = Folder::whereHas('budgets', function ($query) use ($projectStatus) {
+    //         $query->where('project_status', $projectStatus);
+    //     })->count();
+
+    //     return response()->json(['count' => $proposedCount]);
+    // }
+    public function proposedCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'proposed'; // Value to match in the project_basis column
+        $proposedCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $proposedCount]);
+    }
+    public function ongoingCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'on-going'; // Value to match in the project_basis column
+        $ongoingCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $ongoingCount]);
+    }
+    public function continuingCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'continuing'; // Value to match in the project_basis column
+        $continuingCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $continuingCount]);
+    }
+    public function terminatingCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'terminating'; // Value to match in the project_basis column
+        $terminatingCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $terminatingCount]);
+    }
+    public function coordinatedCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'coordinated'; // Value to match in the project_basis column
+        $coordinatedCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $coordinatedCount]);
+    }
+
     /**
      * Display a listing of Folder.
      *
@@ -71,14 +116,14 @@ class FoldersController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-/** View Folders with Same Region as User*/
+    /** View Folders with Same Region as User*/
     public function viewFoldersWithSameRegion()
     {
         if (!Gate::allows('folder_access')) {
             return abort(401);
         }
         $userRegion = auth()->user()->region; // Assuming user's region is stored in the 'region' field
-    
+
         if ($filterBy = request()->get('filter')) {
             if ($filterBy == 'all') {
                 Session::put('Folder.filter', 'all');
@@ -98,7 +143,7 @@ class FoldersController extends Controller
         $foldersCount = $folders->count();
         return view('admin.folders.index', compact('folders', 'foldersCount'));
     }
-    
+
 
     public function create()
     {

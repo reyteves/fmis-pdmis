@@ -20,8 +20,6 @@ class Psgc extends Model
         if (isset($region)) {
             return $region->name;
         }
-
-        
     }
 
     static function getRegionsDropdown()

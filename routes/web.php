@@ -10,10 +10,16 @@ use App\Http\Controllers\PsgcController;
 Route::get('/', function () { return redirect('/admin/home'); });
 
 
-// custom AJAX routes
+// custom AJAX routes for dashboard counts
 
 Route::get('/get-folder-count', 'Admin\FoldersController@getFolderCount');
 Route::get('/get-user-count', 'Admin\UsersController@getUserCount');
+
+Route::get('/get-proposed-count', 'Admin\FoldersController@proposedCount');
+Route::get('/get-ongoing-count', 'Admin\FoldersController@ongoingCount');
+Route::get('/get-continuing-count', 'Admin\FoldersController@continuingCount');
+Route::get('/get-terminating-count', 'Admin\FoldersController@terminatingCount');
+Route::get('/get-coordinated-count', 'Admin\FoldersController@coordinatedCount');
 
 // custom View routes
 Route::get('admin/folders/{id}/view_ppf', [FoldersController::class, 'view_ppf'])->name('admin.folders.view_ppf');
@@ -28,6 +34,7 @@ Route::get('/getProvinceName/{code}', 'PsgcController@getProvinceName');
 
 Route::get('/getCityName/{code}', 'PsgcController@getCityName');
 
+Route::get('/getBarangayName/{code}', 'PsgcController@getBarangayName');
 
 // end custom psgc routes
 

@@ -65,6 +65,7 @@
                             @else
                                 @include('admin.folders.index-table');
                             @endif
+                             {{-- /end filter --}}
                         @endforeach
                     @else
                         <tr>
