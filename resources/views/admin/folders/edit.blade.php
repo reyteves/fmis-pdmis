@@ -6,7 +6,21 @@
 @section('content')
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
 
-    {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!}
+    {{-- {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!} --}}
+
+
+        {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!}
+        {!! Form::textarea(
+            'evaluation_project_title',
+            old('evaluation_project_title', $folder->evaluation->evaluation_project_title),
+            [
+                'class' => 'form-control',
+                'rows' => 1,
+                'placeholder' => 'Project Title',
+            ],
+        ) !!}
+        
+       
 
 
     {{-- <div class="panel panel-default"> --}}
@@ -64,19 +78,18 @@
                             class="fa fa-eye"></i>&nbsp;Print Project Details</a>
                 </li>
 
-                @if (Auth::user()->role_id !== 2)
+                {{-- @if (Auth::user()->role_id !== 2) --}}
                     <li class="nav-item">
                         <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate"><i
                                 class="fa fa-check"></i>&nbsp;Evaluate</a>
                     </li>
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate-print"><i
                                 class="fa fa-eye"></i>&nbsp;Print Evaluation Page</a>
-                    </li>
+                    </li> --}}
 
-
-                @endif
+                {{-- @endif --}}
             </ul>
 
             <div class="tab-content panel-body">
@@ -101,9 +114,9 @@
                 <div class="tab-pane fade" id="evaluate">
                     @include('admin.folders.tab_edit.evaluate')
                 </div>
-                <div class="tab-pane fade" id="evaluate-print">
+                {{-- <div class="tab-pane fade" id="evaluate-print">
                     @include('admin.folders.tab_edit.evaluation-page')
-                </div>
+                </div> --}}
 
             </div>
         </div>

@@ -1411,7 +1411,9 @@
                 }
             },
             error: function () {
-                $('#provinceSpan').text('Error fetching data');
+                // $('#provinceSpan').text('Error fetching data');
+                // blank instead of error message
+                $('#provinceSpan').text('');
             }
         });
 
@@ -1429,7 +1431,9 @@
             }
         },
         error: function () {
-            $('#citySpan').text('Error fetching data');
+            // $('#citySpan').text('Error fetching data');
+            // blank instead of error message
+            $('#provinceSpan').text('');
         }
     });
 
@@ -1449,7 +1453,9 @@
             }
         },
         error: function () {
-            $('#barangaySpan').text('Error fetching data');
+            // $('#barangaySpan').text('Error fetching data');
+            // blank instead of error message
+            $('#provinceSpan').text('');
         }
     });
 

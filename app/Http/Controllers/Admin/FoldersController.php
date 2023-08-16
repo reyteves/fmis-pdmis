@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\File;
 use App\Folder;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Log;
 use Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -401,9 +403,9 @@ class FoldersController extends Controller
 
     public function view_ppf($id)
     {
-        // if (!Gate::allows('folder_edit')) {
-        //     return abort(401);
-        // }
+        if (!Gate::allows('folder_edit')) {
+            return abort(401);
+        }
 
         $created_bies = \App\User::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
 
@@ -423,6 +425,8 @@ class FoldersController extends Controller
 
     public function update(UpdateFoldersRequest $request, $id)
     {
+        // try {
+
         if (!Gate::allows('folder_edit')) {
             return abort(401);
         }
@@ -505,6 +509,8 @@ class FoldersController extends Controller
             $budget->save();
         }
 
+       
+
         $evaluation = $folder->evaluation;
         if ($evaluation) {
             $evaluation->format_check = $request->input('format_check');
@@ -586,8 +592,14 @@ class FoldersController extends Controller
 
             $evaluation->save();
         }
+        
 
         return redirect()->route('admin.folders.index');
+
+    // } catch (QueryException $e) {
+    //     // Handle the exception, log it, and display an error message to the user
+    //     Log::error('QueryException: ' . $e->getMessage());
+    // }
     }
 
 

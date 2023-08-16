@@ -70,21 +70,19 @@
     </div>
 </div>
 
-
-
-
-
 <script>
     $(document).ready(function() {
 
-        // Fetch regions from the server and populate the region dropdown
         fetch('/get-regions-dropdown')
             .then(response => response.json())
             .then(data => {
                 let dropdown = $('#region-dropdown');
                 dropdown.empty();
 
-                for (let code in data) {
+                // Sort the data keys (codes) alphabetically
+                let sortedCodes = Object.keys(data).sort();
+
+                for (let code of sortedCodes) {
                     let option = $('<option></option>');
                     option.val(code).text(data[code]);
                     dropdown.append(option);
@@ -93,15 +91,18 @@
                 // Set the initial value based on the selected option from the server-side
                 let initialRegionCode = '{{ $folder->site->region }}';
                 dropdown.val(initialRegionCode);
-
                 // Trigger the change event manually to populate provinces initially
                 dropdown.trigger('change');
             });
 
 
+
         // Event listener for region dropdown change
         $('#region-dropdown').on('change', function() {
             let selectedRegionId = $(this).val();
+
+            console.log(selectedRegionId);
+
             let provincesDropdown = $(
                 '#provinces-dropdown'
             ); // Replace 'provinces-dropdown' with the ID of your provinces dropdown
@@ -144,119 +145,19 @@
             $('#provinces-dropdown').trigger('change');
         });
 
-        /* To select cities/municipalities/sub-municipalities based on selected province */
-        // $('#provinces-dropdown').on('change', function() {
-        //     let selectedProvinceId = $(this).val();
-        //     let municipalitiesDropdown = $(
-        //         '#municipalities-dropdown'
-        //     ); // Replace 'municipalities-dropdown' with the ID of your municipalities dropdown
-        //     let barangayDropdown = $('#barangay-dropdown');
-        //     // Fetch municipalities based on the selected province
-        //     $.ajax({
-        //         url: "{{ route('getCities') }}",
-        //         data: {
-        //             provinceID: selectedProvinceId // Use province code as the parameter
-        //         },
-        //         type: "GET",
-        //         dataType: "json",
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{ csrf_token() }}',
-        //         },
-        //         success: function(data) {
-        //             municipalitiesDropdown.empty();
-        //             let initialMunicipalityCode = '{{ $folder->site->municipality }}';
-        //             municipalitiesDropdown.val(initialMunicipalityCode);
-        //             for (let municipality of data) {
-        //                 let option = $('<option></option>');
-        //                 option.val(municipality.code).text(municipality.name);
-        //                 if (municipality.code === initialMunicipalityCode) {
-        //                     option.prop('selected', true);
-        //                 }
-        //                 municipalitiesDropdown.append(option);
-        //             }
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error(error);
-        //         }
-        //     });
-        //     // Trigger change event on municipalities dropdown after page load
-        //     $('#municipalities-dropdown').trigger('change');
-        // });
-        /* To select barangays based on selected municipality */
-        // $('#municipalities-dropdown').on('change', function() {
-        //     let selectedMunicipalityId = $(this).val();
-        //     let barangayDropdown = $('#barangay-dropdown');
-        //     // Fetch barangays based on the selected municipality
-        //     $.ajax({
-        //         url: "{{ route('getBrgy') }}", // Change to your route for fetching barangays
-        //         data: {
-        //             cityID: selectedMunicipalityId
-        //         },
-        //         type: "GET",
-        //         dataType: "json",
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{ csrf_token() }}',
-        //         },
-        //         success: function(data) {
-        //             barangayDropdown.empty();
-        //             let initialBarangayValue = '{{ $folder->site->barangay }}';
-        //             console.log("initialBarangayValue: " + initialBarangayValue);
-        //             barangayDropdown.val(initialBarangayValue);
-        //             for (let barangay of data) {
-        //                 let option = $('<option></option>');
-        //                 option.val(barangay.code).text(barangay.name);
-        //                 if (barangay.code === initialBarangayValue) {
-        //                     option.prop('selected', true);
-        //                 }
-        //                 barangayDropdown.append(option);
-        //             }
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error("error: " + error);
-        //         }
-        //     });
-        //     $('#barangay-dropdown').trigger('change');
-        // });
-        //  /end of document ready
-        // Trigger change event on provinces dropdown to populate municipalities and barangays
-    $('#provinces-dropdown').trigger('change');
+        $('#provinces-dropdown').trigger('change');
 
-/* To select municipalities and barangays based on selected province */
-$('#provinces-dropdown').on('change', function() {
-    let selectedProvinceId = $(this).val();
-    let municipalitiesDropdown = $('#municipalities-dropdown');
-    let barangayDropdown = $('#barangay-dropdown');
+        /* To select municipalities and barangays based on selected province */
+        $('#provinces-dropdown').on('change', function() {
+            let selectedProvinceId = $(this).val();
+            let municipalitiesDropdown = $('#municipalities-dropdown');
+            let barangayDropdown = $('#barangay-dropdown');
 
-    // Fetch municipalities based on the selected province
-    $.ajax({
-        url: "{{ route('getCities') }}",
-        data: {
-            provinceID: selectedProvinceId // Use province code as the parameter
-        },
-        type: "GET",
-        dataType: "json",
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}',
-        },
-        success: function(data) {
-            municipalitiesDropdown.empty();
-            let initialMunicipalityCode = '{{ $folder->site->municipality }}';
-            municipalitiesDropdown.val(initialMunicipalityCode);
-            for (let municipality of data) {
-                let option = $('<option></option>');
-                option.val(municipality.code).text(municipality.name);
-                if (municipality.code === initialMunicipalityCode) {
-                    option.prop('selected', true);
-                }
-                municipalitiesDropdown.append(option);
-            }
-
-            // Fetch barangays based on the selected municipality
-            let selectedMunicipalityId = municipalitiesDropdown.val();
+            // Fetch municipalities based on the selected province
             $.ajax({
-                url: "{{ route('getBrgy') }}", // Change to your route for fetching barangays
+                url: "{{ route('getCities') }}",
                 data: {
-                    cityID: selectedMunicipalityId
+                    provinceID: selectedProvinceId // Use province code as the parameter
                 },
                 type: "GET",
                 dataType: "json",
@@ -264,27 +165,54 @@ $('#provinces-dropdown').on('change', function() {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}',
                 },
                 success: function(data) {
-                    barangayDropdown.empty();
-                    let initialBarangayValue = '{{ $folder->site->barangay }}';
-                    barangayDropdown.val(initialBarangayValue);
-                    for (let barangay of data) {
+                    municipalitiesDropdown.empty();
+                    let initialMunicipalityCode = '{{ $folder->site->municipality }}';
+                    municipalitiesDropdown.val(initialMunicipalityCode);
+                    for (let municipality of data) {
                         let option = $('<option></option>');
-                        option.val(barangay.code).text(barangay.name);
-                        if (barangay.code === initialBarangayValue) {
+                        option.val(municipality.code).text(municipality.name);
+                        if (municipality.code === initialMunicipalityCode) {
                             option.prop('selected', true);
                         }
-                        barangayDropdown.append(option);
+                        municipalitiesDropdown.append(option);
                     }
+
+                    // Fetch barangays based on the selected municipality
+                    let selectedMunicipalityId = municipalitiesDropdown.val();
+                    $.ajax({
+                        url: "{{ route('getBrgy') }}", // Change to your route for fetching barangays
+                        data: {
+                            cityID: selectedMunicipalityId
+                        },
+                        type: "GET",
+                        dataType: "json",
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        },
+                        success: function(data) {
+                            barangayDropdown.empty();
+                            let initialBarangayValue =
+                                '{{ $folder->site->barangay }}';
+                            barangayDropdown.val(initialBarangayValue);
+                            for (let barangay of data) {
+                                let option = $('<option></option>');
+                                option.val(barangay.code).text(barangay.name);
+                                if (barangay.code === initialBarangayValue) {
+                                    option.prop('selected', true);
+                                }
+                                barangayDropdown.append(option);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("error: " + error);
+                        }
+                    });
                 },
                 error: function(xhr, status, error) {
-                    console.error("error: " + error);
+                    console.error(error);
                 }
             });
-        },
-        error: function(xhr, status, error) {
-            console.error(error);
-        }
-    });
-});
+        });
+        
     });
 </script>

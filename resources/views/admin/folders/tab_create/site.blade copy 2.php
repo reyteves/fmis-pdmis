@@ -114,7 +114,48 @@
                 dropdown.trigger('change');
             });
 
-        
+        // Event listener for region dropdown change
+        // $('#region-dropdown').on('change', function() {
+        //     console.log('region dropdown changed');
+        //     let selectedRegionId = $(this).val();
+        //     let provincesDropdown = $('#provinces-dropdown');
+
+        //     let provincesUrl = "{{ route('getProvinces') }}";
+        //     console.log('Provinces URL:', provincesUrl);
+        //     console.log('selectedRegionId:', selectedRegionId);
+
+        //     // Fetch provinces based on the selected region
+        //     $.ajax({
+        //         url: provincesUrl,
+        //         data: {
+        //             // regionID: selectedRegionId 
+        //             regionID: selectedRegionId
+        //         },
+        //         type: "GET",
+        //         dataType: "json",
+        //         headers: {
+        //             'X-CSRF-TOKEN': '{{ csrf_token() }}',
+        //         },
+        //         success: function(data) {
+        //             provincesDropdown.empty();
+
+        //             for (let province of data) {
+        //                 let option = $('<option></option>');
+        //                 option.val(province.code).text(province.name);
+        //                 provincesDropdown.append(option);
+
+        //                 console.log('province:', province);
+        //             }
+
+        //             // Trigger change event on provinces dropdown to populate cities dropdown
+        //             provincesDropdown.trigger('change');
+        //         },
+        //         error: function(xhr, status, error) {
+        //             console.error("error: " + error);
+        //         }
+        //     });
+        // });
+
         $('#region-dropdown').on('change', function() {
             let selectedRegionId = $(this).val();
 

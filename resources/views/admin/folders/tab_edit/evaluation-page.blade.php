@@ -152,7 +152,7 @@
                         :</strong>
                 </p>
                 {!! Form::textarea(
-                    'evaluation_project_title',
+                    'evaluation_project_title2',
                     old('evaluation_project_title', $folder->evaluation->evaluation_project_title),
                     [
                         'class' => 'form-control',
@@ -169,7 +169,7 @@
                         &nbsp; &nbsp; &nbsp;
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :</strong>
                 </p>
-                {!! Form::textarea('location', old('location', $folder->evaluation->location), [
+                {!! Form::textarea('location2', old('location', $folder->evaluation->location), [
                     'class' => 'form-control',
                     'rows' => 1,
                     'placeholder' => 'Location',
@@ -183,7 +183,7 @@
                         &nbsp; &nbsp;
                         &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;:</strong>
                 </p>
-                {!! Form::textarea('cost_and_source', old('cost_and_source', $folder->evaluation->cost_and_source), [
+                {!! Form::textarea('cost_and_source2', old('cost_and_source', $folder->evaluation->cost_and_source), [
                     'class' => 'form-control',
                     'rows' => 1,
                     'placeholder' => 'Cost and Source',
@@ -196,7 +196,7 @@
                     <strong>Period of implementation&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;:</strong>
                 </p>
                 {!! Form::textarea(
-                    'period_of_implementation',
+                    'period_of_implementation2',
                     old('period_of_implementation', $folder->evaluation->period_of_implementation),
                     [
                         'class' => 'form-control',
@@ -214,7 +214,7 @@
 
                         :</strong>
                 </p>
-                {!! Form::textarea('no_of_beneficiaries', old('no_of_beneficiaries', $folder->evaluation->no_of_beneficiaries), [
+                {!! Form::textarea('no_of_beneficiaries2', old('no_of_beneficiaries', $folder->evaluation->no_of_beneficiaries), [
                     'class' => 'form-control',
                     'rows' => 1,
                     'placeholder' => 'No. of Beneficiaries',
@@ -228,16 +228,12 @@
                         &nbsp; &nbsp; &nbsp;
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</strong>
                 </p>
-                {!! Form::textarea('synopsis', old('synopsis', $folder->evaluation->synopsis), [
+                {!! Form::textarea('synopsis2', old('synopsis', $folder->evaluation->synopsis), [
                     'class' => 'form-control',
                     'rows' => 1,
                     'placeholder' => 'SYNOPSIS',
                 ]) !!}
             </div>
-
-
-
-
 
         </table>
 

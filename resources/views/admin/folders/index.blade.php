@@ -5,16 +5,33 @@
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
     @can('folder_create')
         <p>
-
             {{-- <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Project</a> --}}
-
             <a href="{{ route('admin.folders.create') }}" class="btn btn-success">
                 <i class="fa fa-plus"></i> &nbsp;Add New Project
             </a>
-
-
         </p>
     @endcan
+
+    @if (Auth::user()->role_id === 3)
+    <p>
+        {{-- <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Project</a> --}}
+        {{-- <a id="projectsFromSameRegionButton" class="btn btn-success">
+            <i class="fa fa-plus"></i> &nbsp;Projects from the Same Region
+        </a>
+
+        <a id="projectsFromAllRegionButton" class="btn btn-success">
+            <i class="fa fa-plus"></i> &nbsp;All Regions
+        </a> --}}
+
+        <button id="projectsFromSameRegionButton" class="btn btn-success">
+            <i class="fa fa-plus"></i> &nbsp;Projects from the Same Region
+        </button>
+        
+        <button id="projectsFromAllRegionButton" class="btn btn-success">
+            <i class="fa fa-plus"></i> &nbsp;All Projects
+        </button>
+    </p>
+    @endif
 
     @can('folder_delete')
         <p>
@@ -27,7 +44,6 @@
         </ul>
         </p>
     @endcan
-
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -54,18 +70,36 @@
                     </tr>
                 </thead>
 
+                {{-- <tbody>
+                    @if (count($folders) > 0)
+                        @foreach ($folders as $folder)
+                            @if (Auth::user()->role_id === 3)
+                                @if ($folder->site->region == auth()->user()->region)
+                                    @include('admin.folders.index-table')
+                                @endif
+                            @else
+                                @include('admin.folders.index-table')
+                            @endif
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="7">@lang('quickadmin.qa_no_entries_in_table')</td>
+                        </tr>
+                    @endif
+                </tbody> --}}
+
                 <tbody>
                     @if (count($folders) > 0)
                         @foreach ($folders as $folder)
-                            {{-- test filter if evaluator view projects with the same region --}}
-                            @if (Auth::user()->role_id === 3)
+                            <div class="conditional-row1">
                                 @if ($folder->site->region == auth()->user()->region)
-                                    @include('admin.folders.index-table');
+                                    @include('admin.folders.index-table')
                                 @endif
-                            @else
-                                @include('admin.folders.index-table');
-                            @endif
-                             {{-- /end filter --}}
+                            </div>
+                
+                            <div class="conditional-row2">
+                                @include('admin.folders.index-table')
+                            </div>
                         @endforeach
                     @else
                         <tr>
@@ -73,6 +107,18 @@
                         </tr>
                     @endif
                 </tbody>
+                
+
+                {{-- <tbody>
+                    @if (count($folders) > 0)
+                    @foreach ($folders as $folder)
+                        <tr class="project-item" data-region="{{ $folder->site->region }}">
+                            @include('admin.folders.index-table')
+                        </tr>
+                    @endforeach
+                    @endif
+                </tbody> --}}
+                
 
             </table>
         </div>
@@ -89,5 +135,45 @@
         @endcan
     </script>
 
-    
+<script>
+    // $(document).ready(function() {
+    //     $('#projectsFromSameRegionButton').click(function() {
+    //         console.log("projectsFromSameRegionButton");
+    //     });
+
+    //     $('#projectsFromAllRegionButton').click(function() {
+    //         console.log("projectsFromAllRegionButton");
+    //     });
+    // });
+
+    $(document).ready(function() {
+        $('.conditional-row1').hide();  // Hide rows with class conditional-row1 initially
+        $('.conditional-row2').hide();  // Hide rows with class conditional-row2 initially
+
+        $('#projectsFromSameRegionButton').click(function() {
+            console.log("projectsFromSameRegionButton");
+            
+            // Hide rows with class conditional-row2
+            $('.conditional-row2').hide();
+            
+            // Show rows with class conditional-row1
+            $('.conditional-row1').show();
+        });
+
+        $('#projectsFromAllRegionButton').click(function() {
+            console.log("projectsFromAllRegionButton");
+            
+            // Hide rows with class conditional-row1
+            $('.conditional-row1').hide();
+            
+            // Show rows with class conditional-row2
+            $('.conditional-row2').show();
+        });
+    });
+</script>
+
+
+
+
+
 @endsection
