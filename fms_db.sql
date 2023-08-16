@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2023 at 03:18 AM
+-- Generation Time: Aug 16, 2023 at 09:24 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -43,9 +43,17 @@ CREATE TABLE `attachments` (
 --
 
 INSERT INTO `attachments` (`id`, `created_at`, `updated_at`, `ppmp`, `implementation_plan`, `summary_of_expenditures`, `list_of_beneficiaries`, `other_attachments`) VALUES
-(112, '2023-07-30 23:40:15', '2023-07-30 23:40:15', 'unchecked', 'checked', 'checked', 'checked', 'checked'),
+(112, '2023-07-30 23:40:15', '2023-08-14 22:57:47', 'checked', 'checked', 'checked', 'checked', 'checked'),
 (113, '2023-07-31 22:01:42', '2023-07-31 22:01:42', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(116, '2023-08-04 00:16:04', '2023-08-04 00:16:04', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked');
+(116, '2023-08-04 00:16:04', '2023-08-04 00:16:04', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(117, '2023-08-07 23:30:54', '2023-08-07 23:30:54', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(118, '2023-08-09 23:30:58', '2023-08-09 23:30:58', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(119, '2023-08-09 23:38:12', '2023-08-09 23:38:12', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(120, '2023-08-09 23:45:10', '2023-08-09 23:45:10', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(121, '2023-08-09 23:51:12', '2023-08-09 23:51:12', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(122, '2023-08-13 18:40:57', '2023-08-13 18:40:57', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(123, '2023-08-14 00:59:12', '2023-08-14 00:59:12', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(124, '2023-08-14 22:30:40', '2023-08-14 22:30:40', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked');
 
 -- --------------------------------------------------------
 
@@ -76,9 +84,17 @@ CREATE TABLE `budgets` (
 --
 
 INSERT INTO `budgets` (`id`, `project_status`, `implementation_mode`, `project_basis`, `total_project_cost`, `direct_cost`, `indirect_cost`, `source_of_fund`, `budget_year`, `core_program`, `sub_program`, `target_date_start`, `target_date_completion`, `created_at`, `updated_at`) VALUES
-(99, 'proposed', 'by-administration', 'Dolore fugiat amet', 'Assumenda debitis re', 'Laborum Atque numqu', 'Laborum Tempor dele', 'Voluptatem dolore q', '1975', 'Aliqua Temporibus u', 'Sint qui voluptatem', '1979-08-14', '1982-11-27', '2023-07-30 23:40:15', '2023-07-31 23:07:02'),
+(99, 'coordinated', 'by-administration', '2023 PrExC; SWF', '1,000,000', '500,000', '500,000', 'GAA FUND', 'CY 2023', 'Administration and General Services', 'Human Resource Management and Development Services', '2023-08-10', '2023-08-11', '2023-07-30 23:40:15', '2023-08-14 22:30:05'),
 (100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42'),
-(103, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04');
+(103, 'coordinated', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-14 22:29:56'),
+(104, 'on-going', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-07 23:30:54', '2023-08-09 23:15:02'),
+(105, 'on-going', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58'),
+(106, 'continuing', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12'),
+(107, 'terminating', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10'),
+(108, 'coordinated', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12'),
+(109, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57'),
+(110, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12'),
+(111, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40');
 
 -- --------------------------------------------------------
 
@@ -165,9 +181,17 @@ CREATE TABLE `evaluations` (
 --
 
 INSERT INTO `evaluations` (`id`, `format_check`, `format_comment`, `provincial_evaluation_check`, `provincial_evaluation_comment`, `regional_validation_check`, `regional_validation_comment`, `general_information_check`, `general_information_comment`, `background_and_rationale_check`, `background_and_rationale_comment`, `objectives_check`, `objectives_comment`, `project_description_check`, `project_description_comment`, `implementation_strategies_check`, `implementation_strategies_comment`, `sustainability_plan_check`, `sustainability_plan_comment`, `budgetary_requirements_check`, `budgetary_requirements_comment`, `attachments_check`, `attachments_comment`, `signatories_check`, `signatories_comment`, `ipra_rights_check`, `ipra_rights_comment`, `presidents_agenda_check`, `presidents_agenda_comment`, `pdp_pip_check`, `pdp_pip_comment`, `ip_master_plan_check`, `ip_master_plan_comment`, `strategic_plan_check`, `strategic_plan_comment`, `workflow_framework_check`, `workflow_framework_comment`, `building_blocks_check`, `building_blocks_comment`, `strategic_directions_check`, `strategic_directions_comment`, `prexc_check`, `prexc_comment`, `sdg_check`, `sdg_comment`, `signature_check`, `signature_comment`, `procurement_management_plan_check`, `procurement_management_plan_comment`, `implementation_plan_check`, `implementation_plan_comment`, `expenditure_summary_check`, `expenditure_summary_comment`, `beneficiaries_check`, `beneficiaries_comment`, `project_page_photocopy_check`, `project_page_photocopy_comment`, `plan_materials_map_check`, `plan_materials_map_comment`, `return_on_investment_check`, `return_on_investment_comment`, `created_at`, `updated_at`, `evaluation_project_title`, `location`, `cost_and_source`, `period_of_implementation`, `no_of_beneficiaries`, `synopsis`, `bureau_director_designation`, `bureau_director_name`) VALUES
-(120, '0', 'Veniam qui enim asp2', '0', 'Est necessitatibus', '0', 'Incidunt laboris es', '1', 'Qui id deserunt mol', '1', 'Odit error quam accu', '0', 'Error qui sapiente s', '1', 'Sint aliquip ipsa a', '0', 'Fugiat vero aut ad m', '1', 'Perspiciatis eum cu', '1', 'Elit dolor facilis', '1', 'Id et aut ad mollit', '1', 'Ipsa odio repudiand', '0', 'Omnis velit qui ipsu', '0', 'Nobis in non a et fu', '1', 'Nesciunt sunt ipsa', '0', 'Voluptatem Tempora', '1', 'In dolore molestiae', '1', 'Ex consectetur est', '0', 'Molestias temporibus', '0', 'Placeat qui dolor e', NULL, 'Libero facilis commo', '0', 'Ad enim molestiae ut', '1', 'Temporibus qui minus', '0', 'Expedita ea et qui i', '1', 'Sit eligendi omnis c', '0', 'Qui ut molestias mol', '1', 'Molestias ratione as', '1', 'Tenetur deserunt inc', '1', 'Ad dolore sed dolor', '0', 'Occaecat elit accus', '2023-07-30 23:40:15', '2023-08-03 00:17:03', 'Fuga Sint commodo1', 'Vel omnis officiis l2', 'Ab minus asperiores3', 'Quia nesciunt in qu4', 'Iusto aliqua Enim q5', 'Hic atque quia porro6', 'Tenetur quo voluptat', 'Macaulay Joyce'),
+(120, '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '2023-07-30 23:40:15', '2023-08-15 22:38:03', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test', 'test'),
 (121, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(125, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-07 23:30:54', '2023-08-07 23:30:54', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(126, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(127, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(128, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(129, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(130, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(131, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(132, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 22:30:40', '2023-08-15 19:10:55', 'test', 'test', 'test', 'test', 'test', 'test', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -211,9 +235,17 @@ CREATE TABLE `folders` (
 --
 
 INSERT INTO `folders` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`, `created_by_id`, `project_id`, `signature_id`, `attachment_id`, `site_id`, `budget_id`, `evaluation_id`) VALUES
-(181, 'Raphael Hodges', '2023-07-30 23:40:15', '2023-07-30 23:40:15', NULL, 1, 165, 137, 112, 104, 99, 120),
+(181, 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE) test', '2023-07-30 23:40:15', '2023-08-15 17:28:44', NULL, 1, 165, 137, 112, 104, 99, 120),
 (182, 'test', '2023-07-31 22:01:42', '2023-07-31 22:01:42', NULL, 3, 166, 138, 113, 105, 100, 121),
-(185, 'test region', '2023-08-04 00:16:04', '2023-08-04 00:16:04', NULL, 1, 169, 141, 116, 108, 103, 124);
+(185, 'AD-ALS Project Proposal Prototype', '2023-08-04 00:16:04', '2023-08-14 22:29:38', NULL, 1, 169, 141, 116, 108, 103, 124),
+(186, 'ADSDPP Project Proposal Prototype', '2023-08-07 23:30:54', '2023-08-10 00:11:05', NULL, 1, 170, 142, 117, 109, 104, 125),
+(187, 'Human Resource Program Project Proposal Prototype', '2023-08-09 23:30:58', '2023-08-10 00:11:17', NULL, 1, 171, 143, 118, 110, 105, 126),
+(188, 'IADDA-CREP Project Proposal Prototype', '2023-08-09 23:38:12', '2023-08-10 00:11:31', NULL, 1, 172, 144, 119, 111, 106, 127),
+(189, 'ICC Environmental Protection Programs Project Proposal Prototype', '2023-08-09 23:45:10', '2023-08-10 00:11:47', NULL, 1, 173, 145, 120, 112, 107, 128),
+(190, 'IP Education and Advocacy Program Project Proposal Prototype', '2023-08-09 23:51:12', '2023-08-10 00:11:59', NULL, 1, 174, 146, 121, 113, 108, 129),
+(191, 'test region', '2023-08-13 18:40:57', '2023-08-14 01:19:45', '2023-08-14 01:19:45', 1, 175, 147, 122, 114, 109, 130),
+(192, 'Test PSGC', '2023-08-14 00:59:12', '2023-08-14 01:19:50', '2023-08-14 01:19:50', 1, 176, 148, 123, 115, 110, 131),
+(193, 'evaluate', '2023-08-14 22:30:40', '2023-08-14 22:30:40', NULL, 1, 177, 149, 124, 116, 111, 132);
 
 -- --------------------------------------------------------
 
@@ -309,7 +341,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (81, '2023_07_26_083455_add_evaluation_fields_to_evaluations_table', 17),
 (82, '2023_07_31_063644_add_bureau_director_to_evaluations_table', 18),
 (83, '2023_07_31_064557_add_bureau_director_name_to_evaluations_table', 19),
-(84, '2023_07_31_065623_modify_evaluations_table_add_bureau_director_designation', 20);
+(84, '2023_07_31_065623_modify_evaluations_table_add_bureau_director_designation', 20),
+(85, '2023_08_08_013215_add_region_column_to_users_table', 21);
 
 -- --------------------------------------------------------
 
@@ -382,9 +415,17 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `name`, `description`, `created_at`, `updated_at`, `deleted_at`, `background_and_rationale`, `objectives`, `project_implementation`, `monitoring_evaluation`, `potential_risk`, `sustainability_plan`) VALUES
-(165, 'Raphael Hodges', 'Eum mollitia ipsum a', '2023-07-30 23:40:15', '2023-07-30 23:40:15', NULL, 'Natus ipsam sunt off', 'Quo labore unde nece', 'Sit molestiae ad ve', 'Irure laborum Vel v', 'Libero nihil at esse', 'Ut a excepteur non a'),
+(165, 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE) test', 'The National Commission on Indigenous Peoples (NCIP) is tasked for the formulation and implementation of policies, plans and programs to promote and protect the rights and well-being of the ICCs/IPs and the recognition of their ancestral domains as well as their rights thereto. In order to achieve this mandate, the Commission should be able to provide learning and development interventions to capacitate and continuously improve its employees’ capabilities and commitment to the Commission’s mandate.', '2023-07-30 23:40:15', '2023-08-15 17:28:14', NULL, 'The National Commission on Indigenous Peoples (NCIP) is tasked for the formulation and implementation of policies, plans and programs to promote and protect the rights and well-being of the ICCs/IPs and the recognition of their ancestral domains as well as their rights thereto. In order to achieve this mandate, the Commission should be able to provide learning and development interventions to capacitate and continuously improve its employees’ capabilities and commitment to the Commission’s mandate.\r\n\r\nIn relation to the aims of capacity building and opportunities, the Civil Service Commission emphasized Rule VIII of the CSC Omnibus Rules Implementing Book V of Executive Order 292 that each government agency should establish a continuing program for the development of its personnel. Part of which is also focused on the recognition of the performance of employees to ensure that proper recognition will be given.\r\n\r\nRewards and recognition are systems where people are acknowledged for their performance in both intrinsic and extrinsic ways. These can be said to be present in a workplace if there is appropriate acknowledgment and appreciation of employees\' effort in a fair and timely manner.\r\n\r\nRecognition helps employees see that their organization values them and their contributions to the success of their teams and the whole organization. This is particularly key when organizations grow or change. It helps employees build a sense of security in their value to the company while motivating them to continue their work with pride and passion.\r\nCorollary hereof, the Civil Service Commission pursuant to Memorandum 01, series of 2001 introduced the concept of PRAISE (Program on Awards and Incentives for Service Excellence.  \r\nThrough this program, creativity, innovativeness, integrity and productivity in the public service is recognized as a valuable contribution to the efficiency, economy, and improvement of government services and extraordinary acts or services in the public service. To support its enforcement, the same memorandum mandated that at least 5% of the HRD funds shall be allocated for the PRAISE and incorporated in the agency\'s annual work and financial plan and budget.\r\nAt present, while there is an existing PRAISE guideline approved, there is a need to revisit the enforcement of which from the Central Office down to the field offices. This also includes the following activities:\r\n\r\n1.	Checking of the existence of PRAISE committees in respective NCIP offices;\r\n2.	study the existing PRAISE interim guidelines to confirm if still in adherence to the latest rules, regulations and provisions on rewards and recognition system provided by the Civil Service Commission and provide revisions if necessary;\r\n3.	ensuring that incentive programs are followed and criteria for selection of deserving employees are in place; and\r\n4.	institutionalize the review of nominated employees, annual recognition program and allocation of funds to ensure delivery of awards.\r\nTo be able to carry out the implementation of a proper employee recognition and rewards system and to ensure its continuity, revitalizing the program in place is necessary. Hence, this project is being proposed.', 'The proposed project aims to promote and direct personnel on the way to fruitful inputs to all projects, activities and programs success and well-organized service delivery by providing options for awards, incentives, and/or recognitions for top performing employees.\r\n	Specifically, this aims to:\r\n1)	Improve the mechanism in identifying, selecting, rewarding and providing incentives to deserving employees;\r\n2)	Provide both monetary and non- monetary rewards and incentives to deserving employees;\r\n3)	Recognize, acknowledge and reward productive, creative, innovative and ethical behavior of employees through formal and informal mode; and\r\n4)	Improve human resources towards productive contributions and efficient service delivery.', 'This activity will be implemented by the Human Resource Office of the Regional Office with the endorsement from the Provincial Office identifying personnel who need such training based on the DATA BANK or PDS file of the employees.\r\n\r\nThis project proposal was anticipated to ensure that personnel structure, competence and approaches match the requirements of the program implementation and services delivery. The Central Office, Regional Offices, Provincial Offices and Community Service Centers are always faced with critical issues and challenges; thus, the said project will encourage the personnel to grow, develop their potential, and prepare for movement.\r\n\r\nThe commencement of this project will be marked by checking the existing PRAISE committees within the NCIP offices. This will be manifested by the preparation of an inventory of the PRAISE committee where the management can see the existence and update of the personnel assigned as members of the committee. This will be followed by implementation of various activities related to PRAISE as approved in the HR Development Plan or other relative resolutions governing the PRAISE activities. Orientation for the PRAISE Committee and NCIP employees are suggested to be emphasized since there were already resolutions from the Civil Service Commission that might trigger updates for modification of existing guidelines. Aside from the orientation, the recognition and rewarding ceremony should be religiously followed as this highlights the culminating of the PRAISE guidelines every calendar year.', 'The Human Resource Officer is tasked to monitor the implementation of the project and determine what progress has been made. The HR Officer is also tasked to ascertain whether the project is on track.\r\n\r\nAs per NCIP SPMS, the PMT is responsible for identifying potential PRAISE awards nominees for various awards categories and the PRAISE Committee in determining top performers of the agency who qualify for awards and incentives. \r\n\r\nLikewise, as part of the monitoring and evaluation, the following strategies are adopted to come up with reliable, effective and credible determination of priority list of interventions for implementation and future action planning:\r\n \r\n1.	Survey Questionnaires- will be used as baseline data for the determination of perceived training needs and interventions. It also tries to determine strengths and weaknesses of individual staff. These shall be consolidated and matched with the positions, skills, strengths and weaknesses of the employees.\r\n\r\n2.	Focus Group Discussion (FGD) (per division/department/province)-to determine the individual need of employees based on their perceived weakness and strength.\r\n\r\n3.	Performance Evaluation (with the department/division heads and the concerned employee) - to validate the need of employees for skills enhancement based on the result of their performance evaluation through the SPMS.\r\n\r\n4.	Staff meetings- to determine the general perception of employees in terms of improving the performance of the agency.\r\n\r\n5.	Annual Work and Financial Plans – Since the Annual WFP considers the priority projects, programs, and activities of the different units for implementation, these are considered in determining the interventions for HRD purposes.', 'It is given that NCIP has limited human resources causing most, if not all, to perform beyond what is in their PDS. As such, one potential risk during implementation especially if the criteria are not clear is for the possibility of not recognizing all the efforts of all performing employees. Thus, the need to clearly set out the criteria for the PRAISE.\r\n\r\nIf the project is not implemented, the potential risk is our office will violate the NCIP SPMS and the CSC Memorandum as indicated in the background and rationale of this proposal.\r\n\r\nThe praise committee may not actually function if its members are holding different designations because they will be preoccupied with other concerns and duties', 'The HRM Office shall consolidate and coordinate developmental interventions that will form part of the HR plan. The HRM shall continue to encourage'),
 (166, 'test', NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(169, 'test region', NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(169, 'AD-ALS Project Proposal Prototype', NULL, '2023-08-04 00:16:04', '2023-08-14 22:29:38', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(170, 'ADSDPP Project Proposal Prototype', NULL, '2023-08-07 23:30:54', '2023-08-10 00:11:05', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(171, 'Human Resource Program Project Proposal Prototype', NULL, '2023-08-09 23:30:58', '2023-08-10 00:11:17', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(172, 'IADDA-CREP Project Proposal Prototype', NULL, '2023-08-09 23:38:12', '2023-08-10 00:11:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(173, 'ICC Environmental Protection Programs Project Proposal Prototype', NULL, '2023-08-09 23:45:10', '2023-08-10 00:11:47', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(174, 'IP Education and Advocacy Program Project Proposal Prototype', NULL, '2023-08-09 23:51:12', '2023-08-10 00:11:59', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(175, 'test region', NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(176, 'Test PSGC', NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(177, 'evaluate', NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -37214,7 +37255,7 @@ INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('129804036', 'Tamontaka IV', 'Bgy'),
 ('129804037', 'Tamontaka V', 'Bgy'),
 ('130000000', 'National Capital Region (NCR)', 'Reg'),
-('133900000', 'NCR, City of Manila, First District (Not a Provinc', 'Dist'),
+('133900000', 'NCR, City of Manila, First District', 'Dist'),
 ('133900000', 'City of Manila', 'City'),
 ('133901000', 'Tondo I/II', 'SubMun'),
 ('133901001', 'Barangay 1', 'Bgy'),
@@ -37784,9 +37825,9 @@ INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('133906178', 'Barangay 572', 'Bgy'),
 ('133906179', 'Barangay 573', 'Bgy'),
 ('133906180', 'Barangay 574', 'Bgy'),
-('133906181', 'Barangay 575', 'Bgy');
+('133906181', 'Barangay 575', 'Bgy'),
+('133906182', 'Barangay 576', 'Bgy');
 INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
-('133906182', 'Barangay 576', 'Bgy'),
 ('133906183', 'Barangay 577', 'Bgy'),
 ('133906184', 'Barangay 578', 'Bgy'),
 ('133906185', 'Barangay 579', 'Bgy'),
@@ -39222,9 +39263,9 @@ INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('140121010', 'Sabtan-olo', 'Bgy'),
 ('140121012', 'San Marcial', 'Bgy'),
 ('140121013', 'Tangbao', 'Bgy'),
-('140122000', 'San Juan', 'Mun');
+('140122000', 'San Juan', 'Mun'),
+('140122001', 'Abualan', 'Bgy');
 INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
-('140122001', 'Abualan', 'Bgy'),
 ('140122002', 'Ba-ug', 'Bgy'),
 ('140122003', 'Badas', 'Bgy'),
 ('140122004', 'Cabcaborao', 'Bgy'),
@@ -40738,9 +40779,9 @@ INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('153611021', 'Calilangan', 'Bgy'),
 ('153611026', 'Carandangan-Mipaga', 'Bgy'),
 ('153611027', 'Cormatan Langban', 'Bgy'),
-('153611031', 'Dialongana', 'Bgy');
+('153611031', 'Dialongana', 'Bgy'),
+('153611035', 'Dilindongan-Cadayonan', 'Bgy');
 INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
-('153611035', 'Dilindongan-Cadayonan', 'Bgy'),
 ('153611039', 'Gadongan', 'Bgy'),
 ('153611040', 'Galawan', 'Bgy'),
 ('153611041', 'Gambai', 'Bgy'),
@@ -42246,10 +42287,10 @@ INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('156603012', 'Pitogo', 'Bgy'),
 ('156603013', 'Karungdong (Pob.)', 'Bgy'),
 ('156603016', 'Tunggol', 'Bgy'),
-('156603017', 'Masjid Bayle', 'Bgy');
-INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
+('156603017', 'Masjid Bayle', 'Bgy'),
 ('156603018', 'Masjid Punjungan', 'Bgy'),
-('156604000', 'Luuk', 'Mun'),
+('156604000', 'Luuk', 'Mun');
+INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('156604004', 'Bual', 'Bgy'),
 ('156604007', 'Kan-Bulak', 'Bgy'),
 ('156604008', 'Kan-Mindus', 'Bgy'),
@@ -43752,10 +43793,10 @@ INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('166724038', 'Sabang', 'Bgy'),
 ('166724039', 'San Isidro', 'Bgy'),
 ('166724040', 'San Jose', 'Bgy'),
-('166724041', 'San Juan', 'Bgy');
-INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
+('166724041', 'San Juan', 'Bgy'),
 ('166724042', 'San Pedro', 'Bgy'),
-('166724043', 'San Roque', 'Bgy'),
+('166724043', 'San Roque', 'Bgy');
+INSERT INTO `psgc` (`code`, `name`, `level`) VALUES
 ('166724044', 'Sidlakan', 'Bgy'),
 ('166724045', 'Silop', 'Bgy'),
 ('166724046', 'Sugbay', 'Bgy'),
@@ -44286,9 +44327,17 @@ CREATE TABLE `signatures` (
 --
 
 INSERT INTO `signatures` (`id`, `prepared_by_input`, `created_at`, `updated_at`, `prepared_by_checkbox`, `evaluated_by_checkbox`, `evaluated_by_input`, `confirmed_by_checkbox`, `confirmed_by_input`, `validated_by_checkbox`, `validated_by_input`, `endorsed_by_checkbox`, `endorsed_by_input`, `recommended_by_checkbox`, `recommended_by_input`, `approved_by_checkbox`, `approved_by_input`) VALUES
-(137, 'Id laudantium veli', '2023-07-30 23:40:15', '2023-07-31 22:00:36', 'unchecked', 'unchecked', 'Incidunt reprehende', 'unchecked', 'Incidunt reprehende', 'unchecked', '09-Jan-2010', 'checked', 'Aliquip et sapiente', 'checked', 'Id exercitation in', 'unchecked', 'Repudiandae tenetur'),
+(137, NULL, '2023-07-30 23:40:15', '2023-08-09 19:09:32', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'checked', 'MERVYN ESPADERO', 'checked', 'ALLEN A. CAPUYAN'),
 (138, NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(141, NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL);
+(141, NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(142, NULL, '2023-08-07 23:30:54', '2023-08-07 23:30:54', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(143, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(144, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(145, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(146, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(147, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(148, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(149, NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL);
 
 -- --------------------------------------------------------
 
@@ -44315,8 +44364,16 @@ CREATE TABLE `sites` (
 --
 
 INSERT INTO `sites` (`id`, `region`, `congressional_district`, `province`, `municipality`, `barangay`, `street_address`, `cadt_calt`, `ad_name`, `created_at`, `updated_at`) VALUES
-(104, '130000000', 'Accusantium aspernat', '137400000', '137401000', 'Adipisci ex eu est l', '373', 'Ut et mollitia simil', 'Ria Alvarado', '2023-07-30 23:40:15', '2023-08-07 00:21:01'),
-(108, '120000000', NULL, '133900000', NULL, NULL, NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-06 21:32:39');
+(104, '130000000', NULL, '133900000', '133902000', '133902001', '373', 'Quezon', 'Quezon Ancestral Domain', '2023-07-30 23:40:15', '2023-08-13 18:54:33'),
+(108, '150000000', NULL, '150700000', '150708000', '150708001', NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-09 23:14:24'),
+(109, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-07 23:30:54', '2023-08-09 23:15:02'),
+(110, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58'),
+(111, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12'),
+(112, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10'),
+(113, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12'),
+(114, 'Cordillera Administrative Region (CAR)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57'),
+(115, '130000000', NULL, '137600000', '137601000', '137601001', NULL, NULL, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12'),
+(116, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40');
 
 -- --------------------------------------------------------
 
@@ -44327,26 +44384,27 @@ INSERT INTO `sites` (`id`, `region`, `congressional_district`, `province`, `muni
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `region` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `role_id` int(10) UNSIGNED DEFAULT NULL,
-  `stripe_customer_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `role_until` datetime DEFAULT NULL
+  `role_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `role_id`, `stripe_customer_id`, `role_until`) VALUES
-(1, 'Admin', 'admin@admin.com', '$2y$10$u5EBywjXyKqzJ1BlHxiO1uAfQl30K5jq1amO9TCfheqZXm5hMFe62', '9UNMmtsIHxSYv68Ydlfho9lmQp3XFZxdLlWHuBqLZHaEjbw6F9cTh8pMgyLJ', '2023-06-09 02:34:06', '2023-06-09 02:34:06', 1, NULL, NULL),
-(3, 'Juan Dela Cruz', 'proponent@gmail.com', '$2y$10$KO2L5ygJhUmFIYYWUsaDBeAI8nOPHAUcTMjUzJwE6rcu5Nidz7QBK', 'zamNkYQzmive2mYRNLh0oJ6Ts1QaM6y8F21Oeus3N4yF1PUDvqKxNXBPazCP', '2023-06-14 19:32:19', '2023-06-29 01:05:13', 2, NULL, NULL),
-(6, 'Rey Jesus Teves', 'JESUS.REYTEVES5@GMAIL.COM', '$2y$10$MX9p8LqSbtmBDmaIK.fKSeEbOdpX3O1adb3HYR3WK9ugvnT3JEk5K', 'd2RFnVRXgF0e3SwqCN34npu4ckHvrbABQu7LoUeOSPPZLQwkFhiuL2jFk4wF', '2023-06-29 00:21:59', '2023-06-29 00:21:59', 2, NULL, NULL),
-(7, 'Evaluator', 'evaluator@gmail.com', '$2y$10$kD6cmzy4K.0IweYp7nPQMuq7riDQhJ.r8rzo9jHzd/c/19hetXo5W', NULL, '2023-07-11 18:46:02', '2023-07-11 18:46:02', 3, NULL, NULL),
-(8, 'Rey Jesus Teves', 'jesus.reyteves-new@gmail.com', '$2y$10$JUEe7GXk/UMq9AhYTzCGpeAIaI/1/S3BqA4yEdcAZflbOvNu.Ivou', 'TiyKZn3pDCDi74r9o4l7MoGMCRNYaQs3Wg6D6HvyNJqsHMP0MgDy4ZoIRZA3', '2023-07-25 17:49:17', '2023-07-25 17:49:17', 2, NULL, NULL);
+INSERT INTO `users` (`id`, `name`, `region`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `role_id`) VALUES
+(1, 'Admin', '130000000', 'admin@admin.com', '$2y$10$394B2e9nQ0vtjKV4Pu6qeuII45CFoWNVllHPB1IcZgCDLQdok11tG', 'k22Da0QDGjPAgtKbUai7qR7iy81V3CNR70yhrC4tIWfPuXdm5MGDtno8neAu', '2023-06-09 02:34:06', '2023-08-07 19:19:14', 1),
+(3, 'Juan Dela Cruz', NULL, 'proponent@gmail.com', '$2y$10$KO2L5ygJhUmFIYYWUsaDBeAI8nOPHAUcTMjUzJwE6rcu5Nidz7QBK', 'ddxrf41IZFBaFrt55aKeJlpmuHblHlhGRWrNRXkX4QduqTiKUIzWHyLLACQ1', '2023-06-14 19:32:19', '2023-06-29 01:05:13', 2),
+(6, 'Rey Jesus Teves', NULL, 'JESUS.REYTEVES5@GMAIL.COM', '$2y$10$MX9p8LqSbtmBDmaIK.fKSeEbOdpX3O1adb3HYR3WK9ugvnT3JEk5K', 'd2RFnVRXgF0e3SwqCN34npu4ckHvrbABQu7LoUeOSPPZLQwkFhiuL2jFk4wF', '2023-06-29 00:21:59', '2023-06-29 00:21:59', 2),
+(7, 'Evaluator', '130000000', 'evaluator@gmail.com', '$2y$10$XUvL7tsZeVmnog7GB4SkUOHkWjaLxVw/63g0G2WXXq3P8xRRqMZFy', 'ga5Yk3aPviu5E8IxtUxhLV3hnwcbC1vX7YBoF0pcxMr7bHEgPjf42tFkTu3D', '2023-07-11 18:46:02', '2023-08-07 21:51:01', 3),
+(8, 'Rey Jesus Teves', '130000000', 'jesus.reyteves-new@gmail.com', '$2y$10$JUEe7GXk/UMq9AhYTzCGpeAIaI/1/S3BqA4yEdcAZflbOvNu.Ivou', 'TiyKZn3pDCDi74r9o4l7MoGMCRNYaQs3Wg6D6HvyNJqsHMP0MgDy4ZoIRZA3', '2023-07-25 17:49:17', '2023-08-07 19:20:03', 2),
+(9, 'Hiroko Schwartz', '130000000', 'locy@mailinator.com', '$2y$10$.v.H76sFjPxcC6Yvfn2hlO2UrHIxej9o0WFgBQvzbbk2P97/vXSua', NULL, '2023-08-07 18:09:06', '2023-08-07 20:06:51', 2),
+(10, 'Latifah Olson', '130000000', 'qazar@mailinator.com', '$2y$10$F87LyEVajRBql60.QEOlDO4WTRr.vlzs1PQoodjV07TwjOPwHbqJi', NULL, '2023-08-07 20:04:52', '2023-08-07 20:06:38', 2);
 
 --
 -- Indexes for dumped tables
@@ -44471,19 +44529,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attachments`
 --
 ALTER TABLE `attachments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT for table `budgets`
 --
 ALTER TABLE `budgets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `evaluations`
 --
 ALTER TABLE `evaluations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
 -- AUTO_INCREMENT for table `files`
@@ -44495,7 +44553,7 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT for table `folders`
 --
 ALTER TABLE `folders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 
 --
 -- AUTO_INCREMENT for table `media`
@@ -44507,7 +44565,7 @@ ALTER TABLE `media`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT for table `payments`
@@ -44525,7 +44583,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -44537,19 +44595,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `signatures`
 --
 ALTER TABLE `signatures`
-  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
 
 --
 -- AUTO_INCREMENT for table `sites`
 --
 ALTER TABLE `sites`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables

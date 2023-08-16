@@ -84,10 +84,10 @@
                                 class="fa fa-check"></i>&nbsp;Evaluate</a>
                     </li>
 
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluate-print"><i
                                 class="fa fa-eye"></i>&nbsp;Print Evaluation Page</a>
-                    </li> --}}
+                    </li>
 
                 {{-- @endif --}}
             </ul>
@@ -114,9 +114,9 @@
                 <div class="tab-pane fade" id="evaluate">
                     @include('admin.folders.tab_edit.evaluate')
                 </div>
-                {{-- <div class="tab-pane fade" id="evaluate-print">
+                <div class="tab-pane fade" id="evaluate-print">
                     @include('admin.folders.tab_edit.evaluation-page')
-                </div> --}}
+                </div>
 
             </div>
         </div>

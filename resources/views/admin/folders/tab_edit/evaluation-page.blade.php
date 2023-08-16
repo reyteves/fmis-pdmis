@@ -356,7 +356,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('format_check', '1', $folder->evaluation->format_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('format_check2', '1', $folder->evaluation->format_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'format_check_yes',
                         ]) !!}
@@ -367,7 +367,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('format_check', '0', $folder->evaluation->format_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('format_check2', '0', $folder->evaluation->format_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'format_check_no',
                         ]) !!}
@@ -378,7 +378,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('format_comment', old('format_comment', $folder->evaluation->format_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('format_comment2', old('format_comment', $folder->evaluation->format_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -406,7 +406,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check', '1', $folder->evaluation->provincial_evaluation_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check2', '1', $folder->evaluation->provincial_evaluation_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'provincial_evaluation_check_yes',
                         ]) !!}
@@ -417,7 +417,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check', '0', $folder->evaluation->provincial_evaluation_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('provincial_evaluation_check2', '0', $folder->evaluation->provincial_evaluation_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'provincial_evaluation_check_no',
                         ]) !!}</span>
@@ -428,7 +428,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'provincial_evaluation_comment',
+                            'provincial_evaluation_comment2',
                             old('provincial_evaluation_comment', $folder->evaluation->provincial_evaluation_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -456,7 +456,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check', '1', $folder->evaluation->regional_validation_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check2', '1', $folder->evaluation->regional_validation_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'regional_validation_check_yes',
                         ]) !!}</span>
@@ -466,7 +466,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check', '0', $folder->evaluation->regional_validation_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('regional_validation_check2', '0', $folder->evaluation->regional_validation_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'regional_validation_check_no',
                         ]) !!}</span>
@@ -477,7 +477,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'regional_validation_comment',
+                            'regional_validation_comment2',
                             old('regional_validation_comment', $folder->evaluation->regional_validation_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -543,7 +543,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check', '1', $folder->evaluation->general_information_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check2', '1', $folder->evaluation->general_information_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'general_information_check_yes',
                         ]) !!}</span>
@@ -553,7 +553,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check', '0', $folder->evaluation->general_information_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('general_information_check2', '0', $folder->evaluation->general_information_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'general_information_check_no',
                         ]) !!}</span>
@@ -564,7 +564,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'general_information_comment',
+                            'general_information_comment2',
                             old('general_information_comment', $folder->evaluation->general_information_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -593,7 +593,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
                         <span style="font-size:24px;">&nbsp;{!! Form::radio(
-                            'background_and_rationale_check',
+                            'background_and_rationale_check2',
                             '1',
                             $folder->evaluation->background_and_rationale_check == '1',
                             ['class' => 'form-check-input', 'id' => 'background_and_rationale_check_yes'],
@@ -605,7 +605,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
                         <span style="font-size:24px;">&nbsp;{!! Form::radio(
-                            'background_and_rationale_check',
+                            'background_and_rationale_check2',
                             '0',
                             $folder->evaluation->background_and_rationale_check == '0',
                             ['class' => 'form-check-input', 'id' => 'background_and_rationale_check_no'],
@@ -617,7 +617,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'background_and_rationale_comment',
+                            'background_and_rationale_comment2',
                             old('background_and_rationale_comment', $folder->evaluation->background_and_rationale_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -645,7 +645,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('objectives_check', '1', $folder->evaluation->objectives_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('objectives_check2', '1', $folder->evaluation->objectives_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'objectives_check_yes',
                         ]) !!}</span>
@@ -655,7 +655,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('objectives_check', '0', $folder->evaluation->objectives_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('objectives_check2', '0', $folder->evaluation->objectives_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'objectives_check_no',
                         ]) !!}</span>
@@ -665,7 +665,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('objectives_comment', old('objectives_comment', $folder->evaluation->objectives_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('objectives_comment2', old('objectives_comment', $folder->evaluation->objectives_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -694,7 +694,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check', '1', $folder->evaluation->project_description_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check2', '1', $folder->evaluation->project_description_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'project_description_check_yes',
                         ]) !!}</span>
@@ -704,7 +704,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check', '0', $folder->evaluation->project_description_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_description_check2', '0', $folder->evaluation->project_description_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'project_description_check_no',
                         ]) !!}</span>
@@ -715,7 +715,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'project_description_comment',
+                            'project_description_comment2',
                             old('project_description_comment', $folder->evaluation->project_description_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -744,7 +744,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
                         <span style="font-size:24px;">&nbsp;{!! Form::radio(
-                            'implementation_strategies_check',
+                            'implementation_strategies_check2',
                             '1',
                             $folder->evaluation->implementation_strategies_check == '1',
                             ['class' => 'form-check-input', 'id' => 'implementation_strategies_check_yes'],
@@ -756,7 +756,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
                         <span style="font-size:24px;">&nbsp;{!! Form::radio(
-                            'implementation_strategies_check',
+                            'implementation_strategies_check2',
                             '0',
                             $folder->evaluation->implementation_strategies_check == '0',
                             ['class' => 'form-check-input', 'id' => 'implementation_strategies_check_no'],
@@ -768,7 +768,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'implementation_strategies_comment',
+                            'implementation_strategies_comment2',
                             old('implementation_strategies_comment', $folder->evaluation->implementation_strategies_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -796,7 +796,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check', '1', $folder->evaluation->sustainability_plan_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check2', '1', $folder->evaluation->sustainability_plan_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'sustainability_plan_check_yes',
                         ]) !!}</span>
@@ -806,7 +806,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check', '0', $folder->evaluation->sustainability_plan_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sustainability_plan_check2', '0', $folder->evaluation->sustainability_plan_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'sustainability_plan_check_no',
                         ]) !!}</span>
@@ -817,7 +817,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'sustainability_plan_comment',
+                            'sustainability_plan_comment2',
                             old('sustainability_plan_comment', $folder->evaluation->sustainability_plan_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -845,7 +845,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check', '1', $folder->evaluation->budgetary_requirements_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check2', '1', $folder->evaluation->budgetary_requirements_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'budgetary_requirements_check_yes',
                         ]) !!}</span>
@@ -855,7 +855,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check', '0', $folder->evaluation->budgetary_requirements_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('budgetary_requirements_check2', '0', $folder->evaluation->budgetary_requirements_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'budgetary_requirements_check_no',
                         ]) !!}</span>
@@ -866,7 +866,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'budgetary_requirements_comment',
+                            'budgetary_requirements_comment2',
                             old('budgetary_requirements_comment', $folder->evaluation->budgetary_requirements_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -894,7 +894,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '1', $folder->evaluation->attachments_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check2', '1', $folder->evaluation->attachments_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'attachments_check_yes',
                         ]) !!}</span>
@@ -904,7 +904,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '0', $folder->evaluation->attachments_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check2', '0', $folder->evaluation->attachments_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'attachments_check_no',
                         ]) !!}</span>
@@ -914,7 +914,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('attachments_comment', old('attachments_comment', $folder->evaluation->attachments_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('attachments_comment2', old('attachments_comment', $folder->evaluation->attachments_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -942,7 +942,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check', '1', $folder->evaluation->signatories_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check2', '1', $folder->evaluation->signatories_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'signatories_check_yes',
                         ]) !!}</span>
@@ -952,7 +952,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check', '0', $folder->evaluation->signatories_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signatories_check2', '0', $folder->evaluation->signatories_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'signatories_check_no',
                         ]) !!}</span>
@@ -1028,7 +1028,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check', '1', $folder->evaluation->ipra_rights_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check2', '1', $folder->evaluation->ipra_rights_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'ipra_rights_check_yes',
                         ]) !!}</span>
@@ -1038,7 +1038,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check', '0', $folder->evaluation->ipra_rights_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ipra_rights_check2', '0', $folder->evaluation->ipra_rights_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'ipra_rights_check_no',
                         ]) !!}</span>
@@ -1048,7 +1048,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('ipra_rights_comment', old('ipra_rights_comment', $folder->evaluation->ipra_rights_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('ipra_rights_comment2', old('ipra_rights_comment', $folder->evaluation->ipra_rights_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -1076,7 +1076,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check', '1', $folder->evaluation->presidents_agenda_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check2', '1', $folder->evaluation->presidents_agenda_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'presidents_agenda_check_yes',
                         ]) !!}</span>
@@ -1086,7 +1086,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check', '0', $folder->evaluation->presidents_agenda_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('presidents_agenda_check2', '0', $folder->evaluation->presidents_agenda_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'presidents_agenda_check_no',
                         ]) !!}</span>
@@ -1097,7 +1097,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'presidents_agenda_comment',
+                            'presidents_agenda_comment2',
                             old('presidents_agenda_comment', $folder->evaluation->presidents_agenda_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1125,7 +1125,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('pdp_pip_check', '1', $folder->evaluation->pdp_pip_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('pdp_pip_check2', '1', $folder->evaluation->pdp_pip_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'pdp_pip_check_yes',
                         ]) !!}</span>
@@ -1135,7 +1135,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('pdp_pip_check', '0', $folder->evaluation->pdp_pip_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('pdp_pip_check2', '0', $folder->evaluation->pdp_pip_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'pdp_pip_check_no',
                         ]) !!}</span>
@@ -1145,7 +1145,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('pdp_pip_comment', old('pdp_pip_comment', $folder->evaluation->pdp_pip_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('pdp_pip_comment2', old('pdp_pip_comment', $folder->evaluation->pdp_pip_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -1173,7 +1173,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check', '1', $folder->evaluation->ip_master_plan_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check2', '1', $folder->evaluation->ip_master_plan_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'ip_master_plan_check_yes',
                         ]) !!}</span>
@@ -1183,7 +1183,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check', '0', $folder->evaluation->ip_master_plan_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('ip_master_plan_check2', '0', $folder->evaluation->ip_master_plan_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'ip_master_plan_check_no',
                         ]) !!}</span>
@@ -1194,7 +1194,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'ip_master_plan_comment',
+                            'ip_master_plan_comment2',
                             old('ip_master_plan_comment', $folder->evaluation->ip_master_plan_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1222,7 +1222,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check', '1', $folder->evaluation->strategic_plan_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check2', '1', $folder->evaluation->strategic_plan_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'strategic_plan_check_yes',
                         ]) !!}</span>
@@ -1232,7 +1232,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check', '0', $folder->evaluation->strategic_plan_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_plan_check2', '0', $folder->evaluation->strategic_plan_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'strategic_plan_check_no',
                         ]) !!}</span>
@@ -1243,7 +1243,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'strategic_plan_comment',
+                            'strategic_plan_comment2',
                             old('strategic_plan_comment', $folder->evaluation->strategic_plan_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1271,7 +1271,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check', '1', $folder->evaluation->workflow_framework_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check2', '1', $folder->evaluation->workflow_framework_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'workflow_framework_check_yes',
                         ]) !!}</span>
@@ -1281,7 +1281,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check', '0', $folder->evaluation->workflow_framework_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('workflow_framework_check2', '0', $folder->evaluation->workflow_framework_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'workflow_framework_check_no',
                         ]) !!}</span>
@@ -1292,7 +1292,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'workflow_framework_comment',
+                            'workflow_framework_comment2',
                             old('workflow_framework_comment', $folder->evaluation->workflow_framework_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1320,7 +1320,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check', '1', $folder->evaluation->building_blocks_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check2', '1', $folder->evaluation->building_blocks_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'building_blocks_check_yes',
                         ]) !!}</span>
@@ -1330,7 +1330,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check', '0', $folder->evaluation->building_blocks_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('building_blocks_check2', '0', $folder->evaluation->building_blocks_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'building_blocks_check_no',
                         ]) !!}</span>
@@ -1341,7 +1341,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'building_blocks_comment',
+                            'building_blocks_comment2',
                             old('building_blocks_comment', $folder->evaluation->building_blocks_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1369,7 +1369,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_directions_check', '1', $folder->evaluation->strategic_directions_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_directions_check2', '1', $folder->evaluation->strategic_directions_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'strategic_directions_check_yes',
                         ]) !!}</span>
@@ -1379,7 +1379,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_directions_check', '0', $folder->evaluation->strategic_directions_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('strategic_directions_check2', '0', $folder->evaluation->strategic_directions_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'strategic_directions_check_no',
                         ]) !!}</span>
@@ -1390,7 +1390,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'strategic_directions_comment',
+                            'strategic_directions_comment2',
                             old('strategic_directions_comment', $folder->evaluation->strategic_directions_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1418,7 +1418,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_check', '1', $folder->evaluation->prexc_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_check2', '1', $folder->evaluation->prexc_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'prexc_check_yes',
                         ]) !!}</span>
@@ -1428,7 +1428,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_check', '0', $folder->evaluation->prexc_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('prexc_check2', '0', $folder->evaluation->prexc_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'prexc_check_no',
                         ]) !!}</span>
@@ -1438,7 +1438,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('prexc_comment', old('prexc_comment', $folder->evaluation->prexc_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('prexc_comment2', old('prexc_comment', $folder->evaluation->prexc_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -1466,7 +1466,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sdg_check', '1', $folder->evaluation->sdg_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sdg_check2', '1', $folder->evaluation->sdg_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'sdg_check_yes',
                         ]) !!}</span>
@@ -1476,7 +1476,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sdg_check', '0', $folder->evaluation->sdg_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('sdg_check2', '0', $folder->evaluation->sdg_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'sdg_check_no',
                         ]) !!}</span>
@@ -1486,7 +1486,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('sdg_comment', old('sdg_comment', $folder->evaluation->sdg_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('sdg_comment2', old('sdg_comment', $folder->evaluation->sdg_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -1552,7 +1552,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signature_check', '1', $folder->evaluation->signature_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signature_check2', '1', $folder->evaluation->signature_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'signature_check_yes',
                         ]) !!}</span>
@@ -1562,7 +1562,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signature_check', '0', $folder->evaluation->signature_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('signature_check2', '0', $folder->evaluation->signature_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'signature_check_no',
                         ]) !!}</span>
@@ -1572,7 +1572,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.45pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('signature_comment', old('signature_comment', $folder->evaluation->signature_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('signature_comment2', old('signature_comment', $folder->evaluation->signature_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -1600,7 +1600,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '1', $folder->evaluation->attachments_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check2', '1', $folder->evaluation->attachments_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'attachments_check_yes',
                         ]) !!}</span>
@@ -1610,7 +1610,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check', '0', $folder->evaluation->attachments_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('attachments_check2', '0', $folder->evaluation->attachments_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'attachments_check_no',
                         ]) !!}</span>
@@ -1620,7 +1620,7 @@
                     style="width: 429pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
-                        <span style="font-size:24px;">{!! Form::textarea('attachments_comment', old('attachments_comment', $folder->evaluation->attachments_comment), [
+                        <span style="font-size:24px;">{!! Form::textarea('attachments_comment2', old('attachments_comment', $folder->evaluation->attachments_comment), [
                             'class' => 'form-control',
                             'rows' => 1,
                         ]) !!}</span>
@@ -1649,7 +1649,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
                         <span style="font-size:24px;">&nbsp;{!! Form::radio(
-                            'procurement_management_plan_check',
+                            'procurement_management_plan_check2',
                             '1',
                             $folder->evaluation->procurement_management_plan_check == '1',
                             ['class' => 'form-check-input', 'id' => 'procurement_management_plan_check_yes'],
@@ -1661,7 +1661,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
                         <span style="font-size:24px;">&nbsp;{!! Form::radio(
-                            'procurement_management_plan_check',
+                            'procurement_management_plan_check2',
                             '0',
                             $folder->evaluation->procurement_management_plan_check == '0',
                             ['class' => 'form-check-input', 'id' => 'procurement_management_plan_check_no'],
@@ -1673,7 +1673,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'procurement_management_plan_comment',
+                            'procurement_management_plan_comment2',
                             old('procurement_management_plan_comment', $folder->evaluation->procurement_management_plan_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1700,7 +1700,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check', '1', $folder->evaluation->implementation_plan_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check2', '1', $folder->evaluation->implementation_plan_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'implementation_plan_check_yes',
                         ]) !!}</span>
@@ -1710,7 +1710,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check', '0', $folder->evaluation->implementation_plan_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('implementation_plan_check2', '0', $folder->evaluation->implementation_plan_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'implementation_plan_check_no',
                         ]) !!}</span>
@@ -1721,7 +1721,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'implementation_plan_comment',
+                            'implementation_plan_comment2',
                             old('presidents_agenda_comment', $folder->evaluation->implementation_plan_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1748,7 +1748,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check', '1', $folder->evaluation->expenditure_summary_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check2', '1', $folder->evaluation->expenditure_summary_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'expenditure_summary_check_yes',
                         ]) !!}</span>
@@ -1758,7 +1758,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.3pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check', '0', $folder->evaluation->expenditure_summary_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('expenditure_summary_check2', '0', $folder->evaluation->expenditure_summary_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'expenditure_summary_check_no',
                         ]) !!}</span>
@@ -1769,7 +1769,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'expenditure_summary_comment',
+                            'expenditure_summary_comment2',
                             old('expenditure_summary_comment', $folder->evaluation->expenditure_summary_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1796,7 +1796,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check', '1', $folder->evaluation->beneficiaries_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check2', '1', $folder->evaluation->beneficiaries_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'beneficiaries_check_yes',
                         ]) !!}</span>
@@ -1806,7 +1806,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 11.4pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check', '0', $folder->evaluation->beneficiaries_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('beneficiaries_check2', '0', $folder->evaluation->beneficiaries_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'beneficiaries_check_no',
                         ]) !!}</span>
@@ -1817,7 +1817,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'beneficiaries_comment',
+                            'beneficiaries_comment2',
                             old('beneficiaries_comment', $folder->evaluation->beneficiaries_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1845,7 +1845,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check', '1', $folder->evaluation->project_page_photocopy_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check2', '1', $folder->evaluation->project_page_photocopy_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'project_page_photocopy_check_yes',
                         ]) !!}</span>
@@ -1855,7 +1855,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check', '0', $folder->evaluation->project_page_photocopy_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('project_page_photocopy_check2', '0', $folder->evaluation->project_page_photocopy_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'page_photocopy_check_no',
                         ]) !!}</span>
@@ -1866,7 +1866,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'project_page_photocopy_comment',
+                            'project_page_photocopy_comment2',
                             old('project_page_photocopy_comment', $folder->evaluation->project_page_photocopy_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1893,7 +1893,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.45pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check', '1', $folder->evaluation->plan_materials_map_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check2', '1', $folder->evaluation->plan_materials_map_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'plan_materials_map_check_yes',
                         ]) !!}</span>
@@ -1903,7 +1903,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.45pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check', '0', $folder->evaluation->plan_materials_map_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('plan_materials_map_check2', '0', $folder->evaluation->plan_materials_map_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'plan_materials_map_check_no',
                         ]) !!}</span>
@@ -1914,7 +1914,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'plan_materials_map_comment',
+                            'plan_materials_map_comment2',
                             old('plan_materials_map_comment', $folder->evaluation->plan_materials_map_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1941,7 +1941,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.4pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check', '1', $folder->evaluation->return_on_investment_check == '1', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check2', '1', $folder->evaluation->return_on_investment_check == '1', [
                             'class' => 'form-check-input',
                             'id' => 'return_on_investment_check_yes',
                         ]) !!}</span>
@@ -1951,7 +1951,7 @@
                     style="width: 106.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 1.65pt 6pt 0cm 0cm;height: 22.35pt;vertical-align: top;">
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;text-align:center;'>
-                        <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check', '0', $folder->evaluation->return_on_investment_check == '0', [
+                        <span style="font-size:24px;">&nbsp;{!! Form::radio('return_on_investment_check2', '0', $folder->evaluation->return_on_investment_check == '0', [
                             'class' => 'form-check-input',
                             'id' => 'return_on_investment_check_no',
                         ]) !!}</span>
@@ -1962,7 +1962,7 @@
                     <p
                         style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.3pt;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;color:black;'>
                         <span style="font-size:24px;">{!! Form::textarea(
-                            'return_on_investment_comment',
+                            'return_on_investment_comment2',
                             old('return_on_investment_comment', $folder->evaluation->return_on_investment_comment),
                             ['class' => 'form-control', 'rows' => 1],
                         ) !!}</span>
@@ -1989,7 +1989,7 @@
             <tr
                 style="width:{{ strlen('For Completion by the Region/For Recommending Approval by the Executive Director:') }}ch">
                 <td>
-                    {!! Form::text('bureau_director_name', old('bureau_director_name', $folder->evaluation->bureau_director_name), [
+                    {!! Form::text('bureau_director_name', old('bureau_director_name2', $folder->evaluation->bureau_director_name), [
                         'class' => 'form-control',
                         'rows' => 1,
                         'placeholder' => 'Bureau Director Name',
@@ -2002,7 +2002,7 @@
             <tr style="width:{{ strlen('________________________') }}ch">
                 <td>
                     {!! Form::text(
-                        'bureau_director_designation',
+                        'bureau_director_designation2',
                         old('bureau_director_designation', $folder->evaluation->bureau_director_designation),
                         [
                             'class' => 'form-control',
