@@ -88,6 +88,19 @@
                     @endif
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('region', 'Region2:', ['class' => 'control-label']) !!}
+                    {!! Form::select('region', [], old('region'), ['class' => 'form-control select2', 'placeholder' => 'Select a region', 'required' => 'required']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('region'))
+                        <p class="help-block">
+                            {{ $errors->first('region') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
             
         </div>
     </div>

@@ -30,6 +30,10 @@
                             <th>Region</th>
                             <td field-key='region'>{{ $user->region }}</td>
                         </tr>
+                        <tr>
+                            <th>Province</th>
+                            <td field-key='region' id="provinceTd">{{ $user->province }}</td>
+                        </tr>
                     </table>
                 </div>
             </div><!-- Nav tabs -->
@@ -232,6 +236,26 @@
                     }
                 });
             });
+    
+    
+        var provinceCode = $('#provinceTd').text().trim(); 
+        $.ajax({
+            url: '/getProvinceName/' + provinceCode,
+            type: 'GET',
+            dataType: 'json',
+            success: function (response) {
+                if (response.provinceName) {
+                    $('#provinceTd').text(response.provinceName);
+                    
+                } else {
+                    $('#provinceTd').text('Province not found');              
+                }
+            },
+            error: function () {
+                $('#provinceTd').text('');
+            }
+        });
+    
     })
 </script>
 @endsection
