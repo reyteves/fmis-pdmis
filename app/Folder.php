@@ -18,7 +18,7 @@ class Folder extends Model
     use SoftDeletes, FilterByUser;
 
     // protected $fillable = ['name', 'created_by_id'];
-    protected $fillable = ['name', 'created_by_id', 'project_id', 'signature_id'];
+    protected $fillable = ['name', 'created_by_id', 'project_id', 'signature_id', 'evaluation_id'];
 
 
     public function project()

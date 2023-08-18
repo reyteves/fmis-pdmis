@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\File;
 use App\Folder;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Log;
 use Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -24,7 +26,59 @@ use App\Evaluation;
 class FoldersController extends Controller
 {
 
-  
+    public function getFolderCount(Request $request)
+    {
+
+        $foldersCount = Folder::count();
+        return response()->json(['count' => $foldersCount]);
+    }
+
+    // public function proposedCount(Request $request)
+    // {
+    //     $projectStatus = 'proposed'; // Value to match in the project_status column
+
+    //     $proposedCount = Folder::whereHas('budgets', function ($query) use ($projectStatus) {
+    //         $query->where('project_status', $projectStatus);
+    //     })->count();
+
+    //     return response()->json(['count' => $proposedCount]);
+    // }
+    public function proposedCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'proposed'; // Value to match in the project_basis column
+        $proposedCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $proposedCount]);
+    }
+    public function ongoingCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'on-going'; // Value to match in the project_basis column
+        $ongoingCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $ongoingCount]);
+    }
+    public function continuingCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'continuing'; // Value to match in the project_basis column
+        $continuingCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $continuingCount]);
+    }
+    public function terminatingCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'terminating'; // Value to match in the project_basis column
+        $terminatingCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $terminatingCount]);
+    }
+    public function coordinatedCount(Request $request)
+    {
+        // $proposedCount = Budget::count();
+        $projectStatus = 'coordinated'; // Value to match in the project_basis column
+        $coordinatedCount = Budget::where('project_status', $projectStatus)->count();
+        return response()->json(['count' => $coordinatedCount]);
+    }
+
     /**
      * Display a listing of Folder.
      *
@@ -52,7 +106,10 @@ class FoldersController extends Controller
             $folders = Folder::all();
         }
 
-        return view('admin.folders.index', compact('folders'));
+        // Retrieve the count of folders
+        $foldersCount = Folder::count();
+
+        return view('admin.folders.index', compact('folders', 'foldersCount'));
     }
 
     /**
@@ -60,6 +117,36 @@ class FoldersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /** View Folders with Same Region as User*/
+    public function viewFoldersWithSameRegion()
+    {
+        if (!Gate::allows('folder_access')) {
+            return abort(401);
+        }
+        $userRegion = auth()->user()->region; // Assuming user's region is stored in the 'region' field
+
+        if ($filterBy = request()->get('filter')) {
+            if ($filterBy == 'all') {
+                Session::put('Folder.filter', 'all');
+            } elseif ($filterBy == 'my') {
+                Session::put('Folder.filter', 'my');
+            }
+        }
+        if (request('show_deleted') == 1) {
+            if (!Gate::allows('folder_delete')) {
+                return abort(401);
+            }
+            $folders = Folder::onlyTrashed()->where('region', $userRegion)->get();
+        } else {
+            $folders = Folder::where('region', $userRegion)->get();
+        }
+        // Retrieve the count of folders
+        $foldersCount = $folders->count();
+        return view('admin.folders.index', compact('folders', 'foldersCount'));
+    }
+
+
     public function create()
     {
         if (!Gate::allows('folder_create')) {
@@ -254,8 +341,6 @@ class FoldersController extends Controller
 
 
 
-
-
             'procurement_management_plan_check' => $request->input('procurement_management_plan_check'),
             'procurement_management_plan_comment' => $request->input('procurement_management_plan_comment'),
 
@@ -277,175 +362,19 @@ class FoldersController extends Controller
             'return_on_investment_check' => $request->input('return_on_investment_check'),
             'return_on_investment_comment' => $request->input('return_on_investment_comment'),
 
+            'evaluation_project_title' => $request->input('evaluation_project_title'),
+            'location' => $request->input('location'),
+            'cost_and_source' => $request->input('cost_and_source'),
+            'period_of_implementation' => $request->input('period_of_implementation'),
+            'no_of_beneficiaries' => $request->input('no_of_beneficiaries'),
+            'synopsis' => $request->input('synopsis'),
+            'bureau_director_name' => $request->input('bureau_director_name'),
+            'bureau_director_designation' => $request->input('bureau_director_designation'),
+
             'id' => $folder->id,
         ]);
 
         $folder->evaluation()->associate($evaluation);
-
-
-        // $evaluation = Evaluation::create([
-
-        //     'format_check' => $request->input('format_check'),
-        //     'format_comment' => $request->input('format_comment'),
-
-        //     'provincial_evaluation_check' => $request->input('provincial_evaluation_check'),
-        //     'provincial_evaluation_comment' => $request->input('provincial_evaluation_comment'),
-
-        //     'regional_validation_check' => $request->input('regional_validation_check'),
-        //     'regional_validation_comment' => $request->input('regional_validation_comment'),
-
-        //     'general_information_check' => $request->input('general_information_check'),
-        //     'general_information_comment' => $request->input('general_information_comment'),
-
-        //     'background_and_rationale_check' => $request->input('background_and_rationale_check'),
-        //     'background_and_rationale_comment' => $request->input('background_and_rationale_comment'),
-
-        //     'objectives_check' => $request->input('objectives_check'),
-        //     'objectives_comment' => $request->input('objectives_comment'),
-
-        //     'project_description_check' => $request->input('project_description_check'),
-        //     'project_description_comment' => $request->input('project_description_comment'),
-
-        //     'implementation_strategies_check' => $request->input('implementation_strategies_check'),
-        //     'implementation_strategies_comment' => $request->input('implementation_strategies_comment'),
-
-        //     'sustainability_plan_check' => $request->input('sustainability_plan_check'),
-        //     'sustainability_plan_comment' => $request->input('sustainability_plan_comment'),
-
-        //     'budgetary_requirements_check' => $request->input('budgetary_requirements_check'),
-        //     'budgetary_requirements_comment' => $request->input('budgetary_requirements_comment'),
-
-        //     'attachments_check' => $request->input('attachments_check'),
-        //     'attachments_comment' => $request->input('attachments_comment'),
-
-        //     'signatories_check' => $request->input('signatories_check'),
-        //     'signatories_comment' => $request->input('signatories_comment'),
-
-        //     'ipra_rights_check' => $request->input('ipra_rights_check'),
-        //     'ipra_rights_comment' => $request->input('ipra_rights_comment'),
-
-        //     'presidents_agenda_check' => $request->input('presidents_agenda_check'),
-        //     'presidents_agenda_comment' => $request->input('presidents_agenda_comment'),
-
-        //     'pdp_pip_check' => $request->input('pdp_pip_check'),
-        //     'pdp_pip_comment' => $request->input('pdp_pip_comment'),
-
-        //     'ip_master_plan_check' => $request->input('ip_master_plan_check'),
-        //     'ip_master_plan_comment' => $request->input('ip_master_plan_comment'),
-
-        //     'strategic_plan_check' => $request->input('strategic_plan_check'),
-        //     'strategic_plan_comment' => $request->input('strategic_plan_comment'),
-
-        //     'workflow_framework_check' => $request->input('workflow_framework_check'),
-        //     'workflow_framework_comment' => $request->input('workflow_framework_comment'),
-
-        //     'building_blocks_check' => $request->input('building_blocks_check'),
-        //     'building_blocks_comment' => $request->input('building_blocks_comment'),
-
-        //     'strategic_directions_check' => $request->input('strategic_directions_check'),
-        //     'strategic_directions_comment' => $request->input('strategic_directions_comment'),
-
-        //     'prexc_check' => $request->input('prexc_check'),
-        //     'prexc_comment' => $request->input('prexc_comment'),
-
-        //     'sdg_check' => $request->input('sdg_check'),
-        //     'sdg_comment' => $request->input('sdg_comment'),
-
-        //     'signature_check' => $request->input('signature_check'),
-        //     'signature_comment' => $request->input('signature_comment'),
-
-        //     'procurement_management_plan_check' => $request->input('procurement_management_plan_check'),
-        //     'procurement_management_plan_comment' => $request->input('procurement_management_plan_comment'),
-
-        //     'implementation_plan_check' => $request->input('implementation_plan_check'),
-        //     'implementation_plan_comment' => $request->input('implementation_plan_comment'),
-
-        //     'expenditure_summary_check' => $request->input('expenditure_summary_check'),
-        //     'expenditure_summary_comment' => $request->input('expenditure_summary_comment'),
-
-        //     'beneficiaries_check' => $request->input('beneficiaries_check'),
-        //     'beneficiaries_comment' => $request->input('beneficiaries_comment'),
-
-        //     'project_page_photocopy_check' => $request->input('project_page_photocopy_check'),
-        //     'project_page_photocopy_comment' => $request->input('project_page_photocopy_comment'),
-
-        //     'plan_materials_map_check' => $request->input('plan_materials_map_check'),
-        //     'plan_materials_map_comment' => $request->input('plan_materials_map_comment'),
-
-        //     'return_on_investment_check' => $request->input('return_on_investment_check'),
-        //     'return_on_investment_comment' => $request->input('return_on_investment_comment'),
-        //     'id' => $folder->id,
-        // ]);
-
-        // $folder->evaluation()->associate($evaluation);
-
-        // $evaluation = Evaluation::create([
-        //     // 'format_check' => "test",
-
-        //     'format_check' => $request->input('format_check'),
-        //     'format_comment' => "test",
-        //     'provincial_evaluation_check' => "test",
-        //     'provincial_evaluation_comment' => "test",
-        //     'regional_validation_check' => "test",
-        //     'regional_validation_comment' => "test",
-        //     'general_information_check' => "test",
-        //     'general_information_comment' => "test",
-        //     'background_and_rationale_check' => "test",
-        //     'background_and_rationale_comment' => "test",
-        //     'objectives_check' => "test",
-        //     'objectives_comment' => "test",
-        //     'project_description_check' => "test",
-        //     'project_description_comment' => "test",
-        //     'implementation_strategies_check' => "test",
-        //     'implementation_strategies_comment' => "test",
-        //     'sustainability_plan_check' => "test",
-        //     'sustainability_plan_comment' => "test",
-        //     'budgetary_requirements_check' => "test",
-        //     'budgetary_requirements_comment' => "test",
-        //     'attachments_check' => "test",
-        //     'attachments_comment' => "test",
-        //     'signatories_check' => "test",
-        //     'signatories_comment' => "test",
-        //     'ipra_rights_check' => "test",
-        //     'ipra_rights_comment' => "test",
-        //     'presidents_agenda_check' => "test",
-        //     'presidents_agenda_comment' => "test",
-        //     'pdp_pip_check' => "test",
-        //     'pdp_pip_comment' => "test",
-        //     'ip_master_plan_check' => "test",
-        //     'ip_master_plan_comment' => "test",
-        //     'strategic_plan_check' => "test",
-        //     'strategic_plan_comment' => "test",
-        //     'workflow_framework_check' => "test",
-        //     'workflow_framework_comment' => "test",
-        //     'building_blocks_check' => "test",
-        //     'building_blocks_comment' => "test",
-        //     'strategic_directions_check' => "test",
-        //     'strategic_directions_comment' => "test",
-        //     'prexc_check' => "test",
-        //     'prexc_comment' => "test",
-        //     'sdg_check' => "test",
-        //     'sdg_comment' => "test",
-        //     'signature_check' => "test",
-        //     'signature_comment' => "test",
-        //     'procurement_management_plan_check' => "test",
-        //     'procurement_management_plan_comment' => "test",
-        //     'implementation_plan_check' => "test",
-        //     'implementation_plan_comment' => "test",
-        //     'expenditure_summary_check' => "test",
-        //     'expenditure_summary_comment' => "test",
-        //     'beneficiaries_check' => "test",
-        //     'beneficiaries_comment' => "test",
-        //     'project_page_photocopy_check' => "test",
-        //     'project_page_photocopy_comment' => "test",
-        //     'plan_materials_map_check' => "test",
-        //     'plan_materials_map_comment' => "test",
-        //     'return_on_investment_check' => "test",
-        //     'return_on_investment_comment' => "test",
-        //     'id' => $folder->id,
-        // ]);
-
-        // $folder->evaluation()->associate($evaluation);
 
         $folder->save();
 
@@ -472,6 +401,19 @@ class FoldersController extends Controller
         return view('admin.folders.edit', compact('folder', 'created_bies'));
     }
 
+    public function view_ppf($id)
+    {
+        if (!Gate::allows('folder_edit')) {
+            return abort(401);
+        }
+
+        $created_bies = \App\User::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
+
+        $folder = Folder::findOrFail($id);
+
+        return view('admin.folders.view_ppf', compact('folder', 'created_bies'));
+    }
+
     /**
      * Update Folder in storage.
      *
@@ -483,6 +425,8 @@ class FoldersController extends Controller
 
     public function update(UpdateFoldersRequest $request, $id)
     {
+        // try {
+
         if (!Gate::allows('folder_edit')) {
             return abort(401);
         }
@@ -565,11 +509,13 @@ class FoldersController extends Controller
             $budget->save();
         }
 
+       
+
         $evaluation = $folder->evaluation;
         if ($evaluation) {
             $evaluation->format_check = $request->input('format_check');
             $evaluation->format_comment = $request->input('format_comment');
-            
+
             $evaluation->provincial_evaluation_check = $request->input('provincial_evaluation_check');
             $evaluation->provincial_evaluation_comment = $request->input('provincial_evaluation_comment');
             $evaluation->regional_validation_check = $request->input('regional_validation_check');
@@ -598,7 +544,7 @@ class FoldersController extends Controller
             $evaluation->ipra_rights_comment = $request->input('ipra_rights_comment');
             $evaluation->presidents_agenda_check = $request->input('presidents_agenda_check');
             $evaluation->presidents_agenda_comment = $request->input('presidents_agenda_comment');
-            
+
 
             $evaluation->pdp_pip_check = $request->input('pdp_pip_check');
             $evaluation->pdp_pip_comment = $request->input('pdp_pip_comment');
@@ -635,10 +581,25 @@ class FoldersController extends Controller
             $evaluation->return_on_investment_check = $request->input('return_on_investment_check');
             $evaluation->return_on_investment_comment = $request->input('return_on_investment_comment');
 
+            $evaluation->evaluation_project_title = $request->input('evaluation_project_title');
+            $evaluation->location = $request->input('location');
+            $evaluation->cost_and_source = $request->input('cost_and_source');
+            $evaluation->period_of_implementation = $request->input('period_of_implementation');
+            $evaluation->no_of_beneficiaries = $request->input('no_of_beneficiaries');
+            $evaluation->synopsis = $request->input('synopsis');
+            $evaluation->bureau_director_name = $request->input('bureau_director_name');
+            $evaluation->bureau_director_designation = $request->input('bureau_director_designation');
+
             $evaluation->save();
         }
+        
 
         return redirect()->route('admin.folders.index');
+
+    // } catch (QueryException $e) {
+    //     // Handle the exception, log it, and display an error message to the user
+    //     Log::error('QueryException: ' . $e->getMessage());
+    // }
     }
 
 
@@ -772,13 +733,6 @@ class FoldersController extends Controller
         if ($evaluation) {
             $evaluation->delete();
         }
-
-
-        // Delete the associated stakeholders from the stakeholders table
-        // $folder->stakeholder()->delete();
-
-        // Delete the associated stakeholders
-        // $folder->stakeholder()->detach();
 
         $folder->forceDelete();
 

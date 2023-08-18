@@ -12,6 +12,14 @@
                 <i class="fa fa-plus"></i> &nbsp;Add New Project
             </a>
 
+            {{-- @if (!is_null(Auth::getUser()->role_id) && config('quickadmin.can_see_all_records_role_id') == Auth::getUser()->role_id) --}}
+                {{-- @if (Session::get('Folder.filter', 'all') == 'my')
+                    <a href="?filter=all" class="btn btn-default">Show all records</a>
+                @else
+                    <a href="?filter=my" class="btn btn-default">Filter my records</a>
+                @endif --}}
+            {{-- @endif --}}
+
 
         </p>
     @endcan
@@ -27,6 +35,19 @@
         </ul>
         </p>
     @endcan
+
+    {{-- if user role is 3 --}}
+    @if (Auth::user()->role_id === 3)
+        <p>
+        <ul class="list-inline">
+            <li><a href="{{ route('admin.folders.index') }}" style="font-weight: 700">All Projects</a></li>
+            |
+            <li><a href="{{ route('admin.folders.index') }}?same_region=1" style="font-weight: 700">Projects In Your
+                    Region</a></li>
+        </ul>
+        </p>
+    @endif
+
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -54,25 +75,19 @@
                 </thead>
 
                 <tbody>
+
+
                     @if (count($folders) > 0)
                         @foreach ($folders as $folder)
-                            {{-- test filter if evaluator view projects with the same region --}}
-                            
-                            @if (Auth::user()->role_id === 3)
-                                @if ($folder->site->region == auth()->user()->region)
-                                    @include('admin.folders.index-table')
-                                @endif
-                            @else
-                                @include('admin.folders.index-table')
-                            @endif
-
-                         
+                            @include('admin.folders.index-table')
                         @endforeach
                     @else
                         <tr>
                             <td colspan="7">@lang('quickadmin.qa_no_entries_in_table')</td>
                         </tr>
                     @endif
+
+
                 </tbody>
 
             </table>

@@ -33,16 +33,7 @@ class FoldersController extends Controller
         return response()->json(['count' => $foldersCount]);
     }
 
-    // public function proposedCount(Request $request)
-    // {
-    //     $projectStatus = 'proposed'; // Value to match in the project_status column
 
-    //     $proposedCount = Folder::whereHas('budgets', function ($query) use ($projectStatus) {
-    //         $query->where('project_status', $projectStatus);
-    //     })->count();
-
-    //     return response()->json(['count' => $proposedCount]);
-    // }
     public function proposedCount(Request $request)
     {
         // $proposedCount = Budget::count();
@@ -89,11 +80,14 @@ class FoldersController extends Controller
         if (!Gate::allows('folder_access')) {
             return abort(401);
         }
-        if ($filterBy = Request::get('filter')) {
+        
+        if ($filterBy = request('filter')) {
             if ($filterBy == 'all') {
                 Session::put('Folder.filter', 'all');
             } elseif ($filterBy == 'my') {
                 Session::put('Folder.filter', 'my');
+            } else {
+                $folders = Folder::all();
             }
         }
 
@@ -106,6 +100,17 @@ class FoldersController extends Controller
             $folders = Folder::all();
         }
 
+        if (request('same_region') == 1) {
+            $user = Auth::user();
+            $userRegion = $user->region;
+            $folders = Folder::whereHas('site', function ($query) use ($userRegion) {
+                $query->where('region', $userRegion);
+            })->get();
+        } else {
+            $folders = Folder::all();
+        }
+
+
         // Retrieve the count of folders
         $foldersCount = Folder::count();
 
@@ -117,34 +122,6 @@ class FoldersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    /** View Folders with Same Region as User*/
-    public function viewFoldersWithSameRegion()
-    {
-        if (!Gate::allows('folder_access')) {
-            return abort(401);
-        }
-        $userRegion = auth()->user()->region; // Assuming user's region is stored in the 'region' field
-
-        if ($filterBy = request()->get('filter')) {
-            if ($filterBy == 'all') {
-                Session::put('Folder.filter', 'all');
-            } elseif ($filterBy == 'my') {
-                Session::put('Folder.filter', 'my');
-            }
-        }
-        if (request('show_deleted') == 1) {
-            if (!Gate::allows('folder_delete')) {
-                return abort(401);
-            }
-            $folders = Folder::onlyTrashed()->where('region', $userRegion)->get();
-        } else {
-            $folders = Folder::where('region', $userRegion)->get();
-        }
-        // Retrieve the count of folders
-        $foldersCount = $folders->count();
-        return view('admin.folders.index', compact('folders', 'foldersCount'));
-    }
 
 
     public function create()
@@ -509,7 +486,7 @@ class FoldersController extends Controller
             $budget->save();
         }
 
-       
+
 
         $evaluation = $folder->evaluation;
         if ($evaluation) {
@@ -592,14 +569,14 @@ class FoldersController extends Controller
 
             $evaluation->save();
         }
-        
+
 
         return redirect()->route('admin.folders.index');
 
-    // } catch (QueryException $e) {
-    //     // Handle the exception, log it, and display an error message to the user
-    //     Log::error('QueryException: ' . $e->getMessage());
-    // }
+        // } catch (QueryException $e) {
+        //     // Handle the exception, log it, and display an error message to the user
+        //     Log::error('QueryException: ' . $e->getMessage());
+        // }
     }
 
 

@@ -10,18 +10,17 @@ trait FilterByUser
 {
     protected static function bootFilterByUser()
     {
-        if (!app()->runningInConsole()) {
+        if(! app()->runningInConsole()) {
             static::creating(function ($model) {
                 $model->created_by_id = Auth::check() ? Auth::getUser()->id : null;
             });
 
             $currentUser = Auth::user();
             if (!$currentUser) return;
-
-            $canSeeAllRecordsRoleIds = config('quickadmin.can_see_all_records_role_id'); // Use the updated configuration key
+            $canSeeAllRecordsRoleId = config('quickadmin.can_see_all_records_role_id');
             $modelName = class_basename(self::class);
 
-            if (!empty($canSeeAllRecordsRoleIds) && in_array($currentUser->role_id, $canSeeAllRecordsRoleIds)) {
+            if (!is_null($canSeeAllRecordsRoleId) && $currentUser->role_id == $canSeeAllRecordsRoleId) {
                 if (Session::get($modelName . '.filter', 'all') == 'my') {
                     Session::put($modelName . '.filter', 'my');
                     $addScope = true;
@@ -32,6 +31,7 @@ trait FilterByUser
             } else {
                 $addScope = true;
             }
+
             if ($addScope) {
                 if (((new self)->getTable()) == 'users') {
                     static::addGlobalScope('created_by_id', function (Builder $builder) use ($currentUser) {

@@ -30,7 +30,6 @@
 
     }
 
-
     @media not print {
 
         .print-content,
@@ -62,8 +61,6 @@
         .custom-font-size tr td p span {
             font-size: 17px !important;
         }
-
-
     }
 </style>
 
@@ -94,9 +91,6 @@
 
     <p><strong><span style="font-size: 11.0pt; font-family: 'Arial',sans-serif; color: black;">I. GENERAL
                 INFORMATION</span></strong></p>
-
-
-
 
     {{-- Project Title --}}
 

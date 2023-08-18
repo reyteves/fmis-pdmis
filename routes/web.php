@@ -75,10 +75,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('users_mass_destroy', ['uses' => 'Admin\UsersController@massDestroy', 'as' => 'users.mass_destroy']);
     Route::resource('folders', 'Admin\FoldersController');
 
-// Add a custom route for the viewFoldersWithSameRegion function
-Route::get('folders/view-same-region', 'Admin\FoldersController@viewFoldersWithSameRegion')
-    ->name('folders.view-same-region');
+    // custom folder controller
 
+    
     Route::post('folders_mass_destroy', ['uses' => 'Admin\FoldersController@massDestroy', 'as' => 'folders.mass_destroy']);
     Route::post('folders_restore/{id}', ['uses' => 'Admin\FoldersController@restore', 'as' => 'folders.restore']);
     Route::delete('folders_perma_del/{id}', ['uses' => 'Admin\FoldersController@perma_del', 'as' => 'folders.perma_del']);
