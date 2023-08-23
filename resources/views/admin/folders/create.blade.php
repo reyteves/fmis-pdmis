@@ -32,23 +32,33 @@
                     <a class="nav-link" data-toggle="tab" href="#site"><i class="fa fa-pencil"></i>&nbsp;Project Site</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#budget"><i class="fa fa-pencil"></i>&nbsp;Budget Details</a>
+                    <a class="nav-link" data-toggle="tab" href="#budget"><i class="fa fa-pencil"></i>&nbsp;Budget
+                        Details</a>
                 </li>
 
-                @if(Auth::user()->role_id !== 2)
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#attachments_signatures"><i class="fa fa-check"></i>&nbsp;Attachments and Signatures</a>
-                </li>
+                @if (Auth::user()->role_id !== 2)
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#attachments_signatures"><i
+                                class="fa fa-check"></i>&nbsp;Attachments and Signatures</a>
+                    </li>
                 @endif
 
-                @if(Auth::user()->role_id !== 2)
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#evaluate"><i class="fa fa-check"></i>&nbsp;Evaluate</a>
-                </li>
+                @if (Auth::user()->role_id !== 2)
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#evaluate"><i class="fa fa-check"></i>&nbsp;Evaluate</a>
+                    </li>
                 @endif
+
+
+                {{-- <li class="nav-item">
+                    <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluator"><i
+                            class="fa fa-eye"></i>&nbsp;Evaluator</a>
+                </li> --}}
+
+
             </ul>
 
-         
+
 
             <div class="tab-content">
                 <div class="tab-pane fade" id="details">
@@ -80,8 +90,14 @@
                         @include('admin.folders.tab_create.evaluate')
                     </div>
                 </div>
-            </div>
 
+                {{-- <div class="tab-pane fade" id="evaluator">
+                    <div class="tab-content">
+                        @include('admin.folders.tab_create.evaluator')
+                    </div>
+                </div> --}}
+
+            </div>
         </div>
     </div>
 

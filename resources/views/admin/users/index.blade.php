@@ -10,8 +10,6 @@
         </p>
     @endcan
 
-
-
     <div class="panel panel-default">
         <div class="panel-heading">
             @lang('quickadmin.qa_list')

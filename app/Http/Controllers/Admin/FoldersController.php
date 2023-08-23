@@ -75,47 +75,59 @@ class FoldersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+  
+
     public function index()
-    {
-        if (!Gate::allows('folder_access')) {
+{
+    if (!Gate::allows('folder_access')) {
+        return abort(401);
+    }
+    $user = Auth::user();
+
+    $folders = Folder::query(); // Initialize the query builder
+
+    if ($filterBy = request('filter')) {
+        if ($filterBy == 'all') {
+            Session::put('Folder.filter', 'all');
+        } elseif ($filterBy == 'my') {
+            Session::put('Folder.filter', 'my');
+        } else {
+            $folders = Folder::all();
+        }
+    }
+
+    if (request('show_deleted') == 1) {
+        if (!Gate::allows('folder_delete')) {
             return abort(401);
         }
-        
-        if ($filterBy = request('filter')) {
-            if ($filterBy == 'all') {
-                Session::put('Folder.filter', 'all');
-            } elseif ($filterBy == 'my') {
-                Session::put('Folder.filter', 'my');
-            } else {
-                $folders = Folder::all();
-            }
-        }
-
-        if (request('show_deleted') == 1) {
-            if (!Gate::allows('folder_delete')) {
-                return abort(401);
-            }
-            $folders = Folder::onlyTrashed()->get();
-        } else {
-            $folders = Folder::all();
-        }
-
-        if (request('same_region') == 1) {
-            $user = Auth::user();
-            $userRegion = $user->region;
-            $folders = Folder::whereHas('site', function ($query) use ($userRegion) {
-                $query->where('region', $userRegion);
-            })->get();
-        } else {
-            $folders = Folder::all();
-        }
-
-
-        // Retrieve the count of folders
-        $foldersCount = Folder::count();
-
-        return view('admin.folders.index', compact('folders', 'foldersCount'));
+        $folders = $folders->onlyTrashed();
+    } else {
+        $folders = $folders->withTrashed();
     }
+
+    if (request('same_region') == 1) {
+        $userRegion = $user->region;
+        $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
+            $query->where('region', $userRegion);
+        });
+    }
+
+    if (request('same_province') == 1) {
+        $userProvince = $user->province;
+        $folders = $folders->whereHas('site', function ($query) use ($userProvince) {
+            $query->where('province', $userProvince);
+        });
+    }
+
+    // Retrieve the count of folders
+    $foldersCount = $folders->count();
+
+    // Get the final collection of folders
+    $folders = $folders->get();
+
+    return view('admin.folders.index', compact('folders', 'foldersCount'));
+}
+
 
     /**
      * Show the form for creating new Folder.
@@ -566,6 +578,8 @@ class FoldersController extends Controller
             $evaluation->synopsis = $request->input('synopsis');
             $evaluation->bureau_director_name = $request->input('bureau_director_name');
             $evaluation->bureau_director_designation = $request->input('bureau_director_designation');
+
+            $evaluation->office_evaluator = $request->input('office_evaluator');
 
             $evaluation->save();
         }

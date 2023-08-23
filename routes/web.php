@@ -6,8 +6,19 @@
 use App\Http\Controllers\Admin\FoldersController; // Update the namespace as per your controller location
 use App\Http\Controllers\PsgcController;
 
+use App\Http\Controllers\Admin\OfficeController;
+
+
 
 Route::get('/', function () { return redirect('/admin/home'); });
+
+
+// custom route for offices
+
+Route::get('/admin/offices', [OfficeController::class, 'index'])->name('admin.offices.index');
+Route::get('/admin/offices/options', [OfficeController::class, 'options'])->name('admin.offices.options');
+
+
 
 
 // custom AJAX routes for dashboard counts

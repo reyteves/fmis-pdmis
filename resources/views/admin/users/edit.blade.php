@@ -97,6 +97,24 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('office', 'Office', ['class' => 'control-label']) !!}
+                    {!! Form::select('office', [], null, [
+                        'id' => 'officeEvaluatorDropdown',
+                        'class' => 'form-control',
+                        'placeholder' => 'Select an office',
+                        // No 'required' attribute in this case
+                    ]) !!}
+                    <p class="help-block"></p>
+                    @if ($errors->has('office'))
+                        <p class="help-block">
+                            {{ $errors->first('office') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -169,7 +187,28 @@
                 $('#provinces-dropdown').trigger('change');
             });
 
+        
+            $.ajax({
+                url: "{{ route('admin.offices.options') }}",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    var dropdown = $('#officeEvaluatorDropdown');
+                    dropdown.empty();
 
+                    // Add the "Select Office" default option
+                    dropdown.append($('<option></option>').attr('value', '').text('Select Office'));
+
+                    // Loop through the data and populate the dropdown
+                    $.each(data, function(_, value) {
+                        var option = $('<option></option>').attr('value', value).text(value);
+                        dropdown.append(option);
+                    });
+
+                    // Set the initial value based on the user's office
+                    dropdown.val("{{ $user->office }}");
+                }
+            });
 
 
         })

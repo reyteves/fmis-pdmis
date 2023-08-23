@@ -44,6 +44,9 @@
             |
             <li><a href="{{ route('admin.folders.index') }}?same_region=1" style="font-weight: 700">Projects In Your
                     Region</a></li>
+                    |
+            <li><a href="{{ route('admin.folders.index') }}?same_province=1" style="font-weight: 700">Projects In Your
+                    Province</a></li>
         </ul>
         </p>
     @endif

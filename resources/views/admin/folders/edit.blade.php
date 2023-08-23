@@ -6,21 +6,7 @@
 @section('content')
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
 
-    {{-- {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!} --}}
-
-
-        {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!}
-        {!! Form::textarea(
-            'evaluation_project_title',
-            old('evaluation_project_title', $folder->evaluation->evaluation_project_title),
-            [
-                'class' => 'form-control',
-                'rows' => 1,
-                'placeholder' => 'Project Title',
-            ],
-        ) !!}
-        
-       
+    {!! Form::model($folder, ['method' => 'PUT', 'route' => ['admin.folders.update', $folder->id]]) !!}
 
 
     {{-- <div class="panel panel-default"> --}}
@@ -89,6 +75,11 @@
                                 class="fa fa-eye"></i>&nbsp;Print Evaluation Page</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluator"><i
+                                class="fa fa-eye"></i>&nbsp;Evaluator</a>
+                    </li>
+
                 {{-- @endif --}}
             </ul>
 
@@ -116,6 +107,9 @@
                 </div>
                 <div class="tab-pane fade" id="evaluate-print">
                     @include('admin.folders.tab_edit.evaluation-page')
+                </div>
+                <div class="tab-pane fade" id="evaluator">
+                    @include('admin.folders.tab_edit.evaluator')
                 </div>
 
             </div>
