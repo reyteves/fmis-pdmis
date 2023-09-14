@@ -17,6 +17,7 @@
             </label>
         </div>
     </div>
+    
     <div class="col-md-3 col-lg-3 col-xl-3">
         <div class="form-check form-check-inline">
             {{ Form::radio('implementation_mode', 'by-contract', $folder->budget->implementation_mode == 'by-contract', ['class' => 'form-check-input', 'id' => 'by-contract', 'checked' => $folder->budget->implementation_mode == 'by-contract']) }}

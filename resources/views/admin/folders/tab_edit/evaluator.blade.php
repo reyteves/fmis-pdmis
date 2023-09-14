@@ -1,6 +1,6 @@
 
-<p>For Evaluation by this Office:</p> 
-{!! Form::select('office_evaluator', [], $folder->evaluation->office_evaluator, ['id' => 'officeEvaluatorDropdown']) !!}
+<p>Request Evaluation from this Office:</p> 
+{!! Form::select('office_evaluator', [], $folder->evaluation->office_evaluator, ['id' => 'officeEvaluatorDropdown', 'class' => 'form-check-input']) !!}
 <script>
     // Fetch and populate the dropdown options using AJAX
     $(document).ready(function () {
@@ -23,7 +23,6 @@
                     if (value === "{{ $folder->evaluation->office_evaluator }}") {
                         option.attr('selected', 'selected');
                     }
-
                     dropdown.append(option);
                 });
             }

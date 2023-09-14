@@ -50,15 +50,16 @@
                 @endif
 
 
-                {{-- <li class="nav-item">
-                    <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluator"><i
-                            class="fa fa-eye"></i>&nbsp;Evaluator</a>
-                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#beneficiaries"><i
+                            class="fa fa-eye"></i>&nbsp;Beneficiaries</a>
+                </li>
 
-
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#stakeholders"><i
+                            class="fa fa-eye"></i>&nbsp;Stakeholders</a>
+                </li>
             </ul>
-
-
 
             <div class="tab-content">
                 <div class="tab-pane fade" id="details">
@@ -91,11 +92,17 @@
                     </div>
                 </div>
 
-                {{-- <div class="tab-pane fade" id="evaluator">
+                <div class="tab-pane fade" id="beneficiaries">
                     <div class="tab-content">
-                        @include('admin.folders.tab_create.evaluator')
+                        @include('admin.folders.tab_create.beneficiaries')
                     </div>
-                </div> --}}
+                </div>
+
+                <div class="tab-pane fade" id="stakeholders">
+                    <div class="tab-content">
+                        @include('admin.folders.tab_create.stakeholders')
+                    </div>
+                </div>
 
             </div>
         </div>

@@ -670,34 +670,12 @@ class FoldersController extends Controller
             $beneficiaries->save();
         }
 
-        $stakeholders= $folder->stakeholders;
-
-        if ($stakeholders) {
-            $stakeholders->stakeholder_name = $request->input('stakeholder_name');
-            $stakeholders->stakeholder_office = $request->input('stakeholder_office');
-            $stakeholders->stakeholder_address = $request->input('stakeholder_address');
-            $stakeholders->stakeholder_number = $request->input('stakeholder_number');
-
-            $stakeholders->stakeholder_name2 = $request->input('stakeholder_name2');
-            $stakeholders->stakeholder_office2 = $request->input('stakeholder_office2');
-            $stakeholders->stakeholder_address2 = $request->input('stakeholder_address2');
-            $stakeholders->stakeholder_number2 = $request->input('stakeholder_number2');
-
-            $stakeholders->stakeholder_name3 = $request->input('stakeholder_name3');
-            $stakeholders->stakeholder_office3 = $request->input('stakeholder_office3');
-            $stakeholders->stakeholder_address3 = $request->input('stakeholder_address3');
-            $stakeholders->stakeholder_number3 = $request->input('stakeholder_number3');
-
-            $stakeholders->stakeholder_name4 = $request->input('stakeholder_name4');
-            $stakeholders->stakeholder_office4 = $request->input('stakeholder_office4');
-            $stakeholders->stakeholder_address4 = $request->input('stakeholder_address4');
-            $stakeholders->stakeholder_number4 = $request->input('stakeholder_number4');
-          
-            $stakeholders->save();
-        }
-
         return redirect()->route('admin.folders.index');
 
+        // } catch (QueryException $e) {
+        //     // Handle the exception, log it, and display an error message to the user
+        //     Log::error('QueryException: ' . $e->getMessage());
+        // }
     }
 
 
@@ -835,11 +813,6 @@ class FoldersController extends Controller
         $beneficiaries = $folder->beneficiaries;
         if ($beneficiaries) {
             $beneficiaries->delete();
-        }
-
-        $stakeholders = $folder->stakeholders;
-        if ($stakeholders) {
-            $stakeholders->delete();
         }
 
         $folder->forceDelete();

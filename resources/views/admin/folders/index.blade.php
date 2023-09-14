@@ -1,7 +1,19 @@
 @inject('request', 'Illuminate\Http\Request')
 @extends('layouts.app')
 
+
 @section('content')
+
+<style>
+    .btn {
+        transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+    }
+</style>
+
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
     @can('folder_create')
         <p>
@@ -47,6 +59,8 @@
                     |
             <li><a href="{{ route('admin.folders.index') }}?same_province=1" style="font-weight: 700">Projects In Your
                     Province</a></li>
+                    |
+            <li><a href="{{ route('admin.folders.index') }}?same_office=1" style="font-weight: 700">Projects For Evaluation By Your Office</a></li>
         </ul>
         </p>
     @endif

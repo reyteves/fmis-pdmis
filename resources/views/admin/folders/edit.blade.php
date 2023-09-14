@@ -77,8 +77,21 @@
 
                     <li class="nav-item">
                         <a id="evaluateLink" class="nav-link" data-toggle="tab" href="#evaluator"><i
-                                class="fa fa-eye"></i>&nbsp;Evaluator</a>
+                                class="fa fa-check"></i>&nbsp;Request Evaluation</a>
                     </li>
+
+
+                    @if (Auth::user()->role_id !== 3)
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#beneficiaries"><i
+                                class="fa fa-check"></i>&nbsp;Beneficiaries</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#stakeholders"><i
+                                class="fa fa-check"></i>&nbsp;Stakeholders</a>
+                    </li>
+                    @endif
 
                 {{-- @endif --}}
             </ul>
@@ -110,6 +123,12 @@
                 </div>
                 <div class="tab-pane fade" id="evaluator">
                     @include('admin.folders.tab_edit.evaluator')
+                </div>
+                <div class="tab-pane fade" id="beneficiaries">
+                    @include('admin.folders.tab_edit.beneficiaries')
+                </div>
+                <div class="tab-pane fade" id="stakeholders">
+                    @include('admin.folders.tab_edit.stakeholders')
                 </div>
 
             </div>

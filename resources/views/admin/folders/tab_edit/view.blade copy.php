@@ -181,8 +181,7 @@
                 </td>
                 <td style="width: 136.8pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                     <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'>
-                        <span style='font-size:12px;font-family:"Arial",sans-serif;'
-                            id="barangaySpan">{!! nl2br($folder->site->barangay) !!}</span>
+                        <span style='font-size:12px;font-family:"Arial",sans-serif;' id="barangaySpan">{!! nl2br($folder->site->barangay) !!}</span>
                     </p>
                 </td>
             </tr>
@@ -206,8 +205,7 @@
                 </td>
                 <td style="width: 135.85pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                     <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
-                            style='font-size:12px;font-family:"Arial",sans-serif;'
-                            id="citySpan">{!! nl2br($folder->site->municipality) !!}</span>
+                            style='font-size:12px;font-family:"Arial",sans-serif;' id="citySpan">{!! nl2br($folder->site->municipality) !!}</span>
                     </p>
                 </td>
                 <td style="width: 4cm;border: none;padding: 0cm 5.4pt;vertical-align: top;">
@@ -247,10 +245,9 @@
                     <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'>
                         {{-- <span style='font-size:12px;font-family:"Arial",sans-serif;'
                             name="province">{!! nl2br($folder->site->province) !!}</span> --}}
-                        <span style='font-size: 12px; font-family: "Arial", sans-serif;' name="province"
-                            id="provinceSpan">
-                            {!! nl2br($folder->site->province) !!}
-                        </span>
+                            <span style='font-size: 12px; font-family: "Arial", sans-serif;' name="province" id="provinceSpan">
+                                {!! nl2br($folder->site->province) !!}
+                            </span>
                     </p>
                 </td>
                 <td style="width: 4cm;border: none;padding: 0cm 5.4pt;vertical-align: top;">
@@ -274,7 +271,7 @@
                     </p>
 
                 </td>
-                {{-- 
+{{-- 
                 <p style='margin: 0cm; font-size: 16px; font-family: "Times New Roman", serif;'>
                     <span style='font-size: 12px; font-family: "Arial", sans-serif;' name="region">
                         {!! nl2br($folder->site->region) !!}
@@ -500,277 +497,131 @@
 
     <!-- /Source of Fund and Budget Year -->
 
-    {{-- beneficiaries --}}
-    <table style="width: 4.8e+2pt; border-collapse: collapse; border: none;">
+    <table style="float: left;width: 1.7e+2pt;border: none;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;">
         <tbody>
             <tr>
-                <td style="width: 82.8pt; border: none; padding: 0cm 5.4pt; height: 11.05pt; vertical-align: top;"
-                    rowspan="2">
-                    <p style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                        <strong><span style="font-family: 'Times New Roman',serif; color: black;">Estimated Numvbers of
-                                Partner Beneficiaries per IP Group</span></strong>
-                    </p>
+                <td style="width: 66.7pt;border: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><strong><span style='font-size:12px;font-family:"Times New Roman",serif;color:#7030A0;'>Beneficiaries</span></strong></p>
                 </td>
-                <td style="width: 14.15pt; border: none; padding: 0cm 5.4pt; height: 11.05pt; vertical-align: top;">
-                    <p style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                        <strong><span style="font-family: 'Times New Roman',serif; color: black;">:</span></strong>
-                    </p>
+                <td style="width: 32.25pt;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'><strong><span style='font-size:12px;font-family:"Times New Roman",serif;color:#7030A0;'>Total</span></strong></p>
                 </td>
-                <td style="width: 177.2pt; border: none; padding: 0cm 5.4pt; height: 11.05pt; vertical-align: top;">
-                    <p style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                        <strong><em><span
-                                    style="font-family: 'Times New Roman',serif; color: black;">Beneficiaries:</span></em></strong>
-                    </p>
+                <td style="width: 30.8pt;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'><strong><span style='font-size:12px;font-family:"Times New Roman",serif;color:#7030A0;'>Male</span></strong></p>
+                </td>
+                <td style="width: 41.75pt;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'><strong><span style='font-size:12px;font-family:"Times New Roman",serif;color:#7030A0;'>Female</span></strong></p>
                 </td>
             </tr>
             <tr>
-                <td style="width: 14.15pt; border: none; padding: .75pt .75pt .75pt .75pt; height: 16.5pt;">&nbsp;</td>
-                <td style="width: 177.2pt; border: none; padding: 0cm 5.4pt; height: 16.5pt; vertical-align: top;">
-                    <table
-                        style="float: left; width: 170pt; border: none; border-collapse: collapse; margin-left: 6.75pt; margin-right: 6.75pt; height: 126px;">
-                        <tbody>
-                            <tr style="height: 18px;">
-                                <td
-                                    style="width: 69.0312px; border: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <strong><span
-                                                style="font-size: 12px; font-family: 'Times New Roman',serif; color: #7030a0;">Beneficiaries</span></strong>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 28.4688px; border-top: 1pt solid black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-image: initial; border-left: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: center; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <strong><span
-                                                style="font-size: 12px; font-family: 'Times New Roman',serif; color: #7030a0;">Total</span></strong>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 27.3594px; border-top: 1pt solid black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-image: initial; border-left: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: center; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <strong><span
-                                                style="font-size: 12px; font-family: 'Times New Roman',serif; color: #7030a0;">Male</span></strong>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 39.2969px; border-top: 1pt solid black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-image: initial; border-left: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: center; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <strong><span
-                                                style="font-size: 12px; font-family: 'Times New Roman',serif; color: #7030a0;">Female</span></strong>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="height: 18px;">
-                                <td
-                                    style="width: 69.0312px; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">IP
-                                            Group</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 28.4688px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; color: #000000; font-family: 'times new roman', times;">{{ $folder->beneficiaries->ip_group_total }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 27.3594px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <span
-                                        style="font-size: 11pt; color: #000000; font-family: 'times new roman', times;">{{ $folder->beneficiaries->ip_group_male }}</span>
-                                </td>
-                                <td
-                                    style="width: 39.2969px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <span
-                                        style="font-size: 11pt; color: #000000; font-family: 'times new roman', times;">{{ $folder->beneficiaries->ip_group_female }}</span>
-                                </td>
-                            </tr>
-                            <tr style="height: 18px;">
-                                <td
-                                    style="width: 69.0312px; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">PWD</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 28.4688px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <span
-                                        style="font-size: 11pt; color: #000000; font-family: 'times new roman', times;">{{ $folder->beneficiaries->pwd_total }}</span>
-                                </td>
-                                <td
-                                    style="width: 27.3594px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <span
-                                        style="font-size: 11pt; color: #000000; font-family: 'times new roman', times;">{{ $folder->beneficiaries->pwd_male }}</span>
-                                </td>
-                                <td
-                                    style="width: 39.2969px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <span
-                                        style="font-size: 11pt; color: #000000; font-family: 'times new roman', times;">{{ $folder->beneficiaries->pwd_female }}</span>
-                                </td>
-                            </tr>
-                            <tr style="height: 18px;">
-                                <td
-                                    style="width: 69.0312px; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">Children</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 28.4688px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->children_total }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 27.3594px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->children_male }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 39.2969px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->children_female }}</span>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="height: 18px;">
-                                <td
-                                    style="width: 69.0312px; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">Youth</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 28.4688px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->youth_total }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 27.3594px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->youth_male }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 39.2969px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->youth_female }}</span>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="height: 18px;">
-                                <td
-                                    style="width: 69.0312px; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">Adult</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 28.4688px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->adult_total }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 27.3594px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->adult_male }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 39.2969px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->adult_female }}</span>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="height: 18px;">
-                                <td
-                                    style="width: 69.0312px; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">Older</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 28.4688px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->older_total }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 27.3594px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->older_male }}</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 39.2969px; border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 5.4pt; vertical-align: top; height: 18px;">
-                                    <p
-                                        style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;">
-                                        <span
-                                            style="font-size: 11pt; font-family: 'times new roman', times; color: #000000;">{{ $folder->beneficiaries->older_female }}</span>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td
-                                    style="width: 400.2pt;border: none;padding: 0cm 5.4pt;height: 10.25pt;vertical-align: top;">
-                                    <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
-                                            style='font-size:12px;font-family:"Arial",sans-serif;'>&nbsp;</span></p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p style="margin: 0cm; text-align: left; font-size: 15px; font-family: 'Calibri',sans-serif;"><span
-                            style="font-family: 'Times New Roman',serif;">&nbsp;</span></p>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>IP Group</span></p>
                 </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>2165</span></p>
+                </td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp; &nbsp; &nbsp;PWD</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>Children</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>13</span></p>
+                </td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>6</span></p>
+                </td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>7</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp; &nbsp; &nbsp;PWD</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>Youth</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>6</span></p>
+                </td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>2</span></p>
+                </td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>4</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp; &nbsp; &nbsp;PWD</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>Adult</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>13</span></p>
+                </td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>7</span></p>
+                </td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>6</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp; &nbsp; PWD</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>Older</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>10</span></p>
+                </td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>6</span></p>
+                </td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:#7030A0;'>4</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 66.7pt;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp; &nbsp; PWD</span></p>
+                </td>
+                <td style="width: 32.25pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 30.8pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
+                <td style="width: 41.75pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;"><br></td>
             </tr>
         </tbody>
     </table>
 
-
-    {{-- /end beneficiaries --}}
 
 
 
@@ -782,6 +633,9 @@
             <tr>
                 <td rowspan="3"
                     style="width: 27.9pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
+                    {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                            <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>7.</span></strong>
+                        </p> --}}
                 </td>
                 <td rowspan="3"
                     style="width: 96.95pt;border: none;padding: 0cm 5.4pt;height: 10.4pt;vertical-align: top;">
@@ -825,6 +679,9 @@
         <tbody>
             <tr>
                 <td style="width: 27.9pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                    {{-- <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:right;'>
+                            <strong><span style='font-size:12px;font-family:"Arial",sans-serif;'>8.</span></strong>
+                        </p> --}}
                 </td>
                 <td style="width: 96.95pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                     <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><strong><span
@@ -859,192 +716,16 @@
                             style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('project_status[]', 'terminating', old('project_status', $folder->budget->project_status) == 'terminating', ['class' => 'form-check-input', 'id' => 'terminating_checkbox', 'disabled' => 'disabled']) }}
                             Terminating</span></p>
                 </td>
-                {{-- <td style="width: 84.1pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
+                <td style="width: 84.1pt;border: none;padding: 0cm 5.4pt;vertical-align: top;">
                     <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;'><span
                             style='font-size:12px;font-family:"Arial",sans-serif;'>{{ Form::checkbox('project_status[]', 'coordinated', old('project_status', $folder->budget->project_status) == 'coordinated', ['class' => 'form-check-input', 'id' => 'coordinated_checkbox', 'disabled' => 'disabled']) }}
                             Coordinated</span></p>
-                </td> --}}
-                <td style="width: 84.1pt; border: none; padding: 0cm 5.4pt; vertical-align: top;">
-                    <label class="form-check-label" for="coordinated_checkbox" style='font-size:16px;font-family:"Arial",serif;font-weight: normal;
-                    '>
-                        {{ Form::checkbox('project_status[]', 'coordinated', old('project_status', $folder->budget->project_status) == 'coordinated', ['class' => 'form-check-input', 'id' => 'coordinated_checkbox', 'disabled' => 'disabled']) }}
-                        Coordinated
-                    </label>
                 </td>
             </tr>
         </tbody>
     </table>
 
     {{-- /Project Status --}}
-
-    {{-- Project Stakeholders and Address --}}
-
-    <table style="width: 4.8e+2pt;border-collapse:collapse;border:none;">
-        <tbody>
-
-            <tr>
-                <br>
-                <td style="width: 82.8pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
-                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'>
-                        <strong><span style='font-family:"Times New Roman",serif;color:black;'>Project Stakeholders and
-                                Address</span></strong>
-                    </p>
-                </td>
-                <td style="width: 14.15pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
-                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'>
-                        <strong><span style='font-family:"Times New Roman",serif;color:black;'>:</span></strong>
-                    </p>
-                </td>
-                <td style="width: 361.45pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
-                    <table
-                        style="float: left;width: 100%;border: none;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;">
-                        <tbody>
-                            <tr>
-                                <td
-                                    style="width: 24.84%;border: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;margin-left:-19.7pt;text-indent:19.7pt;'>
-                                        <span style='font-family:"Times New Roman",serif;'>Name</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 22.36%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
-                                        <span style='font-family:"Times New Roman",serif;'>Office</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 26.24%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
-                                        <span style='font-family:"Times New Roman",serif;'>Address</span>
-                                    </p>
-                                </td>
-                                <td
-                                    style="width: 26.56%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
-                                        <span style='font-family:"Times New Roman",serif;'>Contact Number</span>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td
-                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_name}}</p>
-                                </td>
-                                <td
-                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_office}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_address}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_number}}</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td
-                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_name2}}</p>
-                                </td>
-                                <td
-                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_office2}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_address2}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_number2}}</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td
-                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_name3}}</p>
-                                </td>
-                                <td
-                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_office3}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_address3}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_number3}}</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td
-                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_name4}}</p>
-                                </td>
-                                <td
-                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_office4}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_address4}}</p>
-                                </td>
-                                <td
-                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
-                                    <p
-                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
-                                        {{$folder->stakeholders->stakeholder_number4}}</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span
-                            style='font-family:  "Times New Roman",serif;'>&nbsp;</span></p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    {{-- /  --}}
-
 
     <!-- Project Duration -->
 
@@ -1836,23 +1517,23 @@
                 });
             });
 
-        var provinceCode = $('#provinceSpan').text().trim();
+        var provinceCode = $('#provinceSpan').text().trim(); 
         $.ajax({
             url: '/getProvinceName/' + provinceCode,
-
+           
             type: 'GET',
             dataType: 'json',
-            success: function(response) {
+            success: function (response) {
                 if (response.provinceName) {
                     $('#provinceSpan').text(response.provinceName);
-                    console.log("provinceCode: " + provinceCode);
-                    console.log("province name: " + response.provinceName);
+                    console.log("provinceCode: "+ provinceCode);
+                    console.log("province name: "+ response.provinceName);
                 } else {
                     $('#provinceSpan').text('Province not found');
-                    console.log("provinceCode: " + provinceCode);
+                    console.log("provinceCode: "+ provinceCode);
                 }
             },
-            error: function() {
+            error: function () {
                 // $('#provinceSpan').text('Error fetching data');
                 // blank instead of error message
                 $('#provinceSpan').text('');
@@ -1862,43 +1543,46 @@
         var cityCode = $('#citySpan').text().trim();
 
         $.ajax({
-            url: '/getCityName/' + cityCode, // Update URL for city name request
-            type: 'GET',
-            dataType: 'json',
-            success: function(response) {
-                if (response.cityName) {
-                    $('#citySpan').text(response.cityName); // Update appropriate span for city
-                } else {
-                    $('#citySpan').text('City not found');
-                }
-            },
-            error: function() {
-                // $('#citySpan').text('Error fetching data');
-                // blank instead of error message
-                $('#provinceSpan').text('');
+        url: '/getCityName/' + cityCode, // Update URL for city name request
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response.cityName) {
+                $('#citySpan').text(response.cityName); // Update appropriate span for city
+            } else {
+                $('#citySpan').text('City not found');
             }
-        });
+        },
+        error: function () {
+            // $('#citySpan').text('Error fetching data');
+            // blank instead of error message
+            $('#provinceSpan').text('');
+        }
+    });
 
-        var barangayCode = $('#barangaySpan').text().trim();
+    var barangayCode = $('#barangaySpan').text().trim();
 
-        console.log("barangayCode: " + barangayCode);
-
+    console.log("barangayCode: "+ barangayCode);
+    
         $.ajax({
-            url: '/getBarangayName/' + barangayCode, // Update URL for city name request
-            type: 'GET',
-            dataType: 'json',
-            success: function(response) {
-                if (response.barangayCode) {
-                    $('#barangaySpan').text(response.barangayCode); // Update appropriate span for city
-                } else {
-                    $('#barangaySpan').text('Barangay not found');
-                }
-            },
-            error: function() {
-                // $('#barangaySpan').text('Error fetching data');
-                // blank instead of error message
-                $('#provinceSpan').text('');
+        url: '/getBarangayName/' + barangayCode, // Update URL for city name request
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response.barangayCode) {
+                $('#barangaySpan').text(response.barangayCode); // Update appropriate span for city
+            } else {
+                $('#barangaySpan').text('Barangay not found');
             }
-        });
+        },
+        error: function () {
+            // $('#barangaySpan').text('Error fetching data');
+            // blank instead of error message
+            $('#provinceSpan').text('');
+        }
+    });
+
+
+
     </script>
 @endsection
