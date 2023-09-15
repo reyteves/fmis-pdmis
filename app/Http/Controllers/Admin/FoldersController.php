@@ -102,9 +102,10 @@ class FoldersController extends Controller
                 return abort(401);
             }
             $folders = $folders->onlyTrashed();
-        } else {
-            $folders = $folders->withTrashed();
-        }
+        } 
+        // else {
+        //     $folders = $folders->withTrashed();
+        // }
 
         if (request('same_region') == 1) {
             $userRegion = $user->region;

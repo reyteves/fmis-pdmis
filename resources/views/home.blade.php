@@ -270,19 +270,19 @@
                     console.log(error); // Handle error if necessary
                 }
             });
-            $.ajax({
-                url: '/get-terminating-count', // Updated route
-                method: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    // Update the number of folders in the small box
-                    $('.terminatingCount').text(data.count);
-                    console.log(data.count);
-                },
-                error: function(xhr, status, error) {
-                    console.log(error); // Handle error if necessary
-                }
-            });
+            // $.ajax({
+            //     url: '/get-terminating-count', // Updated route
+            //     method: 'GET',
+            //     dataType: 'json',
+            //     success: function(data) {
+            //         // Update the number of folders in the small box
+            //         $('.terminatingCount').text(data.count);
+            //         console.log(data.count);
+            //     },
+            //     error: function(xhr, status, error) {
+            //         console.log(error); // Handle error if necessary
+            //     }
+            // });
             $.ajax({
                 url: '/get-terminating-count', // Updated route
                 method: 'GET',

@@ -57,7 +57,7 @@
                                         <p class="form-group">
                                             <a href="{{ url('/admin/' . $file->uuid . '/download') }}"
                                                 target="_blank">{{ $media->name }} ({{ $media->size }} KB)</a>
-                                        </p>
+                                       </p>
                                     @endforeach
                                 </td>
                                 {{-- <td field-key='folder'>{{ $file->folder->name or '' }}</td> --}}

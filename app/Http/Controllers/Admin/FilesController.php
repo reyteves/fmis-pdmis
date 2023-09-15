@@ -57,13 +57,16 @@ class FilesController extends Controller
      */
     public function create()
     {
-        if (!Gate::allows('file_create')) {
-            return abort(401);
-        }
+        // if (!Gate::allows('file_create')) {
+        //     return abort(401);
+        // }
         
         $roleId = Auth::getUser()->role_id;
         $userFilesCount = File::where('created_by_id', Auth::getUser()->id)->count();
-        if ($roleId == 2 && $userFilesCount > 5) {
+        // if ($roleId == 2 && $userFilesCount > 5) {
+        //     return redirect('/admin/files');
+        // }
+        if ($roleId == 2) {
             return redirect('/admin/files');
         }
 
@@ -81,9 +84,9 @@ class FilesController extends Controller
      */
     public function store(StoreFilesRequest $request)
     {
-        if (!Gate::allows('file_create')) {
-            return abort(401);
-        }
+        // if (!Gate::allows('file_create')) {
+        //     return abort(401);
+        // }
         
             $request = $this->saveFiles($request);
 

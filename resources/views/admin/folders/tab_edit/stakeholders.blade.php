@@ -17,6 +17,11 @@
         font-size: 12px;
         background-color: lightgray;
     }
+
+    #stakeholders_table input[type="text"] {
+        /* width: 100%; */
+        text-align: center;
+    }
 </style>
 </head>
 <body>

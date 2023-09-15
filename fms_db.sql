@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2023 at 09:24 AM
+-- Generation Time: Sep 15, 2023 at 10:19 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -43,17 +43,49 @@ CREATE TABLE `attachments` (
 --
 
 INSERT INTO `attachments` (`id`, `created_at`, `updated_at`, `ppmp`, `implementation_plan`, `summary_of_expenditures`, `list_of_beneficiaries`, `other_attachments`) VALUES
-(112, '2023-07-30 23:40:15', '2023-08-14 22:57:47', 'checked', 'checked', 'checked', 'checked', 'checked'),
-(113, '2023-07-31 22:01:42', '2023-07-31 22:01:42', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(116, '2023-08-04 00:16:04', '2023-08-04 00:16:04', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(117, '2023-08-07 23:30:54', '2023-08-07 23:30:54', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(118, '2023-08-09 23:30:58', '2023-08-09 23:30:58', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(119, '2023-08-09 23:38:12', '2023-08-09 23:38:12', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(120, '2023-08-09 23:45:10', '2023-08-09 23:45:10', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(121, '2023-08-09 23:51:12', '2023-08-09 23:51:12', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(122, '2023-08-13 18:40:57', '2023-08-13 18:40:57', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(123, '2023-08-14 00:59:12', '2023-08-14 00:59:12', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
-(124, '2023-08-14 22:30:40', '2023-08-14 22:30:40', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked');
+(30, '2023-09-14 22:23:46', '2023-09-14 22:23:46', 'checked', 'checked', 'checked', 'checked', 'checked'),
+(31, '2023-09-14 22:28:42', '2023-09-14 22:28:42', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked'),
+(32, '2023-09-14 22:47:56', '2023-09-14 22:47:56', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `beneficiaries`
+--
+
+CREATE TABLE `beneficiaries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `ip_group_total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ip_group_male` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ip_group_female` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pwd_total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pwd_male` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pwd_female` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `children_total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `children_male` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `children_female` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `youth_total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `youth_male` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `youth_female` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `adult_total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `adult_male` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `adult_female` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `older_total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `older_male` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `older_female` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `folder_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `beneficiaries`
+--
+
+INSERT INTO `beneficiaries` (`id`, `ip_group_total`, `ip_group_male`, `ip_group_female`, `pwd_total`, `pwd_male`, `pwd_female`, `children_total`, `children_male`, `children_female`, `youth_total`, `youth_male`, `youth_female`, `adult_total`, `adult_male`, `adult_female`, `older_total`, `older_male`, `older_female`, `folder_id`, `created_at`, `updated_at`) VALUES
+(7, '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', '1000', NULL, '2023-09-14 22:23:46', '2023-09-14 22:23:46'),
+(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:28:42', '2023-09-14 22:28:42'),
+(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:47:56', '2023-09-14 22:47:56');
 
 -- --------------------------------------------------------
 
@@ -84,17 +116,8 @@ CREATE TABLE `budgets` (
 --
 
 INSERT INTO `budgets` (`id`, `project_status`, `implementation_mode`, `project_basis`, `total_project_cost`, `direct_cost`, `indirect_cost`, `source_of_fund`, `budget_year`, `core_program`, `sub_program`, `target_date_start`, `target_date_completion`, `created_at`, `updated_at`) VALUES
-(99, 'coordinated', 'by-administration', '2023 PrExC; SWF', '1,000,000', '500,000', '500,000', 'GAA FUND', 'CY 2023', 'Administration and General Services', 'Human Resource Management and Development Services', '2023-08-10', '2023-08-11', '2023-07-30 23:40:15', '2023-08-14 22:30:05'),
-(100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42'),
-(103, 'coordinated', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-14 22:29:56'),
-(104, 'on-going', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-07 23:30:54', '2023-08-09 23:15:02'),
-(105, 'on-going', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58'),
-(106, 'continuing', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12'),
-(107, 'terminating', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10'),
-(108, 'coordinated', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12'),
-(109, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57'),
-(110, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12'),
-(111, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40');
+(17, 'proposed', 'by-contract', '2023 PrExC; SWF', '1000000', '1000000', '1000000', 'GAA FUND', 'CY 2023', 'Administration and General Services', 'Human Resource Management and Development Services', '2023-09-15', '2024-01-15', '2023-09-14 22:23:46', '2023-09-14 22:49:04'),
+(18, 'proposed', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:28:42', '2023-09-14 22:49:21');
 
 -- --------------------------------------------------------
 
@@ -173,25 +196,18 @@ CREATE TABLE `evaluations` (
   `no_of_beneficiaries` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `synopsis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `bureau_director_designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `bureau_director_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `bureau_director_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `office_evaluator` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `evaluations`
 --
 
-INSERT INTO `evaluations` (`id`, `format_check`, `format_comment`, `provincial_evaluation_check`, `provincial_evaluation_comment`, `regional_validation_check`, `regional_validation_comment`, `general_information_check`, `general_information_comment`, `background_and_rationale_check`, `background_and_rationale_comment`, `objectives_check`, `objectives_comment`, `project_description_check`, `project_description_comment`, `implementation_strategies_check`, `implementation_strategies_comment`, `sustainability_plan_check`, `sustainability_plan_comment`, `budgetary_requirements_check`, `budgetary_requirements_comment`, `attachments_check`, `attachments_comment`, `signatories_check`, `signatories_comment`, `ipra_rights_check`, `ipra_rights_comment`, `presidents_agenda_check`, `presidents_agenda_comment`, `pdp_pip_check`, `pdp_pip_comment`, `ip_master_plan_check`, `ip_master_plan_comment`, `strategic_plan_check`, `strategic_plan_comment`, `workflow_framework_check`, `workflow_framework_comment`, `building_blocks_check`, `building_blocks_comment`, `strategic_directions_check`, `strategic_directions_comment`, `prexc_check`, `prexc_comment`, `sdg_check`, `sdg_comment`, `signature_check`, `signature_comment`, `procurement_management_plan_check`, `procurement_management_plan_comment`, `implementation_plan_check`, `implementation_plan_comment`, `expenditure_summary_check`, `expenditure_summary_comment`, `beneficiaries_check`, `beneficiaries_comment`, `project_page_photocopy_check`, `project_page_photocopy_comment`, `plan_materials_map_check`, `plan_materials_map_comment`, `return_on_investment_check`, `return_on_investment_comment`, `created_at`, `updated_at`, `evaluation_project_title`, `location`, `cost_and_source`, `period_of_implementation`, `no_of_beneficiaries`, `synopsis`, `bureau_director_designation`, `bureau_director_name`) VALUES
-(120, '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '0', 'test', '2023-07-30 23:40:15', '2023-08-15 22:38:03', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test', 'test'),
-(121, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(125, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-07 23:30:54', '2023-08-07 23:30:54', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(126, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(127, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(128, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(129, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(130, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(131, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(132, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 22:30:40', '2023-08-15 19:10:55', 'test', 'test', 'test', 'test', 'test', 'test', NULL, NULL);
+INSERT INTO `evaluations` (`id`, `format_check`, `format_comment`, `provincial_evaluation_check`, `provincial_evaluation_comment`, `regional_validation_check`, `regional_validation_comment`, `general_information_check`, `general_information_comment`, `background_and_rationale_check`, `background_and_rationale_comment`, `objectives_check`, `objectives_comment`, `project_description_check`, `project_description_comment`, `implementation_strategies_check`, `implementation_strategies_comment`, `sustainability_plan_check`, `sustainability_plan_comment`, `budgetary_requirements_check`, `budgetary_requirements_comment`, `attachments_check`, `attachments_comment`, `signatories_check`, `signatories_comment`, `ipra_rights_check`, `ipra_rights_comment`, `presidents_agenda_check`, `presidents_agenda_comment`, `pdp_pip_check`, `pdp_pip_comment`, `ip_master_plan_check`, `ip_master_plan_comment`, `strategic_plan_check`, `strategic_plan_comment`, `workflow_framework_check`, `workflow_framework_comment`, `building_blocks_check`, `building_blocks_comment`, `strategic_directions_check`, `strategic_directions_comment`, `prexc_check`, `prexc_comment`, `sdg_check`, `sdg_comment`, `signature_check`, `signature_comment`, `procurement_management_plan_check`, `procurement_management_plan_comment`, `implementation_plan_check`, `implementation_plan_comment`, `expenditure_summary_check`, `expenditure_summary_comment`, `beneficiaries_check`, `beneficiaries_comment`, `project_page_photocopy_check`, `project_page_photocopy_comment`, `plan_materials_map_check`, `plan_materials_map_comment`, `return_on_investment_check`, `return_on_investment_comment`, `created_at`, `updated_at`, `evaluation_project_title`, `location`, `cost_and_source`, `period_of_implementation`, `no_of_beneficiaries`, `synopsis`, `bureau_director_designation`, `bureau_director_name`, `office_evaluator`) VALUES
+(141, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, NULL, NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '0', 'Summary of Expenditures  Document to Follow', '1', NULL, '1', NULL, '1', NULL, '1', NULL, '2023-09-14 22:23:46', '2023-09-14 22:57:54', 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE)', 'Quzon', '1000000', '2023-2024', '1000', 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE)', 'Chiarperson', 'Mervyn Espadero', 'Office of the Executive Director'),
+(142, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:28:42', '2023-09-14 22:58:01', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Records Section'),
+(143, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:47:56', '2023-09-14 22:58:07', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Internal Audit Services');
 
 -- --------------------------------------------------------
 
@@ -227,25 +243,18 @@ CREATE TABLE `folders` (
   `attachment_id` int(10) UNSIGNED DEFAULT NULL,
   `site_id` int(10) UNSIGNED DEFAULT NULL,
   `budget_id` int(10) UNSIGNED DEFAULT NULL,
-  `evaluation_id` bigint(20) UNSIGNED DEFAULT NULL
+  `evaluation_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `beneficiaries_id` int(10) UNSIGNED DEFAULT NULL,
+  `stakeholders_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `folders`
 --
 
-INSERT INTO `folders` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`, `created_by_id`, `project_id`, `signature_id`, `attachment_id`, `site_id`, `budget_id`, `evaluation_id`) VALUES
-(181, 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE) test', '2023-07-30 23:40:15', '2023-08-15 17:28:44', NULL, 1, 165, 137, 112, 104, 99, 120),
-(182, 'test', '2023-07-31 22:01:42', '2023-07-31 22:01:42', NULL, 3, 166, 138, 113, 105, 100, 121),
-(185, 'AD-ALS Project Proposal Prototype', '2023-08-04 00:16:04', '2023-08-14 22:29:38', NULL, 1, 169, 141, 116, 108, 103, 124),
-(186, 'ADSDPP Project Proposal Prototype', '2023-08-07 23:30:54', '2023-08-10 00:11:05', NULL, 1, 170, 142, 117, 109, 104, 125),
-(187, 'Human Resource Program Project Proposal Prototype', '2023-08-09 23:30:58', '2023-08-10 00:11:17', NULL, 1, 171, 143, 118, 110, 105, 126),
-(188, 'IADDA-CREP Project Proposal Prototype', '2023-08-09 23:38:12', '2023-08-10 00:11:31', NULL, 1, 172, 144, 119, 111, 106, 127),
-(189, 'ICC Environmental Protection Programs Project Proposal Prototype', '2023-08-09 23:45:10', '2023-08-10 00:11:47', NULL, 1, 173, 145, 120, 112, 107, 128),
-(190, 'IP Education and Advocacy Program Project Proposal Prototype', '2023-08-09 23:51:12', '2023-08-10 00:11:59', NULL, 1, 174, 146, 121, 113, 108, 129),
-(191, 'test region', '2023-08-13 18:40:57', '2023-08-14 01:19:45', '2023-08-14 01:19:45', 1, 175, 147, 122, 114, 109, 130),
-(192, 'Test PSGC', '2023-08-14 00:59:12', '2023-08-14 01:19:50', '2023-08-14 01:19:50', 1, 176, 148, 123, 115, 110, 131),
-(193, 'evaluate', '2023-08-14 22:30:40', '2023-08-14 22:30:40', NULL, 1, 177, 149, 124, 116, 111, 132);
+INSERT INTO `folders` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`, `created_by_id`, `project_id`, `signature_id`, `attachment_id`, `site_id`, `budget_id`, `evaluation_id`, `beneficiaries_id`, `stakeholders_id`) VALUES
+(223, 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE)', '2023-09-14 22:23:46', '2023-09-14 22:23:46', NULL, 1, 207, 179, 30, 157, 17, 141, 7, 20),
+(224, 'Strengthening the Adjudication Services of the RHO', '2023-09-14 22:28:42', '2023-09-14 22:28:42', NULL, 1, 208, 180, 31, 158, 18, 142, 8, 21);
 
 -- --------------------------------------------------------
 
@@ -286,6 +295,17 @@ CREATE TABLE `media` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `media`
+--
+
+INSERT INTO `media` (`id`, `model_type`, `model_id`, `uuid`, `collection_name`, `name`, `file_name`, `mime_type`, `disk`, `conversions_disk`, `size`, `manipulations`, `custom_properties`, `generated_conversions`, `responsive_images`, `order_column`, `created_at`, `updated_at`) VALUES
+(24, 'App\\File', NULL, 'e2f47463-8e39-44f1-9efc-d1f280678849', 'filename', 'AD-AL Project Proposal Prototype', 'AD-AL-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 114149, '[]', '[]', '[]', '[]', 1, '2023-08-21 21:16:36', '2023-08-21 21:16:36'),
+(25, 'App\\File', 25, '4dd06c3e-87f0-494d-8d0f-6bc0bcf58ae1', 'filename', 'Human Resource Program Project Proposal Prototype', 'Human-Resource-Program-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 46000, '[]', '[]', '[]', '[]', 2, '2023-09-14 17:43:27', '2023-09-14 17:43:30'),
+(26, 'App\\File', 26, '7fb9440c-c07d-455d-9a6b-a3e51a4d0b8a', 'filename', 'Test', 'Test.docx', 'application/x-empty', 'public', 'public', 0, '[]', '[]', '[]', '[]', 2, '2023-09-14 17:51:09', '2023-09-14 17:51:14'),
+(27, 'App\\File', 27, '1aa54347-ee03-4624-beaf-76a2d7655752', 'filename', 'AD-AL Project Proposal Prototype', 'AD-AL-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 114149, '[]', '[]', '[]', '[]', 2, '2023-09-14 18:30:01', '2023-09-14 18:30:09'),
+(28, 'App\\File', 28, '23ca311e-27a7-462d-94cd-e96fb95a4726', 'filename', 'Test', 'Test.docx', 'application/x-empty', 'public', 'public', 0, '[]', '[]', '[]', '[]', 2, '2023-09-14 19:08:14', '2023-09-14 19:08:25');
 
 -- --------------------------------------------------------
 
@@ -342,7 +362,127 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (82, '2023_07_31_063644_add_bureau_director_to_evaluations_table', 18),
 (83, '2023_07_31_064557_add_bureau_director_name_to_evaluations_table', 19),
 (84, '2023_07_31_065623_modify_evaluations_table_add_bureau_director_designation', 20),
-(85, '2023_08_08_013215_add_region_column_to_users_table', 21);
+(85, '2023_08_08_013215_add_region_column_to_users_table', 21),
+(86, '2023_08_18_051648_add_province_to_users_table', 22),
+(87, '2023_08_22_015710_add_office_evaluator_to_evaluations_table', 23),
+(88, '2023_08_23_060841_add_office_to_users_table', 24),
+(89, '2023_09_14_035057_create_stakeholders_table_nullable_fields', 25),
+(90, '2023_09_14_055942_create_stakeholders_table', 26),
+(91, '2023_07_13_070246_create_evaluations_table', 27);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `offices`
+--
+
+CREATE TABLE `offices` (
+  `id` int(11) NOT NULL,
+  `longName` varchar(100) DEFAULT NULL,
+  `shortName` varchar(100) DEFAULT NULL,
+  `officeEmail` varchar(50) DEFAULT NULL,
+  `officeCode` varchar(100) DEFAULT NULL,
+  `dateAdded` timestamp NULL DEFAULT NULL,
+  `parentbureauId` int(11) DEFAULT NULL,
+  `addedBy` varchar(100) DEFAULT NULL,
+  `status` enum('Active','Inactive') DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `offices`
+--
+
+INSERT INTO `offices` (`id`, `longName`, `shortName`, `officeEmail`, `officeCode`, `dateAdded`, `parentbureauId`, `addedBy`, `status`) VALUES
+(1, 'Ancestral Domain Office - Director', 'ADO  - Director', 'ado@ncip.gov.ph', 'CO-ADO-DIR', '2021-11-25 07:39:03', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(2, 'Legal Affairs Office -Director', 'LAO -Director', 'lao@ncip.gov.ph', 'CO-LAO-DIR', '2021-11-25 07:39:30', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(3, 'Office on Policy, Planning and Research - Director', 'OPPR - Director', 'oppr@ncip.gov.ph', 'CO-OPPR-DIR', '2021-11-29 00:15:41', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(4, 'Office on Empowerment and Human Rights - Director', 'OEHR - Director', 'oehr@ncip.gov.ph', 'CO-OEHR-DIR', '2022-02-20 06:57:46', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(5, 'Office of the Executive Director', 'OED', 'oed@ncip.gov.ph', 'CO-OED', '2022-02-20 19:05:07', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(6, 'Office of the Chairperson', 'OC', 'chairperson.external@ncip.gov.ph', 'CO-OC', '2022-02-20 19:05:42', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(7, 'Records Section', 'Records (AS-GSD)', 'records2ncip@gmail.com', 'CO-AS-GSD-REC', '2022-02-20 19:56:59', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(8, 'Office on Socio-Economic Services and Special Concerns - Director', 'OSESSC - Director', 'osessc@ncip.gov.ph', 'CO-OSESSC-DIR', '2022-03-28 19:42:00', NULL, 'a3150a56-cc86-4723-bf6c-f54fa9641c7a', 'Active'),
+(9, 'Finance Service - Director', 'FS - Director', 'fs@ncip.gov.ph', 'CO-FS-DIR', '2022-04-18 00:45:17', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(10, 'Foreign Assisted Programs and International Relations Office  - Director', 'FAPIRO - Director', 'fapiro@ncip.gov.ph', 'CO-FAPIRO-DIR', '2022-04-18 00:58:19', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(11, 'Office on Education Culture and Health - Director', 'OECH - Director', 'oech@ncip.gov.ph', 'CO-OECH-DIR', '2022-04-18 01:01:58', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(12, 'Administrative Services - Director', 'AS - Director', 'admin.service@ncip.gov.ph', 'CO-AS-DIR', '2022-04-18 01:02:50', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(13, 'Internal Audit Services', 'IAS', 'ias@ncip.gov.ph', 'CO-IAS', '2022-04-18 01:03:25', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(14, 'Clerk of Commission', 'COC', 'coc.ncip@gmail.com', 'CO-OCC', '2022-04-26 18:58:38', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(15, 'Office of the Commissioner for Central Mindanao', 'Comm. for Central Mindanao', 'comm.centralmindanao@ncip.gov.ph', 'COM-CEN-MIN', '2022-05-10 02:11:01', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(16, 'Office of the Commissioner for Island and Rest of Visayas', 'Comm for Island & Rest of Visayas', 'comm.islandandrestofvisayas@ncip.gov.ph', 'COM-VIS', '2022-05-10 02:16:25', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(17, 'Office of the Commissioner for  Region III and Rest of Luzon', 'Comm. for  Region III ', 'comm.region3andrestluzon@ncip.gov.ph', 'COM-REG3-LUZ', '2022-05-10 02:17:39', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(18, 'Office of the Commissioner for Region II', 'Office of the Commissioner for Region II', 'comm.region2@ncip.gov.ph', 'COM-REG2', '2022-05-11 19:11:49', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(19, 'OPPR - Policy and Planning Division', 'OPPR - PPD', 'ppd@ncip.gov.ph', 'CO-OPPR-PPD', '2022-05-12 04:20:15', 3, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(20, 'OPPR - Information and Research Division', 'OPPR - IRD', 'ird@ncip.gov.ph', 'CO-OPPR-IRD', '2022-05-12 04:21:48', 3, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(21, 'OPPR - Information and Communications Technology Division', 'OPPR - ICTD', 'ictd@ncip.gov.ph', 'CO-OPPR-ICTD', '2022-05-12 04:22:26', 3, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(22, 'FS - Accounting Division', 'FS - Accounting', 'fao.accounting@ncip.gov.ph', 'CO-FS-AD', '2022-05-12 04:23:27', 9, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(23, 'FS - Budget Division', 'FS - Budget', 'fao.budget@ncip.gov.ph', 'CO-FS-BD', '2022-05-12 04:24:05', 9, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(24, 'AS - Human Resource Management Division', 'AS - HRMD', 'fao.hrmd@ncip.gov.ph', 'CO-AS-HRMD', '2022-05-12 04:28:54', 12, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(25, 'AS - General Services Division', 'AS - GSD', 'gsdfao.ncip@gmail.com', 'CO-AS-GSD', '2022-05-12 04:29:36', 12, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(26, 'OECH - Education and Culture Division', 'OECH - ECD', 'ecd@ncip.gov.ph', 'CO-OECH-ECD', '2022-05-13 01:43:52', 11, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(27, 'OECH - Health Development Division', 'OECH - HDD', 'hdd@ncip.gov.ph', 'CO-OECH-HDD', '2022-05-13 01:44:58', 11, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(28, 'OEHR - Human Rights Division', 'OEHR - Human Rights Div', 'hrd@ncip.gov.ph', 'CO-OEHR-HRD', '2022-05-13 01:46:13', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(29, 'OEHR - Empowerment Division', 'OEHR - Empowerment Div', 'ed@ncip.gov.ph', 'CO-OEHR-ED', '2022-05-13 01:47:11', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(30, 'OSESSC - Socio-Economic Division', 'OSESSC - SED ', 'sed@ncip.gov.ph', 'CO-OSESSC-SED', '2022-05-13 01:51:18', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(31, 'OSESSC - Special Concerns Division ', 'OSESSC -SCD ', 'scd@ncip.gov.ph', 'CO-OSESSC-SCD', '2022-05-13 02:19:25', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(32, 'ADO - Recognition Division', 'ADO - Recognition Div', 'rd@ncip.gov.ph', 'CO-ADO-RD', '2022-05-13 02:21:03', 1, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(33, 'ADO - Resource Management Division', 'ADO - RMD', 'rmd@ncip.gov.ph', 'CO-ADO-RMD', '2022-05-13 02:21:43', 1, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(34, 'LAO - Public Assistance Division', 'LAO - PAD', 'pad@ncip.gov.ph', 'CO-LAO-PAD', '2022-05-13 02:55:30', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(35, 'LAO - Ligitation Adjudication Division', 'LAO - LAD', 'lad@ncip.gov.ph', 'CO-LAO-LAD', '2022-05-13 02:56:06', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(36, ' FAPIRO - Project Management Monitoring and Evaluation Division', 'FAPIRO - PMMED ', 'pmmed@ncip.gov.ph', 'CO-FAPIRO-PMMED', '2022-05-15 18:24:56', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(37, 'FAPIRO - External Affairs and Communication Division', 'FAPIRO - EACD', 'eacd@ncip.gov.ph', 'CO-FAPIRO-EACD', '2022-05-15 18:25:32', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(38, 'Region I - Office of the Regional Director', 'Region I - ORD', 'region1@ncip.gov.ph', 'REG1-ORD', '2022-05-20 00:57:52', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(39, 'Region I - Admin & Finance Services Division', 'Region I - AFSD', 'reg1afsd@ncip.gov.ph', 'REG1-AFSD', '2022-05-22 18:51:45', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(40, 'Region I - Technical Management Services Division', 'Region I - TMSD', 'reg1tmsd@ncip.gov.ph', 'REG1-TMSD', '2022-05-22 18:55:27', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(41, 'Region II - Office of the Regional Director', 'Region II - ORD ', 'region2@ncip.gov.ph', 'REG2-ORD', '2022-05-22 18:56:51', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(42, 'Region II - Admin & Finance Services Division', 'Region II - AFSD', 'reg2afsd@ncip.gov.ph', 'REG2-AFSD', '2022-05-22 19:53:38', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(43, 'Region II  - Technical Management Services Division', 'Region II - TMSD', 'reg2tmsd@ncip.gov.ph', 'REG2-TMSD', '2022-05-22 19:56:45', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(44, 'CAR - Office of the Regional Director', 'CAR - ORD', 'car@ncip.gov.ph', 'CAR-ORD', '2022-05-22 19:58:06', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(45, 'CAR - Admin & Finance Services Division', 'CAR - AFSD', 'carafsd@ncip.gov.ph', 'CAR-AFSD', '2022-05-22 20:08:30', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(46, 'CAR - Technical Management Services Division', 'CAR TMSD', 'cartmsd@ncip.gov.ph', 'CAR-TMSD', '2022-05-22 20:10:27', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(47, 'Region I - Provincial Office', 'Region I - PO', 'reg1po@ncip.gov.ph', NULL, '2022-05-22 23:10:48', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(48, 'Region II - Provincial Office', 'Region II - PO', 'reg2po@ncip.gov.ph', NULL, '2022-05-22 23:11:38', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(49, 'CAR - Provincial Office', 'CAR - PO', 'carpo@ncip.gov.ph', NULL, '2022-05-22 23:12:11', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(50, 'Region I - Community Service Center', 'Region I - CSC', 'reg1csc@ncip.gov.ph', NULL, '2022-05-22 23:34:08', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(51, 'Region II - Community Service Center', 'Region II - CSC', 'reg2csc@ncip.gov.ph', NULL, '2022-05-22 23:34:42', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(52, 'CAR - Community Service Center', 'CAR - CSC', 'carcsc@ncip.gov.ph', NULL, '2022-05-22 23:35:10', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(53, 'Region III - Office of the Regional Director', 'Region III - ORD', 'region3@ncip.gov.ph', '', '2022-05-23 19:14:00', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(54, 'Region IVA - Office of the Regional Director', 'Region IVA - ORD', 'region4a@ncip.gov.ph', '', '2022-05-23 19:23:24', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(55, 'Region III - Technical Management Services Division', 'Region III - TMSD', 'reg3tmsd@ncip.gov.ph', NULL, '2022-05-23 19:41:22', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(56, 'Region III - Admin & Finance Services Division', 'Region III - AFSD', 'reg3afsd@ncip.gov.ph', NULL, '2022-05-23 19:42:35', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(57, 'Region IVA - Technical Management Division ', 'Region IVA - TMSD', 'tmsdncipcalabarzon@gmail.com', NULL, '2022-05-23 19:43:38', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(58, 'Region IVA - Admin & Finance Services Division', 'Region IVA - AFSD', 'afsdncip4a@gmail.com', NULL, '2022-05-23 19:44:28', 54, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(59, 'Region IVB - Office of the Regional Director', 'Region IVB - ORD', 'ncip4b@ncip.gov.ph', '', '2022-05-23 19:46:41', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(60, 'Region IVB - Admin & Finance Services Division', 'Region IVB - AFSD', 'reg4bafsd@ncip.gov.ph', NULL, '2022-05-23 19:48:17', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(61, 'Region IVB - Technical Management Services Division', 'Region IVB - TMSD', 'joemer.samong@gmail.com', NULL, '2022-05-23 19:49:21', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(62, 'Region III - Provincial Office Aurora', 'Region III - PO Aurora', 'Dhelsiejoygonzales@gmail.com', NULL, '2022-05-23 20:03:48', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(63, 'Region III - Provincial Office Tarlac', 'Region III - PO Tarlac', 'nciptarlac@yahoo.com', NULL, '2022-05-23 20:04:59', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(64, 'Region IVB - Provincial Office Oriental Mindoro', 'Region IVB - PO Oriental ', 'nciporientalmindoro@ncip.gov.ph', NULL, '2022-05-23 20:18:33', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(65, 'Region III - Provincial Office Bataan', 'Region III - PO Bataan', 'gbhaguy2021@gmail.com', NULL, '2022-05-23 20:34:39', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(66, 'Region V -  Office of the Regional Director', 'Region V - ORD', 'region5@ncip.gov.ph', '', '2022-05-24 19:12:42', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(67, 'Region V - Technical Management Services Division', 'Region V - TMSD', 'region5.tmsd.rmagistrado@gmail.com', NULL, '2022-05-24 19:22:14', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(68, 'Region V - Admin & Finance Services Division', 'Region V - AFSD', 'marygrace.afsd.ncip5@gmail.com', NULL, '2022-05-24 19:56:43', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(69, 'Region VI / VII - Office of the Regional Director', 'Region VI / VII - ORD', 'region67@ncip.gov.ph', NULL, '2022-05-24 20:21:59', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(70, 'Region VI / VII - Admin & Finance Services Division', 'Region VI / VII - AFSD', 'region67afsd@ncip.gov.ph', NULL, '2022-05-24 20:33:56', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(71, 'Region VI / VII - Technical Management Services Division ', 'Region VI / VII - TMSD', 'region67tmsd@ncip.gov.ph', NULL, '2022-05-24 20:34:47', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(72, 'Region IX - Office of the Regional Director', 'Region IX - ORD', 'region9@ncip.gov.ph', '', '2022-05-24 20:42:05', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(73, 'Region IX - Technical Management Services Division', 'Region IX - TMSD', 'region9tmsd@ncip.gov.ph', NULL, '2022-05-24 20:47:10', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(74, 'Region IX - Admin & Finance Services Division', 'Region IX - AFSD', 'region9afsd@ncip.gov.ph', NULL, '2022-05-24 20:47:54', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(75, 'Region X - Office of the Regional Director', 'Region X - ORD', 'region10@ncip.gov.ph', '', '2022-05-25 19:27:01', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(76, 'Region X - Technical Management Services Division', 'Region X - TMSD', 'ncip10ict@gmail.com', NULL, '2022-05-25 19:35:09', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(77, 'Region X - Admin & Finance Services Division', 'Region X - AFSD', 'hrmodata@gmail.com', NULL, '2022-05-25 19:42:25', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(78, 'Region XI - Office of the Regional Director', 'Region XI - ORD', 'region11@ncip.gov.ph', '', '2022-05-25 19:43:39', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(79, 'Region XI - Admin & Finance Services Division', 'Region XI - AFSD', 'ncip11_records@yahoo.com', NULL, '2022-05-25 19:44:46', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(80, 'Region XI - Technical Management Services Division', 'Region XI - TMSD', 'region11tmsd@ncip.gov.ph', NULL, '2022-05-25 19:48:17', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(81, 'Region XII - Office of the Regional Director', 'Region XII - ORD', 'region12@ncip.gov.ph', NULL, '2022-05-25 19:52:56', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(82, 'Region XII - Admin & Finance Services Division', 'Region XII - AFSD', 'ncipr12recordsection@gmail.com', NULL, '2022-05-25 19:53:58', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(83, 'Region XII - Technical Management Services Division', 'Region XII - TMSD', 'region12tmsd@ncip.gov.ph', NULL, '2022-05-25 19:55:04', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(84, 'Region XIII - Office of the Regional Director', 'Region XIII - ORD', 'region13@ncip.gov.ph', NULL, '2022-05-25 19:58:11', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(85, 'Region XIII - Technical Management Services Division', 'Region XIII - TMSD', 'region13tmsd@ncip.gov.ph', NULL, '2022-05-25 19:59:40', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(86, 'Region XIII - Admin & Finance Services Division', 'Region XIII - AFSD', 'region13afsd@ncip.gov.ph', NULL, '2022-05-25 20:00:13', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(87, 'Office of the Commissioner for Region II -1', 'Comm. for Region II -1', 'comm.region2@ncip.gov.pha', 'COM-REG2 -1', '2022-06-15 01:42:36', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Inactive'),
+(88, 'Office of the Commissioner of Southern and Eastern Mindanao', 'Comm. of S&E Mindanao', 'comm.southernandeasternmindanao@ncip.gov.ph', 'COM-SE-MIN', '2022-06-15 08:17:44', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(89, 'Office of the Commissioner for CAR and Region I', 'Comm. for CAR and R1', 'comm.carand1@ncip.gov.ph', 'COM-CAR-REG1', '2022-06-15 08:24:46', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active'),
+(90, 'Office of the Commissioner for the Northern and Western Mindanao', 'Comm. for N&W Mindanao', 'comm.northernandwesternmindanao@ncip.gov.ph', 'COM-NW-MIN', '2022-06-15 09:08:32', NULL, '0d08d967-319a-4650-9ab9-0da8fde91c08', 'Active');
 
 -- --------------------------------------------------------
 
@@ -415,17 +555,8 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `name`, `description`, `created_at`, `updated_at`, `deleted_at`, `background_and_rationale`, `objectives`, `project_implementation`, `monitoring_evaluation`, `potential_risk`, `sustainability_plan`) VALUES
-(165, 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE) test', 'The National Commission on Indigenous Peoples (NCIP) is tasked for the formulation and implementation of policies, plans and programs to promote and protect the rights and well-being of the ICCs/IPs and the recognition of their ancestral domains as well as their rights thereto. In order to achieve this mandate, the Commission should be able to provide learning and development interventions to capacitate and continuously improve its employees’ capabilities and commitment to the Commission’s mandate.', '2023-07-30 23:40:15', '2023-08-15 17:28:14', NULL, 'The National Commission on Indigenous Peoples (NCIP) is tasked for the formulation and implementation of policies, plans and programs to promote and protect the rights and well-being of the ICCs/IPs and the recognition of their ancestral domains as well as their rights thereto. In order to achieve this mandate, the Commission should be able to provide learning and development interventions to capacitate and continuously improve its employees’ capabilities and commitment to the Commission’s mandate.\r\n\r\nIn relation to the aims of capacity building and opportunities, the Civil Service Commission emphasized Rule VIII of the CSC Omnibus Rules Implementing Book V of Executive Order 292 that each government agency should establish a continuing program for the development of its personnel. Part of which is also focused on the recognition of the performance of employees to ensure that proper recognition will be given.\r\n\r\nRewards and recognition are systems where people are acknowledged for their performance in both intrinsic and extrinsic ways. These can be said to be present in a workplace if there is appropriate acknowledgment and appreciation of employees\' effort in a fair and timely manner.\r\n\r\nRecognition helps employees see that their organization values them and their contributions to the success of their teams and the whole organization. This is particularly key when organizations grow or change. It helps employees build a sense of security in their value to the company while motivating them to continue their work with pride and passion.\r\nCorollary hereof, the Civil Service Commission pursuant to Memorandum 01, series of 2001 introduced the concept of PRAISE (Program on Awards and Incentives for Service Excellence.  \r\nThrough this program, creativity, innovativeness, integrity and productivity in the public service is recognized as a valuable contribution to the efficiency, economy, and improvement of government services and extraordinary acts or services in the public service. To support its enforcement, the same memorandum mandated that at least 5% of the HRD funds shall be allocated for the PRAISE and incorporated in the agency\'s annual work and financial plan and budget.\r\nAt present, while there is an existing PRAISE guideline approved, there is a need to revisit the enforcement of which from the Central Office down to the field offices. This also includes the following activities:\r\n\r\n1.	Checking of the existence of PRAISE committees in respective NCIP offices;\r\n2.	study the existing PRAISE interim guidelines to confirm if still in adherence to the latest rules, regulations and provisions on rewards and recognition system provided by the Civil Service Commission and provide revisions if necessary;\r\n3.	ensuring that incentive programs are followed and criteria for selection of deserving employees are in place; and\r\n4.	institutionalize the review of nominated employees, annual recognition program and allocation of funds to ensure delivery of awards.\r\nTo be able to carry out the implementation of a proper employee recognition and rewards system and to ensure its continuity, revitalizing the program in place is necessary. Hence, this project is being proposed.', 'The proposed project aims to promote and direct personnel on the way to fruitful inputs to all projects, activities and programs success and well-organized service delivery by providing options for awards, incentives, and/or recognitions for top performing employees.\r\n	Specifically, this aims to:\r\n1)	Improve the mechanism in identifying, selecting, rewarding and providing incentives to deserving employees;\r\n2)	Provide both monetary and non- monetary rewards and incentives to deserving employees;\r\n3)	Recognize, acknowledge and reward productive, creative, innovative and ethical behavior of employees through formal and informal mode; and\r\n4)	Improve human resources towards productive contributions and efficient service delivery.', 'This activity will be implemented by the Human Resource Office of the Regional Office with the endorsement from the Provincial Office identifying personnel who need such training based on the DATA BANK or PDS file of the employees.\r\n\r\nThis project proposal was anticipated to ensure that personnel structure, competence and approaches match the requirements of the program implementation and services delivery. The Central Office, Regional Offices, Provincial Offices and Community Service Centers are always faced with critical issues and challenges; thus, the said project will encourage the personnel to grow, develop their potential, and prepare for movement.\r\n\r\nThe commencement of this project will be marked by checking the existing PRAISE committees within the NCIP offices. This will be manifested by the preparation of an inventory of the PRAISE committee where the management can see the existence and update of the personnel assigned as members of the committee. This will be followed by implementation of various activities related to PRAISE as approved in the HR Development Plan or other relative resolutions governing the PRAISE activities. Orientation for the PRAISE Committee and NCIP employees are suggested to be emphasized since there were already resolutions from the Civil Service Commission that might trigger updates for modification of existing guidelines. Aside from the orientation, the recognition and rewarding ceremony should be religiously followed as this highlights the culminating of the PRAISE guidelines every calendar year.', 'The Human Resource Officer is tasked to monitor the implementation of the project and determine what progress has been made. The HR Officer is also tasked to ascertain whether the project is on track.\r\n\r\nAs per NCIP SPMS, the PMT is responsible for identifying potential PRAISE awards nominees for various awards categories and the PRAISE Committee in determining top performers of the agency who qualify for awards and incentives. \r\n\r\nLikewise, as part of the monitoring and evaluation, the following strategies are adopted to come up with reliable, effective and credible determination of priority list of interventions for implementation and future action planning:\r\n \r\n1.	Survey Questionnaires- will be used as baseline data for the determination of perceived training needs and interventions. It also tries to determine strengths and weaknesses of individual staff. These shall be consolidated and matched with the positions, skills, strengths and weaknesses of the employees.\r\n\r\n2.	Focus Group Discussion (FGD) (per division/department/province)-to determine the individual need of employees based on their perceived weakness and strength.\r\n\r\n3.	Performance Evaluation (with the department/division heads and the concerned employee) - to validate the need of employees for skills enhancement based on the result of their performance evaluation through the SPMS.\r\n\r\n4.	Staff meetings- to determine the general perception of employees in terms of improving the performance of the agency.\r\n\r\n5.	Annual Work and Financial Plans – Since the Annual WFP considers the priority projects, programs, and activities of the different units for implementation, these are considered in determining the interventions for HRD purposes.', 'It is given that NCIP has limited human resources causing most, if not all, to perform beyond what is in their PDS. As such, one potential risk during implementation especially if the criteria are not clear is for the possibility of not recognizing all the efforts of all performing employees. Thus, the need to clearly set out the criteria for the PRAISE.\r\n\r\nIf the project is not implemented, the potential risk is our office will violate the NCIP SPMS and the CSC Memorandum as indicated in the background and rationale of this proposal.\r\n\r\nThe praise committee may not actually function if its members are holding different designations because they will be preoccupied with other concerns and duties', 'The HRM Office shall consolidate and coordinate developmental interventions that will form part of the HR plan. The HRM shall continue to encourage'),
-(166, 'test', NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(169, 'AD-ALS Project Proposal Prototype', NULL, '2023-08-04 00:16:04', '2023-08-14 22:29:38', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(170, 'ADSDPP Project Proposal Prototype', NULL, '2023-08-07 23:30:54', '2023-08-10 00:11:05', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(171, 'Human Resource Program Project Proposal Prototype', NULL, '2023-08-09 23:30:58', '2023-08-10 00:11:17', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(172, 'IADDA-CREP Project Proposal Prototype', NULL, '2023-08-09 23:38:12', '2023-08-10 00:11:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(173, 'ICC Environmental Protection Programs Project Proposal Prototype', NULL, '2023-08-09 23:45:10', '2023-08-10 00:11:47', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(174, 'IP Education and Advocacy Program Project Proposal Prototype', NULL, '2023-08-09 23:51:12', '2023-08-10 00:11:59', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(175, 'test region', NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(176, 'Test PSGC', NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(177, 'evaluate', NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(207, 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE)', 'The National Commission on Indigenous Peoples (NCIP) is tasked for the formulation and implementation of policies, plans and programs to promote and protect the rights and well-being of the ICCs/IPs and the recognition of their ancestral domains as well as their rights thereto. In order to achieve this mandate, the Commission should be able to provide learning and development interventions to capacitate and continuously improve its employees’ capabilities and commitment to the Commission’s mandate.', '2023-09-14 22:23:46', '2023-09-14 22:23:46', NULL, 'The National Commission on Indigenous Peoples (NCIP) is tasked for the formulation and implementation of policies, plans and programs to promote and protect the rights and well-being of the ICCs/IPs and the recognition of their ancestral domains as well as their rights thereto. In order to achieve this mandate, the Commission should be able to provide learning and development interventions to capacitate and continuously improve its employees’ capabilities and commitment to the Commission’s mandate.\r\n\r\nIn relation to the aims of capacity building and opportunities, the Civil Service Commission emphasized Rule VIII of the CSC Omnibus Rules Implementing Book V of Executive Order 292 that each government agency should establish a continuing program for the development of its personnel. Part of which is also focused on the recognition of the performance of employees to ensure that proper recognition will be given.\r\n\r\nRewards and recognition are systems where people are acknowledged for their performance in both intrinsic and extrinsic ways. These can be said to be present in a workplace if there is appropriate acknowledgment and appreciation of employees\' effort in a fair and timely manner.\r\n\r\nRecognition helps employees see that their organization values them and their contributions to the success of their teams and the whole organization. This is particularly key when organizations grow or change. It helps employees build a sense of security in their value to the company while motivating them to continue their work with pride and passion.\r\nCorollary hereof, the Civil Service Commission pursuant to Memorandum 01, series of 2001 introduced the concept of PRAISE (Program on Awards and Incentives for Service Excellence.  \r\nThrough this program, creativity, innovativeness, integrity and productivity in the public service is recognized as a valuable contribution to the efficiency, economy, and improvement of government services and extraordinary acts or services in the public service. To support its enforcement, the same memorandum mandated that at least 5% of the HRD funds shall be allocated for the PRAISE and incorporated in the agency\'s annual work and financial plan and budget.\r\nAt present, while there is an existing PRAISE guideline approved, there is a need to revisit the enforcement of which from the Central Office down to the field offices. This also includes the following activities:\r\n\r\n1.	Checking of the existence of PRAISE committees in respective NCIP offices;\r\n2.	study the existing PRAISE interim guidelines to confirm if still in adherence to the latest rules, regulations and provisions on rewards and recognition system provided by the Civil Service Commission and provide revisions if necessary;\r\n3.	ensuring that incentive programs are followed and criteria for selection of deserving employees are in place; and\r\n4.	institutionalize the review of nominated employees, annual recognition program and allocation of funds to ensure delivery of awards.\r\nTo be able to carry out the implementation of a proper employee recognition and rewards system and to ensure its continuity, revitalizing the program in place is necessary. Hence, this project is being proposed.', 'The proposed project aims to promote and direct personnel on the way to fruitful inputs to all projects, activities and programs success and well-organized service delivery by providing options for awards, incentives, and/or recognitions for top performing employees.\r\n	Specifically, this aims to:\r\n1)	Improve the mechanism in identifying, selecting, rewarding and providing incentives to deserving employees;\r\n2)	Provide both monetary and non- monetary rewards and incentives to deserving employees;\r\n3)	Recognize, acknowledge and reward productive, creative, innovative and ethical behavior of employees through formal and informal mode; and\r\n4)	Improve human resources towards productive contributions and efficient service delivery.', 'This activity will be implemented by the Human Resource Office of the Regional Office with the endorsement from the Provincial Office identifying personnel who need such training based on the DATA BANK or PDS file of the employees.\r\n\r\nThis project proposal was anticipated to ensure that personnel structure, competence and approaches match the requirements of the program implementation and services delivery. The Central Office, Regional Offices, Provincial Offices and Community Service Centers are always faced with critical issues and challenges; thus, the said project will encourage the personnel to grow, develop their potential, and prepare for movement.\r\n\r\nThe commencement of this project will be marked by checking the existing PRAISE committees within the NCIP offices. This will be manifested by the preparation of an inventory of the PRAISE committee where the management can see the existence and update of the personnel assigned as members of the committee. This will be followed by implementation of various activities related to PRAISE as approved in the HR Development Plan or other relative resolutions governing the PRAISE activities. Orientation for the PRAISE Committee and NCIP employees are suggested to be emphasized since there were already resolutions from the Civil Service Commission that might trigger updates for modification of existing guidelines. Aside from the orientation, the recognition and rewarding ceremony should be religiously followed as this highlights the culminating of the PRAISE guidelines every calendar year.', 'The Human Resource Officer is tasked to monitor the implementation of the project and determine what progress has been made. The HR Officer is also tasked to ascertain whether the project is on track.\r\n\r\nAs per NCIP SPMS, the PMT is responsible for identifying potential PRAISE awards nominees for various awards categories and the PRAISE Committee in determining top performers of the agency who qualify for awards and incentives. \r\n\r\nLikewise, as part of the monitoring and evaluation, the following strategies are adopted to come up with reliable, effective and credible determination of priority list of interventions for implementation and future action planning:\r\n \r\n1.	Survey Questionnaires- will be used as baseline data for the determination of perceived training needs and interventions. It also tries to determine strengths and weaknesses of individual staff. These shall be consolidated and matched with the positions, skills, strengths and weaknesses of the employees.\r\n\r\n2.	Focus Group Discussion (FGD) (per division/department/province)-to determine the individual need of employees based on their perceived weakness and strength.\r\n\r\n3.	Performance Evaluation (with the department/division heads and the concerned employee) - to validate the need of employees for skills enhancement based on the result of their performance evaluation through the SPMS.\r\n\r\n4.	Staff meetings- to determine the general perception of employees in terms of improving the performance of the agency.\r\n\r\n5.	Annual Work and Financial Plans – Since the Annual WFP considers the priority projects, programs, and activities of the different units for implementation, these are considered in determining the interventions for HRD purposes.', 'It is given that NCIP has limited human resources causing most, if not all, to perform beyond what is in their PDS. As such, one potential risk during implementation especially if the criteria are not clear is for the possibility of not recognizing all the efforts of all performing employees. Thus, the need to clearly set out the criteria for the PRAISE.\r\n\r\nIf the project is not implemented, the potential risk is our office will violate the NCIP SPMS and the CSC Memorandum as indicated in the background and rationale of this proposal.\r\n\r\nThe praise committee may not actually function if its members are holding different designations because they will be preoccupied with other concerns and duties', 'The HRM Office shall consolidate and coordinate developmental interventions that will form part of the HR plan. The HRM shall continue to encourage'),
+(208, 'Strengthening the Adjudication Services of the RHO', 'This project to strengthen the adjudication services of the RHO envisions using funds to increase the RHO’s manpower complement by hiring [process servers (to deliver notices/orders/decisions/resolutions/summonses to parties), and legal researchers (to assist in case research and handling)]. Procurement of necessary equipment, materials and supplies will also be made in order to ensure operations of the RHO are not hampered, especially during this protracted pandemic. Funds are going to be utilized as well to support the continued operations of the RHO through payment of utilities and other expenses such as travel, mailing and communications.\r\n\r\nOutcome/Key Result Areas:\r\n1.	Adequate and responsive RHO staff to fully exercise the adjudicatory functions of the RHO;\r\n2.	Appropriate equipment to meet the challenges faced during this pandemic, especially in terms of digitization of files and holding of virtual hearings;\r\n3.	Enhanced capacity to address the disposition and adjudication of cases;\r\n4.	Sufficient finances to pay for recurring and necessary expenses needed for RHO operations.', '2023-09-14 22:28:42', '2023-09-14 22:28:42', NULL, 'The Indigenous Peoples are one of the most marginalized sectors of society. For this reason, access to mainstream justice system is limited, with only the IPs who have sufficient financial resources can prosecute or defend their rights in the regular courts.\r\n \r\nThe introduction of Indigenous Peoples Rights Act (IPRA) in the country has provided alternative means for the protection and promotion of IP rights regardless of socio-economic status. As the primary government agency tasked to implement the mandate of IPRA, NCIP has been granted quasi-judicial powers to adjudicate cases involving the rights of ICCs/IPs, including claims and disputes among members of the same ICC/IP group. \r\n \r\nThe Regional Hearing Office (RHO) is where the NCIP generally exercises its quasi-judicial powers at the first instance. Aside from deciding cases, the performance of the quasi-judicial powers of the RHO entails the other tasks such as the docketing of cases, receiving pleadings and motions, service of summons and orders, scheduling of hearings, execution of judgments, mailing correspondence, keeping of records, entertaining parties to the case and other related tasks. The performance of these tasks requires dedicated personnel who will man the desk and, oftentimes, go outside of the office to perform these duties. \r\n\r\nHowever, lack of personnel at the RHO, appropriate equipment and supplies adversely affects the effective and efficient performance of the office in carrying out adjudication services to the ICCs/IPs. The onset of the pandemic, which may continue throughout 2023, has also limited the performance of the RHO in conducting hearings and conferences. For a genuine realization of the quasi-judicial mandate of NCIP, the RHO must be able to function smoothly and regularly. This can only be achieved if there is sufficient budget to support its operational expenses which includes salaries of [sheriffs, process servers, legal researchers, etc, and costs for utilities, equipment, supplies, travel, mailing, and communication.', 'The following objectives are targeted to be attained by Q1 2023: \r\n1.	Hiring of J.O.s in the RHO, particularly [process server, legal researcher, etc;\r\n2.	Procurement of equipment such as laptops and scanners;\r\n\r\nThe following objectives are targeted to be attained in 2023:\r\n1.	Higher percentage of cases disposed and higher number of actions taken on active cases in 2023;\r\n2.	Payment of utilities (electricity, water, internet, subscription to cloud storage);\r\n3.	Payment of mailing, travel, and communication expenses in 2023.', 'a.	Project Implementation\r\n\r\n1.	Hiring of J.O.s\r\n•	Source possible candidates through EAP graduates;\r\n•	HR to publish vacancy in the official website of the RO and post the same within the office premises;\r\n•	Interview potential candidates (referrals of current employees)\r\n\r\n2.	Procurement of Equipment, Supplies, and other Services\r\n•	Go through the usual channels of procurement in the RO\r\n•	Closely coordinate with BAC re specifications and timeline\r\n\r\n3.	Payment of Utilities and other necessary expenses\r\n•	Closely coordinate with AFSD/accountant/cashier re disbursements, liquidation and reimbursement of funds\r\n\r\n4.	Improved/enhanced Adjudication Services\r\n•	Online conduct of hearings\r\n•	Sending of notices, orders and other processes through electronic means\r\n•	Digitization of case files', 'b.	Monitoring and Evaluation Strategies\r\n\r\n•	Regular assessment of performance of JOs per terms of reference (through accomplishment reports)\r\n•	Develop a regular feedback system within the RHO office, i.e., open lines of communications, weekly/monthly meetings, etc\r\n•	Continue with timely submission of quarterly inventory of cases to monitor progress of pending cases;\r\n•	Regularly follow-up implementation of orders and resolutions made;\r\n•	Work closely with AFSD regarding monitoring of expenses and develop a spreadsheet to track possible savings/reduction of costs/ areas where additional funds are needed;\r\n•	Work closely with BAC regarding scheduling and canvassing for equipment and supplies/services', '•	Limited number of qualified candidates, scarcity of applicants\r\n•	Prolonged pandemic (risk to safety and health of all staff members)\r\n•	Promulgation of jurisprudence that may result in further limiting jurisdiction of the NCIP', '•	Regular maintenance and repair of procured equipment;\r\n•	Replacement/update of equipment, including software;\r\n•	Eventual hiring of additional personnel (plantilla positions needed for daily operations of RHO) through coordination with HR and CO;\r\n•	Continued subscription of necessary utilities and services;\r\n•	Adoption of new rules of procedure for electronic filing and service of pleadings, virtual hearings and conferences');
 
 -- --------------------------------------------------------
 
@@ -44327,17 +44458,9 @@ CREATE TABLE `signatures` (
 --
 
 INSERT INTO `signatures` (`id`, `prepared_by_input`, `created_at`, `updated_at`, `prepared_by_checkbox`, `evaluated_by_checkbox`, `evaluated_by_input`, `confirmed_by_checkbox`, `confirmed_by_input`, `validated_by_checkbox`, `validated_by_input`, `endorsed_by_checkbox`, `endorsed_by_input`, `recommended_by_checkbox`, `recommended_by_input`, `approved_by_checkbox`, `approved_by_input`) VALUES
-(137, NULL, '2023-07-30 23:40:15', '2023-08-09 19:09:32', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'checked', 'MERVYN ESPADERO', 'checked', 'ALLEN A. CAPUYAN'),
-(138, NULL, '2023-07-31 22:01:42', '2023-07-31 22:01:42', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(141, NULL, '2023-08-04 00:16:04', '2023-08-04 00:16:04', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(142, NULL, '2023-08-07 23:30:54', '2023-08-07 23:30:54', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(143, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(144, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(145, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(146, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(147, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(148, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
-(149, NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL);
+(179, 'Gng. Luningning Santos', '2023-09-14 22:23:46', '2023-09-14 22:23:46', 'checked', 'checked', 'G. Juanito dela Cruz', 'checked', 'Gng. Dalisay Reyes', 'checked', 'Juan Cruz', 'checked', 'G. Jose Hernandez', 'checked', 'Gng. Maria Cruz', 'checked', 'Allen Capuyan'),
+(180, 'Gng. Luningning Santos', '2023-09-14 22:28:42', '2023-09-14 23:55:40', 'checked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL),
+(181, NULL, '2023-09-14 22:47:56', '2023-09-14 22:47:56', 'unchecked', 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL, 'unchecked', NULL);
 
 -- --------------------------------------------------------
 
@@ -44364,16 +44487,46 @@ CREATE TABLE `sites` (
 --
 
 INSERT INTO `sites` (`id`, `region`, `congressional_district`, `province`, `municipality`, `barangay`, `street_address`, `cadt_calt`, `ad_name`, `created_at`, `updated_at`) VALUES
-(104, '130000000', NULL, '133900000', '133902000', '133902001', '373', 'Quezon', 'Quezon Ancestral Domain', '2023-07-30 23:40:15', '2023-08-13 18:54:33'),
-(108, '150000000', NULL, '150700000', '150708000', '150708001', NULL, NULL, NULL, '2023-08-04 00:16:04', '2023-08-09 23:14:24'),
-(109, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-07 23:30:54', '2023-08-09 23:15:02'),
-(110, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:30:58', '2023-08-09 23:30:58'),
-(111, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:38:12', '2023-08-09 23:38:12'),
-(112, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:45:10', '2023-08-09 23:45:10'),
-(113, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 23:51:12', '2023-08-09 23:51:12'),
-(114, 'Cordillera Administrative Region (CAR)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 18:40:57', '2023-08-13 18:40:57'),
-(115, '130000000', NULL, '137600000', '137601000', '137601001', NULL, NULL, NULL, '2023-08-14 00:59:12', '2023-08-14 00:59:12'),
-(116, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-14 22:30:40', '2023-08-14 22:30:40');
+(157, '130000000', '110', '133900000', '133902000', '133902001', '12', 'Quezon', 'Quezon Ancestral Domain', '2023-09-14 22:23:46', '2023-09-14 22:23:46'),
+(158, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:28:42', '2023-09-14 22:28:42'),
+(159, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:47:56', '2023-09-14 22:47:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stakeholders`
+--
+
+CREATE TABLE `stakeholders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `stakeholder_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_office` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_name2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_office2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_address2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_number2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_name3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_office3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_address3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_number3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_name4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_office4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_address4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stakeholder_number4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `stakeholders`
+--
+
+INSERT INTO `stakeholders` (`id`, `stakeholder_name`, `stakeholder_office`, `stakeholder_address`, `stakeholder_number`, `stakeholder_name2`, `stakeholder_office2`, `stakeholder_address2`, `stakeholder_number2`, `stakeholder_name3`, `stakeholder_office3`, `stakeholder_address3`, `stakeholder_number3`, `stakeholder_name4`, `stakeholder_office4`, `stakeholder_address4`, `stakeholder_number4`, `created_at`, `updated_at`) VALUES
+(20, 'Maria Cruz 2', 'Project Coordinator', 'NCIP Regional Office - Mindanao', '(02) 555-1234', 'Juan Santos', 'Community Liaison Officer', 'NCIP Regional Office - Visayas', '(032) 123-4567', 'Lorna Reyes', 'Environmental Consultant', 'NCIP Regional Office - Luzon', '(02) 987-6543', 'Andres Dela Cruz', 'Indigenous Peoples Advocate', 'NCIP National Headquarters', '(02) 789-0123', '2023-09-14 22:23:46', '2023-09-14 22:23:46'),
+(21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:28:42', '2023-09-14 22:28:42'),
+(22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-14 22:47:56', '2023-09-14 22:47:56');
 
 -- --------------------------------------------------------
 
@@ -44385,6 +44538,8 @@ CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `region` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `province` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `office` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -44397,14 +44552,16 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `region`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `role_id`) VALUES
-(1, 'Admin', '130000000', 'admin@admin.com', '$2y$10$394B2e9nQ0vtjKV4Pu6qeuII45CFoWNVllHPB1IcZgCDLQdok11tG', 'k22Da0QDGjPAgtKbUai7qR7iy81V3CNR70yhrC4tIWfPuXdm5MGDtno8neAu', '2023-06-09 02:34:06', '2023-08-07 19:19:14', 1),
-(3, 'Juan Dela Cruz', NULL, 'proponent@gmail.com', '$2y$10$KO2L5ygJhUmFIYYWUsaDBeAI8nOPHAUcTMjUzJwE6rcu5Nidz7QBK', 'ddxrf41IZFBaFrt55aKeJlpmuHblHlhGRWrNRXkX4QduqTiKUIzWHyLLACQ1', '2023-06-14 19:32:19', '2023-06-29 01:05:13', 2),
-(6, 'Rey Jesus Teves', NULL, 'JESUS.REYTEVES5@GMAIL.COM', '$2y$10$MX9p8LqSbtmBDmaIK.fKSeEbOdpX3O1adb3HYR3WK9ugvnT3JEk5K', 'd2RFnVRXgF0e3SwqCN34npu4ckHvrbABQu7LoUeOSPPZLQwkFhiuL2jFk4wF', '2023-06-29 00:21:59', '2023-06-29 00:21:59', 2),
-(7, 'Evaluator', '130000000', 'evaluator@gmail.com', '$2y$10$XUvL7tsZeVmnog7GB4SkUOHkWjaLxVw/63g0G2WXXq3P8xRRqMZFy', 'ga5Yk3aPviu5E8IxtUxhLV3hnwcbC1vX7YBoF0pcxMr7bHEgPjf42tFkTu3D', '2023-07-11 18:46:02', '2023-08-07 21:51:01', 3),
-(8, 'Rey Jesus Teves', '130000000', 'jesus.reyteves-new@gmail.com', '$2y$10$JUEe7GXk/UMq9AhYTzCGpeAIaI/1/S3BqA4yEdcAZflbOvNu.Ivou', 'TiyKZn3pDCDi74r9o4l7MoGMCRNYaQs3Wg6D6HvyNJqsHMP0MgDy4ZoIRZA3', '2023-07-25 17:49:17', '2023-08-07 19:20:03', 2),
-(9, 'Hiroko Schwartz', '130000000', 'locy@mailinator.com', '$2y$10$.v.H76sFjPxcC6Yvfn2hlO2UrHIxej9o0WFgBQvzbbk2P97/vXSua', NULL, '2023-08-07 18:09:06', '2023-08-07 20:06:51', 2),
-(10, 'Latifah Olson', '130000000', 'qazar@mailinator.com', '$2y$10$F87LyEVajRBql60.QEOlDO4WTRr.vlzs1PQoodjV07TwjOPwHbqJi', NULL, '2023-08-07 20:04:52', '2023-08-07 20:06:38', 2);
+INSERT INTO `users` (`id`, `name`, `region`, `province`, `office`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `role_id`) VALUES
+(1, 'Admin', '130000000', '137600000', 'Office on Policy, Planning and Research - Director', 'admin@admin.com', '$2y$10$VaICddQLcI9KimmsgoxR8O/wuqm4KIGnT82v2Q5dsI3.U5nB5FPQq', 'BxY6tN8aKzGW3iRxRj4rme4prYdekwTcJpbLVXWdQd5UFmCtQgsswAcjL7xi', '2023-06-09 02:34:06', '2023-08-22 23:26:22', 1),
+(3, 'Juan Dela Cruz', '120000000', '128000000', NULL, 'proponent@gmail.com', '$2y$10$.cbTgLc3tI5e4623BqsFuOtRGZkpWIPunC0wVFty4k0dENWx.nL/W', '7V2aORrvrpZ5dcaTPmchc3G3zRho4YY3jNUCmmp1yCTI21pkc3bwVkLyo4PT', '2023-06-14 19:32:19', '2023-08-17 22:35:38', 2),
+(6, 'Rey Jesus Teves', '010000000', '012800000', NULL, 'JESUS.REYTEVES5@GMAIL.COM', '$2y$10$LwRfSpDXQLpXS0xWwFLRiugVvCgVSEJvBIKIs6t10hz1VCMaiNYSG', 'd2RFnVRXgF0e3SwqCN34npu4ckHvrbABQu7LoUeOSPPZLQwkFhiuL2jFk4wF', '2023-06-29 00:21:59', '2023-08-17 22:41:57', 2),
+(7, 'Evaluator', '130000000', '133900000', 'Office on Policy, Planning and Research - Director', 'evaluator@gmail.com', '$2y$10$WrpeYKMM8L0ci1OL2vu9aOvddqJqaO3yFio.Q7xxK7TyxxT1l0ArC', 'SThT7UYSNiF01OUFmqDfITGt6fCRwsUPCONWOLGElpWBXbhOldHiZVlBbWlo', '2023-07-11 18:46:02', '2023-08-22 23:44:27', 3),
+(8, 'Rey Jesus Teves', '130000000', NULL, NULL, 'jesus.reyteves-new@gmail.com', '$2y$10$JUEe7GXk/UMq9AhYTzCGpeAIaI/1/S3BqA4yEdcAZflbOvNu.Ivou', 'TiyKZn3pDCDi74r9o4l7MoGMCRNYaQs3Wg6D6HvyNJqsHMP0MgDy4ZoIRZA3', '2023-07-25 17:49:17', '2023-08-07 19:20:03', 2),
+(9, 'Hiroko Schwartz', '130000000', '137500000', NULL, 'locy@mailinator.com', '$2y$10$.v.H76sFjPxcC6Yvfn2hlO2UrHIxej9o0WFgBQvzbbk2P97/vXSua', NULL, '2023-08-07 18:09:06', '2023-08-17 22:50:51', 2),
+(10, 'Latifah Olson', '130000000', '137400000', 'Office on Socio-Economic Services and Special Concerns - Director', 'qazar@mailinator.com', '$2y$10$F87LyEVajRBql60.QEOlDO4WTRr.vlzs1PQoodjV07TwjOPwHbqJi', NULL, '2023-08-07 20:04:52', '2023-08-22 22:34:12', 2),
+(11, 'test', '010000000', '012800000', 'Foreign Assisted Programs and International Relations Office  - Director', 'proponent@test.com', '$2y$10$JG2bf1qH4rErDA6CX8v3FugQ96OYvH2OOW/KSpYFmKSNd4WlrwwrO', NULL, '2023-08-22 21:50:47', '2023-08-22 22:33:59', 2),
+(12, 'test-office', '010000000', '012800000', 'LAO - Ligitation Adjudication Division', 'office@office.com', '$2y$10$H5XJKCagxFycivNLguzRDOhhCc6WblAXu2VEW6AzIqqmeXwtgtYj2', NULL, '2023-08-22 22:20:51', '2023-08-22 22:38:03', 2);
 
 --
 -- Indexes for dumped tables
@@ -44414,6 +44571,12 @@ INSERT INTO `users` (`id`, `name`, `region`, `email`, `password`, `remember_toke
 -- Indexes for table `attachments`
 --
 ALTER TABLE `attachments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `beneficiaries`
+--
+ALTER TABLE `beneficiaries`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -44443,9 +44606,15 @@ ALTER TABLE `files`
 ALTER TABLE `folders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `folders_deleted_at_index` (`deleted_at`),
-  ADD KEY `110369_5a671f8a18acf` (`created_by_id`),
   ADD KEY `folders_project_id_foreign` (`project_id`),
-  ADD KEY `folders_evaluation_id_foreign` (`evaluation_id`);
+  ADD KEY `folders_evaluation_id_foreign` (`evaluation_id`),
+  ADD KEY `signature_id` (`signature_id`),
+  ADD KEY `attachment_id` (`attachment_id`),
+  ADD KEY `site_id` (`site_id`),
+  ADD KEY `budget_id` (`budget_id`),
+  ADD KEY `beneficiaries_id` (`beneficiaries_id`),
+  ADD KEY `stakeholders_id` (`stakeholders_id`),
+  ADD KEY `110369_5a671f8a18acf` (`created_by_id`);
 
 --
 -- Indexes for table `folder_stakeholder`
@@ -44515,6 +44684,12 @@ ALTER TABLE `sites`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `stakeholders`
+--
+ALTER TABLE `stakeholders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -44529,43 +44704,49 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attachments`
 --
 ALTER TABLE `attachments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT for table `beneficiaries`
+--
+ALTER TABLE `beneficiaries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `budgets`
 --
 ALTER TABLE `budgets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `evaluations`
 --
 ALTER TABLE `evaluations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `folders`
 --
 ALTER TABLE `folders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=229;
 
 --
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `payments`
@@ -44583,7 +44764,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -44595,19 +44776,25 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `signatures`
 --
 ALTER TABLE `signatures`
-  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 
 --
 -- AUTO_INCREMENT for table `sites`
 --
 ALTER TABLE `sites`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
+
+--
+-- AUTO_INCREMENT for table `stakeholders`
+--
+ALTER TABLE `stakeholders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -44624,8 +44811,7 @@ ALTER TABLE `files`
 -- Constraints for table `folders`
 --
 ALTER TABLE `folders`
-  ADD CONSTRAINT `110369_5a671f8a18acf` FOREIGN KEY (`created_by_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `folders_evaluation_id_foreign` FOREIGN KEY (`evaluation_id`) REFERENCES `evaluations` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `110369_5a671f8a18acf` FOREIGN KEY (`created_by_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `folder_stakeholder`
