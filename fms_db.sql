@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2023 at 10:19 AM
+-- Generation Time: Sep 18, 2023 at 07:39 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -225,6 +225,14 @@ CREATE TABLE `files` (
   `created_by_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`id`, `uuid`, `created_at`, `updated_at`, `deleted_at`, `folder_id`, `created_by_id`) VALUES
+(1, '47b04cb0-55e5-11ee-9bc9-0501031fce0b', '2023-09-17 21:36:13', '2023-09-17 21:36:13', NULL, 223, 1),
+(2, '66e74520-55e5-11ee-a02f-dbd8398b230e', '2023-09-17 21:37:05', '2023-09-17 21:37:05', NULL, 224, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -301,11 +309,8 @@ CREATE TABLE `media` (
 --
 
 INSERT INTO `media` (`id`, `model_type`, `model_id`, `uuid`, `collection_name`, `name`, `file_name`, `mime_type`, `disk`, `conversions_disk`, `size`, `manipulations`, `custom_properties`, `generated_conversions`, `responsive_images`, `order_column`, `created_at`, `updated_at`) VALUES
-(24, 'App\\File', NULL, 'e2f47463-8e39-44f1-9efc-d1f280678849', 'filename', 'AD-AL Project Proposal Prototype', 'AD-AL-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 114149, '[]', '[]', '[]', '[]', 1, '2023-08-21 21:16:36', '2023-08-21 21:16:36'),
-(25, 'App\\File', 25, '4dd06c3e-87f0-494d-8d0f-6bc0bcf58ae1', 'filename', 'Human Resource Program Project Proposal Prototype', 'Human-Resource-Program-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 46000, '[]', '[]', '[]', '[]', 2, '2023-09-14 17:43:27', '2023-09-14 17:43:30'),
-(26, 'App\\File', 26, '7fb9440c-c07d-455d-9a6b-a3e51a4d0b8a', 'filename', 'Test', 'Test.docx', 'application/x-empty', 'public', 'public', 0, '[]', '[]', '[]', '[]', 2, '2023-09-14 17:51:09', '2023-09-14 17:51:14'),
-(27, 'App\\File', 27, '1aa54347-ee03-4624-beaf-76a2d7655752', 'filename', 'AD-AL Project Proposal Prototype', 'AD-AL-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 114149, '[]', '[]', '[]', '[]', 2, '2023-09-14 18:30:01', '2023-09-14 18:30:09'),
-(28, 'App\\File', 28, '23ca311e-27a7-462d-94cd-e96fb95a4726', 'filename', 'Test', 'Test.docx', 'application/x-empty', 'public', 'public', 0, '[]', '[]', '[]', '[]', 2, '2023-09-14 19:08:14', '2023-09-14 19:08:25');
+(1, 'App\\File', 1, '6e37f5d3-b393-482f-a416-9718a3d06f36', 'filename', 'Paralegal Trainings Project Proposal Prototype', 'Paralegal-Trainings-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 46134, '[]', '[]', '[]', '[]', 1, '2023-09-17 21:36:08', '2023-09-17 21:36:13'),
+(2, 'App\\File', 2, 'cd006b7c-206c-4758-a50f-3567194934d9', 'filename', 'IPS-IPO-ADMO Project Proposal Prototype', 'IPS-IPO-ADMO-Project-Proposal-Prototype.docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'public', 'public', 47060, '[]', '[]', '[]', '[]', 1, '2023-09-17 21:37:04', '2023-09-17 21:37:05');
 
 -- --------------------------------------------------------
 
@@ -44553,7 +44558,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `region`, `province`, `office`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `role_id`) VALUES
-(1, 'Admin', '130000000', '137600000', 'Office on Policy, Planning and Research - Director', 'admin@admin.com', '$2y$10$VaICddQLcI9KimmsgoxR8O/wuqm4KIGnT82v2Q5dsI3.U5nB5FPQq', 'BxY6tN8aKzGW3iRxRj4rme4prYdekwTcJpbLVXWdQd5UFmCtQgsswAcjL7xi', '2023-06-09 02:34:06', '2023-08-22 23:26:22', 1),
+(1, 'Admin', '130000000', '137600000', 'Office on Policy, Planning and Research - Director', 'admin@admin.com', '$2y$10$VaICddQLcI9KimmsgoxR8O/wuqm4KIGnT82v2Q5dsI3.U5nB5FPQq', 'TkETZopYSZGRxibKgjfPg7vEq08BEoTJUGk9XoeuaWKPhqN0zqtVkKET9a2P', '2023-06-09 02:34:06', '2023-08-22 23:26:22', 1),
 (3, 'Juan Dela Cruz', '120000000', '128000000', NULL, 'proponent@gmail.com', '$2y$10$.cbTgLc3tI5e4623BqsFuOtRGZkpWIPunC0wVFty4k0dENWx.nL/W', '7V2aORrvrpZ5dcaTPmchc3G3zRho4YY3jNUCmmp1yCTI21pkc3bwVkLyo4PT', '2023-06-14 19:32:19', '2023-08-17 22:35:38', 2),
 (6, 'Rey Jesus Teves', '010000000', '012800000', NULL, 'JESUS.REYTEVES5@GMAIL.COM', '$2y$10$LwRfSpDXQLpXS0xWwFLRiugVvCgVSEJvBIKIs6t10hz1VCMaiNYSG', 'd2RFnVRXgF0e3SwqCN34npu4ckHvrbABQu7LoUeOSPPZLQwkFhiuL2jFk4wF', '2023-06-29 00:21:59', '2023-08-17 22:41:57', 2),
 (7, 'Evaluator', '130000000', '133900000', 'Office on Policy, Planning and Research - Director', 'evaluator@gmail.com', '$2y$10$WrpeYKMM8L0ci1OL2vu9aOvddqJqaO3yFio.Q7xxK7TyxxT1l0ArC', 'SThT7UYSNiF01OUFmqDfITGt6fCRwsUPCONWOLGElpWBXbhOldHiZVlBbWlo', '2023-07-11 18:46:02', '2023-08-22 23:44:27', 3),
@@ -44728,7 +44733,7 @@ ALTER TABLE `evaluations`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `folders`
@@ -44740,7 +44745,7 @@ ALTER TABLE `folders`
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`

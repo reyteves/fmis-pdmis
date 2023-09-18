@@ -104,11 +104,6 @@ class FilesController extends Controller
             $model = config('media-library.media_model');
             $file = $model::find($id);
 
-            // dd(Media::find($id)->id);
-
-            // $media = Media::find($id);
-
-
             $file->model_id = $file->id;
             $file->save();
         }

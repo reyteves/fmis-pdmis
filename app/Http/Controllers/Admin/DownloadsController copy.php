@@ -19,21 +19,21 @@ class DownloadsController extends Controller
             ['created_by_id', '=', Auth::getUser()->id]
         ])->first();
 
-        $media = Media::where('id', $file->id)->first();
-
-        // $media = Media::where('model_id', 31)->first();
+        $media = Media::where('model_id', $file->id)->first();
+        
+        // $media = Media::where('id', $file->id)->first();
 
         // dd($media);
 
         if ($media === null) {
             $pathToFile = storage_path('app' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . $file->id . DIRECTORY_SEPARATOR . 'Media is null');
 
-            return response()->json(['error' => 'Error: Media is null', 'media_id' => $media, 'file' => $file], 404);
+            return response()->json(['error' => 'Error: Media is null', 'media' => $media, 'file' => $file], 404);
         }
 
-        $pathToFile = storage_path('app' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . $file->id . DIRECTORY_SEPARATOR . $media->file_name);
+        // $pathToFile = storage_path('app' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . $file->id . DIRECTORY_SEPARATOR . $media->file_name);
 
-        // $pathToFile = storage_path('app' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 31 . DIRECTORY_SEPARATOR . $media->file_name);
+        $pathToFile = storage_path('app' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . $file->id . DIRECTORY_SEPARATOR . $media->file_name);
 
         return Response::download($pathToFile);
     }
