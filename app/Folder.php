@@ -18,7 +18,7 @@ class Folder extends Model
     use SoftDeletes, FilterByUser;
 
     // protected $fillable = ['name', 'created_by_id'];
-    protected $fillable = ['name', 'created_by_id', 'project_id', 'signature_id', 'evaluation_id','beneficiaries_id','stakeholders_id' ];
+    protected $fillable = ['name', 'created_by_id', 'project_id', 'signature_id', 'evaluation_id','beneficiaries_id','stakeholders_id','proponents_id','implementers_id' ];
 
 
     public function project()
@@ -54,6 +54,14 @@ class Folder extends Model
     public function stakeholders()
     {
         return $this->belongsTo(Stakeholders::class, 'stakeholders_id')->withDefault();
+    }
+    public function proponents()
+    {
+        return $this->belongsTo(Proponents::class, 'proponents_id')->withDefault();
+    }
+    public function implementers()
+    {
+        return $this->belongsTo(Implementers::class, 'implementers_id')->withDefault();
     }
 
     

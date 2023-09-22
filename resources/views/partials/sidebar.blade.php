@@ -3,6 +3,26 @@
 <aside class="main-sidebar sidebar-dark-info elevation-4">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+
+
+        <style>
+            .sidebar-menu li a {
+                transition: transform 0.2s ease;
+            }
+
+            .sidebar-menu li a:hover {
+                transform: scale(1.05);
+                border-radius: 10px;
+                background-color: rgba(0, 166, 90, 0.8) !important;
+                opacity: 0.8 !important;
+                filter: brightness(1.2) !important;
+
+                font-family: cursive, serif !important;
+            }
+        </style>
+
+
+
         <ul class="sidebar-menu">
 
             <li>
@@ -62,11 +82,11 @@
                     <a href="{{ route('admin.files.index') }}">
                         {{-- <i class="fa fa-gears"></i> --}}
                         <i class="fa fa-file"></i>
-                        
+
                         @if (Auth::check() && Auth::user()->role_id != 2)
-                        <span class="title">@lang('quickadmin.files.title')</span>
+                            <span class="title">@lang('quickadmin.files.title')</span>
                         @else
-                        <span class="title">My Project Files</span>
+                            <span class="title">My Project Files</span>
                         @endif
 
                     </a>

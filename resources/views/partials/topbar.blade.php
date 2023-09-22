@@ -27,7 +27,7 @@
 
 <header class="main-header">
     <!-- Logo -->
-    <a href="{{ url('/admin/home') }}" class="logo" style="font-size: 16px;">
+    <a href="{{ url('/admin/home') }}" class="logo" style="font-size: 16px; font-family: cursive, serif !important;">
         <!-- Logo Image -->
         
         <!-- mini logo for sidebar mini 50x50 pixels -->

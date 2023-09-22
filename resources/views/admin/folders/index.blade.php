@@ -4,15 +4,36 @@
 
 @section('content')
 
-<style>
-    .btn {
-        transition: transform 0.2s ease;
-    }
+    <style>
+        .btn {
+            transition: transform 0.5s ease;
+        }
 
-    .btn:hover {
-        transform: scale(1.1);
-    }
-</style>
+        .btn:hover {
+            transform: scale(1.05);
+            border-radius: 10px !important;
+            opacity: 0.8 !important;
+            filter: brightness(1.2) !important;
+            font-family: cursive, serif !important;
+        }
+
+        tr td:hover {
+            font-weight: bolder !important;
+            font-family: cursive, serif !important;
+            transition: transform 0.1s ease;
+        }
+
+        .content-wrapper {
+            /* background-image: url('public/images/background.PNG') !important; */
+            background-image: url('public\images\app\NCIP_logo150x150.png') !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            /* Optionally, you can set a background color as a fallback */
+            background-color: #f0f0f0 !important;
+            /* Choose a suitable background color */
+        }
+    </style>
 
     <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
     @can('folder_create')
@@ -25,7 +46,7 @@
             </a>
 
             {{-- @if (!is_null(Auth::getUser()->role_id) && config('quickadmin.can_see_all_records_role_id') == Auth::getUser()->role_id) --}}
-                {{-- @if (Session::get('Folder.filter', 'all') == 'my')
+            {{-- @if (Session::get('Folder.filter', 'all') == 'my')
                     <a href="?filter=all" class="btn btn-default">Show all records</a>
                 @else
                     <a href="?filter=my" class="btn btn-default">Filter my records</a>
@@ -56,18 +77,19 @@
             |
             <li><a href="{{ route('admin.folders.index') }}?same_region=1" style="font-weight: 700">Projects In Your
                     Region</a></li>
-                    |
+            |
             <li><a href="{{ route('admin.folders.index') }}?same_province=1" style="font-weight: 700">Projects In Your
                     Province</a></li>
-                    |
-            <li><a href="{{ route('admin.folders.index') }}?same_office=1" style="font-weight: 700">Projects For Evaluation By Your Office</a></li>
+            |
+            <li><a href="{{ route('admin.folders.index') }}?same_office=1" style="font-weight: 700">Projects For Evaluation
+                    By Your Office</a></li>
         </ul>
         </p>
     @endif
 
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
+    <div class="panel panel-default" style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
+        <div class="panel-heading" style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
             @lang('quickadmin.qa_list')
         </div>
 

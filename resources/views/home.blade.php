@@ -36,11 +36,25 @@
         margin-bottom: 20px;
         /* Add some spacing between boxes */
     }
+
+
+    .small-box:hover {
+        /* transform: scale(1.05); */
+
+        transform: scale(1.05) rotateX(7deg) rotateY(-7deg);
+        font-family: cursive, serif !important;
+        transition: transform 0.1s ease;
+
+        /* opacity: 0.8 !important; */
+        filter: brightness(1.2) !important;
+    }
+
+    ,
 </style>
 
 @section('content')
-    <section class="content">
-        <div class="container-fluid panel panel default">
+    <section class="content" style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
+        <div class="container-fluid panel panel default" style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
 
             <div class="panel-body">
 

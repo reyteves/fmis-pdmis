@@ -23,12 +23,15 @@ use App\Budget;
 use App\Evaluation;
 use App\Beneficiaries;
 use App\Stakeholders;
+use App\Proponents;
+use App\Implementers;
 
 class FoldersController extends Controller
 {
 
     public function getFolderCount(Request $request)
     {
+       
 
         $foldersCount = Folder::count();
         return response()->json(['count' => $foldersCount]);
@@ -102,9 +105,10 @@ class FoldersController extends Controller
                 return abort(401);
             }
             $folders = $folders->onlyTrashed();
-        } else {
-            $folders = $folders->withTrashed();
         }
+        // else {
+        //     $folders = $folders->withTrashed();
+        // }
 
         if (request('same_region') == 1) {
             $userRegion = $user->region;
@@ -420,12 +424,57 @@ class FoldersController extends Controller
             'stakeholder_office4' => $request->input('stakeholder_office4'),
             'stakeholder_address4' => $request->input('stakeholder_address4'),
             'stakeholder_number4' => $request->input('stakeholder_number4'),
-       
+
             'id' => $folder->id,
         ]);
 
         $folder->stakeholders()->associate($stakeholders);
 
+        $proponents = Proponents::create([
+            'proponent_name' => $request->input('proponent_name'),
+            'proponent_office' => $request->input('proponent_office'),
+            'proponent_address' => $request->input('proponent_address'),
+            'proponent_number' => $request->input('proponent_number'),
+            'proponent_name2' => $request->input('proponent_name2'),
+            'proponent_office2' => $request->input('proponent_office2'),
+            'proponent_address2' => $request->input('proponent_address2'),
+            'proponent_number2' => $request->input('proponent_number2'),
+            'proponent_name3' => $request->input('proponent_name3'),
+            'proponent_office3' => $request->input('proponent_office3'),
+            'proponent_address3' => $request->input('proponent_address3'),
+            'proponent_number3' => $request->input('proponent_number3'),
+            'proponent_name4' => $request->input('proponent_name4'),
+            'proponent_office4' => $request->input('proponent_office4'),
+            'proponent_address4' => $request->input('proponent_address4'),
+            'proponent_number4' => $request->input('proponent_number4'),
+
+            'id' => $folder->id,
+        ]);
+
+        $folder->proponents()->associate($proponents);
+
+        $implementers = Implementers::create([
+            'implementer_name' => $request->input('implementer_name'),
+            'implementer_office' => $request->input('implementer_office'),
+            'implementer_address' => $request->input('implementer_address'),
+            'implementer_number' => $request->input('implementer_number'),
+            'implementer_name2' => $request->input('implementer_name2'),
+            'implementer_office2' => $request->input('implementer_office2'),
+            'implementer_address2' => $request->input('implementer_address2'),
+            'implementer_number2' => $request->input('implementer_number2'),
+            'implementer_name3' => $request->input('implementer_name3'),
+            'implementer_office3' => $request->input('implementer_office3'),
+            'implementer_address3' => $request->input('implementer_address3'),
+            'implementer_number3' => $request->input('implementer_number3'),
+            'implementer_name4' => $request->input('implementer_name4'),
+            'implementer_office4' => $request->input('implementer_office4'),
+            'implementer_address4' => $request->input('implementer_address4'),
+            'implementer_number4' => $request->input('implementer_number4'),
+
+            'id' => $folder->id,
+        ]);
+
+        $folder->implementers()->associate($implementers);
 
         $folder->save();
 
@@ -670,12 +719,86 @@ class FoldersController extends Controller
             $beneficiaries->save();
         }
 
-        return redirect()->route('admin.folders.index');
+        $stakeholders = $folder->stakeholders;
 
-        // } catch (QueryException $e) {
-        //     // Handle the exception, log it, and display an error message to the user
-        //     Log::error('QueryException: ' . $e->getMessage());
-        // }
+        if ($stakeholders) {
+            $stakeholders->stakeholder_name = $request->input('stakeholder_name');
+            $stakeholders->stakeholder_office = $request->input('stakeholder_office');
+            $stakeholders->stakeholder_address = $request->input('stakeholder_address');
+            $stakeholders->stakeholder_number = $request->input('stakeholder_number');
+
+            $stakeholders->stakeholder_name2 = $request->input('stakeholder_name2');
+            $stakeholders->stakeholder_office2 = $request->input('stakeholder_office2');
+            $stakeholders->stakeholder_address2 = $request->input('stakeholder_address2');
+            $stakeholders->stakeholder_number2 = $request->input('stakeholder_number2');
+
+            $stakeholders->stakeholder_name3 = $request->input('stakeholder_name3');
+            $stakeholders->stakeholder_office3 = $request->input('stakeholder_office3');
+            $stakeholders->stakeholder_address3 = $request->input('stakeholder_address3');
+            $stakeholders->stakeholder_number3 = $request->input('stakeholder_number3');
+
+            $stakeholders->stakeholder_name4 = $request->input('stakeholder_name4');
+            $stakeholders->stakeholder_office4 = $request->input('stakeholder_office4');
+            $stakeholders->stakeholder_address4 = $request->input('stakeholder_address4');
+            $stakeholders->stakeholder_number4 = $request->input('stakeholder_number4');
+
+            $stakeholders->save();
+        }
+
+        $proponents = $folder->proponents;
+
+        if ($proponents) {
+            $proponents->proponent_name = $request->input('proponent_name');
+            $proponents->proponent_office = $request->input('proponent_office');
+            $proponents->proponent_address = $request->input('proponent_address');
+            $proponents->proponent_number = $request->input('proponent_number');
+
+            $proponents->proponent_name2 = $request->input('proponent_name2');
+            $proponents->proponent_office2 = $request->input('proponent_office2');
+            $proponents->proponent_address2 = $request->input('proponent_address2');
+            $proponents->proponent_number2 = $request->input('proponent_number2');
+
+            $proponents->proponent_name3 = $request->input('proponent_name3');
+            $proponents->proponent_office3 = $request->input('proponent_office3');
+            $proponents->proponent_address3 = $request->input('proponent_address3');
+            $proponents->proponent_number3 = $request->input('proponent_number3');
+
+            $proponents->proponent_name4 = $request->input('proponent_name4');
+            $proponents->proponent_office4 = $request->input('proponent_office4');
+            $proponents->proponent_address4 = $request->input('proponent_address4');
+            $proponents->proponent_number4 = $request->input('proponent_number4');
+
+            $proponents->save();
+        }
+
+        $implementers = $folder->implementers;
+
+        if ($implementers) {
+            $implementers->implementer_name = $request->input('implementer_name');
+            $implementers->implementer_office = $request->input('implementer_office');
+            $implementers->implementer_address = $request->input('implementer_address');
+            $implementers->implementer_number = $request->input('implementer_number');
+
+            $implementers->implementer_name2 = $request->input('implementer_name2');
+            $implementers->implementer_office2 = $request->input('implementer_office2');
+            $implementers->implementer_address2 = $request->input('implementer_address2');
+            $implementers->implementer_number2 = $request->input('implementer_number2');
+
+            $implementers->implementer_name3 = $request->input('implementer_name3');
+            $implementers->implementer_office3 = $request->input('implementer_office3');
+            $implementers->implementer_address3 = $request->input('implementer_address3');
+            $implementers->implementer_number3 = $request->input('implementer_number3');
+
+            $implementers->implementer_name4 = $request->input('implementer_name4');
+            $implementers->implementer_office4 = $request->input('implementer_office4');
+            $implementers->implementer_address4 = $request->input('implementer_address4');
+            $implementers->implementer_number4 = $request->input('implementer_number4');
+
+            $implementers->save();
+        }
+
+
+        return redirect()->route('admin.folders.index');
     }
 
 
@@ -813,6 +936,21 @@ class FoldersController extends Controller
         $beneficiaries = $folder->beneficiaries;
         if ($beneficiaries) {
             $beneficiaries->delete();
+        }
+
+        $stakeholders = $folder->stakeholders;
+        if ($stakeholders) {
+            $stakeholders->delete();
+        }
+
+        $proponents = $folder->proponents;
+        if ($proponents) {
+            $proponents->delete();
+        }
+
+        $implementers = $folder->implementers;
+        if ($implementers) {
+            $implementers->delete();
         }
 
         $folder->forceDelete();

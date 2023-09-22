@@ -1042,8 +1042,175 @@
         </tbody>
     </table>
 
+    {{-- /  Project Stakeholders and Address--}}
 
-    {{-- /  --}}
+
+    {{-- Proponent/s and Address --}}
+
+    <table style="width: 4.8e+2pt;border-collapse:collapse;border:none;">
+        <tbody>
+
+            <tr>
+                <br>
+                <td style="width: 82.8pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'>
+                        <strong><span style='font-family:"Times New Roman",serif;color:black;'>Proponent/s and Address</span></strong>
+                    </p>
+                </td>
+                <td style="width: 14.15pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'>
+                        <strong><span style='font-family:"Times New Roman",serif;color:black;'>:</span></strong>
+                    </p>
+                </td>
+                <td style="width: 361.45pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
+                    <table
+                        style="float: left;width: 100%;border: none;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;">
+                        <tbody>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;margin-left:-19.7pt;text-indent:19.7pt;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Name</span>
+                                    </p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Office</span>
+                                    </p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Address</span>
+                                    </p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Contact Number</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_name}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_office}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_address}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_number}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_name2}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_office2}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_address2}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_number2}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_name3}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_office3}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_address3}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_number3}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_name4}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_office4}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_address4}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->proponents->proponent_number4}}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span
+                            style='font-family:  "Times New Roman",serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{-- /  Project Proponent/s and Address--}}
+
 
 
     <!-- Project Duration -->
@@ -1187,11 +1354,173 @@
 
     <!-- /Mode of Implementation -->
 
+    {{-- Implementer and Address --}}
+
+    <table style="width: 4.8e+2pt;border-collapse:collapse;border:none;">
+        <tbody>
+
+            <tr>
+                <br>
+                <td style="width: 82.8pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'>
+                        <strong><span style='font-family:"Times New Roman",serif;color:black;'>Implementer and Address</span></strong>
+                    </p>
+                </td>
+                <td style="width: 14.15pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'>
+                        <strong><span style='font-family:"Times New Roman",serif;color:black;'>:</span></strong>
+                    </p>
+                </td>
+                <td style="width: 361.45pt;border: none;padding: 0cm 5.4pt;height: 139.5pt;vertical-align: top;">
+                    <table
+                        style="float: left;width: 100%;border: none;border-collapse:collapse;margin-left:6.75pt;margin-right:6.75pt;">
+                        <tbody>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border: 1pt solid black;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;margin-left:-19.7pt;text-indent:19.7pt;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Name</span>
+                                    </p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Office</span>
+                                    </p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Address</span>
+                                    </p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: 1pt solid black;border-right: 1pt solid black;border-bottom: 1pt solid black;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:center;font-size:15px;font-family:"Calibri",sans-serif;'>
+                                        <span style='font-family:"Times New Roman",serif;'>Contact Number</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_name}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_office}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_address}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_number}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_name2}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_office2}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_address2}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_number2}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_name3}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_office3}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_address3}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_number3}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width: 24.84%;border-right: 1pt solid black;border-bottom: 1pt solid black;border-left: 1pt solid black;border-image: initial;border-top: none;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_name4}}</p>
+                                </td>
+                                <td
+                                    style="width: 22.36%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_office4}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.24%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_address4}}</p>
+                                </td>
+                                <td
+                                    style="width: 26.56%;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid black;padding: 5pt;height: 1pt;vertical-align: top;">
+                                    <p
+                                        style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;margin-top:0cm;margin-right:7.1pt;margin-bottom:.0001pt;margin-left:7.1pt;'>
+                                        {{$folder->implementers->implementer_number4}}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style='margin:0cm;text-align:left;font-size:15px;font-family:"Calibri",sans-serif;'><span
+                            style='font-family:  "Times New Roman",serif;'>&nbsp;</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{-- / Implementer and Address--}}
 
     {{-- /End Block --}}
-
-
-
 
     <table style="width: 100%; border-collapse: collapse; border: none;">
         <tbody>

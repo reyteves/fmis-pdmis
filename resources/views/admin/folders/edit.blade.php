@@ -91,6 +91,17 @@
                         <a class="nav-link" data-toggle="tab" href="#stakeholders"><i
                                 class="fa fa-check"></i>&nbsp;Stakeholders</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#proponents"><i
+                                class="fa fa-check"></i>&nbsp;Proponents</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#implementers"><i
+                                class="fa fa-check"></i>&nbsp;Implementers</a>
+                    </li>
+
                     @endif
 
                 {{-- @endif --}}
@@ -129,6 +140,12 @@
                 </div>
                 <div class="tab-pane fade" id="stakeholders">
                     @include('admin.folders.tab_edit.stakeholders')
+                </div>
+                <div class="tab-pane fade" id="proponents">
+                    @include('admin.folders.tab_edit.proponents')
+                </div>
+                <div class="tab-pane fade" id="implementers">
+                    @include('admin.folders.tab_edit.implementers')
                 </div>
 
             </div>
