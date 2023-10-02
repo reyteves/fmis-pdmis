@@ -28,6 +28,49 @@ use App\Implementers;
 
 class FoldersController extends Controller
 {
+// 
+
+public function userRegionTotalCost(Request $request)
+    {
+        // Get the authenticated user's region
+        $userRegion = Auth::user()->region;
+        $folders = Folder::query();
+
+        $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
+            $query->where('region', $userRegion);
+        });
+
+        // Calculate the total project cost for projects with the same region as the user
+        $totalCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+            $query->where('region', $userRegion);
+        })->sum('total_project_cost');
+
+        // return response()->json(['total_cost' => $totalCost]);
+
+        return response()->json([
+            'region' => $userRegion,
+            'total_cost' => $totalCost
+        ]);
+    }
+
+
+    // all projects
+
+    public function totalCost(Request $request)
+    {
+        $totalCost = Budget::sum('total_project_cost');
+        return response()->json(['total_cost' => $totalCost]);
+    }
+    public function totalDirectCost(Request $request)
+    {
+        $directCost = Budget::sum('direct_cost');
+        return response()->json(['direct_cost' => $directCost]);
+    }
+    public function totalIndirectCost(Request $request)
+    {
+        $indirectCost = Budget::sum('indirect_cost');
+        return response()->json(['indirect_cost' => $indirectCost]);
+    }
 
     public function getFolderCount(Request $request)
     {

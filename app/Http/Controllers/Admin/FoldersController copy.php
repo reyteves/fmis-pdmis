@@ -74,6 +74,15 @@ class FoldersController extends Controller
         return response()->json(['count' => $coordinatedCount]);
     }
 
+
+    // budget status
+
+    public function totalCost(Request $request)
+{
+    $totalCost = Budget::sum('total_project_cost');
+    return response()->json(['total_cost' => $totalCost]);
+}
+
     /**
      * Display a listing of Folder.
      *

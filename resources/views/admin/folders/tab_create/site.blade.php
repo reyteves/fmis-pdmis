@@ -118,7 +118,7 @@
         $('#region-dropdown').on('change', function() {
             let selectedRegionId = $(this).val();
 
-            console.log(selectedRegionId);
+            // console.log(selectedRegionId);
 
             let provincesDropdown = $(
                 '#provinces-dropdown'
@@ -229,4 +229,38 @@
             });
         });
     </script>
+
+
+
+
+<script>
+    $(document).ready(function() {
+
+        console.log("Test Javascript");
+        // Get references to the input fields
+        var totalCostInput = $('#total_project_cost');
+        var directCostInput = $('#direct_cost');
+        var indirectCostInput = $('#indirect_cost');
+
+        // Function to update the total_project_cost field
+        function updateTotalCost() {
+            var directCost = parseFloat(directCostInput.val()) || 0;
+            console.log("directCost): " + directCost);
+
+            var indirectCost = parseFloat(indirectCostInput.val()) || 0;
+            console.log("indirectCost: " + indirectCost);
+
+            var totalCost = directCost + indirectCost;
+            console.log("totalCost: " + totalCost);
+
+            totalCostInput.val(totalCost.toFixed(2)); // Set the value with 2 decimal places
+        }
+
+        // Call the updateTotalCost function whenever either direct_cost or indirect_cost inputs change
+        directCostInput.on('input', updateTotalCost);
+        indirectCostInput.on('input', updateTotalCost);
+    });
+</script>
 @endsection
+
+

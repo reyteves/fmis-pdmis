@@ -102,6 +102,11 @@
                                 class="fa fa-check"></i>&nbsp;Implementers</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#gantt"><i
+                                class="fa fa-check"></i>&nbsp;Gantt Chart</a>
+                    </li>
+
                     @endif
 
                 {{-- @endif --}}
@@ -146,6 +151,9 @@
                 </div>
                 <div class="tab-pane fade" id="implementers">
                     @include('admin.folders.tab_edit.implementers')
+                </div>
+                <div class="tab-pane fade" id="gantt">
+                    @include('admin.folders.tab_edit.gantt')
                 </div>
 
             </div>

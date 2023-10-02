@@ -136,7 +136,19 @@
                         @endcan
                     </ul>
                 </li>
+
+
+                <li>
+                    <a href="{{ url('/documentation') }}">
+                        <span style="color: white;"><i class="fa fa-book"></i>&nbsp;</span>
+                        <span class="title">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
             @endcan
+
+            
 
             <li>
                 <a href="#logout" onclick="$('#logout').submit();">

@@ -8,9 +8,32 @@ use App\Http\Controllers\PsgcController;
 
 use App\Http\Controllers\Admin\OfficeController;
 
+// user region
+Route::get('/user-region-total-cost', [FoldersController::class, 'userRegionTotalCost']);
 
 
-Route::get('/', function () { return redirect('/admin/home'); });
+
+// budget controllers
+
+Route::get('get-total-cost', 'Admin\FoldersController@totalCost');
+Route::get('get-direct-cost', 'Admin\FoldersController@totalDirectCost');
+Route::get('get-indirect-cost', 'Admin\FoldersController@totalIndirectCost');
+
+
+
+Route::get('/', function () {
+    return redirect('/admin/home');
+});
+
+
+// Route::get('/documentation', function () {
+//     return redirect('/admin/home');
+// });
+
+Route::get('/documentation', function () {
+    return view('documentation');
+});
+
 
 
 // custom route for offices
@@ -88,7 +111,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     // custom folder controller
 
-    
+
     Route::post('folders_mass_destroy', ['uses' => 'Admin\FoldersController@massDestroy', 'as' => 'folders.mass_destroy']);
     Route::post('folders_restore/{id}', ['uses' => 'Admin\FoldersController@restore', 'as' => 'folders.restore']);
     Route::delete('folders_perma_del/{id}', ['uses' => 'Admin\FoldersController@perma_del', 'as' => 'folders.perma_del']);
@@ -99,6 +122,4 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::delete('files_perma_del/{id}', ['uses' => 'Admin\FilesController@perma_del', 'as' => 'files.perma_del']);
     Route::post('/spatie/media/upload', 'Admin\SpatieMediaController@create')->name('media.upload');
     Route::post('/spatie/media/remove', 'Admin\SpatieMediaController@destroy')->name('media.remove');
-
-
 });
