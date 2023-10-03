@@ -25,6 +25,7 @@ use App\Beneficiaries;
 use App\Stakeholders;
 use App\Proponents;
 use App\Implementers;
+use App\Gantt;
 
 class FoldersController extends Controller
 {

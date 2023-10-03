@@ -47,22 +47,22 @@
 <body>
     <div class="panel" style="margin-bottom: 25px">
         <label for="gantt_project_name" class="col-form-label text-md-end">Project Name</label>
-        {{ Form::text('gantt_project_name', $folder->gantt->gantt_project_name, ['class' => 'form-control', 'id' => 'gantt_project_name']) }}
+        {{ Form::text('gantt_project_name', 'Software Development Project', ['class' => 'form-control', 'id' => 'gantt_project_name']) }}
 
 
         <!-- Task 1 -->
         <div class="row" style="margin-top: 25px;">
             <div class="col-md-4">
                 <label for="task_1" class="col-form-label text-md-end">Task 1</label>
-                {{ Form::text('task_1', $folder->gantt->task_1, ['class' => 'form-control', 'id' => 'task_1']) }}
+                {{ Form::text('task_1', 'Planning', ['class' => 'form-control', 'id' => 'task_1']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_1_start_date" class="col-form-label text-md-end">Start Date</label>
-                {{ Form::date('task_1_start_date', $folder->gantt->task_1_start_date, ['class' => 'form-control', 'id' => 'task_1_start_date']) }}
+                {{ Form::date('task_1_start_date', '2023-01-01', ['class' => 'form-control', 'id' => 'task_1_start_date']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_1_end_date" class="col-form-label text-md-end">End Date</label>
-                {{ Form::date('task_1_end_date', $folder->gantt->task_1_end_date, ['class' => 'form-control', 'id' => 'task_1_end_date']) }}
+                {{ Form::date('task_1_end_date', '2023-02-01', ['class' => 'form-control', 'id' => 'task_1_end_date']) }}
             </div>
         </div>
 
@@ -70,15 +70,15 @@
         <div class="row" style="margin-top: 25px;">
             <div class="col-md-4">
                 <label for="task_2" class="col-form-label text-md-end">Task 2</label>
-                {{ Form::text('task_2', $folder->gantt->task_2, ['class' => 'form-control', 'id' => 'task_2']) }}
+                {{ Form::text('task_2', 'Analysis', ['class' => 'form-control', 'id' => 'task_2']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_2_start_date" class="col-form-label text-md-end">Start Date</label>
-                {{ Form::date('task_2_start_date', $folder->gantt->task_2_start_date, ['class' => 'form-control', 'id' => 'task_2_start_date']) }}
+                {{ Form::date('task_2_start_date', '2023-02-01', ['class' => 'form-control', 'id' => 'task_2_start_date']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_2_end_date" class="col-form-label text-md-end">End Date</label>
-                {{ Form::date('task_2_end_date', $folder->gantt->task_2_end_date, ['class' => 'form-control', 'id' => 'task_2_end_date']) }}
+                {{ Form::date('task_2_end_date', '2023-03-01', ['class' => 'form-control', 'id' => 'task_2_end_date']) }}
             </div>
         </div>
 
@@ -86,15 +86,15 @@
         <div class="row" style="margin-top: 25px;">
             <div class="col-md-4">
                 <label for="task_3" class="col-form-label text-md-end">Task 3</label>
-                {{ Form::text('task_3', $folder->gantt->task_3, ['class' => 'form-control', 'id' => 'task_3']) }}
+                {{ Form::text('task_3', 'Design', ['class' => 'form-control', 'id' => 'task_3']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_3_start_date" class="col-form-label text-md-end">Start Date</label>
-                {{ Form::date('task_3_start_date', $folder->gantt->task_3_start_date, ['class' => 'form-control', 'id' => 'task_3_start_date']) }}
+                {{ Form::date('task_3_start_date', '2023-03-01', ['class' => 'form-control', 'id' => 'task_3_start_date']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_3_end_date" class="col-form-label text-md-end">End Date</label>
-                {{ Form::date('task_3_end_date', $folder->gantt->task_3_end_date, ['class' => 'form-control', 'id' => 'task_3_end_date']) }}
+                {{ Form::date('task_3_end_date', '2023-04-01', ['class' => 'form-control', 'id' => 'task_3_end_date']) }}
             </div>
         </div>
 
@@ -102,15 +102,15 @@
         <div class="row" style="margin-top: 25px;">
             <div class="col-md-4">
                 <label for="task_4" class="col-form-label text-md-end">Task 4</label>
-                {{ Form::text('task_4', $folder->gantt->task_4, ['class' => 'form-control', 'id' => 'task_4']) }}
+                {{ Form::text('task_4', 'Implementation', ['class' => 'form-control', 'id' => 'task_4']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_4_start_date" class="col-form-label text-md-end">Start Date</label>
-                {{ Form::date('task_4_start_date', $folder->gantt->task_4_start_date, ['class' => 'form-control', 'id' => 'task_4_start_date']) }}
+                {{ Form::date('task_4_start_date', '2023-04-01', ['class' => 'form-control', 'id' => 'task_4_start_date']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_4_end_date" class="col-form-label text-md-end">End Date</label>
-                {{ Form::date('task_4_end_date', $folder->gantt->task_4_end_date, ['class' => 'form-control', 'id' => 'task_4_end_date']) }}
+                {{ Form::date('task_4_end_date', '2023-05-01', ['class' => 'form-control', 'id' => 'task_4_end_date']) }}
             </div>
         </div>
 
@@ -118,15 +118,15 @@
         <div class="row" style="margin-top: 25px;">
             <div class="col-md-4">
                 <label for="task_5" class="col-form-label text-md-end">Task 5</label>
-                {{ Form::text('task_5', $folder->gantt->task_5, ['class' => 'form-control', 'id' => 'task_5']) }}
+                {{ Form::text('task_5', 'Testing', ['class' => 'form-control', 'id' => 'task_5']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_5_start_date" class="col-form-label text-md-end">Start Date</label>
-                {{ Form::date('task_5_start_date', $folder->gantt->task_5_start_date, ['class' => 'form-control', 'id' => 'task_5_start_date']) }}
+                {{ Form::date('task_5_start_date', '2023-05-01', ['class' => 'form-control', 'id' => 'task_5_start_date']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_5_end_date" class="col-form-label text-md-end">End Date</label>
-                {{ Form::date('task_5_end_date', $folder->gantt->task_5_end_date, ['class' => 'form-control', 'id' => 'task_5_end_date']) }}
+                {{ Form::date('task_5_end_date', '2023-06-01', ['class' => 'form-control', 'id' => 'task_5_end_date']) }}
             </div>
         </div>
 
@@ -134,15 +134,15 @@
         <div class="row" style="margin-top: 25px;">
             <div class="col-md-4">
                 <label for="task_6" class="col-form-label text-md-end">Task 6</label>
-                {{ Form::text('task_6', $folder->gantt->task_6, ['class' => 'form-control', 'id' => 'task_6']) }}
+                {{ Form::text('task_6', 'Deployment', ['class' => 'form-control', 'id' => 'task_6']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_6_start_date" class="col-form-label text-md-end">Start Date</label>
-                {{ Form::date('task_6_start_date', $folder->gantt->task_6_start_date, ['class' => 'form-control', 'id' => 'task_6_start_date']) }}
+                {{ Form::date('task_6_start_date', '2023-06-01', ['class' => 'form-control', 'id' => 'task_6_start_date']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_6_end_date" class="col-form-label text-md-end">End Date</label>
-                {{ Form::date('task_6_end_date', $folder->gantt->task_6_end_date, ['class' => 'form-control', 'id' => 'task_6_end_date']) }}
+                {{ Form::date('task_6_end_date', '2023-07-01', ['class' => 'form-control', 'id' => 'task_6_end_date']) }}
             </div>
         </div>
 
@@ -150,15 +150,15 @@
         <div class="row" style="margin-top: 25px;">
             <div class="col-md-4">
                 <label for="task_7" class="col-form-label text-md-end">Task 7</label>
-                {{ Form::text('task_7', $folder->gantt->task_7, ['class' => 'form-control', 'id' => 'task_7']) }}
+                {{ Form::text('task_7', 'Maintenance', ['class' => 'form-control', 'id' => 'task_7']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_7_start_date" class="col-form-label text-md-end">Start Date</label>
-                {{ Form::date('task_7_start_date', $folder->gantt->task_7_start_date, ['class' => 'form-control', 'id' => 'task_7_start_date']) }}
+                {{ Form::date('task_7_start_date', '2023-07-01', ['class' => 'form-control', 'id' => 'task_7_start_date']) }}
             </div>
             <div class="col-md-4">
                 <label for="task_7_end_date" class="col-form-label text-md-end">End Date</label>
-                {{ Form::date('task_7_end_date', $folder->gantt->task_7_end_date, ['class' => 'form-control', 'id' => 'task_7_end_date']) }}
+                {{ Form::date('task_7_end_date', '2023-08-01', ['class' => 'form-control', 'id' => 'task_7_end_date']) }}
             </div>
         </div>
 
@@ -189,7 +189,7 @@
                     ['2023-06-01', '2023-07-01'],
                     ['2023-07-01', '2023-08-01']
                 ],
-
+             
                 backgroundColor: [
                     'rgba(255, 26, 104, 1)',
                     'rgba(54, 162, 235, 1)',
@@ -260,6 +260,7 @@
             myChart.update();
         });
 
+    
         // Create a function to update a specific task label
         function updateTaskLabel(taskIndex, newValue) {
             // Update the label in the labels array
@@ -290,7 +291,6 @@
                 updateTaskLabel(index, newTaskName);
             });
         });
-
 
 
         // Create a function to update a specific start dates or end dates
@@ -326,36 +326,6 @@
                 });
             });
         });
-
-
-        // update chart on page load based on input values
-        // Function to update the chart with initial values
-        function updateChartWithInitialValues() {
-            // Get project name from input element
-            const initialProjectName = document.getElementById('gantt_project_name').value;
-
-            // Update the project name label in the chart
-            config.data.datasets[0].label = initialProjectName;
-
-            // Update task names from input elements
-            taskInputs.forEach((input, index) => {
-                const initialTaskName = input.value;
-                updateTaskLabel(index, initialTaskName);
-            });
-
-            // Update task dates from input elements
-            taskDateInputs.forEach((input, index) => {
-                const initialStartDate = input[0].value;
-                const initialEndDate = input[1].value;
-                updateTaskDates(index, initialStartDate, initialEndDate);
-            });
-
-            // Update the chart
-            myChart.update();
-        }
-
-        // Call the function to update the chart with initial values on page load
-        updateChartWithInitialValues();
     </script>
 </body>
 

@@ -13,7 +13,7 @@
         }
 
         .chartMenu {
-            width: 100vw;
+            width: calc(100vw);
             height: 40px;
             background: #1A1A1A;
             color: rgba(54, 162, 235, 1);
@@ -45,27 +45,126 @@
 </head>
 
 <body>
-    <div class="col-md-6 col-lg-6 col-xl-6 panel" style="margin-bottom: 25px">
-        <label for="task_1" class="col-form-label text-md-end">Project Name</label>
-        {{ Form::text('gantt_project_name', 'Project Name', ['class' => 'form-control', 'id' => 'gantt_project_name']) }}
-        
-        <label for="task_1" class="col-form-label text-md-end">Task 1 Name</label>
-        {{ Form::text('task_1', 'Task 1 Name', ['class' => 'form-control', 'id' => 'task_1']) }}
-        <label for="task_2" class="col-form-label text-md-end">Task 2 Name</label>
-        {{ Form::text('task_2', 'Task 2 Name', ['class' => 'form-control', 'id' => 'task_2']) }}
-        <label for="task_3" class="col-form-label text-md-end">Task 3 Name</label>
-        {{ Form::text('task_3', 'Task 3 Name', ['class' => 'form-control', 'id' => 'task_3']) }}
-        <label for="task_4" class="col-form-label text-md-end">Task 4 Name</label>
-        {{ Form::text('task_4', 'Task 4 Name', ['class' => 'form-control', 'id' => 'task_4']) }}
-        <label for="task_5" class="col-form-label text-md-end">Task 5 Name</label>
-        {{ Form::text('task_5', 'Task 5 Name', ['class' => 'form-control', 'id' => 'task_5']) }}
-        <label for="task_6" class="col-form-label text-md-end">Task 6 Name</label>
-        {{ Form::text('task_6', 'Task 6 Name', ['class' => 'form-control', 'id' => 'task_6']) }}
-        <label for="task_7" class="col-form-label text-md-end">Task 7 Name</label>
-        {{ Form::text('task_7', 'Task 7 Name', ['class' => 'form-control', 'id' => 'task_7']) }}
+    <div class="panel" style="margin-bottom: 25px">
+        <label for="gantt_project_name" class="col-form-label text-md-end">Project Name</label>
+        {{ Form::text('gantt_project_name', $folder->gantt->gantt_project_name, ['class' => 'form-control', 'id' => 'gantt_project_name']) }}
+
+
+        <!-- Task 1 -->
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4">
+                <label for="task_1" class="col-form-label text-md-end">Task 1</label>
+                {{ Form::text('task_1', 'Planning', ['class' => 'form-control', 'id' => 'task_1']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_1_start_date" class="col-form-label text-md-end">Start Date</label>
+                {{ Form::date('task_1_start_date', '2023-01-01', ['class' => 'form-control', 'id' => 'task_1_start_date']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_1_end_date" class="col-form-label text-md-end">End Date</label>
+                {{ Form::date('task_1_end_date', '2023-02-01', ['class' => 'form-control', 'id' => 'task_1_end_date']) }}
+            </div>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4">
+                <label for="task_2" class="col-form-label text-md-end">Task 2</label>
+                {{ Form::text('task_2', 'Analysis', ['class' => 'form-control', 'id' => 'task_2']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_2_start_date" class="col-form-label text-md-end">Start Date</label>
+                {{ Form::date('task_2_start_date', '2023-02-01', ['class' => 'form-control', 'id' => 'task_2_start_date']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_2_end_date" class="col-form-label text-md-end">End Date</label>
+                {{ Form::date('task_2_end_date', '2023-03-01', ['class' => 'form-control', 'id' => 'task_2_end_date']) }}
+            </div>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4">
+                <label for="task_3" class="col-form-label text-md-end">Task 3</label>
+                {{ Form::text('task_3', 'Design', ['class' => 'form-control', 'id' => 'task_3']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_3_start_date" class="col-form-label text-md-end">Start Date</label>
+                {{ Form::date('task_3_start_date', '2023-03-01', ['class' => 'form-control', 'id' => 'task_3_start_date']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_3_end_date" class="col-form-label text-md-end">End Date</label>
+                {{ Form::date('task_3_end_date', '2023-04-01', ['class' => 'form-control', 'id' => 'task_3_end_date']) }}
+            </div>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4">
+                <label for="task_4" class="col-form-label text-md-end">Task 4</label>
+                {{ Form::text('task_4', 'Implementation', ['class' => 'form-control', 'id' => 'task_4']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_4_start_date" class="col-form-label text-md-end">Start Date</label>
+                {{ Form::date('task_4_start_date', '2023-04-01', ['class' => 'form-control', 'id' => 'task_4_start_date']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_4_end_date" class="col-form-label text-md-end">End Date</label>
+                {{ Form::date('task_4_end_date', '2023-05-01', ['class' => 'form-control', 'id' => 'task_4_end_date']) }}
+            </div>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4">
+                <label for="task_5" class="col-form-label text-md-end">Task 5</label>
+                {{ Form::text('task_5', 'Testing', ['class' => 'form-control', 'id' => 'task_5']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_5_start_date" class="col-form-label text-md-end">Start Date</label>
+                {{ Form::date('task_5_start_date', '2023-05-01', ['class' => 'form-control', 'id' => 'task_5_start_date']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_5_end_date" class="col-form-label text-md-end">End Date</label>
+                {{ Form::date('task_5_end_date', '2023-06-01', ['class' => 'form-control', 'id' => 'task_5_end_date']) }}
+            </div>
+        </div>
+
+        <!-- Task 6 -->
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4">
+                <label for="task_6" class="col-form-label text-md-end">Task 6</label>
+                {{ Form::text('task_6', 'Deployment', ['class' => 'form-control', 'id' => 'task_6']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_6_start_date" class="col-form-label text-md-end">Start Date</label>
+                {{ Form::date('task_6_start_date', '2023-06-01', ['class' => 'form-control', 'id' => 'task_6_start_date']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_6_end_date" class="col-form-label text-md-end">End Date</label>
+                {{ Form::date('task_6_end_date', '2023-07-01', ['class' => 'form-control', 'id' => 'task_6_end_date']) }}
+            </div>
+        </div>
+
+        <!-- Task 7 -->
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4">
+                <label for="task_7" class="col-form-label text-md-end">Task 7</label>
+                {{ Form::text('task_7', 'Maintenance', ['class' => 'form-control', 'id' => 'task_7']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_7_start_date" class="col-form-label text-md-end">Start Date</label>
+                {{ Form::date('task_7_start_date', '2023-07-01', ['class' => 'form-control', 'id' => 'task_7_start_date']) }}
+            </div>
+            <div class="col-md-4">
+                <label for="task_7_end_date" class="col-form-label text-md-end">End Date</label>
+                {{ Form::date('task_7_end_date', '2023-08-01', ['class' => 'form-control', 'id' => 'task_7_end_date']) }}
+            </div>
+        </div>
+
+
+        <!-- /end panel -->
     </div>
-
-
 
     <div class="chartCard">
         <div class="chartBox">
@@ -80,16 +179,17 @@
         const data = {
             labels: ['Planning', 'Analysis', 'Design', 'Implementation', 'Testing', 'Deployment', 'Maintenance'],
             datasets: [{
-                label: 'Project Tasks',
+                label: 'Software Project',
                 data: [
-                    ['2023-01-01', '2023-02-03'],
-                    ['2023-02-03', '2023-03-06'],
-                    ['2023-03-06', '2023-04-07'],
-                    ['2023-04-07', '2023-05-09'],
-                    ['2023-05-09', '2023-06-13'],
-                    ['2023-06-13', '2023-07-15'],
-                    ['2023-07-15', '2023-08-21']
+                    ['2023-01-01', '2023-02-01'],
+                    ['2023-02-01', '2023-03-01'],
+                    ['2023-03-01', '2023-04-01'],
+                    ['2023-04-01', '2023-05-01'],
+                    ['2023-05-01', '2023-06-01'],
+                    ['2023-06-01', '2023-07-01'],
+                    ['2023-07-01', '2023-08-01']
                 ],
+             
                 backgroundColor: [
                     'rgba(255, 26, 104, 1)',
                     'rgba(54, 162, 235, 1)',
@@ -145,39 +245,20 @@
             config
         );
 
-        // Get the input element
-        const task1Input1 = document.getElementById('task_1');
-        const task1Input2 = document.getElementById('task_2');
-        const task1Input3 = document.getElementById('task_3');
-        const task1Input4 = document.getElementById('task_4');
-        const task1Input5 = document.getElementById('task_5');
-        const task1Input6 = document.getElementById('task_6');
-        const task1Input7 = document.getElementById('task_7');
+        // Get project name input element
+        const projectName = document.getElementById('gantt_project_name');
 
+        // update project name label: 'Project Tasks',
+        projectName.addEventListener('input', function() {
+            // Get the new task name from the input
+            const newTaskName = projectName.value;
 
-        // Add an event listener to the input element to detect changes
-        // task1Input1.addEventListener('input', function() {
-        //     // Get the new task name from the input
-        //     const newTaskName1 = task1Input1.value;
-        //     const newTaskName2 = task1Input2.value;
-        //     const newTaskName3 = task1Input3.value;
-        //     const newTaskName4 = task1Input4.value;
-        //     const newTaskName5 = task1Input5.value;
-        //     const newTaskName6 = task1Input6.value;
-        //     const newTaskName7 = task1Input7.value;
+            // Update the corresponding project name
+            config.data.datasets[0].label = newTaskName;
 
-        //     // Update the label in the labels array
-        //     config.data.labels[0] = newTaskName1;
-        //     config.data.labels[1] = newTaskName2;
-        //     config.data.labels[2] = newTaskName3;
-        //     config.data.labels[3] = newTaskName4;
-        //     config.data.labels[4] = newTaskName5;
-        //     config.data.labels[5] = newTaskName6;
-        //     config.data.labels[6] = newTaskName7;
-
-        //     // Update the chart
-        //     myChart.update();
-        // });
+            // Update the chart
+            myChart.update();
+        });
 
         // Create a function to update a specific task label
         function updateTaskLabel(taskIndex, newValue) {
@@ -207,6 +288,42 @@
 
                 // Update the corresponding task label
                 updateTaskLabel(index, newTaskName);
+            });
+        });
+
+
+
+        // Create a function to update a specific start dates or end dates
+        function updateTaskDates(taskIndex, newStartDate, newEndDate) {
+            // Update the label in the labels array
+            config.data.datasets[0].data[taskIndex] = [newStartDate, newEndDate];
+
+            // Update the chart
+            myChart.update();
+        }
+
+        // Get each input element
+        const taskDateInputs = [
+            [document.getElementById('task_1_start_date'), document.getElementById('task_1_end_date')],
+            [document.getElementById('task_2_start_date'), document.getElementById('task_2_end_date')],
+            [document.getElementById('task_3_start_date'), document.getElementById('task_3_end_date')],
+            [document.getElementById('task_4_start_date'), document.getElementById('task_4_end_date')],
+            [document.getElementById('task_5_start_date'), document.getElementById('task_5_end_date')],
+            [document.getElementById('task_6_start_date'), document.getElementById('task_6_end_date')],
+            [document.getElementById('task_7_start_date'), document.getElementById('task_7_end_date')]
+        ];
+
+        // Attach an event listener to each input element
+        taskDateInputs.forEach((input, index) => {
+            input.forEach((dateInput, dateIndex) => {
+                dateInput.addEventListener('input', function() {
+                    // Get the new task name from the input
+                    const newTaskStartDate = taskDateInputs[index][0].value;
+                    const newTaskEndDate = taskDateInputs[index][1].value;
+
+                    // Update the corresponding task label
+                    updateTaskDates(index, newTaskStartDate, newTaskEndDate);
+                });
             });
         });
     </script>

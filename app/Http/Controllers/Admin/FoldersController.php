@@ -25,12 +25,13 @@ use App\Beneficiaries;
 use App\Stakeholders;
 use App\Proponents;
 use App\Implementers;
+use App\Gantt;
 
 class FoldersController extends Controller
 {
-// 
+    // 
 
-public function userRegionTotalCost(Request $request)
+    public function userRegionTotalCost(Request $request)
     {
         // Get the authenticated user's region
         $userRegion = Auth::user()->region;
@@ -121,10 +122,10 @@ public function userRegionTotalCost(Request $request)
         // $proposedCount = Budget::count();
         $projectStatus = 'continuing'; // Value to match in the project_basis column
         $continuingCount = Budget::where('project_status', $projectStatus)
-        ->whereHas('folder', function ($query) {
-            $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
-        })
-        ->count();
+            ->whereHas('folder', function ($query) {
+                $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
+            })
+            ->count();
         return response()->json(['count' => $continuingCount]);
     }
     public function terminatingCount(Request $request)
@@ -132,10 +133,10 @@ public function userRegionTotalCost(Request $request)
         // $proposedCount = Budget::count();
         $projectStatus = 'terminating'; // Value to match in the project_basis column
         $terminatingCount = Budget::where('project_status', $projectStatus)
-        ->whereHas('folder', function ($query) {
-            $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
-        })
-        ->count();
+            ->whereHas('folder', function ($query) {
+                $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
+            })
+            ->count();
         return response()->json(['count' => $terminatingCount]);
     }
     public function coordinatedCount(Request $request)
@@ -143,10 +144,10 @@ public function userRegionTotalCost(Request $request)
         // $proposedCount = Budget::count();
         $projectStatus = 'coordinated'; // Value to match in the project_basis column
         $coordinatedCount = Budget::where('project_status', $projectStatus)
-        ->whereHas('folder', function ($query) {
-            $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
-        })
-        ->count();
+            ->whereHas('folder', function ($query) {
+                $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
+            })
+            ->count();
         return response()->json(['count' => $coordinatedCount]);
     }
 
@@ -552,6 +553,36 @@ public function userRegionTotalCost(Request $request)
 
         $folder->implementers()->associate($implementers);
 
+
+        $gantt = Gantt::create([
+            'gantt_project_name' => $request->input('gantt_project_name'),
+            'task_1' => $request->input('task_1'),
+            'task_1_start_date' => $request->input('task_1_start_date'),
+            'task_1_end_date' => $request->input('task_1_end_date'),
+            'task_2' => $request->input('task_2'),
+            'task_2_start_date' => $request->input('task_2_start_date'),
+            'task_2_end_date' => $request->input('task_2_end_date'),
+            'task_3' => $request->input('task_3'),
+            'task_3_start_date' => $request->input('task_3_start_date'),
+            'task_3_end_date' => $request->input('task_3_end_date'),
+            'task_4' => $request->input('task_4'),
+            'task_4_start_date' => $request->input('task_4_start_date'),
+            'task_4_end_date' => $request->input('task_4_end_date'),
+            'task_5' => $request->input('task_5'),
+            'task_5_start_date' => $request->input('task_5_start_date'),
+            'task_5_end_date' => $request->input('task_5_end_date'),
+            'task_6' => $request->input('task_6'),
+            'task_6_start_date' => $request->input('task_6_start_date'),
+            'task_6_end_date' => $request->input('task_6_end_date'),
+            'task_7' => $request->input('task_7'),
+            'task_7_start_date' => $request->input('task_7_start_date'),
+            'task_7_end_date' => $request->input('task_7_end_date'),
+
+            'id' => $folder->id,
+        ]);
+
+        $folder->gantt()->associate($gantt);
+
         $folder->save();
 
         return redirect()->route('admin.folders.index');
@@ -873,6 +904,35 @@ public function userRegionTotalCost(Request $request)
             $implementers->save();
         }
 
+        $gantt = $folder->gantt;
+
+        if ($gantt) {
+            $gantt->gantt_project_name = $request->input('gantt_project_name');
+            $gantt->task_1 = $request->input('task_1');
+            $gantt->task_1_start_date = $request->input('task_1_start_date');
+            $gantt->task_1_end_date = $request->input('task_1_end_date');
+            $gantt->task_2 = $request->input('task_2');
+            $gantt->task_2_start_date = $request->input('task_2_start_date');
+            $gantt->task_2_end_date = $request->input('task_2_end_date');
+            $gantt->task_3 = $request->input('task_3');
+            $gantt->task_3_start_date = $request->input('task_3_start_date');
+            $gantt->task_3_end_date = $request->input('task_3_end_date');
+            $gantt->task_4 = $request->input('task_4');
+            $gantt->task_4_start_date = $request->input('task_4_start_date');
+            $gantt->task_4_end_date = $request->input('task_4_end_date');
+            $gantt->task_5 = $request->input('task_5');
+            $gantt->task_5_start_date = $request->input('task_5_start_date');
+            $gantt->task_5_end_date = $request->input('task_5_end_date');
+            $gantt->task_6 = $request->input('task_6');
+            $gantt->task_6_start_date = $request->input('task_6_start_date');
+            $gantt->task_6_end_date = $request->input('task_6_end_date');
+            $gantt->task_7 = $request->input('task_7');
+            $gantt->task_7_start_date = $request->input('task_7_start_date');
+            $gantt->task_7_end_date = $request->input('task_7_end_date');
+
+            $gantt->save();
+        }
+
 
         return redirect()->route('admin.folders.index');
     }
@@ -1027,6 +1087,11 @@ public function userRegionTotalCost(Request $request)
         $implementers = $folder->implementers;
         if ($implementers) {
             $implementers->delete();
+        }
+
+        $gantt = $folder->gantt;
+        if ($gantt) {
+            $gantt->delete();
         }
 
         $folder->forceDelete();

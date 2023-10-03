@@ -18,7 +18,7 @@ class Folder extends Model
     use SoftDeletes, FilterByUser;
 
     // protected $fillable = ['name', 'created_by_id'];
-    protected $fillable = ['name', 'created_by_id', 'project_id', 'signature_id', 'evaluation_id','beneficiaries_id','stakeholders_id','proponents_id','implementers_id' ];
+    protected $fillable = ['name', 'created_by_id', 'project_id', 'signature_id', 'evaluation_id','beneficiaries_id','stakeholders_id','proponents_id','implementers_id','gantt_id'];
 
 
     public function project()
@@ -62,6 +62,10 @@ class Folder extends Model
     public function implementers()
     {
         return $this->belongsTo(Implementers::class, 'implementers_id')->withDefault();
+    }
+    public function gantt()
+    {
+        return $this->belongsTo(Gantt::class, 'gantt_id')->withDefault();
     }
 
     

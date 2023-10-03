@@ -68,6 +68,10 @@
                     <a class="nav-link" data-toggle="tab" href="#implementers"><i
                             class="fa fa-eye"></i>&nbsp;Implementers</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#gantt"><i
+                            class="fa fa-eye"></i>&nbsp;Gantt Chart</a>
+                </li>
             </ul>
 
             <div class="tab-content">
@@ -122,6 +126,11 @@
                 <div class="tab-pane fade" id="implementers">
                     <div class="tab-content">
                         @include('admin.folders.tab_create.implementers')
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="gantt">
+                    <div class="tab-content">
+                        @include('admin.folders.tab_create.gantt')
                     </div>
                 </div>
 
