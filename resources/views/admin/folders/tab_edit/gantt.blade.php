@@ -356,6 +356,67 @@
 
         // Call the function to update the chart with initial values on page load
         updateChartWithInitialValues();
+
+
+        // Function to update the pie chart
+        function updatePieChart(directCost, indirectCost) {
+            const pieData = {
+                labels: ['Direct Cost', 'Indirect Cost'],
+                datasets: [{
+                    data: [directCost, indirectCost],
+                    backgroundColor: ['#FF5733', '#3399FF'], // Define colors for the two segments
+                }, ],
+            };
+
+            const pieOptions = {
+                responsive: true,
+            };
+
+            // Destroy the existing chart if it exists
+            if (myPieChart) {
+                myPieChart.destroy();
+            }
+
+            // Create a new pie chart
+            myPieChart = new Chart(document.getElementById('myPieChart'), {
+                type: 'pie',
+                data: pieData,
+                options: pieOptions,
+            });
+        }
+
+        // Perform the two AJAX requests and update the pie chart
+        $.ajax({
+            url: '/get-direct-cost',
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Update the number of folders in the small box
+                $('.getDirectCost').text(data.direct_cost);
+                console.log(data.direct_cost);
+
+                // Perform the second AJAX request for indirect cost
+                $.ajax({
+                    url: '/get-indirect-cost',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(indirectData) {
+                        // Update the number of folders in the small box
+                        $('.getIndirectCost').text(indirectData.indirect_cost);
+                        console.log(indirectData.indirect_cost);
+
+                        // Call the function to update the pie chart with both values
+                        updatePieChart(data.direct_cost, indirectData.indirect_cost);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(error); // Handle error if necessary
+                    },
+                });
+            },
+            error: function(xhr, status, error) {
+                console.log(error); // Handle error if necessary
+            },
+        });
     </script>
 </body>
 

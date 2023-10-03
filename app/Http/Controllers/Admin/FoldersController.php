@@ -29,8 +29,9 @@ use App\Gantt;
 
 class FoldersController extends Controller
 {
-    // 
+    // projets of the user
 
+    // Total cost of projects with the same region as the user
     public function userRegionTotalCost(Request $request)
     {
         // Get the authenticated user's region
@@ -53,6 +54,56 @@ class FoldersController extends Controller
             'total_cost' => $totalCost
         ]);
     }
+
+
+    // Direct cost of projects with the same region as the user
+    public function userRegionDirectCost(Request $request)
+    {
+        // Get the authenticated user's region
+        $userRegion = Auth::user()->region;
+        $folders = Folder::query();
+
+        $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
+            $query->where('region', $userRegion);
+        });
+
+        // Calculate the total project cost for projects with the same region as the user
+        $directCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+            $query->where('region', $userRegion);
+        })->sum('direct_cost');
+
+        // return response()->json(['total_cost' => $totalCost]);
+
+        return response()->json([
+            'region' => $userRegion,
+            'direct_cost' => $directCost
+        ]);
+    }
+
+    // Indirect cost of projects with the same region as the user
+    public function userRegionIndirectCost(Request $request)
+    {
+        // Get the authenticated user's region
+        $userRegion = Auth::user()->region;
+        $folders = Folder::query();
+
+        $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
+            $query->where('region', $userRegion);
+        });
+
+        // Calculate the total project cost for projects with the same region as the user
+        $indirectCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+            $query->where('region', $userRegion);
+        })->sum('indirect_cost');
+
+        // return response()->json(['total_cost' => $totalCost]);
+
+        return response()->json([
+            'region' => $userRegion,
+            'indirect_cost' => $indirectCost
+        ]);
+    }
+
 
 
     // all projects

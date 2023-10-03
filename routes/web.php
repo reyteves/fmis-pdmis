@@ -8,8 +8,12 @@ use App\Http\Controllers\PsgcController;
 
 use App\Http\Controllers\Admin\OfficeController;
 
-// user region
+// total cost of the projects that has the same region as the user
 Route::get('/user-region-total-cost', [FoldersController::class, 'userRegionTotalCost']);
+// direct cost of the projects that has the same region as the user
+Route::get('/user-region-direct-cost', [FoldersController::class, 'userRegionDirectCost']);
+// indirect cost of the projects that has the same region as the user
+Route::get('/user-region-indirect-cost', [FoldersController::class, 'userRegionIndirectCost']);
 
 
 

@@ -1,23 +1,6 @@
 @extends('layouts.app')
 
 <style>
-    /* .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col-lg-3 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.small-box {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-} */
-
     .flex-container {
         display: flex;
         flex-wrap: wrap;
@@ -53,8 +36,10 @@
 </style>
 
 @section('content')
-    <section class="content" style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
-        <div class="container-fluid panel panel default" style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
+    <section class="content"
+        style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
+        <div class="container-fluid panel panel default"
+            style="background-image: url('{{ asset('images/background.PNG') }}') !important; background-size: cover !important;">
 
             <div class="panel-body">
 
@@ -258,6 +243,10 @@
 
                     {{-- /end row --}}
                 </div>
+
+                <div style="width: 500px; height: 500px; display: flex; justify-content: center; align-items: center;" class="panel-body">
+                    <canvas id="myChart1"></canvas>
+                </div>
             </div>
 
 
@@ -280,11 +269,41 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-3 col-6 justify-content-center">
+                        <!-- small box -->
+                        <div class="small-box bg-primary text-dark">
+                            <div class="inner text-center">
+                                <h3 class="userRegionDirectCost"></h3>
+                                <p>Metro Manila</p>
+                                <p>Total Project Direct Costs</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-document-text"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-6 justify-content-center">
+                        <!-- small box -->
+                        <div class="small-box bg-primary text-dark">
+                            <div class="inner text-center">
+                                <h3 class="userRegionIndirectCost"></h3>
+                                <p>Metro Manila</p>
+                                <p>Total Project Indirect Costs<</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-document-text"></i>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- /end row --}}
                 </div>
 
             </div>
 
-            
+
 
     </section>
 @endsection
@@ -363,7 +382,7 @@
                     console.log(error); // Handle error if necessary
                 }
             });
-            
+
             $.ajax({
                 url: '/get-terminating-count', // Updated route
                 method: 'GET',
@@ -397,7 +416,7 @@
 
             // total cost
             $.ajax({
-                url: '/get-total-cost', 
+                url: '/get-total-cost',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -412,7 +431,7 @@
 
             // direct cost
             $.ajax({
-                url: '/get-direct-cost', 
+                url: '/get-direct-cost',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -427,7 +446,7 @@
 
             // indirect cost
             $.ajax({
-                url: '/get-indirect-cost', 
+                url: '/get-indirect-cost',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -440,9 +459,10 @@
                 }
             });
 
-// Region Total Cost
-$.ajax({
-                url: '/user-region-total-cost', 
+
+            //total cost of the projects that has the same region as the user
+            $.ajax({
+                url: '/user-region-total-cost',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -457,6 +477,125 @@ $.ajax({
                 }
             });
 
+            //direct cost of the projects that has the same region as the user
+            $.ajax({
+                url: '/user-region-direct-cost',
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Update the number of folders in the small box
+                    $('.userRegionDirectCost').text(data.direct_cost);
+                    console.log(data.direct_cost);
+                    $('.userRegion').text(data.region);
+                    console.log(data.region);
+                },
+                error: function(xhr, status, error) {
+                    console.log(error); // Handle error if necessary
+                }
+            });
+
+
+            //indirect cost of the projects that has the same region as the user
+            $.ajax({
+                url: '/user-region-indirect-cost',
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Update the number of folders in the small box
+                    $('.userRegionIndirectCost').text(data.indirect_cost);
+                    console.log(data.indirect_cost);
+                    $('.userRegion').text(data.region);
+                    console.log(data.region);
+                },
+                error: function(xhr, status, error) {
+                    console.log(error); // Handle error if necessary
+                }
+            });
+
+         
+   
+// /end on document ready
         });
     </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+
+// Initialize variables to store direct and indirect costs
+let directCost;
+let indirectCost;
+
+// AJAX request for direct cost
+$.ajax({
+    url: '/get-direct-cost',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+        // Update the number of folders in the small box
+        $('.getDirectCost').text(data.direct_cost);
+        console.log(data.direct_cost);
+
+        // Assign the value to the directCost variable
+        directCost = data.direct_cost;
+
+        // Check if both directCost and indirectCost are available
+        if (directCost !== undefined && indirectCost !== undefined) {
+            createPieChart();
+        }
+    },
+    error: function(xhr, status, error) {
+        console.log(error); // Handle error if necessary
+    }
+});
+
+// AJAX request for indirect cost
+$.ajax({
+    url: '/get-indirect-cost',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+        // Update the number of folders in the small box
+        $('.getIndirectCost').text(data.indirect_cost);
+        console.log(data.indirect_cost);
+
+        // Assign the value to the indirectCost variable
+        indirectCost = data.indirect_cost;
+
+        // Check if both directCost and indirectCost are available
+        if (directCost !== undefined && indirectCost !== undefined) {
+            createPieChart();
+        }
+    },
+    error: function(xhr, status, error) {
+        console.log(error); // Handle error if necessary
+    }
+});
+
+// Function to create the pie chart when both values are available
+function createPieChart() {
+    const ctx = document.getElementById('myChart1');
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Direct Cost', 'Indirect Cost'],
+            datasets: [{
+                label: 'Direct and Indirect Costs',
+                data: [directCost, indirectCost],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+</script>
+
 @endsection
