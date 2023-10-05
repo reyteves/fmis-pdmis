@@ -32,97 +32,183 @@ class FoldersController extends Controller
     // projets of the user
 
     // Total cost of projects with the same region as the user
-    public function userRegionTotalCost(Request $request)
-    {
-        // Get the authenticated user's region
-        $userRegion = Auth::user()->region;
-        $folders = Folder::query();
+    // public function userRegionTotalCost(Request $request)
+    // {
+    //     // Get the authenticated user's region
+    //     $userRegion = Auth::user()->region;
+    //     $folders = Folder::query();
 
-        $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
-            $query->where('region', $userRegion);
-        });
+    //     $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
+    //         $query->where('region', $userRegion);
+    //     });
 
-        // Calculate the total project cost for projects with the same region as the user
-        $totalCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
-            $query->where('region', $userRegion);
-        })->sum('total_project_cost');
+    //     // Calculate the total project cost for projects with the same region as the user
+    //     $totalCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+    //         $query->where('region', $userRegion);
+    //     })->sum('total_project_cost');
 
-        // return response()->json(['total_cost' => $totalCost]);
+    //     // return response()->json(['total_cost' => $totalCost]);
 
-        return response()->json([
-            'region' => $userRegion,
-            'total_cost' => $totalCost
-        ]);
-    }
+    //     return response()->json([
+    //         'region' => $userRegion,
+    //         'total_cost' => $totalCost
+    //     ]);
+    // }
 
 
-    // Direct cost of projects with the same region as the user
-    public function userRegionDirectCost(Request $request)
-    {
-        // Get the authenticated user's region
-        $userRegion = Auth::user()->region;
-        $folders = Folder::query();
+    // // Direct cost of projects with the same region as the user
+    // public function userRegionDirectCost(Request $request)
+    // {
+    //     // Get the authenticated user's region
+    //     $userRegion = Auth::user()->region;
+    //     $folders = Folder::query();
 
-        $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
-            $query->where('region', $userRegion);
-        });
+    //     $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
+    //         $query->where('region', $userRegion);
+    //     });
 
-        // Calculate the total project cost for projects with the same region as the user
-        $directCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
-            $query->where('region', $userRegion);
-        })->sum('direct_cost');
+    //     // Calculate the total project cost for projects with the same region as the user
+    //     $directCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+    //         $query->where('region', $userRegion);
+    //     })->sum('direct_cost');
 
-        // return response()->json(['total_cost' => $totalCost]);
+    //     // return response()->json(['total_cost' => $totalCost]);
 
-        return response()->json([
-            'region' => $userRegion,
-            'direct_cost' => $directCost
-        ]);
-    }
+    //     return response()->json([
+    //         'region' => $userRegion,
+    //         'direct_cost' => $directCost
+    //     ]);
+    // }
 
-    // Indirect cost of projects with the same region as the user
-    public function userRegionIndirectCost(Request $request)
-    {
-        // Get the authenticated user's region
-        $userRegion = Auth::user()->region;
-        $folders = Folder::query();
+    // // Indirect cost of projects with the same region as the user
+    // public function userRegionIndirectCost(Request $request)
+    // {
+    //     // Get the authenticated user's region
+    //     $userRegion = Auth::user()->region;
+    //     $folders = Folder::query();
 
-        $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
-            $query->where('region', $userRegion);
-        });
+    //     $folders = $folders->whereHas('site', function ($query) use ($userRegion) {
+    //         $query->where('region', $userRegion);
+    //     });
 
-        // Calculate the total project cost for projects with the same region as the user
-        $indirectCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
-            $query->where('region', $userRegion);
-        })->sum('indirect_cost');
+    //     // Calculate the total project cost for projects with the same region as the user
+    //     $indirectCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+    //         $query->where('region', $userRegion);
+    //     })->sum('indirect_cost');
 
-        // return response()->json(['total_cost' => $totalCost]);
+    //     // return response()->json(['total_cost' => $totalCost]);
 
-        return response()->json([
-            'region' => $userRegion,
-            'indirect_cost' => $indirectCost
-        ]);
-    }
+    //     return response()->json([
+    //         'region' => $userRegion,
+    //         'indirect_cost' => $indirectCost
+    //     ]);
+    // }
+
+
+public function userRegionTotalCost(Request $request)
+{
+    // Get the authenticated user's region
+    $userRegion = Auth::user()->region;
+
+    // Calculate the total project cost for projects with the same region as the user
+    $totalCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+        $query->where('region', $userRegion)
+            ->whereNull('deleted_at'); // Exclude soft-deleted folders
+    })->sum('total_project_cost');
+
+    return response()->json([
+        'region' => $userRegion,
+        'total_cost' => $totalCost
+    ]);
+}
+
+public function userRegionDirectCost(Request $request)
+{
+    // Get the authenticated user's region
+    $userRegion = Auth::user()->region;
+
+    // Calculate the total direct cost for projects with the same region as the user
+    $directCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+        $query->where('region', $userRegion)
+            ->whereNull('deleted_at'); // Exclude soft-deleted folders
+    })->sum('direct_cost');
+
+    return response()->json([
+        'region' => $userRegion,
+        'direct_cost' => $directCost
+    ]);
+}
+
+public function userRegionIndirectCost(Request $request)
+{
+    // Get the authenticated user's region
+    $userRegion = Auth::user()->region;
+
+    // Calculate the total indirect cost for projects with the same region as the user
+    $indirectCost = Budget::whereHas('folder.site', function ($query) use ($userRegion) {
+        $query->where('region', $userRegion)
+            ->whereNull('deleted_at'); // Exclude soft-deleted folders
+    })->sum('indirect_cost');
+
+    return response()->json([
+        'region' => $userRegion,
+        'indirect_cost' => $indirectCost
+    ]);
+}
 
 
 
     // all projects
 
+    // public function totalCost(Request $request)
+    // {
+    //     $folders = Folder::query();
+    //     $totalCost = Budget::sum('total_project_cost');
+    //     return response()->json(['total_cost' => $totalCost]);
+    // }
+    // public function totalDirectCost(Request $request)
+    // {
+    //     $folders = Folder::query();
+    //     $directCost = Budget::sum('direct_cost');
+    //     return response()->json(['direct_cost' => $directCost]);
+    // }
+    // public function totalIndirectCost(Request $request)
+    // {
+    //     $folders = Folder::query();
+    //     $indirectCost = Budget::sum('indirect_cost');
+    //     return response()->json(['indirect_cost' => $indirectCost]);
+    // }
+
     public function totalCost(Request $request)
     {
-        $totalCost = Budget::sum('total_project_cost');
+        $totalCost = Budget::whereHas('folder', function ($query) {
+            $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
+        })->sum('total_project_cost');
+    
         return response()->json(['total_cost' => $totalCost]);
     }
+    
     public function totalDirectCost(Request $request)
     {
-        $directCost = Budget::sum('direct_cost');
+        $directCost = Budget::whereHas('folder', function ($query) {
+            $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
+        })->sum('direct_cost');
+    
         return response()->json(['direct_cost' => $directCost]);
     }
+    
     public function totalIndirectCost(Request $request)
     {
-        $indirectCost = Budget::sum('indirect_cost');
+        $indirectCost = Budget::whereHas('folder', function ($query) {
+            $query->whereNull('deleted_at'); // Check if the folder is not soft deleted
+        })->sum('indirect_cost');
+    
         return response()->json(['indirect_cost' => $indirectCost]);
     }
+
+ 
+
+
 
     public function getFolderCount(Request $request)
     {

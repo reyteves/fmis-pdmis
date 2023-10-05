@@ -358,65 +358,33 @@
         updateChartWithInitialValues();
 
 
-        // Function to update the pie chart
-        function updatePieChart(directCost, indirectCost) {
-            const pieData = {
-                labels: ['Direct Cost', 'Indirect Cost'],
-                datasets: [{
-                    data: [directCost, indirectCost],
-                    backgroundColor: ['#FF5733', '#3399FF'], // Define colors for the two segments
-                }, ],
-            };
+       
 
-            const pieOptions = {
-                responsive: true,
-            };
 
-            // Destroy the existing chart if it exists
-            if (myPieChart) {
-                myPieChart.destroy();
+        // Function to validate start and end dates for a specific task
+        function validateDates2(taskNumber) {
+            // Get the values of start and end date fields for the specified task
+            const startDate = new Date(document.getElementById(`task_${taskNumber}_start_date`).value);
+            const endDate = new Date(document.getElementById(`task_${taskNumber}_end_date`).value);
+
+            // Check if the start date is after the end date or the end date is before the start date
+            if (startDate > endDate || endDate < startDate) {
+                // Clear the date fields for the specified task
+                document.getElementById(`task_${taskNumber}_start_date`).value = '';
+                document.getElementById(`task_${taskNumber}_end_date`).value = '';
+
+                // Display an alert message
+                alert(`The start date must be before the end date`);
             }
-
-            // Create a new pie chart
-            myPieChart = new Chart(document.getElementById('myPieChart'), {
-                type: 'pie',
-                data: pieData,
-                options: pieOptions,
-            });
         }
 
-        // Perform the two AJAX requests and update the pie chart
-        $.ajax({
-            url: '/get-direct-cost',
-            method: 'GET',
-            dataType: 'json',
-            success: function(data) {
-                // Update the number of folders in the small box
-                $('.getDirectCost').text(data.direct_cost);
-                console.log(data.direct_cost);
-
-                // Perform the second AJAX request for indirect cost
-                $.ajax({
-                    url: '/get-indirect-cost',
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function(indirectData) {
-                        // Update the number of folders in the small box
-                        $('.getIndirectCost').text(indirectData.indirect_cost);
-                        console.log(indirectData.indirect_cost);
-
-                        // Call the function to update the pie chart with both values
-                        updatePieChart(data.direct_cost, indirectData.indirect_cost);
-                    },
-                    error: function(xhr, status, error) {
-                        console.log(error); // Handle error if necessary
-                    },
-                });
-            },
-            error: function(xhr, status, error) {
-                console.log(error); // Handle error if necessary
-            },
-        });
+        // Attach the validateDates function to the change event of the date fields for each task (task_1 to task_7)
+        for (let taskNumber = 1; taskNumber <= 7; taskNumber++) {
+            document.getElementById(`task_${taskNumber}_start_date`).addEventListener('change', () => validateDates2(
+                taskNumber));
+            document.getElementById(`task_${taskNumber}_end_date`).addEventListener('change', () => validateDates2(
+                taskNumber));
+        }
     </script>
 </body>
 

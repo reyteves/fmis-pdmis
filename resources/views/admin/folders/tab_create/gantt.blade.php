@@ -189,7 +189,7 @@
                     ['2023-06-01', '2023-07-01'],
                     ['2023-07-01', '2023-08-01']
                 ],
-             
+
                 backgroundColor: [
                     'rgba(255, 26, 104, 1)',
                     'rgba(54, 162, 235, 1)',
@@ -260,7 +260,7 @@
             myChart.update();
         });
 
-    
+
         // Create a function to update a specific task label
         function updateTaskLabel(taskIndex, newValue) {
             // Update the label in the labels array
@@ -326,6 +326,53 @@
                 });
             });
         });
+
+
+        // validate start and end date
+        // Function to validate start and end dates
+        // function validateDates() {
+        //     // Get the values of start and end date fields
+        //     const startDate = new Date(document.getElementById('task_1_start_date').value);
+        //     const endDate = new Date(document.getElementById('task_1_end_date').value);
+
+        //     // Check if the start date is after the end date or the end date is before the start date
+        //     if (startDate > endDate || endDate < startDate) {
+        //         // Clear the date fields
+        //         document.getElementById('task_1_start_date').value = '';
+        //         document.getElementById('task_1_end_date').value = '';
+
+        //         // Display an alert message
+        //         alert('The start date must be before the end date');
+        //     }
+        // }
+
+        // // Attach the validateDates function to the change event of the date fields
+        // document.getElementById('task_1_start_date').addEventListener('change', validateDates);
+        // document.getElementById('task_1_end_date').addEventListener('change', validateDates);
+        // Function to validate start and end dates for a specific task
+        function validateDates(taskNumber) {
+            // Get the values of start and end date fields for the specified task
+            const startDate = new Date(document.getElementById(`task_${taskNumber}_start_date`).value);
+            const endDate = new Date(document.getElementById(`task_${taskNumber}_end_date`).value);
+
+            // Check if the start date is after the end date or the end date is before the start date
+            if (startDate > endDate || endDate < startDate) {
+                // Clear the date fields for the specified task
+                document.getElementById(`task_${taskNumber}_start_date`).value = '';
+                document.getElementById(`task_${taskNumber}_end_date`).value = '';
+
+                // Display an alert message
+                alert(`The start date must be before the end date`);
+            }
+        }
+
+        // Attach the validateDates function to the change event of the date fields for each task (task_1 to task_7)
+        for (let taskNumber = 1; taskNumber <= 7; taskNumber++) {
+            document.getElementById(`task_${taskNumber}_start_date`).addEventListener('change', () => validateDates(
+                taskNumber));
+            document.getElementById(`task_${taskNumber}_end_date`).addEventListener('change', () => validateDates(
+                taskNumber));
+        }
     </script>
 </body>
 

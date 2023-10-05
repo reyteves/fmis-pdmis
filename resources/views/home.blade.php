@@ -197,7 +197,11 @@
 
             <div class="panel-body">
                 <div class="panel-body">
+                    @if (Auth::check() && Auth::user()->role_id != 2)
                     <h1>All Projects Budget Expenses</h1>
+                    @elseif (Auth::check() && Auth::user()->role_id == 2)
+                    <h1>My Projects Budget Expenses</h1>
+                    @endif
                 </div>
 
                 {{-- start row --}}
@@ -244,11 +248,15 @@
                     {{-- /end row --}}
                 </div>
 
-                <div style="width: 500px; height: 500px; display: flex; justify-content: center; align-items: center;" class="panel-body">
+                <div style="width: 500px; height: 500px; display: flex; justify-content: center; align-items: center;" class="panel-body col-lg-3 col-6 justify-content-center">
                     <canvas id="myChart1"></canvas>
                 </div>
             </div>
 
+
+
+            @if (Auth::check() && Auth::user()->role_id != 2)
+            
 
             <div class="panel-body">
                 <div class="panel-body">
@@ -300,9 +308,11 @@
                     </div>
                     {{-- /end row --}}
                 </div>
-
+                <div style="width: 500px; height: 500px; display: flex; justify-content: center; align-items: center;" class="panel-body">
+                    <canvas id="myChart2"></canvas>
+                </div>
             </div>
-
+@endif
 
 
     </section>
@@ -596,6 +606,83 @@ function createPieChart() {
         }
     });
 }
+
+// pie chart 2
+
+// Initialize variables to store userDirectCost and userIndirectCost
+let userDirectCost;
+let userIndirectCost;
+
+// AJAX request for userDirectCost
+$.ajax({
+    url: '/user-region-direct-cost',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+        // Update the number of folders in the small box
+        $('.userRegionDirectCost').text(data.direct_cost);
+        console.log(data.direct_cost);
+
+        // Assign the value to the userDirectCost variable
+        userDirectCost = data.direct_cost;
+
+        // Check if both userDirectCost and userIndirectCost are available
+        if (userDirectCost !== undefined && userIndirectCost !== undefined) {
+            createPieChart2();
+        }
+    },
+    error: function(xhr, status, error) {
+        console.log(error); // Handle error if necessary
+    }
+});
+
+// AJAX request for userIndirectCost
+$.ajax({
+    url: '/user-region-indirect-cost',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+        // Update the number of folders in the small box
+        $('.userIndirectCost').text(data.indirect_cost);
+        console.log(data.indirect_cost);
+
+        // Assign the value to the userIndirectCost variable
+        userIndirectCost = data.indirect_cost;
+
+        // Check if both userDirectCost and userIndirectCost are available
+        if (userDirectCost !== undefined && userIndirectCost !== undefined) {
+            createPieChart2();
+        }
+    },
+    error: function(xhr, status, error) {
+        console.log(error); // Handle error if necessary
+    }
+});
+
+// Function to create the pie chart when both values are available
+function createPieChart2() {
+    const ctx = document.getElementById('myChart2');
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['User Direct Cost', 'User Indirect Cost'],
+            datasets: [{
+                label: 'User Direct and Indirect Costs',
+                data: [userDirectCost, userIndirectCost],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
 </script>
 
 @endsection
