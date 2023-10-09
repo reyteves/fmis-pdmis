@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2023 at 11:54 AM
+-- Generation Time: Oct 09, 2023 at 11:37 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -163,9 +163,9 @@ INSERT INTO `budgets` (`id`, `project_status`, `implementation_mode`, `project_b
 (53, NULL, NULL, NULL, '4.00', '2.00', '2.00', NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-28 23:47:16', '2023-09-28 23:47:16'),
 (56, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-02 19:59:15', '2023-10-02 19:59:15'),
 (57, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-02 21:42:57', '2023-10-02 21:42:57'),
-(58, 'proposed', 'by-administration', '2023 PrExC; SWF', '3000020.00', '1000013.00', '2000007.00', 'GAA FUND', 'CY 2023', 'Administration and General Services', 'Human Resource Management and Development Services', '2022-10-01', '2023-12-12', '2023-10-02 22:45:35', '2023-10-04 22:56:06'),
-(59, 'proposed', NULL, NULL, '30000.00', '10000.00', '20000.00', NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-05 00:28:43', '2023-10-05 00:56:06'),
-(60, 'proposed', NULL, NULL, '400000.00', '100000.00', '300000.00', NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-05 00:52:50', '2023-10-05 00:57:34');
+(58, 'terminating', 'by-administration', '2023 PrExC; SWF', '2.00', '1.00', '1.00', 'GAA FUND', 'CY 2023', 'Administration and General Services', 'Human Resource Management and Development Services', '2022-10-01', '2023-12-12', '2023-10-02 22:45:35', '2023-10-08 21:18:22'),
+(59, 'on-going', NULL, NULL, '30000.00', '10000.00', '20000.00', NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-05 00:28:43', '2023-10-08 21:15:22'),
+(60, 'continuing', NULL, NULL, '400000.00', '100000.00', '300000.00', NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-05 00:52:50', '2023-10-08 21:15:34');
 
 -- --------------------------------------------------------
 
@@ -270,7 +270,7 @@ INSERT INTO `evaluations` (`id`, `format_check`, `format_comment`, `provincial_e
 (178, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-02 19:59:15', '2023-10-02 19:59:15', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (179, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-02 21:42:57', '2023-10-02 21:42:57', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (180, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '1', NULL, '2023-10-02 22:45:35', '2023-10-03 21:15:37', 'Revitalizing/Strengthening the National Commission on Indigenous Peoples (NCIP) Program on Awards and Incentives for Service Excellence (PRAISE)', 'NCR', '1000000000', 'January 1, 2022 to December 31, 2023', '10000', 'The National Commission on Indigenous Peoples (NCIP) is tasked for the formulation and implementation', 'Chairperson', NULL, 'Legal Affairs Office -Director'),
-(181, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-05 00:28:43', '2023-10-05 00:28:43', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(181, NULL, NULL, NULL, NULL, NULL, NULL, '0', 'Use the suggested title on this form. The suggested title had been updated on the Project Proposal Form', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-05 00:28:43', '2023-10-08 21:33:24', 'Human Resource Program Project Proposal Prototype For Upadate', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (182, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-05 00:52:50', '2023-10-05 00:52:50', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -690,6 +690,13 @@ CREATE TABLE `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('JESUS.REYTEVES5@GMAIL.COM', '$2y$10$5Xav6Cv9zqVsXWSoDpPO0OGElgcOYCd66UbG4sRh2fWmNpPOFnd5C', '2023-10-08 21:46:14');
 
 -- --------------------------------------------------------
 
@@ -44790,7 +44797,7 @@ INSERT INTO `sites` (`id`, `region`, `congressional_district`, `province`, `muni
 (193, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-28 23:47:16', '2023-09-28 23:47:16'),
 (196, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-02 19:59:15', '2023-10-02 19:59:15'),
 (197, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-02 21:42:57', '2023-10-02 21:42:57'),
-(198, '130000000', '110', '133900000', '133902000', '133902001', '12', 'Quezon', 'Quezon Ancestral Domain', '2023-10-02 22:45:35', '2023-10-03 21:15:37'),
+(198, '010000000', '110', '012800000', '012801000', '012801001', '12', 'Quezon', 'Quezon Ancestral Domain', '2023-10-02 22:45:35', '2023-10-08 21:18:46'),
 (199, '130000000', NULL, '133900000', '133902000', '133902001', NULL, NULL, NULL, '2023-10-05 00:28:43', '2023-10-05 00:50:08'),
 (200, '010000000', NULL, '012800000', '012801000', '012801001', NULL, NULL, NULL, '2023-10-05 00:52:50', '2023-10-05 00:52:50');
 
@@ -44872,16 +44879,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `region`, `province`, `office`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `role_id`) VALUES
-(1, 'Admin', '130000000', '137600000', 'Office on Policy, Planning and Research - Director', 'admin@admin.com', '$2y$10$VaICddQLcI9KimmsgoxR8O/wuqm4KIGnT82v2Q5dsI3.U5nB5FPQq', '6GQzHAy4PW2rKM6jHEZG5G8AksMAmCqvqYA6TShtWKoGu3y6vqcxmreRi1Av', '2023-06-09 02:34:06', '2023-08-22 23:26:22', 1),
+(1, 'Admin', '130000000', '137600000', 'Office on Policy, Planning and Research - Director', 'admin@admin.com', '$2y$10$VaICddQLcI9KimmsgoxR8O/wuqm4KIGnT82v2Q5dsI3.U5nB5FPQq', 'Ar1sYlg3WFMCk75uMHOhOqRNIuv2X1jnKedmzoAskUu7HIMisFgyUtY67lM2', '2023-06-09 02:34:06', '2023-08-22 23:26:22', 1),
 (3, 'Juan Dela Cruz', '120000000', '128000000', NULL, 'proponent@gmail.com', '$2y$10$.cbTgLc3tI5e4623BqsFuOtRGZkpWIPunC0wVFty4k0dENWx.nL/W', 'pa0OA9aR57UjwBMiZZN6jArzp15IhHkWIFqQ9tGB9hw33JPyWhF8uVH0ezJp', '2023-06-14 19:32:19', '2023-08-17 22:35:38', 2),
-(6, 'Rey Jesus Teves', '010000000', '012800000', NULL, 'JESUS.REYTEVES5@GMAIL.COM', '$2y$10$LwRfSpDXQLpXS0xWwFLRiugVvCgVSEJvBIKIs6t10hz1VCMaiNYSG', 'd2RFnVRXgF0e3SwqCN34npu4ckHvrbABQu7LoUeOSPPZLQwkFhiuL2jFk4wF', '2023-06-29 00:21:59', '2023-08-17 22:41:57', 2),
-(7, 'Evaluator', '130000000', '133900000', 'Office on Policy, Planning and Research - Director', 'evaluator@gmail.com', '$2y$10$WrpeYKMM8L0ci1OL2vu9aOvddqJqaO3yFio.Q7xxK7TyxxT1l0ArC', 'xgZoFUgxSfs0SoXj1vuvx6L9f9Y5bd7iZxqKVnfKbXTexU5PjIGq9UkmLNwB', '2023-07-11 18:46:02', '2023-08-22 23:44:27', 3),
+(6, 'Rey Jesus Teves', '010000000', '012800000', NULL, 'JESUS.REYTEVES5@GMAIL.COM', '$2y$10$qL7xK8FzjrFk/iwSIahsIup2j1.rXcW8PVyLhw4bM/kV2.hzxDnjG', 'gDjznuNlsd0ky1vYjFYRbrX9rgcdg7UN1r8mtTbssbKqXl5LC81ZjtNIhxOP', '2023-06-29 00:21:59', '2023-10-08 21:45:48', 2),
+(7, 'Evaluator', '130000000', '133900000', 'Office on Policy, Planning and Research - Director', 'evaluator@gmail.com', '$2y$10$WrpeYKMM8L0ci1OL2vu9aOvddqJqaO3yFio.Q7xxK7TyxxT1l0ArC', 'rADKKCV0rijjKWiqUly0v2FnZxhPPvHWN2uaDeX9swDqRYkb828sn0V4y3w2', '2023-07-11 18:46:02', '2023-08-22 23:44:27', 3),
 (8, 'Rey Jesus Teves', '130000000', NULL, NULL, 'jesus.reyteves-new@gmail.com', '$2y$10$JUEe7GXk/UMq9AhYTzCGpeAIaI/1/S3BqA4yEdcAZflbOvNu.Ivou', 'TiyKZn3pDCDi74r9o4l7MoGMCRNYaQs3Wg6D6HvyNJqsHMP0MgDy4ZoIRZA3', '2023-07-25 17:49:17', '2023-08-07 19:20:03', 2),
 (9, 'Hiroko Schwartz', '130000000', '137500000', NULL, 'locy@mailinator.com', '$2y$10$.v.H76sFjPxcC6Yvfn2hlO2UrHIxej9o0WFgBQvzbbk2P97/vXSua', NULL, '2023-08-07 18:09:06', '2023-08-17 22:50:51', 2),
 (10, 'Latifah Olson', '130000000', '137400000', 'Office on Socio-Economic Services and Special Concerns - Director', 'qazar@mailinator.com', '$2y$10$F87LyEVajRBql60.QEOlDO4WTRr.vlzs1PQoodjV07TwjOPwHbqJi', NULL, '2023-08-07 20:04:52', '2023-08-22 22:34:12', 2),
 (11, 'test', '010000000', '012800000', 'Foreign Assisted Programs and International Relations Office  - Director', 'proponent@test.com', '$2y$10$JG2bf1qH4rErDA6CX8v3FugQ96OYvH2OOW/KSpYFmKSNd4WlrwwrO', NULL, '2023-08-22 21:50:47', '2023-08-22 22:33:59', 2),
 (12, 'test-office', '010000000', '012800000', 'LAO - Ligitation Adjudication Division', 'office@office.com', '$2y$10$H5XJKCagxFycivNLguzRDOhhCc6WblAXu2VEW6AzIqqmeXwtgtYj2', NULL, '2023-08-22 22:20:51', '2023-08-22 22:38:03', 2),
-(13, 'Test Project Registration', '010000000', '012800000', 'Office on Policy, Planning and Research - Director', 'email@ncipprojects.com', '$2y$10$dgTlGQAZd4vSK7V9bXEnH.h4UNEJTUHJ9bHCnvCAOasC..7q/sUIu', NULL, '2023-09-26 23:00:16', '2023-09-26 23:04:44', 1);
+(13, 'Test Project Registration', '010000000', '012800000', 'Office on Policy, Planning and Research - Director', 'email@ncipprojects.com', '$2y$10$dgTlGQAZd4vSK7V9bXEnH.h4UNEJTUHJ9bHCnvCAOasC..7q/sUIu', NULL, '2023-09-26 23:00:16', '2023-09-26 23:04:44', 1),
+(14, 'New Project', NULL, NULL, NULL, 'example@gmail.com', '$2y$10$EMkvvWDq3SvfDg/m4ccACO/s48XkI8MVCy/GQ/uwUXMKvKaH8aLou', NULL, '2023-10-08 21:47:15', '2023-10-08 21:47:15', 2);
 
 --
 -- Indexes for dumped tables
@@ -45152,7 +45160,7 @@ ALTER TABLE `stakeholders`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
